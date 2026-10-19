@@ -1,0 +1,2655 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
+<title>多语言翻译与润色工具</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #c3c6d7; border-radius: 10px; }
+    .nav-link.active { background: #cfe2f9; color: #091d2e; font-weight: 600; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    .diff-removed { background: #ffebe9; text-decoration: line-through; color: #cf222e; }
+    .diff-added { background: #e6ffec; color: #1a7f37; }
+</style>
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#003da6", "primary-container": "#0052d9",
+                    "on-primary": "#ffffff", "on-primary-container": "#cbd6ff",
+                    "secondary": "#4e6073", "secondary-container": "#cfe2f9",
+                    "on-secondary": "#ffffff", "on-secondary-container": "#526478",
+                    "surface": "#faf8ff", "surface-container-low": "#f3f3fe",
+                    "surface-container-high": "#e7e7f3", "surface-container-lowest": "#ffffff",
+                    "outline": "#737686", "outline-variant": "#c3c6d7",
+                    "on-surface": "#191b23", "on-surface-variant": "#434654",
+                    "error": "#ba1a1a", "error-container": "#ffdad6", "on-error-container": "#93000a",
+                    "background": "#faf8ff",
+                },
+                borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                spacing: { "gutter": "24px", "container_padding": "32px", "sidebar_width": "260px", "top_nav_height": "56px" },
+                fontFamily: { "label-caps": ["JetBrains Mono"], "display-lg": ["Hanken Grotesk"], "title-sm": ["Inter"], "headline-md": ["Hanken Grotesk"], "body-lg": ["Inter"], "body-md": ["Inter"] },
+                fontSize: { "label-caps": ["12px", {"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"500"}], "display-lg": ["28px", {"lineHeight":"36px","fontWeight":"700"}], "title-sm": ["16px", {"lineHeight":"24px","fontWeight":"600"}], "headline-md": ["22px", {"lineHeight":"28px","fontWeight":"600"}], "body-lg": ["16px", {"lineHeight":"24px"}], "body-md": ["14px", {"lineHeight":"22px"}] }
+            }
+        }
+    }
+</script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-hidden h-screen flex">
+
+<!-- ==================== SIDEBAR ==================== -->
+<aside class="fixed left-0 top-0 h-screen w-sidebar_width bg-surface-container-lowest border-r border-outline-variant flex flex-col p-4 z-50">
+    <!-- Logo -->
+    <div class="mb-4 px-2">
+        <h1 class="font-display-lg text-display-lg font-bold text-primary">🌐 翻译润色工具</h1>
+        <p class="text-[10px] text-outline-variant">v4.1 · 546条有效语料 · 实验默认80样本 · <span class="px-1.5 py-0.5 bg-orange-100 text-orange-700 rounded-full font-bold text-[9px]">🔬 实训</span></p>
+        <p class="text-xs text-on-surface-variant mt-1" id="sidebar-model-name">模型未启动</p>
+    </div>
+
+    <!-- Model Status -->
+    <div class="bg-surface-container-low rounded-xl p-3 mb-4 border border-outline-variant">
+        <div class="flex items-center gap-2 mb-2">
+            <span class="relative flex h-2 w-2" id="status-dot">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+            </span>
+            <span class="font-title-sm text-sm" id="status-text">vLLM 未启动</span>
+        </div>
+        <div class="space-y-2">
+            <label class="block text-xs font-label-caps text-outline">选择模型</label>
+            <select id="model-select" class="w-full bg-white border border-outline-variant rounded-lg text-body-md py-1.5 px-2 focus:ring-2 focus:ring-primary-container outline-none">
+                <option value="Hy-MT2-1.8B">Hy-MT2-1.8B（混元翻译 v2）</option>
+                <option value="Qwen2.5-1.5B-Instruct">Qwen2.5-1.5B（通义千问）</option>
+                <option value="DeepSeek-R1-Distill-Qwen-1.5B">DeepSeek-R1（推理模型）</option>
+            </select>
+            <div class="flex gap-2">
+                <button onclick="startModel(this)" class="flex-1 bg-primary text-white py-1.5 rounded-lg text-sm font-semibold hover:opacity-90 active:scale-[0.98] transition-all">启动/切换</button>
+                <button onclick="stopModel()" class="bg-error-container text-on-error-container p-1.5 rounded-lg hover:opacity-80 transition-all"><span class="material-symbols-outlined text-lg">stop_circle</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="flex-1 space-y-0.5" id="sidebar-nav">
+        <a class="nav-link active flex items-center gap-3 px-3 py-2.5 rounded-xl transition-colors cursor-pointer" data-tab="tab-translate">
+            <span class="material-symbols-outlined">translate</span><span>翻译</span></a>
+        <a class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer" data-tab="tab-polish">
+            <span class="material-symbols-outlined">auto_fix_high</span><span>学术润色</span></a>
+        <a class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer" data-tab="tab-convert">
+            <span class="material-symbols-outlined">swap_horiz</span><span>口语/书面语转换</span></a>
+        <a class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer" data-tab="tab-evaluate">
+            <span class="material-symbols-outlined">analytics</span><span>质量评估</span></a>
+        <a class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer" data-tab="tab-batch">
+            <span class="material-symbols-outlined">inventory_2</span><span>批量处理</span></a>
+        <a class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer" data-tab="tab-experiment">
+            <span class="material-symbols-outlined">science</span><span>对比实验</span></a>
+        <a class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer" data-tab="tab-dataset">
+            <span class="material-symbols-outlined">database</span><span>语料库管理</span></a>
+        <a class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer" data-tab="tab-export">
+            <span class="material-symbols-outlined">download</span><span>结果导出</span></a>
+    </nav>
+
+    <!-- Footer -->
+    <div class="pt-3 border-t border-outline-variant">
+        <button onclick="refreshStatus()" class="w-full flex items-center justify-center gap-1.5 py-2 text-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-colors">
+            <span class="material-symbols-outlined text-lg">refresh</span>刷新状态</button>
+    </div>
+</aside>
+
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="ml-[260px] flex-1 flex flex-col h-screen overflow-hidden">
+
+    <!-- Top Bar -->
+    <header class="h-top_nav_height bg-surface border-b border-outline-variant flex items-center justify-between px-container_padding flex-shrink-0">
+        <h2 class="font-headline-md text-headline-md text-primary" id="page-title">多语言翻译</h2>
+        <div class="flex items-center gap-3 text-sm text-on-surface-variant">
+            <span id="api-status-badge" class="px-2.5 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-700">⚫ API 离线</span>
+        </div>
+    </header>
+
+    <!-- Scrollable Content -->
+    <div class="flex-1 overflow-y-auto p-container_padding bg-[#F5F7FA]">
+
+        <!-- ============ TAB 1: 翻译 ============ -->
+        <div class="tab-content active" id="tab-translate">
+            <div class="grid grid-cols-12 gap-gutter">
+                <!-- Input -->
+                <div class="col-span-12 lg:col-span-5 flex flex-col bg-white border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+                    <div class="bg-surface-container-low px-4 py-2 border-b border-outline-variant flex justify-between">
+                        <span class="font-title-sm text-sm">原文输入</span>
+                        <span class="text-xs text-outline font-label-caps" id="char-count-trans">字符数: 0</span>
+                    </div>
+                    <textarea id="trans-input" class="flex-1 w-full p-4 text-body-lg resize-none border-none focus:ring-0 placeholder-outline" placeholder="请输入要翻译的文本..." rows="8"></textarea>
+                </div>
+                <!-- Settings -->
+                <div class="col-span-12 lg:col-span-2 flex flex-col gap-3">
+                    <div class="bg-white border border-outline-variant rounded-xl p-3 shadow-sm">
+                        <label class="block text-xs font-label-caps text-outline mb-1.5">语言对</label>
+                        <select id="trans-lang" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-2 focus:ring-2 focus:ring-primary-container outline-none">
+                            <option value="zh-en">中 → 英</option><option value="en-zh">英 → 中</option>
+                            <option value="zh-ja">中 → 日</option><option value="ja-zh">日 → 中</option>
+                            <option value="zh-ko">中 → 韩</option><option value="ko-zh">韩 → 中</option>
+                        </select>
+                    </div>
+                    <div class="bg-white border border-outline-variant rounded-xl p-3 shadow-sm">
+                        <label class="block text-xs font-label-caps text-outline mb-1.5">翻译策略</label>
+                        <label class="flex items-center gap-2 py-1 cursor-pointer"><input type="radio" name="trans-strategy" value="academic" checked class="text-primary"/>学术润色翻译</label>
+                        <label class="flex items-center gap-2 py-1 cursor-pointer"><input type="radio" name="trans-strategy" value="semantic" class="text-primary"/>意译（流畅）</label>
+                        <label class="flex items-center gap-2 py-1 cursor-pointer"><input type="radio" name="trans-strategy" value="literal" class="text-primary"/>直译（精确）</label>
+                    </div>
+                    <div class="bg-white border border-outline-variant rounded-xl p-3 shadow-sm">
+                        <label class="block text-xs font-label-caps text-outline mb-1.5">场景</label>
+                        <select id="trans-domain" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-2 focus:ring-2 focus:ring-primary-container outline-none">
+                            <option value="auto" selected>🔍 自动检测</option>
+                            <option value="academic">📚 学术论文</option>
+                            <option value="business">💼 商务</option>
+                            <option value="technical">🔧 技术文档</option>
+                            <option value="daily">💬 日常对话</option>
+                            <option value="law">⚖️ 法律</option>
+                            <option value="medicine">🏥 医学</option>
+                            <option value="cs">💻 计算机科学</option>
+                        </select>
+                    </div>
+                    <div class="bg-white border border-outline-variant rounded-xl p-3 shadow-sm flex-1">
+                        <label class="block text-xs font-label-caps text-outline mb-2">高级参数</label>
+                        <div class="mb-3">
+                            <div class="flex justify-between text-xs mb-1"><span>Temperature</span><span class="font-mono text-primary" id="temp-val">0.3</span></div>
+                            <input type="range" id="trans-temp" class="w-full accent-primary" min="0" max="1" step="0.1" value="0.3" oninput="document.getElementById('temp-val').textContent=this.value">
+                        </div>
+                        <div class="mb-3">
+                            <div class="text-xs mb-1">最大Token数</div>
+                            <input type="number" id="trans-max-tokens" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-1.5 px-2" value="128" min="64" max="1024">
+                        </div>
+                        <button onclick="doTranslate()" class="w-full bg-primary text-white py-2.5 rounded-xl font-bold text-lg hover:shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined">translate</span>开始翻译</button>
+                    </div>
+                </div>
+                <!-- Result -->
+                <div class="col-span-12 lg:col-span-5 flex flex-col gap-3">
+                    <div class="flex-1 bg-white border border-outline-variant rounded-xl flex flex-col overflow-hidden shadow-sm">
+                        <div class="bg-surface-container-low px-4 py-2 border-b border-outline-variant flex justify-between">
+                            <span class="font-title-sm text-sm">翻译结果</span>
+                            <button onclick="copyResult('trans-result')" class="p-1 hover:bg-outline-variant rounded transition-colors" title="复制"><span class="material-symbols-outlined text-lg">content_copy</span></button>
+                        </div>
+                        <div id="trans-result" class="flex-1 p-4 text-body-lg overflow-y-auto text-outline italic">点击"开始翻译"获取结果...</div>
+                    </div>
+                    <!-- History -->
+                    <div class="bg-white border border-outline-variant rounded-xl shadow-sm">
+                        <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full px-4 py-2.5 flex items-center justify-between bg-surface-container-low hover:bg-surface-container-high transition-colors rounded-xl">
+                            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline">history</span><span class="font-semibold text-sm">翻译历史</span></div>
+                            <span class="material-symbols-outlined text-outline">expand_more</span>
+                        </button>
+                        <div class="hidden max-h-[200px] overflow-y-auto p-2 space-y-1" id="trans-history"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ TAB 2: 学术润色 ============ -->
+        <div class="tab-content" id="tab-polish">
+            <div class="max-w-6xl mx-auto space-y-4">
+                <div class="flex items-end justify-between">
+                    <div><h3 class="font-headline-md">学术论文润色</h3><p class="text-sm text-on-surface-variant mt-1">提升论文专业性、逻辑性与地道表达</p></div>
+                    <div class="flex gap-3">
+                        <div><label class="text-xs font-label-caps text-outline block mb-1">润色级别</label>
+                            <select id="polish-level" class="bg-white border border-outline-variant rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary-container">
+                                <option value="light">轻度（纠错）</option><option value="moderate" selected>中度（流畅）</option><option value="heavy">重度（重构）</option></select></div>
+                        <div><label class="text-xs font-label-caps text-outline block mb-1">语言</label>
+                            <select id="polish-lang" class="bg-white border border-outline-variant rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary-container">
+                                <option value="zh">中文</option><option value="en" selected>英文</option><option value="ja">日文</option><option value="ko">韩文</option></select></div>
+                    </div>
+                </div>
+                <div class="bg-white border border-outline-variant rounded-xl p-4 shadow-sm">
+                    <textarea id="polish-input" class="w-full h-40 bg-transparent border-none focus:ring-0 text-body-lg resize-none" placeholder="请在此输入您的学术文本..."></textarea>
+                    <div class="flex justify-between items-center mt-3 pt-3 border-t border-outline-variant/30">
+                        <span class="text-xs text-outline font-label-caps" id="polish-char-count">字数: 0</span>
+                        <div class="flex gap-2">
+                            <button onclick="doPolish()" class="bg-primary text-white px-8 py-2.5 rounded-xl font-semibold hover:shadow-lg active:scale-[0.98] transition-all flex items-center gap-2">
+                                <span class="material-symbols-outlined">auto_fix_high</span>开始润色</button>
+                            <button onclick="comparePolish()" class="bg-surface border border-outline-variant px-4 py-2.5 rounded-xl text-sm font-semibold text-on-surface-variant hover:bg-surface-container-low transition-all flex items-center gap-2">
+                                <span class="material-symbols-outlined">science</span>三级对比</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+                    <div class="bg-white border border-outline-variant rounded-xl p-4 min-h-[300px]">
+                        <h4 class="text-xs font-label-caps text-outline mb-3 flex items-center gap-1"><span class="material-symbols-outlined text-sm">edit_note</span>原文</h4>
+                        <div id="polish-original" class="text-body-lg text-on-surface leading-relaxed whitespace-pre-wrap text-outline italic">等待输入...</div>
+                    </div>
+                    <div class="bg-white border border-primary/20 rounded-xl p-4 min-h-[300px] shadow-sm">
+                        <h4 class="text-xs font-label-caps text-primary mb-3 flex items-center gap-1"><span class="material-symbols-outlined text-sm">check_circle</span>润色结果</h4>
+                        <div id="polish-result" class="text-body-lg text-on-surface leading-relaxed whitespace-pre-wrap text-outline italic">等待润色...</div>
+                    </div>
+                </div>
+                <!-- Polish Comparison -->
+                <div id="polish-compare-area" class="hidden mt-4 bg-white border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+                    <div class="px-4 py-3 border-b border-outline-variant bg-surface-container-low flex justify-between">
+                        <span class="font-semibold text-sm">📊 三级润色对比</span>
+                        <button onclick="document.getElementById('polish-compare-area').classList.add('hidden')" class="text-xs text-outline">✕ 关闭</button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm">
+                            <thead class="bg-surface-container-low">
+                                <tr><th class="px-3 py-2 w-16">级别</th><th class="px-3 py-2">润色结果</th><th class="px-3 py-2 text-center w-16">句长</th><th class="px-3 py-2 text-center w-16">被动%</th><th class="px-3 py-2 text-center w-16">连接词</th><th class="px-3 py-2 text-center w-16">正式度</th></tr>
+                            </thead>
+                            <tbody id="polish-compare-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Polish History -->
+                <div class="bg-white border border-outline-variant rounded-xl shadow-sm">
+                    <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full px-4 py-2.5 flex items-center justify-between bg-surface-container-low hover:bg-surface-container-high transition-colors rounded-xl">
+                        <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline">history</span><span class="font-semibold text-sm">润色历史</span></div>
+                        <span class="material-symbols-outlined text-outline">expand_more</span>
+                    </button>
+                    <div class="hidden max-h-[200px] overflow-y-auto p-2 space-y-1" id="polish-history"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ TAB 3: 口语/书面语转换 ============ -->
+        <div class="tab-content" id="tab-convert">
+            <div class="max-w-6xl mx-auto space-y-4">
+                <div class="flex items-center gap-4">
+                    <h3 class="font-headline-md">口语 ↔ 书面语转换</h3>
+                    <div class="flex gap-1 p-1 bg-surface-container-low rounded-lg">
+                        <button class="px-5 py-1.5 rounded-md text-sm font-semibold bg-white shadow-sm text-primary transition-all" id="btn-s2w" onclick="setConvDir('s2w')">口语 → 书面语</button>
+                        <button class="px-5 py-1.5 rounded-md text-sm text-on-surface-variant transition-all" id="btn-w2s" onclick="setConvDir('w2s')">书面语 → 口语</button>
+                    </div>
+                    <div class="ml-auto">
+                        <label class="text-xs font-label-caps text-outline block mb-1">语言</label>
+                        <select id="conv-lang" class="bg-white border border-outline-variant rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary-container">
+                            <option value="zh">中文</option><option value="en">英文</option><option value="ja">日文</option><option value="ko">韩文</option></select>
+                    </div>
+                </div>
+                <div class="bg-white border border-outline-variant rounded-xl p-4 shadow-sm">
+                    <textarea id="conv-input" class="w-full h-40 bg-transparent border-none focus:ring-0 text-body-lg resize-none" placeholder="请输入文本..."></textarea>
+                    <div class="flex justify-between items-center mt-3 pt-3 border-t border-outline-variant/30">
+                        <span class="text-xs text-outline" id="conv-char-count">字数: 0</span>
+                        <button onclick="doConvert()" class="bg-primary text-white px-8 py-2.5 rounded-xl font-semibold hover:shadow-lg active:scale-[0.98] transition-all flex items-center gap-2">
+                            <span class="material-symbols-outlined">swap_horiz</span>执行转换</button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+                    <div class="bg-white border border-outline-variant rounded-xl p-4 min-h-[200px]">
+                        <h4 class="text-xs font-label-caps text-outline mb-3">原文</h4>
+                        <div id="conv-original" class="text-body-lg leading-relaxed whitespace-pre-wrap text-outline italic">等待...</div>
+                    </div>
+                    <div class="bg-white border border-primary/20 rounded-xl p-4 min-h-[200px] shadow-sm">
+                        <h4 class="text-xs font-label-caps text-primary mb-3">转换结果</h4>
+                        <div id="conv-result" class="text-body-lg leading-relaxed whitespace-pre-wrap text-outline italic">等待转换...</div>
+                    </div>
+                </div>
+                <!-- Convert History -->
+                <div class="bg-white border border-outline-variant rounded-xl shadow-sm">
+                    <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full px-4 py-2.5 flex items-center justify-between bg-surface-container-low hover:bg-surface-container-high transition-colors rounded-xl">
+                        <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline">history</span><span class="font-semibold text-sm">转换历史</span></div>
+                        <span class="material-symbols-outlined text-outline">expand_more</span>
+                    </button>
+                    <div class="hidden max-h-[200px] overflow-y-auto p-2 space-y-1" id="conv-history"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ TAB 4: 质量评估 ============ -->
+        <div class="tab-content" id="tab-evaluate">
+            <div class="max-w-6xl mx-auto space-y-4">
+                <div class="flex items-center gap-4">
+                    <h3 class="font-headline-md">翻译质量评估</h3>
+                    <div class="flex gap-1 p-1 bg-surface-container-low rounded-lg">
+                        <button class="px-5 py-1.5 rounded-md text-sm font-semibold bg-white shadow-sm text-primary transition-all" id="btn-auto-eval" onclick="setEvalMode('batch')">📊 批量评估</button>
+                        <button class="px-5 py-1.5 rounded-md text-sm text-on-surface-variant transition-all" id="btn-single-eval" onclick="setEvalMode('single')">🔄 单条评估</button>
+                        <button class="px-5 py-1.5 rounded-md text-sm text-on-surface-variant transition-all" id="btn-manual-eval" onclick="setEvalMode('manual')">✍️ 人工打分</button>
+                    </div>
+                </div>
+                <!-- Batch Eval -->
+                <div id="eval-batch">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter mb-4">
+                        <div class="bg-white border border-outline-variant rounded-xl p-4 space-y-3">
+                            <label class="block text-xs font-label-caps text-outline mb-1">测试样本数</label>
+                            <input type="number" id="eval-batch-n" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-3" value="10" min="1" max="50">
+                            <label class="block text-xs font-label-caps text-outline mb-1">翻译方向</label>
+                            <select id="eval-batch-lang" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-3">
+                                <option value="zh-en">中 → 英</option><option value="en-zh">英 → 中</option><option value="zh-ja">中 → 日</option><option value="zh-ko">中 → 韩</option></select>
+                            <label class="block text-xs font-label-caps text-outline mb-1">领域</label>
+                            <select id="eval-batch-domain" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-3">
+                                <option value="">全部领域</option><option value="academic">学术</option><option value="business">商务</option><option value="technical">技术</option><option value="daily">日常</option><option value="law">法律</option><option value="medicine">医学</option><option value="cs">计算机</option></select>
+                            <label class="block text-xs font-label-caps text-outline mb-1">评估策略（匹配对应参考译文风格）</label>
+                            <select id="eval-batch-strategy" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-3">
+                                <option value="semantic">意译 → 意译参考</option><option value="literal">直译 → 直译参考</option><option value="academic">学术润色 → 学术参考</option></select>
+                            <button onclick="doBatchEval()" class="w-full bg-primary text-white py-2.5 rounded-xl font-semibold hover:shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2"><span class="material-symbols-outlined">science</span>开始自动评估</button>
+                        </div>
+                        <div class="lg:col-span-2">
+                            <div class="grid grid-cols-2 gap-3 mb-3">
+                                <div class="bg-white border border-outline-variant rounded-xl p-4 flex flex-col items-center justify-center text-center"><span class="text-xs font-label-caps text-outline mb-2">平均 BLEU</span><div class="text-4xl font-extrabold text-primary" id="batch-bleu">—</div></div>
+                                <div class="bg-white border border-outline-variant rounded-xl p-4 flex flex-col items-center justify-center text-center"><span class="text-xs font-label-caps text-outline mb-2">平均 METEOR</span><div class="text-4xl font-extrabold text-primary" id="batch-meteor">—</div></div>
+                            </div>
+                            <div id="batch-eval-progress" class="hidden bg-white border border-outline-variant rounded-xl p-3 mb-3"><div class="flex justify-between text-xs mb-1"><span id="batch-eval-msg">处理中...</span><span class="text-primary font-bold" id="batch-eval-pct">0%</span></div><div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden"><div id="batch-eval-bar" class="bg-primary h-full transition-all" style="width:0%"></div></div></div>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-outline-variant rounded-xl overflow-hidden">
+                        <div class="px-4 py-3 border-b border-outline-variant bg-surface-container-low font-semibold text-sm">评估详情</div>
+                        <div class="overflow-x-auto max-h-[300px] overflow-y-auto"><table class="w-full text-left text-xs"><thead class="bg-surface-container-low"><tr><th class="px-3 py-2">#</th><th class="px-3 py-2">原文</th><th class="px-3 py-2">模型翻译</th><th class="px-3 py-2">参考译文</th><th class="px-3 py-2 text-center">BLEU</th><th class="px-3 py-2 text-center">METEOR</th></tr></thead><tbody id="batch-eval-table-body" class="divide-y divide-outline-variant"><tr><td colspan="6" class="px-3 py-6 text-center text-outline text-sm">点击「开始自动评估」</td></tr></tbody></table></div>
+                    </div>
+                </div>
+                <!-- Single Eval -->
+                <div id="eval-single" class="hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter mb-4">
+                        <div class="bg-white border border-outline-variant rounded-xl p-4 space-y-3">
+                            <div><label class="block text-xs font-label-caps text-outline mb-1">原文</label><textarea id="eval-src" class="w-full bg-surface-container-low border-none rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary-container resize-none" rows="3" placeholder="输入待翻译的原文..."></textarea></div>
+                            <div class="flex gap-2"><select id="eval-single-lang" class="bg-white border border-outline-variant rounded-lg px-3 py-1.5 text-sm"><option value="zh-en">中→英</option><option value="en-zh">英→中</option></select></div>
+                            <button onclick="doSingleTranslate()" class="w-full bg-surface-container-high text-primary py-2 rounded-lg text-sm font-semibold hover:bg-outline-variant transition-all flex items-center justify-center gap-1"><span class="material-symbols-outlined text-sm">translate</span>先翻译</button>
+                            <div><label class="block text-xs font-label-caps text-outline mb-1">模型翻译结果</label><textarea id="eval-model-trans" class="w-full bg-blue-50 border-none rounded-lg p-3 text-sm resize-none" rows="3" placeholder="点击「先翻译」后自动填入..." readonly></textarea></div>
+                            <div><label class="block text-xs font-label-caps text-outline mb-1">参考译文（你填入正确翻译）</label><textarea id="eval-single-ref" class="w-full bg-surface-container-low border-none rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary-container resize-none" rows="3" placeholder="填入你认为的正确翻译..."></textarea></div>
+                            <button onclick="doSingleEval()" class="w-full bg-primary text-white py-2.5 rounded-xl font-semibold hover:shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2"><span class="material-symbols-outlined">calculate</span>计算 BLEU &amp; METEOR</button>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-white border border-outline-variant rounded-xl p-6 flex flex-col items-center justify-center text-center"><span class="text-xs font-label-caps text-outline mb-2">BLEU</span><div class="text-5xl font-extrabold text-primary" id="single-bleu">—</div></div>
+                            <div class="bg-white border border-outline-variant rounded-xl p-6 flex flex-col items-center justify-center text-center"><span class="text-xs font-label-caps text-outline mb-2">METEOR</span><div class="text-5xl font-extrabold text-primary" id="single-meteor">—</div></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Manual Eval -->
+                <div id="eval-manual" class="hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-4">
+                        <div class="lg:col-span-7 bg-white border border-outline-variant rounded-xl p-4 space-y-3">
+                            <div><label class="text-xs font-label-caps text-outline block mb-1">源文本</label><textarea id="man-src" class="w-full bg-surface-container-low border-none rounded-lg p-3 text-sm resize-none" rows="3" placeholder="源文本..."></textarea></div>
+                            <div><label class="text-xs font-label-caps text-outline block mb-1">翻译结果</label><textarea id="man-trans" class="w-full bg-surface-container-low border-none rounded-lg p-3 text-sm resize-none" rows="3" placeholder="翻译结果..."></textarea></div>
+                            <div><label class="text-xs font-label-caps text-outline block mb-1">参考译文（可选）</label><textarea id="man-ref" class="w-full bg-surface-container-low border-none rounded-lg p-3 text-sm resize-none" rows="2" placeholder="参考译文..."></textarea></div>
+                        </div>
+                        <div class="lg:col-span-5 bg-white border border-outline-variant rounded-xl p-4 flex flex-col">
+                            <h4 class="text-sm font-semibold mb-4">多维评分 (1-5分)</h4>
+                            <div class="space-y-4 flex-1"><div><div class="flex justify-between text-xs mb-1"><span>准确度</span><span class="text-primary font-mono" id="acc-val">4</span></div><input type="range" id="man-acc" class="w-full accent-primary" min="1" max="5" value="4" oninput="document.getElementById('acc-val').textContent=this.value"></div><div><div class="flex justify-between text-xs mb-1"><span>流畅度</span><span class="text-primary font-mono" id="flu-val">4</span></div><input type="range" id="man-flu" class="w-full accent-primary" min="1" max="5" value="4" oninput="document.getElementById('flu-val').textContent=this.value"></div><div><div class="flex justify-between text-xs mb-1"><span>充分性</span><span class="text-primary font-mono" id="ade-val">4</span></div><input type="range" id="man-ade" class="w-full accent-primary" min="1" max="5" value="4" oninput="document.getElementById('ade-val').textContent=this.value"></div></div>
+                            <!-- 错误类型 -->
+                            <div class="mb-2">
+                                <span class="text-xs font-label-caps text-outline block mb-1">错误类型（可多选）</span>
+                                <div class="grid grid-cols-2 gap-1">
+                                    <label class="flex items-center gap-1 text-xs cursor-pointer"><input type="checkbox" class="error-cat accent-primary" value="术语错误">术语错误</label>
+                                    <label class="flex items-center gap-1 text-xs cursor-pointer"><input type="checkbox" class="error-cat accent-primary" value="语法问题">语法问题</label>
+                                    <label class="flex items-center gap-1 text-xs cursor-pointer"><input type="checkbox" class="error-cat accent-primary" value="风格不当">风格不当</label>
+                                    <label class="flex items-center gap-1 text-xs cursor-pointer"><input type="checkbox" class="error-cat accent-primary" value="漏译">漏译</label>
+                                    <label class="flex items-center gap-1 text-xs cursor-pointer"><input type="checkbox" class="error-cat accent-primary" value="冗余">冗余</label>
+                                </div>
+                            </div>
+                            <div class="mb-2">
+                                <label class="text-xs font-label-caps text-outline block mb-1">建议译文（可选）</label>
+                                <textarea id="man-suggested" class="w-full bg-surface-container-low border-none rounded-lg p-2 text-sm resize-none" rows="2" placeholder="你认为的正确翻译..."></textarea>
+                            </div>
+                            <div class="mb-2">
+                                <label class="text-xs font-label-caps text-outline block mb-1">备注（可选）</label>
+                                <textarea id="man-notes" class="w-full bg-surface-container-low border-none rounded-lg p-2 text-sm resize-none" rows="2" placeholder="其他备注..."></textarea>
+                            </div>
+                            <button onclick="submitManualScore()" class="w-full bg-primary text-white py-2.5 rounded-xl font-semibold hover:shadow-lg active:scale-[0.98] transition-all mt-3">提交评分</button>
+                        </div>
+                    </div>
+                    <!-- Feedback Insights -->
+                    <div class="bg-white border border-outline-variant rounded-xl overflow-hidden mt-4">
+                        <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full px-4 py-3 flex items-center justify-between bg-surface-container-low hover:bg-surface-container-high transition-colors">
+                            <span class="font-semibold text-sm flex items-center gap-2"><span class="material-symbols-outlined text-primary">insights</span>反馈分析与提示优化建议</span>
+                            <span class="material-symbols-outlined text-outline">expand_more</span>
+                        </button>
+                        <div class="p-4 hidden" id="feedback-insights">
+                            <div id="feedback-insights-content" class="text-sm text-on-surface-variant">暂无反馈数据。提交含错误类别的评分后可见分析。</div>
+                        </div>
+                    </div>
+                    <!-- Manual Score History -->
+                    <div class="bg-white border border-outline-variant rounded-xl overflow-hidden">
+                        <div class="px-4 py-3 border-b border-outline-variant bg-surface-container-low flex justify-between items-center"><span class="font-semibold text-sm">人工评分历史</span><span class="text-xs text-outline" id="score-count">共 0 条</span></div>
+                        <div class="overflow-x-auto max-h-[200px] overflow-y-auto">
+                            <table class="w-full text-left text-xs"><thead class="bg-surface-container-low"><tr><th class="px-3 py-2">#</th><th class="px-3 py-2">准确度</th><th class="px-3 py-2">流畅度</th><th class="px-3 py-2">充分性</th><th class="px-3 py-2">总分</th><th class="px-3 py-2">时间</th></tr></thead>
+                            <tbody id="score-table-body" class="divide-y divide-outline-variant"><tr><td colspan="6" class="px-3 py-6 text-center text-outline text-sm">暂无评分记录</td></tr></tbody></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ TAB 5: 批量处理 ============ -->
+        <div class="tab-content" id="tab-batch">
+            <div class="max-w-6xl mx-auto space-y-4">
+                <h3 class="font-headline-md">批量翻译处理</h3>
+
+                <!-- 模式切换 -->
+                <div class="flex gap-1 p-1 bg-surface-container-low rounded-lg w-fit">
+                    <button class="flex-1 py-1.5 px-4 rounded-md text-sm font-semibold bg-white shadow-sm text-primary transition-all" id="btn-batch-mode-file" onclick="setBatchMode('file')">📁 文件批量</button>
+                    <button class="flex-1 py-1.5 px-4 rounded-md text-sm text-on-surface-variant transition-all" id="btn-batch-mode-long" onclick="setBatchMode('longtext')">📜 长文本分句</button>
+                </div>
+
+                <!-- ===== 文件批量模式 ===== -->
+                <div id="batch-mode-file">
+                    <!-- Upload -->
+                    <div class="bg-white border-2 border-dashed border-outline-variant rounded-xl p-10 text-center hover:border-primary transition-colors cursor-pointer" id="dropzone">
+                        <span class="material-symbols-outlined text-5xl text-primary mb-3">upload_file</span>
+                        <p class="font-semibold text-lg mb-1">拖拽文件至此处，或点击选择文件</p>
+                        <p class="text-sm text-on-surface-variant mb-3">支持 .txt / .pdf / .docx</p>
+                        <input type="file" id="batch-file-input" accept=".txt,.pdf,.docx" class="hidden" onchange="handleFileSelect(event)">
+                        <button onclick="document.getElementById('batch-file-input').click()" class="bg-surface border border-outline-variant px-6 py-2 rounded-lg text-sm font-semibold text-primary hover:bg-surface-container-low transition-all">选择文件</button>
+                        <p class="text-xs text-outline mt-3" id="batch-file-name">未选择文件</p>
+                    </div>
+                    <!-- Config -->
+                    <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
+                        <div class="bg-white border border-outline-variant rounded-xl p-3">
+                            <label class="block text-xs font-label-caps text-outline mb-1">语言对</label>
+                            <select id="batch-lang" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-2">
+                                <option value="zh-en">中 → 英</option><option value="en-zh">英 → 中</option><option value="zh-ja">中 → 日</option><option value="zh-ko">中 → 韩</option></select>
+                        </div>
+                        <div class="bg-white border border-outline-variant rounded-xl p-3">
+                            <label class="block text-xs font-label-caps text-outline mb-1">翻译策略</label>
+                            <select id="batch-strategy" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-2">
+                                <option value="academic">学术润色</option><option value="semantic">意译</option><option value="literal">直译</option></select>
+                        </div>
+                        <div class="bg-white border border-outline-variant rounded-xl p-3">
+                            <label class="block text-xs font-label-caps text-outline mb-1">后续润色</label>
+                            <select id="batch-polish" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-2">
+                                <option value="none">不润色</option><option value="light">轻度</option><option value="moderate">中度</option><option value="heavy">重度</option></select>
+                        </div>
+                        <div class="bg-white border border-outline-variant rounded-xl p-3">
+                            <label class="block text-xs font-label-caps text-outline mb-1">🔗 上下文关联</label>
+                            <select id="batch-ctx-window" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-2">
+                                <option value="0">不关联（逐段独立）</option><option value="1">前1段</option><option value="2">前2段</option><option value="3">前3段</option></select>
+                        </div>
+                        <button onclick="startBatch()" class="bg-primary text-white rounded-xl flex items-center justify-center gap-2 font-semibold hover:opacity-90 active:scale-[0.98] transition-all">
+                            <span class="material-symbols-outlined">bolt</span>开始批量翻译</button>
+                    </div>
+                </div>
+
+                <!-- ===== 长文本分句模式 ===== -->
+                <div id="batch-mode-longtext" class="hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+                        <!-- Input -->
+                        <div class="lg:col-span-7 bg-white border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+                            <div class="bg-surface-container-low px-4 py-2 border-b border-outline-variant flex justify-between">
+                                <span class="font-title-sm text-sm">长文本输入</span>
+                                <span class="text-xs text-outline font-label-caps" id="lt-char-count">字符数: 0</span>
+                            </div>
+                            <textarea id="lt-input" class="w-full h-64 p-4 text-body-lg resize-none border-none focus:ring-0 placeholder-outline" placeholder="粘贴或输入长文本（论文、合同、技术文档等）。系统将自动分句、保护代码/URL/Markdown等特殊格式、逐句翻译并关联上下文拼接..."></textarea>
+                        </div>
+                        <!-- Config -->
+                        <div class="lg:col-span-5 space-y-3">
+                            <div class="bg-white border border-outline-variant rounded-xl p-3">
+                                <label class="block text-xs font-label-caps text-outline mb-1">语言对</label>
+                                <select id="lt-lang" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-2">
+                                    <option value="zh-en">中 → 英</option><option value="en-zh">英 → 中</option><option value="zh-ja">中 → 日</option><option value="zh-ko">中 → 韩</option></select>
+                            </div>
+                            <div class="bg-white border border-outline-variant rounded-xl p-3">
+                                <label class="block text-xs font-label-caps text-outline mb-1">翻译策略</label>
+                                <select id="lt-strategy" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-2">
+                                    <option value="semantic">意译</option><option value="academic">学术润色</option><option value="literal">直译</option></select>
+                            </div>
+                            <div class="bg-white border border-outline-variant rounded-xl p-3">
+                                <label class="block text-xs font-label-caps text-outline mb-1">领域</label>
+                                <select id="lt-domain" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-2">
+                                    <option value="">不指定</option><option value="academic">学术论文</option><option value="business">商务</option><option value="technical">技术文档</option><option value="daily">日常对话</option><option value="law">法律</option><option value="medicine">医学</option><option value="cs">计算机科学</option></select>
+                            </div>
+                            <div class="bg-white border border-outline-variant rounded-xl p-3">
+                                <label class="flex items-center justify-between cursor-pointer">
+                                    <span class="text-sm font-semibold">🔒 保护特殊格式</span>
+                                    <input type="checkbox" id="lt-preserve-format" checked class="accent-primary w-4 h-4">
+                                </label>
+                                <p class="text-xs text-outline mt-1">自动保护代码块、URL、邮箱、HTML标签、数字/日期等，翻译后恢复</p>
+                            </div>
+                            <div class="bg-white border border-outline-variant rounded-xl p-3">
+                                <label class="flex items-center justify-between mb-2">
+                                    <span class="text-sm font-semibold">🔗 上下文关联</span>
+                                    <span class="text-xs text-outline" id="lt-ctx-val">前2句</span>
+                                </label>
+                                <input type="range" id="lt-ctx-window" class="w-full accent-primary" min="0" max="3" value="2" oninput="document.getElementById('lt-ctx-val').textContent = this.value==0 ? '不关联' : '前'+this.value+'句'">
+                            </div>
+                            <button onclick="startLongText(this)" class="w-full bg-primary text-white py-2.5 rounded-xl font-semibold hover:shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined">auto_awesome</span>开始分句翻译</button>
+                        </div>
+                    </div>
+                    <!-- Progress -->
+                    <div id="lt-progress" class="hidden mt-3 bg-white border border-outline-variant rounded-xl p-4">
+                        <div class="flex justify-between text-sm mb-2"><span id="lt-status-text">处理中...</span><span class="font-bold text-primary" id="lt-percent">0%</span></div>
+                        <div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden"><div class="bg-primary h-full transition-all" id="lt-bar" style="width:0%"></div></div>
+                    </div>
+                    <!-- Result -->
+                    <div id="lt-result-area" class="hidden mt-4 bg-white border border-outline-variant rounded-xl overflow-hidden">
+                        <div class="px-4 py-3 border-b border-outline-variant bg-surface-container-low flex justify-between">
+                            <span class="font-semibold text-sm">翻译结果（拼接后）</span>
+                            <div class="flex gap-2">
+                                <button onclick="copyLongTextResult()" class="text-primary text-sm font-semibold hover:underline flex items-center gap-1"><span class="material-symbols-outlined text-sm">content_copy</span>复制</button>
+                                <button onclick="downloadLongTextResult()" class="text-primary text-sm font-semibold hover:underline flex items-center gap-1"><span class="material-symbols-outlined text-sm">download</span>下载</button>
+                            </div>
+                        </div>
+                        <div id="lt-merged-result" class="p-4 text-body-lg whitespace-pre-wrap leading-relaxed"></div>
+                    </div>
+                    <!-- Sentence Details -->
+                    <div id="lt-details-card" class="hidden mt-3 bg-white border border-outline-variant rounded-xl overflow-hidden">
+                        <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full px-4 py-2.5 flex items-center justify-between bg-surface-container-low hover:bg-surface-container-high transition-colors rounded-xl">
+                            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-outline">list</span><span class="font-semibold text-sm">分句详情</span></div>
+                            <span class="material-symbols-outlined text-outline">expand_more</span>
+                        </button>
+                        <div class="hidden max-h-[400px] overflow-y-auto p-2 space-y-1" id="lt-details-body"></div>
+                    </div>
+                </div>
+
+                <!-- Shared Progress & Results (file batch) -->
+                <div id="batch-progress" class="hidden bg-white border border-outline-variant rounded-xl p-4">
+                    <div class="flex justify-between text-sm mb-2"><span id="batch-status-text">处理中...</span><span class="font-bold text-primary" id="batch-percent">0%</span></div>
+                    <div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden"><div class="bg-primary h-full transition-all" id="batch-bar" style="width:0%"></div></div>
+                </div>
+                <div class="bg-white border border-outline-variant rounded-xl overflow-hidden">
+                    <div class="px-4 py-3 border-b border-outline-variant bg-surface-container-low flex justify-between">
+                        <span class="font-semibold text-sm">翻译结果</span>
+                        <button onclick="downloadBatchResults()" class="text-primary text-sm font-semibold hover:underline flex items-center gap-1"><span class="material-symbols-outlined text-sm">download</span>下载 JSON</button>
+                    </div>
+                    <div class="overflow-x-auto max-h-[400px] overflow-y-auto">
+                        <table class="w-full text-left text-sm">
+                            <thead class="bg-surface-container-low"><tr><th class="px-3 py-2">#</th><th class="px-3 py-2">原文</th><th class="px-3 py-2">译文</th><th class="px-3 py-2">润色</th><th class="px-3 py-2 text-center">响应</th></tr></thead>
+                            <tbody id="batch-table-body" class="divide-y divide-outline-variant"><tr><td colspan="5" class="px-3 py-6 text-center text-outline text-sm">暂无数据，请上传文件并开始处理</td></tr></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ TAB 6: 对比实验 ============ -->
+        <div class="tab-content" id="tab-experiment">
+            <div class="max-w-6xl mx-auto space-y-4">
+                <h3 class="font-headline-md">对比实验</h3>
+                <!-- Sub-Tab Navigation -->
+                <div class="flex gap-1 p-1 bg-surface-container-low rounded-lg w-fit">
+                    <button class="flex-1 py-1.5 px-4 rounded-md text-sm font-semibold bg-white shadow-sm text-primary transition-all" id="btn-sub-exp1" onclick="setExpSubTab('exp1')">实验一：模型</button>
+                    <button class="flex-1 py-1.5 px-4 rounded-md text-sm text-on-surface-variant transition-all" id="btn-sub-exp2" onclick="setExpSubTab('exp2')">实验二：策略</button>
+                    <button class="flex-1 py-1.5 px-4 rounded-md text-sm text-on-surface-variant transition-all" id="btn-sub-multilang" onclick="setExpSubTab('multilang')">实验三：多语言</button>
+                    <button class="flex-1 py-1.5 px-4 rounded-md text-sm text-on-surface-variant transition-all" id="btn-sub-ablation" onclick="setExpSubTab('ablation')">实验四：消融-场景</button>
+                    <button class="flex-1 py-1.5 px-4 rounded-md text-sm text-on-surface-variant transition-all" id="btn-sub-ablation2" onclick="setExpSubTab('ablation2')">实验五：消融-术语</button>
+                </div>
+
+                <!-- ===== 实验一：模型 ===== -->
+                <div id="exp-sub-content-exp1" class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                    <div class="lg:col-span-4 space-y-3">
+                        <div class="bg-white border border-outline-variant rounded-xl p-4 shadow-sm">
+                            <label class="block text-xs font-label-caps text-outline mb-2">测试样本数</label>
+                            <input type="number" id="exp1-sample" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-3 mb-3" value="80" min="5" max="200">
+                            <label class="block text-xs font-label-caps text-outline mb-2">数据集</label>
+                            <select id="exp1-dataset" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-3 mb-3">
+                                <option value="default">默认语料库</option></select>
+                            <label class="block text-xs font-label-caps text-outline mb-2">翻译方向</label>
+                            <select id="exp1-lang" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-3 mb-3">
+                                <option value="zh-en">中 → 英</option><option value="en-zh">英 → 中</option><option value="zh-ja">中 → 日</option><option value="zh-ko">中 → 韩</option></select>
+                            <button onclick="runExp1()" id="btn-run-exp1" class="w-full bg-primary text-white py-2.5 rounded-xl font-semibold hover:shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined">play_arrow</span>运行实验一</button>
+                            <div id="exp1-progress" class="hidden mt-3 bg-white border border-outline-variant rounded-lg p-3">
+                                <div class="flex justify-between text-xs mb-1"><span id="exp1-progress-msg">准备中...</span><span class="font-bold text-primary" id="exp1-progress-pct">0%</span></div>
+                                <div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden"><div id="exp1-progress-bar" class="bg-primary h-full transition-all" style="width:0%"></div></div>
+                                <button onclick="stopExperiment()" class="mt-2 text-xs text-error font-semibold hover:underline flex items-center gap-1"><span class="material-symbols-outlined text-sm">stop_circle</span>停止实验</button>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-xl border border-primary/20 text-xs">
+                            <p class="font-bold mb-1">💡 实验一说明</p>
+                            <p>用相同策略（意译）对比三个模型的翻译效果。需依次切换模型各运行一次，结果自动汇总。</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-8 space-y-3">
+                        <div class="bg-white border border-outline-variant rounded-xl overflow-hidden">
+                            <div class="px-4 py-3 border-b border-outline-variant bg-surface-container-low font-semibold text-sm">实验一数据汇总</div>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left text-sm">
+                                    <thead class="bg-surface-container-low" id="exp1-table-head"><tr><th class="px-3 py-2">模型</th><th class="px-3 py-2 text-center">成功率</th><th class="px-3 py-2 text-center">BLEU</th><th class="px-3 py-2 text-center">METEOR</th><th class="px-3 py-2 text-center">响应(s)</th></tr></thead>
+                                    <tbody id="exp1-table-body" class="divide-y divide-outline-variant"><tr><td colspan="5" class="px-4 py-6 text-center text-outline text-sm">暂无实验数据，请运行实验</td></tr></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="bg-white border border-outline-variant rounded-xl p-3 flex items-center gap-3">
+                            <span class="text-xs font-label-caps text-outline">查看结果:</span>
+                            <select id="exp1-view-dataset" class="bg-surface-container-low border-none rounded-lg text-sm py-1.5 px-2" onchange="loadExp1DataForDataset(this.value)">
+                                <option value="default">默认语料库</option></select>
+                            <button onclick="refreshExp1View()" class="text-primary text-sm font-semibold hover:underline flex items-center gap-1"><span class="material-symbols-outlined text-sm">refresh</span>刷新</button>
+                        </div>
+                        <!-- Per-Domain Breakdown -->
+                        <div class="bg-white border border-outline-variant rounded-xl overflow-hidden" id="exp1-domain-card">
+                            <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full px-4 py-3 flex items-center justify-between bg-surface-container-low hover:bg-surface-container-high transition-colors">
+                                <span class="font-semibold text-sm flex items-center gap-2"><span class="material-symbols-outlined text-primary">donut_small</span>各场景独立评估 (Per-Domain)</span>
+                                <span class="material-symbols-outlined text-outline">expand_more</span>
+                            </button>
+                            <div class="overflow-x-auto max-h-[300px] overflow-y-auto" id="exp1-domain-table-container">
+                                <table class="w-full text-left text-xs">
+                                    <thead class="bg-surface-container-low" id="exp1-domain-table-head"></thead>
+                                    <tbody id="exp1-domain-table-body" class="divide-y divide-outline-variant">
+                                        <tr><td colspan="5" class="px-3 py-6 text-center text-outline text-sm">暂无数据，请先运行实验</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button onclick="generateExp1Charts()" class="bg-white border border-outline-variant rounded-xl px-4 py-2.5 text-sm font-semibold hover:bg-surface-container-low transition-all flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined">bar_chart</span>生成可视化图表</button>
+                            <button onclick="generateExpReport()" class="bg-white border border-outline-variant rounded-xl px-4 py-2.5 text-sm font-semibold hover:bg-surface-container-low transition-all flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined">description</span>生成实验报告</button>
+                        </div>
+                        <div id="exp1-chart-area" class="hidden bg-white border border-outline-variant rounded-xl overflow-hidden"></div>
+                    </div>
+                </div>
+
+                <!-- ===== 实验二：策略 ===== -->
+                <div id="exp-sub-content-exp2" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                    <div class="lg:col-span-4 space-y-3">
+                        <div class="bg-white border border-outline-variant rounded-xl p-4 shadow-sm">
+                            <label class="block text-xs font-label-caps text-outline mb-2">测试样本数</label>
+                            <input type="number" id="exp2-sample" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-3 mb-3" value="80" min="5" max="200">
+                            <label class="block text-xs font-label-caps text-outline mb-2">数据集</label>
+                            <select id="exp2-dataset" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-3 mb-3">
+                                <option value="default">默认语料库</option></select>
+                            <label class="block text-xs font-label-caps text-outline mb-2">翻译方向</label>
+                            <select id="exp2-lang" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-3 mb-3">
+                                <option value="zh-en">中 → 英</option><option value="en-zh">英 → 中</option><option value="zh-ja">中 → 日</option><option value="zh-ko">中 → 韩</option></select>
+                            <label class="block text-xs font-label-caps text-outline mb-1">选择策略（可多选）</label>
+                            <label class="flex items-center gap-2 py-1 cursor-pointer"><input type="checkbox" class="exp2-strategy-cb accent-primary" value="literal" checked/><span class="text-sm">直译</span></label>
+                            <label class="flex items-center gap-2 py-1 cursor-pointer"><input type="checkbox" class="exp2-strategy-cb accent-primary" value="semantic" checked/><span class="text-sm">意译</span></label>
+                            <label class="flex items-center gap-2 py-1 cursor-pointer"><input type="checkbox" class="exp2-strategy-cb accent-primary" value="academic" checked/><span class="text-sm">学术润色翻译</span></label>
+                            <button onclick="runExp2()" id="btn-run-exp2" class="w-full bg-primary text-white py-2.5 rounded-xl font-semibold hover:shadow-lg active:scale-[0.98] transition-all mt-4 flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined">play_arrow</span>运行实验二</button>
+                            <div id="exp2-progress" class="hidden mt-3 bg-white border border-outline-variant rounded-lg p-3">
+                                <div class="flex justify-between text-xs mb-1"><span id="exp2-progress-msg">准备中...</span><span class="font-bold text-primary" id="exp2-progress-pct">0%</span></div>
+                                <div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden"><div id="exp2-progress-bar" class="bg-primary h-full transition-all" style="width:0%"></div></div>
+                                <button onclick="stopExperiment()" class="mt-2 text-xs text-error font-semibold hover:underline flex items-center gap-1"><span class="material-symbols-outlined text-sm">stop_circle</span>停止实验</button>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-xl border border-primary/20 text-xs">
+                            <p class="font-bold mb-1">💡 实验二说明</p>
+                            <p id="exp2-desc">勾选要对比的策略，用当前模型每种策略独立跑完所有样本。</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-8 space-y-3">
+                        <div class="bg-white border border-outline-variant rounded-xl overflow-hidden">
+                            <div class="px-4 py-3 border-b border-outline-variant bg-surface-container-low font-semibold text-sm">实验二数据汇总</div>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left text-sm">
+                                    <thead class="bg-surface-container-low" id="exp2-table-head"><tr><th class="px-3 py-2">策略</th><th class="px-3 py-2 text-center">成功率</th><th class="px-3 py-2 text-center">BLEU</th><th class="px-3 py-2 text-center">METEOR</th><th class="px-3 py-2 text-center">响应(s)</th></tr></thead>
+                                    <tbody id="exp2-table-body" class="divide-y divide-outline-variant"><tr><td colspan="5" class="px-4 py-6 text-center text-outline text-sm">暂无实验数据，请运行实验</td></tr></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="bg-white border border-outline-variant rounded-xl p-3 flex items-center gap-3">
+                            <span class="text-xs font-label-caps text-outline">查看结果:</span>
+                            <select id="exp2-view-dataset" class="bg-surface-container-low border-none rounded-lg text-sm py-1.5 px-2" onchange="loadExp2DataForDataset(this.value)">
+                                <option value="default">默认语料库</option></select>
+                            <button onclick="refreshExp2View()" class="text-primary text-sm font-semibold hover:underline flex items-center gap-1"><span class="material-symbols-outlined text-sm">refresh</span>刷新</button>
+                        </div>
+                        <!-- Per-Domain Breakdown -->
+                        <div class="bg-white border border-outline-variant rounded-xl overflow-hidden" id="exp2-domain-card">
+                            <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full px-4 py-3 flex items-center justify-between bg-surface-container-low hover:bg-surface-container-high transition-colors">
+                                <span class="font-semibold text-sm flex items-center gap-2"><span class="material-symbols-outlined text-primary">donut_small</span>各场景独立评估 (Per-Domain)</span>
+                                <span class="material-symbols-outlined text-outline">expand_more</span>
+                            </button>
+                            <div class="overflow-x-auto max-h-[300px] overflow-y-auto" id="exp2-domain-table-container">
+                                <table class="w-full text-left text-xs">
+                                    <thead class="bg-surface-container-low" id="exp2-domain-table-head"></thead>
+                                    <tbody id="exp2-domain-table-body" class="divide-y divide-outline-variant">
+                                        <tr><td colspan="5" class="px-3 py-6 text-center text-outline text-sm">暂无数据，请先运行实验</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button onclick="generateExp2Charts()" class="bg-white border border-outline-variant rounded-xl px-4 py-2.5 text-sm font-semibold hover:bg-surface-container-low transition-all flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined">bar_chart</span>生成可视化图表</button>
+                            <button onclick="generateExpReport()" class="bg-white border border-outline-variant rounded-xl px-4 py-2.5 text-sm font-semibold hover:bg-surface-container-low transition-all flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined">description</span>生成实验报告</button>
+                        </div>
+                        <div id="exp2-chart-area" class="hidden bg-white border border-outline-variant rounded-xl overflow-hidden"></div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- ===== 实验三：多语言对对比 ===== -->
+                <div id="exp-sub-content-multilang" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                    <div class="lg:col-span-4 space-y-3">
+                        <div class="bg-white border border-outline-variant rounded-xl p-4 shadow-sm">
+                            <label class="block text-xs font-label-caps text-outline mb-2">测试样本数</label>
+                            <input type="number" id="ml-sample" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-3 mb-3" value="80" min="5" max="200">
+                            <label class="block text-xs font-label-caps text-outline mb-2">数据集</label>
+                            <select id="ml-dataset" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-3 mb-3">
+                                <option value="default">默认语料库</option></select>
+                            <button onclick="runMultilangExp()" id="btn-run-ml" class="w-full bg-primary text-white py-2.5 rounded-xl font-semibold hover:shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined">play_arrow</span>运行多语言对对比</button>
+                            <div id="ml-progress" class="hidden mt-3 bg-white border border-outline-variant rounded-lg p-3">
+                                <div class="flex justify-between text-xs mb-1"><span id="ml-progress-msg">准备中...</span><span class="font-bold text-primary" id="ml-progress-pct">0%</span></div>
+                                <div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden"><div id="ml-progress-bar" class="bg-primary h-full transition-all" style="width:0%"></div></div>
+                                <button onclick="stopExperiment()" class="mt-2 text-xs text-error font-semibold hover:underline flex items-center gap-1"><span class="material-symbols-outlined text-sm">stop_circle</span>停止实验</button>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-xl border border-primary/20 text-xs">
+                            <p class="font-bold mb-1">💡 实验三说明</p>
+                            <p>在 zh-en / en-zh / zh-ja / zh-ko 四个语言对上运行当前模型，生成跨语言性能对比图表。</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-8 space-y-3">
+                        <!-- Summary Table -->
+                        <div class="bg-white border border-outline-variant rounded-xl overflow-hidden">
+                            <div class="px-4 py-3 border-b border-outline-variant bg-surface-container-low font-semibold text-sm">各语言对性能指标</div>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left text-sm">
+                                    <thead class="bg-surface-container-low"><tr><th class="px-3 py-2">模型</th><th class="px-3 py-2">语言对</th><th class="px-3 py-2 text-center">成功率</th><th class="px-3 py-2 text-center">BLEU</th><th class="px-3 py-2 text-center">METEOR</th><th class="px-3 py-2 text-center">响应(s)</th></tr></thead>
+                                    <tbody id="ml-table-body" class="divide-y divide-outline-variant"><tr><td colspan="6" class="px-4 py-6 text-center text-outline text-sm">暂无数据，请运行实验</td></tr></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- Dataset View Switcher -->
+                        <div class="bg-white border border-outline-variant rounded-xl p-3 flex items-center gap-3">
+                            <span class="text-xs font-label-caps text-outline">查看结果:</span>
+                            <select id="ml-view-dataset" class="bg-surface-container-low border-none rounded-lg text-sm py-1.5 px-2" onchange="loadMLDataForDataset(this.value)">
+                                <option value="default">默认语料库</option></select>
+                            <button onclick="refreshMLView()" class="text-primary text-sm font-semibold hover:underline flex items-center gap-1"><span class="material-symbols-outlined text-sm">refresh</span>刷新</button>
+                        </div>
+                        <!-- Chart & Report buttons -->
+                        <div class="grid grid-cols-2 gap-3">
+                            <button onclick="generateMLCharts()" class="bg-white border border-outline-variant rounded-xl px-4 py-2.5 text-sm font-semibold hover:bg-surface-container-low transition-all flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined">bar_chart</span>生成可视化图表</button>
+                            <button onclick="generateMLReport()" class="bg-white border border-outline-variant rounded-xl px-4 py-2.5 text-sm font-semibold hover:bg-surface-container-low transition-all flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined">description</span>生成实验报告</button>
+                        </div>
+                        <div id="ml-chart-area" class="hidden bg-white border border-outline-variant rounded-xl overflow-hidden"></div>
+                    </div>
+                </div>
+
+                <!-- ===== 实验四：消融实验一 — 场景识别 ===== -->
+                <div id="exp-sub-content-ablation" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                    <div class="lg:col-span-4 space-y-3">
+                        <div class="bg-white border border-outline-variant rounded-xl p-4 shadow-sm">
+                            <label class="block text-xs font-label-caps text-outline mb-2">测试样本数</label>
+                            <input type="number" id="abl1-sample" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-3 mb-3" value="80" min="5" max="200">
+                            <label class="block text-xs font-label-caps text-outline mb-2">语料库</label>
+                            <div class="bg-surface-container-low rounded-lg text-sm py-2 px-3 mb-3 text-xs text-on-surface-variant">默认语料库（全部七领域，307条）</div>
+                            <label class="block text-xs font-label-caps text-outline mb-2">翻译方向</label>
+                            <select id="abl1-lang" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-3 mb-3">
+                                <option value="zh-en">中 → 英</option><option value="en-zh">英 → 中</option><option value="zh-ja">中 → 日</option><option value="zh-ko">中 → 韩</option></select>
+                            <button onclick="runAbl1Exp()" id="btn-run-abl1" class="w-full bg-primary text-white py-2.5 rounded-xl font-semibold hover:shadow-lg active:scale-[0.98] transition-all mt-2 flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined">play_arrow</span>运行消融实验一</button>
+                            <div id="abl1-progress" class="hidden mt-3 bg-white border border-outline-variant rounded-lg p-3">
+                                <div class="flex justify-between text-xs mb-1"><span id="abl1-progress-msg">准备中...</span><span class="font-bold text-primary" id="abl1-progress-pct">0%</span></div>
+                                <div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden"><div id="abl1-progress-bar" class="bg-primary h-full transition-all" style="width:0%"></div></div>
+                                <button onclick="stopExperiment()" class="mt-2 text-xs text-error font-semibold hover:underline flex items-center gap-1"><span class="material-symbols-outlined text-sm">stop_circle</span>停止实验</button>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-xl border border-primary/20 text-xs">
+                            <p class="font-bold mb-1">💡 消融实验一</p>
+                            <p>对比<b>场景自动识别+领域提示词注入</b>对翻译质量的影响。抽取<b>全部七个领域</b>（学术/商务/技术/日常/法律/医学/计算机）。第一轮：自动识别场景→注入领域提示词。第二轮：不识别场景，纯翻译。</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-8 space-y-3">
+                        <div id="abl1-result-area" class="bg-white border border-outline-variant rounded-xl overflow-hidden">
+                            <div class="px-4 py-3 border-b border-outline-variant bg-surface-container-low font-semibold text-sm">消融实验一：场景识别+领域提示 ON vs OFF</div>
+                            <div class="p-6 text-center text-outline text-sm">暂无数据，请运行实验</div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <button onclick="generateAbl1Charts()" class="bg-white border border-outline-variant rounded-xl px-4 py-2.5 text-sm font-semibold hover:bg-surface-container-low transition-all flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined">bar_chart</span>生成可视化图表</button>
+                            <button onclick="generateAbl1Report()" class="bg-white border border-outline-variant rounded-xl px-4 py-2.5 text-sm font-semibold hover:bg-surface-container-low transition-all flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined">description</span>生成实验报告</button>
+                        </div>
+                        <div id="abl1-chart-area" class="hidden bg-white border border-outline-variant rounded-xl overflow-hidden"></div>
+                    </div>
+                </div>
+
+                <!-- ===== 实验五：消融实验二 — 术语注入 ===== -->
+                <div id="exp-sub-content-ablation2" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                    <div class="lg:col-span-4 space-y-3">
+                        <div class="bg-white border border-outline-variant rounded-xl p-4 shadow-sm">
+                            <label class="block text-xs font-label-caps text-outline mb-2">测试样本数</label>
+                            <input type="number" id="abl2-sample" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-3 mb-3" value="80" min="5" max="200">
+                            <label class="block text-xs font-label-caps text-outline mb-2">语料库</label>
+                            <div class="bg-surface-container-low rounded-lg text-sm py-2 px-3 mb-3 text-xs text-on-surface-variant">消融语料库（法律+医学+计算机，150条）</div>
+                            <label class="block text-xs font-label-caps text-outline mb-2">翻译方向</label>
+                            <select id="abl2-lang" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-3 mb-3">
+                                <option value="zh-en">中 → 英</option></select>
+                            <button onclick="runAbl2Exp()" id="btn-run-abl2" class="w-full bg-primary text-white py-2.5 rounded-xl font-semibold hover:shadow-lg active:scale-[0.98] transition-all mt-2 flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined">play_arrow</span>运行消融实验二</button>
+                            <div id="abl2-progress" class="hidden mt-3 bg-white border border-outline-variant rounded-lg p-3">
+                                <div class="flex justify-between text-xs mb-1"><span id="abl2-progress-msg">准备中...</span><span class="font-bold text-primary" id="abl2-progress-pct">0%</span></div>
+                                <div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden"><div id="abl2-progress-bar" class="bg-primary h-full transition-all" style="width:0%"></div></div>
+                                <button onclick="stopExperiment()" class="mt-2 text-xs text-error font-semibold hover:underline flex items-center gap-1"><span class="material-symbols-outlined text-sm">stop_circle</span>停止实验</button>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-xl border border-primary/20 text-xs">
+                            <p class="font-bold mb-1">💡 消融实验二</p>
+                            <p>仅抽取<b>法律/医学/计算机</b>三个专业领域。两轮都做场景识别+领域提示词，唯一变量是<b>术语词典注入</b>。第一轮：注入专业术语词典。第二轮：不注入。验证术语注入对 BLEU 的增益。</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-8 space-y-3">
+                        <div id="abl2-result-area" class="bg-white border border-outline-variant rounded-xl overflow-hidden">
+                            <div class="px-4 py-3 border-b border-outline-variant bg-surface-container-low font-semibold text-sm">消融实验二：术语词典注入 ON vs OFF（仅法律/医学/计算机）</div>
+                            <div class="p-6 text-center text-outline text-sm">暂无数据，请运行实验</div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <button onclick="generateAbl2Charts()" class="bg-white border border-outline-variant rounded-xl px-4 py-2.5 text-sm font-semibold hover:bg-surface-container-low transition-all flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined">bar_chart</span>生成可视化图表</button>
+                            <button onclick="generateAbl2Report()" class="bg-white border border-outline-variant rounded-xl px-4 py-2.5 text-sm font-semibold hover:bg-surface-container-low transition-all flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined">description</span>生成实验报告</button>
+                        </div>
+                        <div id="abl2-chart-area" class="hidden bg-white border border-outline-variant rounded-xl overflow-hidden"></div>
+                    </div>
+                </div>
+        </div>
+
+        <!-- ============ TAB 8: 语料库管理 ============ -->
+        <div class="tab-content" id="tab-dataset">
+            <div class="max-w-6xl mx-auto space-y-4">
+                <h3 class="font-headline-md">语料库管理</h3>
+                <p class="text-sm text-on-surface-variant">管理实验数据集，查看语料统计，切换活跃数据集</p>
+
+                <!-- Dataset List -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4" id="dataset-cards">
+                    <div class="col-span-3 text-outline text-sm text-center py-8">加载中...</div>
+                </div>
+
+                <!-- Selected Dataset Detail -->
+                <div class="bg-white border border-outline-variant rounded-xl overflow-hidden" id="dataset-detail" style="display:none;">
+                    <div class="px-4 py-3 border-b border-outline-variant bg-surface-container-low flex justify-between items-center">
+                        <span class="font-semibold text-sm" id="dataset-detail-title">数据集详情</span>
+                        <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold" id="dataset-active-badge" style="display:none;">当前活跃</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4" id="dataset-stats-grid"></div>
+                        <h4 class="text-sm font-semibold mb-2">语料预览（前5条）</h4>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-xs">
+                                <thead class="bg-surface-container-low"><tr><th class="px-3 py-2">#</th><th class="px-3 py-2">中文</th><th class="px-3 py-2">英文</th><th class="px-3 py-2">领域</th></tr></thead>
+                                <tbody id="dataset-preview-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ TAB 7: 导出 ============ -->
+        <div class="tab-content" id="tab-export">
+            <div class="max-w-6xl mx-auto space-y-4">
+                <h3 class="font-headline-md">结果导出</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                    <!-- Selection -->
+                    <div class="lg:col-span-8 bg-white border border-outline-variant rounded-xl p-5">
+                        <h4 class="font-semibold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary">fact_check</span>选择导出内容</h4>
+                        <div class="grid grid-cols-2 gap-3">
+                            <label class="flex items-start gap-3 p-3 border border-outline-variant rounded-lg hover:border-primary cursor-pointer transition-colors">
+                                <input type="checkbox" id="exp-trans" class="mt-0.5 accent-primary"><div><p class="font-semibold text-sm">翻译历史</p><p class="text-xs text-on-surface-variant">原文与译文对照数据</p></div></label>
+                            <label class="flex items-start gap-3 p-3 border border-outline-variant rounded-lg hover:border-primary cursor-pointer transition-colors">
+                                <input type="checkbox" id="exp-polish" class="mt-0.5 accent-primary"><div><p class="font-semibold text-sm">润色记录</p><p class="text-xs text-on-surface-variant">润色前后对比</p></div></label>
+                            <label class="flex items-start gap-3 p-3 border border-outline-variant rounded-lg hover:border-primary cursor-pointer transition-colors">
+                                <input type="checkbox" id="exp-convert" class="mt-0.5 accent-primary"><div><p class="font-semibold text-sm">口语/书面语转换记录</p><p class="text-xs text-on-surface-variant">转换前后对比</p></div></label>
+                            <label class="flex items-start gap-3 p-3 border border-outline-variant rounded-lg hover:border-primary cursor-pointer transition-colors">
+                                <input type="checkbox" id="exp-eval" class="mt-0.5 accent-primary"><div><p class="font-semibold text-sm">评估结果</p><p class="text-xs text-on-surface-variant">BLEU/METEOR 指标</p></div></label>
+                            <label class="flex items-start gap-3 p-3 border border-outline-variant rounded-lg hover:border-primary cursor-pointer transition-colors">
+                                <input type="checkbox" id="exp-batch" class="mt-0.5 accent-primary"><div><p class="font-semibold text-sm">批量处理结果</p><p class="text-xs text-on-surface-variant">批量翻译数据</p></div></label>
+                            <label class="flex items-start gap-3 p-3 border border-outline-variant rounded-lg hover:border-primary cursor-pointer transition-colors">
+                                <input type="checkbox" id="exp-exp1" class="mt-0.5 accent-primary"><div><p class="font-semibold text-sm">实验一数据</p><p class="text-xs text-on-surface-variant">模型对比结果</p></div></label>
+                            <label class="flex items-start gap-3 p-3 border border-outline-variant rounded-lg hover:border-primary cursor-pointer transition-colors">
+                                <input type="checkbox" id="exp-exp2" class="mt-0.5 accent-primary"><div><p class="font-semibold text-sm">实验二数据</p><p class="text-xs text-on-surface-variant">策略对比结果</p></div></label>
+                            <label class="flex items-start gap-3 p-3 border border-outline-variant rounded-lg hover:border-primary cursor-pointer transition-colors">
+                                <input type="checkbox" id="exp-exp3" class="mt-0.5 accent-primary"><div><p class="font-semibold text-sm">实验三数据</p><p class="text-xs text-on-surface-variant">多语言对比结果</p></div></label>
+                            <label class="flex items-start gap-3 p-3 border border-outline-variant rounded-lg hover:border-primary cursor-pointer transition-colors">
+                                <input type="checkbox" id="exp-exp4" class="mt-0.5 accent-primary"><div><p class="font-semibold text-sm">实验四数据</p><p class="text-xs text-on-surface-variant">消融一（场景识别）</p></div></label>
+                            <label class="flex items-start gap-3 p-3 border border-outline-variant rounded-lg hover:border-primary cursor-pointer transition-colors">
+                                <input type="checkbox" id="exp-exp5" class="mt-0.5 accent-primary"><div><p class="font-semibold text-sm">实验五数据</p><p class="text-xs text-on-surface-variant">消融二（术语注入）</p></div></label>
+                        </div>
+                    </div>
+                    <!-- Format & Action -->
+                    <div class="lg:col-span-4 bg-white border border-outline-variant rounded-xl p-5 flex flex-col">
+                        <h4 class="font-semibold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary">settings_applications</span>导出设置</h4>
+                        <label class="block text-xs font-label-caps text-outline mb-2">输出格式</label>
+                        <select id="export-format" class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2.5 px-3 mb-3">
+                            <option value="json">JSON (.json)</option><option value="markdown">Markdown (.md)</option><option value="txt">纯文本 (.txt)</option></select>
+                        <label class="block text-xs font-label-caps text-outline mb-2">字符编码</label>
+                        <select class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2.5 px-3 mb-4">
+                            <option>UTF-8（标准）</option></select>
+                        <button onclick="doExport()" class="w-full bg-primary text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:shadow-lg active:scale-[0.98] transition-all mt-auto" id="exportBtn">
+                            <span class="material-symbols-outlined">download</span>导出资产</button>
+                    </div>
+                </div>
+                <!-- History -->
+                <div class="bg-white border border-outline-variant rounded-xl overflow-hidden">
+                    <div class="px-4 py-3 border-b border-outline-variant bg-surface-container-low font-semibold text-sm">导出历史</div>
+                    <div class="overflow-x-auto max-h-[200px] overflow-y-auto">
+                        <table class="w-full text-left text-sm">
+                            <thead class="bg-surface-container-low"><tr><th class="px-4 py-2">文件名</th><th class="px-4 py-2">格式</th><th class="px-4 py-2">时间</th><th class="px-4 py-2 text-right">操作</th></tr></thead>
+                            <tbody id="export-history-body" class="divide-y divide-outline-variant"><tr><td colspan="4" class="px-4 py-6 text-center text-outline text-sm">暂无导出记录</td></tr></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- end scrollable content -->
+</main>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script>
+// ======== Global State ========
+const API_BASE = window.location.origin; // Same origin — FastAPI serves both HTML and API
+let translationHistory = [];
+let polishHistory = [];
+let convertHistory = [];
+let evaluationResults = [];
+let manualScores = [];
+let batchResults = [];
+let experiment1Data = null;
+let experiment2Data = null;
+let multilangData = null;
+let abl1Data = null;
+let abl2Data = null;
+let currentTab = "tab-translate";
+let convDir = "s2w";
+let evalMode = "auto";
+let expSubTab = "exp1";
+let _experimentRunning = false;
+
+// ======== History persistence helpers ========
+function saveHistoryToServer(type, entry) {
+    fetch(`${API_BASE}/api/history/${type}`, {
+        method: 'POST', headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(entry)
+    }).catch(()=>{});
+}
+function loadHistoryFromServer(type, setterFn) {
+    fetch(`${API_BASE}/api/history/${type}`).then(r => r.json()).then(d => {
+        if (d.success) { setterFn(d.data); }
+    }).catch(()=>{});
+}
+
+// ======== Sidebar Navigation ========
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+        currentTab = link.dataset.tab;
+        document.getElementById(currentTab).classList.add('active');
+        const titles = {
+            'tab-translate': '多语言翻译', 'tab-polish': '学术润色', 'tab-convert': '口语/书面语转换',
+            'tab-evaluate': '翻译质量评估', 'tab-batch': '批量处理', 'tab-experiment': '对比实验',
+            'tab-dataset': '语料库管理', 'tab-export': '结果导出'
+        };
+        document.getElementById('page-title').textContent = titles[currentTab] || '';
+    });
+});
+
+// ======== Model Management ========
+async function checkStatus() {
+    try {
+        const resp = await fetch(`${API_BASE}/api/status`);
+        if (resp.ok) {
+            const data = await resp.json();
+            if (data.running) {
+                document.getElementById('status-dot').innerHTML = '<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>';
+                document.getElementById('status-text').textContent = '🟢 运行中';
+                document.getElementById('sidebar-model-name').textContent = data.current_model_name || '已连接';
+                document.getElementById('api-status-badge').textContent = '🟢 API 在线';
+                document.getElementById('api-status-badge').className = 'px-2.5 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700';
+                return true;
+            }
+        }
+    } catch(e) {}
+    document.getElementById('status-dot').innerHTML = '<span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>';
+    document.getElementById('status-text').textContent = '🔴 未启动';
+    document.getElementById('sidebar-model-name').textContent = '模型未启动';
+    document.getElementById('api-status-badge').textContent = '⚫ API 离线';
+    document.getElementById('api-status-badge').className = 'px-2.5 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-700';
+    return false;
+}
+
+async function startModel(btn) {
+    btn.disabled = true;
+    btn.textContent = '切换中...';
+    document.getElementById('status-text').textContent = '🟡 切换中...';
+    try {
+        const model = document.getElementById('model-select').value;
+        const resp = await fetch(`${API_BASE}/api/model/start`, {
+            method: 'POST', headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({model: model})
+        });
+        const data = await resp.json();
+        if (data.success) {
+            if (data.background) {
+                // Background task — poll until done
+                btn.textContent = '加载中...';
+                let pollCount = 0;
+                const poll = setInterval(async () => {
+                    pollCount++;
+                    try {
+                        const sr = await fetch(`${API_BASE}/api/model/switch-status`);
+                        const sd = await sr.json();
+                        document.getElementById('status-text').textContent = '🟡 ' + sd.message;
+                        if (!sd.switching || pollCount > 60) {
+                            clearInterval(poll);
+                            await checkStatus();
+                            btn.disabled = false;
+                            btn.textContent = '启动/切换';
+                        }
+                    } catch(e) { clearInterval(poll); btn.disabled = false; btn.textContent = '启动/切换'; }
+                }, 3000);
+            } else {
+                alert(data.message);
+                btn.disabled = false;
+                btn.textContent = '启动/切换';
+                setTimeout(checkStatus, 3000);
+            }
+        } else { alert(data.message); btn.disabled = false; btn.textContent = '启动/切换'; }
+    } catch(e) { alert('请求失败: ' + e.message); btn.disabled = false; btn.textContent = '启动/切换'; }
+}
+
+async function stopModel() {
+    try {
+        await fetch(`${API_BASE}/api/model/stop`, {method:'POST'});
+        alert('已停止');
+    } catch(e) {}
+    setTimeout(checkStatus, 2000);
+}
+
+async function refreshStatus() { await checkStatus(); }
+
+// ======== Translation ========
+document.getElementById('trans-input').addEventListener('input', function(){
+    document.getElementById('char-count-trans').textContent = '字符数: ' + this.value.length;
+});
+
+async function doTranslate() {
+    const text = document.getElementById('trans-input').value.trim();
+    if (!text) { alert('请输入要翻译的文本'); return; }
+    if (!await checkStatus()) { alert('请先启动 vLLM 服务'); return; }
+
+    const langPair = document.getElementById('trans-lang').value;
+    const [source, target] = langPair.split('-');
+    const strategy = document.querySelector('input[name="trans-strategy"]:checked')?.value || 'academic';
+    const domain = document.getElementById('trans-domain')?.value || 'auto';
+    const temperature = parseFloat(document.getElementById('trans-temp').value);
+    const max_tokens = parseInt(document.getElementById('trans-max-tokens').value);
+
+    const resultDiv = document.getElementById('trans-result');
+    resultDiv.innerHTML = '<span class="material-symbols-outlined animate-spin align-middle mr-2">sync</span>翻译中...';
+    resultDiv.classList.add('italic','text-outline');
+
+    try {
+        const resp = await fetch(`${API_BASE}/api/translate`, {
+            method: 'POST', headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({text, source_lang:source, target_lang:target, strategy, domain, temperature, max_tokens})
+        });
+        const data = await resp.json();
+        if (data.success) {
+            resultDiv.textContent = data.translated_text;
+            resultDiv.classList.remove('italic','text-outline');
+            const modelName = await fetch(`${API_BASE}/api/status`).then(r=>r.json()).then(d=>d.current_model_name||'未知').catch(()=>'未知');
+            const entry = {timestamp: new Date().toISOString(), original:text, translated:data.translated_text, source, target, strategy, model: modelName};
+            translationHistory.push(entry);
+            saveHistoryToServer('translation', entry);
+            renderTransHistory();
+        } else {
+            resultDiv.textContent = '翻译失败: ' + (data.error||'未知错误');
+        }
+    } catch(e) { resultDiv.textContent = '网络错误: ' + e.message; }
+}
+
+function renderTransHistory() {
+    const container = document.getElementById('trans-history');
+    container.innerHTML = translationHistory.slice(-10).reverse().map(h =>
+        `<div class="p-2 hover:bg-surface-container-low rounded-lg cursor-pointer border-b border-surface-variant last:border-0">
+            <p class="text-xs font-semibold truncate">${h.original.substring(0, 60)}...</p>
+            <p class="text-xs text-primary truncate">${h.translated.substring(0, 60)}...</p>
+            <p class="text-[10px] text-outline mt-0.5">${h.timestamp.substring(0,19)} · ${h.model||'未知模型'} · ${h.source}→${h.target}</p>
+        </div>`).join('');
+}
+
+function copyResult(id) {
+    const text = document.getElementById(id).textContent;
+    navigator.clipboard.writeText(text).then(() => {});
+}
+
+// ======== Polish ========
+document.getElementById('polish-input').addEventListener('input', function(){
+    document.getElementById('polish-char-count').textContent = '字数: ' + this.value.length;
+});
+
+async function doPolish() {
+    const text = document.getElementById('polish-input').value.trim();
+    if (!text) { alert('请输入要润色的文本'); return; }
+    if (!await checkStatus()) { alert('请先启动 vLLM 服务'); return; }
+
+    const level = document.getElementById('polish-level').value;
+    const lang = document.getElementById('polish-lang').value;
+    document.getElementById('polish-original').textContent = text;
+    document.getElementById('polish-original').classList.remove('italic','text-outline');
+    const resultDiv = document.getElementById('polish-result');
+    resultDiv.innerHTML = '<span class="material-symbols-outlined animate-spin mr-2">sync</span>润色中...';
+
+    try {
+        const resp = await fetch(`${API_BASE}/api/polish`, {
+            method: 'POST', headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({text, level, target_lang:lang})
+        });
+        const data = await resp.json();
+        if (data.success) {
+            resultDiv.textContent = data.polished_text;
+            resultDiv.classList.remove('italic','text-outline');
+            const pEntry = {timestamp: new Date().toISOString(), original:text, polished:data.polished_text, level, lang};
+            polishHistory.push(pEntry);
+            saveHistoryToServer('polish', pEntry);
+            renderPolishHistory();
+        } else {
+            resultDiv.textContent = '润色失败: ' + (data.error||'未知错误');
+        }
+    } catch(e) { resultDiv.textContent = '错误: ' + e.message; }
+}
+
+function renderPolishHistory() {
+    const container = document.getElementById('polish-history');
+    container.innerHTML = polishHistory.slice(-10).reverse().map(h =>
+        `<div class="p-2 hover:bg-surface-container-low rounded-lg cursor-pointer border-b border-surface-variant last:border-0">
+            <p class="text-xs font-semibold truncate">${h.original.substring(0, 60)}...</p>
+            <p class="text-xs text-primary truncate">${h.polished.substring(0, 60)}...</p>
+            <p class="text-[10px] text-outline mt-0.5">${h.timestamp.substring(0,19)} · ${h.level||'未知级别'} · ${h.lang||''}</p>
+        </div>`).join('');
+}
+
+
+async function comparePolish() {
+    const text = document.getElementById('polish-input').value.trim();
+    if (!text) { alert('请输入要润色的文本'); return; }
+    if (!await checkStatus()) { alert('请先启动 vLLM 服务'); return; }
+
+    document.getElementById('polish-result').innerHTML = '<span class="material-symbols-outlined animate-spin mr-2">sync</span>三级对比中...';
+
+    try {
+        const lang = document.getElementById('polish-lang').value;
+        const resp = await fetch(`${API_BASE}/api/polish/compare`, {
+            method: 'POST', headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({text, level: 'moderate', target_lang: lang})
+        });
+        const data = await resp.json();
+        if (!data.success) { alert('对比失败'); return; }
+
+        document.getElementById('polish-original').textContent = data.original;
+        document.getElementById('polish-original').classList.remove('italic','text-outline');
+        document.getElementById('polish-result').textContent = '▼ 见下方三级对比表';
+        document.getElementById('polish-result').classList.remove('italic','text-outline');
+
+        const levels = ['light','moderate','heavy'];
+        const names = {'light':'轻度','moderate':'中度','heavy':'重度'};
+        const body = document.getElementById('polish-compare-body');
+        body.innerHTML = levels.map(l => {
+            const r = data.results[l] || {};
+            const st = r.style || {};
+            const score = st.formality_score_0_to_1 || 0;
+            const sclr = score >= 0.7 ? 'text-green-600 font-bold' : score >= 0.4 ? 'text-yellow-600' : 'text-red-500';
+            const txt = (r.polished_text||'失败');
+            return `<tr class="hover:bg-surface-container-low">
+                <td class="px-3 py-2 font-semibold text-xs align-top">${names[l]}</td>
+                <td class="px-3 py-2 text-xs whitespace-pre-wrap leading-relaxed max-w-lg">${txt}</td>
+                <td class="px-3 py-2 text-center text-xs">${st.avg_sentence_length||0}</td>
+                <td class="px-3 py-2 text-center text-xs">${st.passive_ratio_per_100w||0}%</td>
+                <td class="px-3 py-2 text-center text-xs">${st.connector_density_10s||0}</td>
+                <td class="px-3 py-2 text-center text-xs ${sclr}">${score.toFixed(2)}</td>
+            </tr>`;
+        }).join('');
+        document.getElementById('polish-compare-area').classList.remove('hidden');
+    } catch(e) { alert('对比失败: ' + e.message); }
+}
+
+// ======== Convert ========
+function setConvDir(dir) {
+    convDir = dir;
+    document.getElementById('btn-s2w').className = dir==='s2w' ? 'px-5 py-1.5 rounded-md text-sm font-semibold bg-white shadow-sm text-primary transition-all' : 'px-5 py-1.5 rounded-md text-sm text-on-surface-variant transition-all';
+    document.getElementById('btn-w2s').className = dir==='w2s' ? 'px-5 py-1.5 rounded-md text-sm font-semibold bg-white shadow-sm text-primary transition-all' : 'px-5 py-1.5 rounded-md text-sm text-on-surface-variant transition-all';
+}
+
+document.getElementById('conv-input').addEventListener('input', function(){
+    document.getElementById('conv-char-count').textContent = '字数: ' + this.value.length;
+});
+
+async function doConvert() {
+    const text = document.getElementById('conv-input').value.trim();
+    if (!text) { alert('请输入文本'); return; }
+    if (!await checkStatus()) { alert('请先启动 vLLM 服务'); return; }
+
+    const lang = document.getElementById('conv-lang').value;
+    const direction = convDir === 's2w' ? 'spoken_to_written' : 'written_to_spoken';
+    document.getElementById('conv-original').textContent = text;
+    document.getElementById('conv-original').classList.remove('italic','text-outline');
+    document.getElementById('conv-result').textContent = '转换中...';
+
+    try {
+        const resp = await fetch(`${API_BASE}/api/convert`, {
+            method: 'POST', headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({text, direction, lang})
+        });
+        const data = await resp.json();
+        if (data.success) {
+            document.getElementById('conv-result').textContent = data.converted_text;
+            document.getElementById('conv-result').classList.remove('italic','text-outline');
+            const dirName = direction === 'spoken_to_written' ? '口语→书面语' : '书面语→口语';
+            const cEntry = {timestamp: new Date().toISOString(), original:text, converted:data.converted_text, direction:dirName, lang};
+            convertHistory.push(cEntry);
+            saveHistoryToServer('conversion', cEntry);
+            renderConvertHistory();
+        } else {
+            document.getElementById('conv-result').textContent = '转换失败: ' + (data.error||'未知错误');
+        }
+    } catch(e) { document.getElementById('conv-result').textContent = '错误: ' + e.message; }
+}
+
+function renderConvertHistory() {
+    const container = document.getElementById('conv-history');
+    container.innerHTML = convertHistory.slice(-10).reverse().map(h =>
+        `<div class="p-2 hover:bg-surface-container-low rounded-lg cursor-pointer border-b border-surface-variant last:border-0">
+            <p class="text-xs font-semibold truncate">${h.original.substring(0, 60)}...</p>
+            <p class="text-xs text-primary truncate">${h.converted.substring(0, 60)}...</p>
+            <p class="text-[10px] text-outline mt-0.5">${h.timestamp.substring(0,19)} · ${h.direction||''} · ${h.lang||''}</p>
+        </div>`).join('');
+}
+
+function renderAutoEvalHistory() {
+    const container = document.getElementById('eval-history-body');
+    if (container) {
+        container.innerHTML = evaluationResults.slice(-10).reverse().map(r =>
+            `<tr class="hover:bg-surface-container-low"><td class="px-3 py-2 text-xs">${r.id||'—'}</td><td class="px-3 py-2 text-center font-bold text-primary">${r.bleu||0}</td><td class="px-3 py-2 text-center">${r.meteor||0}</td></tr>`
+        ).join('');
+    }
+}
+
+// ======== Evaluate ========
+function setEvalMode(mode) {
+    evalMode = mode;
+    ['btn-auto-eval','btn-single-eval','btn-manual-eval'].forEach(id => {
+        const btn = document.getElementById(id);
+        if (!btn) return;
+        const isActive = (id==='btn-auto-eval' && mode==='batch') || (id==='btn-single-eval' && mode==='single') || (id==='btn-manual-eval' && mode==='manual');
+        btn.className = isActive ? 'px-5 py-1.5 rounded-md text-sm font-semibold bg-white shadow-sm text-primary transition-all' : 'px-5 py-1.5 rounded-md text-sm text-on-surface-variant transition-all';
+    });
+    document.getElementById('eval-batch').classList.toggle('hidden', mode !== 'batch');
+    document.getElementById('eval-single').classList.toggle('hidden', mode !== 'single');
+    document.getElementById('eval-manual').classList.toggle('hidden', mode !== 'manual');
+}
+
+// ======== Batch Auto Eval ========
+async function doBatchEval() {
+    if (!await checkStatus()) { alert('请先启动模型服务'); return; }
+    const n = parseInt(document.getElementById('eval-batch-n').value) || 10;
+    const langPair = document.getElementById('eval-batch-lang').value;
+    const domain = document.getElementById('eval-batch-domain').value;
+    const strategyVal = document.getElementById('eval-batch-strategy').value;
+
+    document.getElementById('batch-eval-progress').classList.remove('hidden');
+    document.getElementById('batch-eval-bar').style.width = '0%';
+
+    try {
+        const resp = await fetch(`${API_BASE}/api/evaluate/batch`, {
+            method: 'POST', headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({sample_size: n, lang_pair: langPair, domain: domain || undefined, strategy: strategyVal})
+        });
+        const startData = await resp.json();
+        if (!startData.success) { alert('启动失败: ' + (startData.error||'未知错误')); return; }
+
+        // Poll progress
+        const poll = setInterval(async () => {
+            try {
+                const pr = await fetch(`${API_BASE}/api/evaluate/batch/progress`);
+                const pd = await pr.json();
+                const p = pd.progress;
+                const pct = p.total > 0 ? Math.round(p.current / p.total * 100) : 0;
+                document.getElementById('batch-eval-bar').style.width = pct + '%';
+                document.getElementById('batch-eval-pct').textContent = pct + '%';
+                document.getElementById('batch-eval-msg').textContent = p.running ? `处理中: ${p.current}/${p.total}` : '完成';
+
+                if (!p.running && p.current >= p.total && p.total > 0) {
+                    clearInterval(poll);
+                    const results = pd.results || [];
+                    // Summary
+                    const bleus = results.map(r=>r.bleu||0), meteors = results.map(r=>r.meteor||0);
+                    document.getElementById('batch-bleu').textContent = (bleus.reduce((a,b)=>a+b,0)/bleus.length).toFixed(1);
+                    document.getElementById('batch-meteor').textContent = (meteors.reduce((a,b)=>a+b,0)/meteors.length).toFixed(2);
+                    // Table
+                    document.getElementById('batch-eval-table-body').innerHTML = results.map(r =>
+                        `<tr class="hover:bg-surface-container-low"><td class="px-3 py-2 text-xs">#${r.id}</td><td class="px-3 py-2 text-xs max-w-[120px] truncate">${r.source||''}</td><td class="px-3 py-2 text-xs max-w-[120px] truncate text-primary">${r.translated||''}</td><td class="px-3 py-2 text-xs max-w-[120px] truncate">${r.reference||''}</td><td class="px-3 py-2 text-center font-bold">${r.bleu}</td><td class="px-3 py-2 text-center">${r.meteor}</td></tr>`
+                    ).join('');
+                }
+            } catch(e) {}
+        }, 1500);
+    } catch(e) { alert('请求失败: ' + e.message); }
+}
+
+// ======== Single Auto Eval ========
+async function doSingleTranslate() {
+    const src = document.getElementById('eval-src').value.trim();
+    if (!src) { alert('请先输入原文'); return; }
+    if (!await checkStatus()) { alert('请先启动模型服务'); return; }
+    const lp = document.getElementById('eval-single-lang').value.split('-');
+    try {
+        const resp = await fetch(`${API_BASE}/api/translate`, {
+            method: 'POST', headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({text: src, source_lang: lp[0], target_lang: lp[1], max_tokens: 256})
+        });
+        const d = await resp.json();
+        if (d.success) {
+            document.getElementById('eval-model-trans').value = d.translated_text;
+        } else {
+            alert('翻译失败: ' + (d.error||'未知错误'));
+        }
+    } catch(e) { alert('请求失败: ' + e.message); }
+}
+
+async function doSingleEval() {
+    const reference = document.getElementById('eval-single-ref').value.trim();
+    const candidate = document.getElementById('eval-model-trans').value.trim();
+    if (!reference || !candidate) { alert('请先翻译并填写参考译文'); return; }
+    const lang = document.getElementById('eval-single-lang').value.split('-')[1];
+    try {
+        const resp = await fetch(`${API_BASE}/api/evaluate`, {
+            method: 'POST', headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({reference, candidate, lang})
+        });
+        const d = await resp.json();
+        const m = d.metrics || {};
+        document.getElementById('single-bleu').textContent = (m.BLEU||{}).bleu || '0';
+        document.getElementById('single-meteor').textContent = (m.METEOR||{}).meteor || '0';
+    } catch(e) { alert('请求失败: ' + e.message); }
+}
+
+function escapeHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+// ======== Eval Data Loaders ========
+async function loadEvalFromExperiment() {
+    const picker = document.getElementById("eval-exp-picker");
+    let expData = null;
+    try { const er = await fetch(API_BASE + "/api/experiment/data"); const ed = await er.json(); expData = ed.experiment1 || ed.experiment2; } catch(e) {}
+    if (!expData || !expData.per_sample) { picker.innerHTML = '<p class="text-xs text-outline p-2">暂无实验数据。请先运行实验。</p>'; picker.classList.remove("hidden"); return; }
+    const samples = expData.per_sample.slice(0, 20);
+    const langPair = (expData.config && expData.config.target_lang) || "en";
+    picker.innerHTML = '<p class="text-xs text-outline mb-1">点击加载（前20条实验数据）:</p>';
+    samples.forEach(function(s) {
+        var models = s.models || s.strategies || {};
+        var firstKey = Object.keys(models)[0];
+        var data = firstKey ? models[firstKey] : null;
+        var ref = (s.reference || "").substring(0, 80);
+        var cand = data ? (data.translated_text || "").substring(0, 80) : "";
+        var div = document.createElement("div");
+        div.className = "p-1.5 mb-1 hover:bg-white rounded cursor-pointer border-b border-outline-variant/30 text-xs";
+        div.innerHTML = '<span class="text-outline">参考:</span> ' + escapeHtml(ref) + '...<br><span class="text-primary">候选:</span> ' + escapeHtml(cand) + '...';
+        div.onclick = function() {
+            document.getElementById("eval-ref").value = ref;
+            document.getElementById("eval-cand").value = cand;
+            document.getElementById("eval-lang").value = langPair;
+            picker.classList.add("hidden");
+        };
+        picker.appendChild(div);
+    });
+    picker.classList.remove("hidden");
+}
+
+async function loadEvalFromHistory() {
+    var picker = document.getElementById("eval-exp-picker");
+    if (!translationHistory.length) { picker.innerHTML = '<p class="text-xs text-outline p-2">暂无翻译记录。请先翻译一些文本。</p>'; picker.classList.remove("hidden"); return; }
+    picker.innerHTML = '<p class="text-xs text-outline mb-1">点击加载（最近10条翻译记录）:</p>';
+    translationHistory.slice(-10).reverse().forEach(function(h) {
+        var trans = (h.translated || "").substring(0, 80);
+        var src = (h.original || "").substring(0, 60);
+        var tgtLang = h.target || "en";
+        var div = document.createElement("div");
+        div.className = "p-1.5 mb-1 hover:bg-white rounded cursor-pointer border-b border-outline-variant/30 text-xs";
+        div.innerHTML = '<span class="text-outline">源文:</span> ' + escapeHtml(src) + '...<br><span class="text-primary">翻译:</span> ' + escapeHtml(trans) + '...';
+        div.onclick = function() {
+            document.getElementById("eval-cand").value = trans;
+            document.getElementById("eval-lang").value = tgtLang;
+            picker.classList.add("hidden");
+        };
+        picker.appendChild(div);
+    });
+    picker.classList.remove("hidden");
+}
+
+
+async function submitManualScore() {
+    const source_text = document.getElementById('man-src').value.trim();
+    const translated_text = document.getElementById('man-trans').value.trim();
+    if (!source_text || !translated_text) { alert('请至少填写源文本和翻译结果'); return; }
+    const accuracy = parseInt(document.getElementById('man-acc').value);
+    const fluency = parseInt(document.getElementById('man-flu').value);
+    const adequacy = parseInt(document.getElementById('man-ade').value);
+    const notes = document.getElementById('man-notes')?.value?.trim() || '';
+    const suggested = document.getElementById('man-suggested')?.value?.trim() || '';
+    const error_categories = [];
+    document.querySelectorAll('.error-cat:checked').forEach(cb => error_categories.push(cb.value));
+
+    try {
+        const resp = await fetch(`${API_BASE}/api/score`, {
+            method: 'POST', headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({source_text, translated_text, accuracy, fluency, adequacy, notes, error_categories, suggested_translation: suggested})
+        });
+        const data = await resp.json();
+        if (data.success) {
+            // 重新从服务器拉取完整评分列表并刷新表格
+            const scoresResp = await fetch(`${API_BASE}/api/scores`);
+            const scoresData = await scoresResp.json();
+            manualScores = scoresData.scores || [];
+            renderScoreTable();
+            loadFeedbackInsights();
+            alert(`评分提交成功！总分: ${data.record.total_score}/15`);
+        } else {
+            alert('提交失败: ' + (data.error||'未知错误'));
+        }
+    } catch(e) { alert('请求失败: ' + e.message); }
+}
+
+function renderScoreTable() {
+    const tb = document.getElementById('score-table-body');
+    document.getElementById('score-count').textContent = `共 ${manualScores.length} 条`;
+    if (!manualScores.length) {
+        tb.innerHTML = '<tr><td colspan="6" class="px-3 py-6 text-center text-outline text-sm">暂无评分记录</td></tr>';
+        return;
+    }
+    tb.innerHTML = manualScores.slice(-15).reverse().map(s => {
+        const acc = s.scores?.accuracy ?? s.accuracy ?? '-';
+        const flu = s.scores?.fluency ?? s.fluency ?? '-';
+        const ade = s.scores?.adequacy ?? s.adequacy ?? '-';
+        const total = s.total_score ?? s.total ?? '-';
+        const ts = (s.timestamp||'').substring(0, 16).replace('T',' ');
+        return `<tr class="hover:bg-surface-container-low"><td class="px-3 py-2 text-xs">#${s.id}</td><td class="px-3 py-2 text-center">${acc}</td><td class="px-3 py-2 text-center">${flu}</td><td class="px-3 py-2 text-center">${ade}</td><td class="px-3 py-2 text-center font-bold text-primary">${total}</td><td class="px-3 py-2 text-xs text-on-surface-variant">${ts}</td></tr>`;
+    }).join('');
+}
+
+async function loadFeedbackInsights() {
+    try {
+        const resp = await fetch(`${API_BASE}/api/feedback/insights`);
+        const data = await resp.json();
+        if (!data.success) return;
+        const fb = data.feedback;
+        let html = '';
+        if (fb && fb.insights && fb.insights.length > 0) {
+            html += '<h4 class="font-semibold mb-2 text-primary">错误类型分布</h4>';
+            html += '<div class="grid grid-cols-3 gap-2 mb-4">';
+            fb.insights.forEach(i => {
+                html += `<div class="bg-surface-container-low rounded-lg p-2 text-center"><span class="text-lg font-extrabold text-primary">${i.count}</span><br><span class="text-[10px] text-outline">${i.category}</span></div>`;
+            });
+            html += '</div>';
+            html += '<h4 class="font-semibold mb-2 text-primary">自动洞察与建议</h4>';
+            html += '<ul class="list-disc list-inside space-y-1">';
+            fb.insights.forEach(i => { html += `<li class="text-xs">${i.suggestion}</li>`; });
+            html += '</ul>';
+        }
+        if (!html) html = '<p class="text-outline text-sm">暂无反馈数据。提交含错误类别的评分后可见分析。</p>';
+        document.getElementById('feedback-insights-content').innerHTML = html;
+    } catch(e) {}
+}
+
+// ======== Experiment Sub-Tab Switching ========
+function setExpSubTab(type) {
+    expSubTab = type;
+    const btns = { exp1: 'btn-sub-exp1', exp2: 'btn-sub-exp2', multilang: 'btn-sub-multilang', ablation: 'btn-sub-ablation', ablation2: 'btn-sub-ablation2' };
+    for (const [key, id] of Object.entries(btns)) {
+        document.getElementById(id).className = key === type
+            ? 'flex-1 py-1.5 px-4 rounded-md text-sm font-semibold bg-white shadow-sm text-primary transition-all'
+            : 'flex-1 py-1.5 px-4 rounded-md text-sm text-on-surface-variant transition-all';
+    }
+    ['exp1','exp2','multilang','ablation','ablation2'].forEach(t => {
+        const div = document.getElementById('exp-sub-content-' + t);
+        if (div) div.classList.toggle('hidden', t !== type);
+    });
+}
+
+// ======== Experiment 1: Model Comparison ========
+let _exp1PollTimer = null;
+async function runExp1() {
+    const status = await fetch(`${API_BASE}/api/status`).then(r => r.json()).catch(() => null);
+    if (!status || !status.running) { alert('请先启动模型服务'); return; }
+    if (!status.current_model) {
+        alert('未检测到当前运行的模型，请先在左侧点击「启动/切换」');
+        return;
+    }
+
+    if (_experimentRunning) {
+        const toast = document.createElement('div');
+        toast.textContent = '⏳ 实验正在运行中，请等待完成或先点「停止实验」';
+        toast.style.cssText = 'position:fixed;top:80px;right:24px;background:#e0e7ff;color:#3730a3;padding:12px 20px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.15);font-weight:600;z-index:9999;transition:opacity .3s';
+        document.body.appendChild(toast);
+        setTimeout(() => { toast.style.opacity = '0'; setTimeout(() => toast.remove(), 300); }, 2500);
+        return;
+    }
+
+    const btn = document.getElementById('btn-run-exp1');
+    const n = parseInt(document.getElementById('exp1-sample').value);
+    const langPair = document.getElementById('exp1-lang').value;
+    const dataset = document.getElementById('exp1-dataset').value || 'default';
+
+    _experimentRunning = true;
+    btn.classList.add('opacity-60', 'cursor-not-allowed');
+    btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> 运行中...';
+
+    const prog = document.getElementById('exp1-progress');
+    prog.classList.remove('hidden');
+    document.getElementById('exp1-progress-pct').textContent = '0%';
+    document.getElementById('exp1-progress-bar').style.width = '0%';
+    document.getElementById('exp1-progress-msg').textContent = '准备中...';
+
+    try {
+        const resp = await fetch(`${API_BASE}/api/experiment/model`, {
+            method: 'POST', headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({sample_size: n, lang_pair: langPair, dataset: dataset})
+        });
+        const d = await resp.json();
+        if (!d.success) {
+            _experimentRunning = false;
+            alert(d.error);
+            btn.classList.remove('opacity-60', 'cursor-not-allowed');
+            btn.innerHTML = '<span class="material-symbols-outlined">play_arrow</span>运行实验一';
+            prog.classList.add('hidden');
+            return;
+        }
+
+        if (_exp1PollTimer) clearInterval(_exp1PollTimer);
+        _exp1PollTimer = setInterval(async () => {
+            try {
+                const pr = await fetch(`${API_BASE}/api/experiment/progress`);
+                const pd = await pr.json();
+                const pct = pd.total > 0 ? Math.round(pd.current / pd.total * 100) : 0;
+                document.getElementById('exp1-progress-bar').style.width = pct + '%';
+                document.getElementById('exp1-progress-pct').textContent = pct + '%';
+                document.getElementById('exp1-progress-msg').textContent = pd.message || '';
+
+                // 【核心修改】不再要求 pd.current >= pd.total，只要 running 为 false 就结束
+                if (!pd.running) {
+                    clearInterval(_exp1PollTimer);
+                    const er = await fetch(`${API_BASE}/api/experiment/data?dataset=${dataset}`);
+                    const ed = await er.json();
+                    if (ed.experiment1) { experiment1Data = ed.experiment1; renderExp1Table(); }
+
+                    // 判断是被停止还是自然跑完
+                    const stopped = pd.total > 0 && pd.current < pd.total;
+                    document.getElementById('exp1-progress-msg').textContent = stopped ? '⚠️ 已被用户停止' : '✅ 实验完成！';
+
+                    setTimeout(() => prog.classList.add('hidden'), 3000);
+
+                    // 【核心修改】立刻恢复按钮状态和全局标志
+                    _experimentRunning = false;
+                    btn.classList.remove('opacity-60', 'cursor-not-allowed');
+                    btn.innerHTML = '<span class="material-symbols-outlined">play_arrow</span>运行实验一';
+                }
+            } catch(e) {}
+        }, 2000);
+    } catch(e) {
+        clearInterval(_exp1PollTimer);
+        _experimentRunning = false;
+        alert('失败: ' + e.message);
+        btn.classList.remove('opacity-60', 'cursor-not-allowed');
+        btn.innerHTML = '<span class="material-symbols-outlined">play_arrow</span>运行实验一';
+        prog.classList.add('hidden');
+    }
+}
+
+function renderExp1Table() {
+    const data = experiment1Data;
+    const head = document.getElementById('exp1-table-head');
+    const body = document.getElementById('exp1-table-body');
+    if (!data || !data.summary) {
+        head.innerHTML = '<tr><th class="px-3 py-2">模型</th><th class="px-3 py-2 text-center">成功率</th><th class="px-3 py-2 text-center">BLEU</th><th class="px-3 py-2 text-center">METEOR</th><th class="px-3 py-2 text-center">响应(s)</th></tr>';
+        body.innerHTML = '<tr><td colspan="5" class="px-4 py-3 text-center text-outline">暂无实验数据，请运行实验</td></tr>';
+        return;
+    }
+    const entries = data.summary?.models || {};
+    if (!Object.keys(entries).length) {
+        head.innerHTML = '<tr><th class="px-3 py-2">模型</th><th class="px-3 py-2 text-center">成功率</th><th class="px-3 py-2 text-center">BLEU</th><th class="px-3 py-2 text-center">METEOR</th><th class="px-3 py-2 text-center">响应(s)</th></tr>';
+        body.innerHTML = '<tr><td colspan="5" class="px-4 py-3 text-center text-outline">暂无数据</td></tr>';
+        return;
+    }
+    // 分场景动态列
+    const firstEntry = Object.values(entries)[0];
+    const domains = firstEntry.domains ? Object.keys(firstEntry.domains) : [];
+    const cols = ['模型','成功率','总BLEU'];
+    domains.forEach(d => cols.push(d+' BLEU'));
+    cols.push('总METEOR','响应(s)');
+    head.innerHTML = '<tr>' + cols.map(c => `<th class="px-2 py-2 text-center text-xs">${c}</th>`).join('') + '</tr>';
+    body.innerHTML = Object.entries(entries).map(([key, info]) => {
+        let row = `<td class="px-2 py-3 text-xs">${(info.model_name||key).substring(0,18)}</td>`;
+        row += `<td class="px-2 py-3 text-center text-xs">${info.success_rate||0}%</td>`;
+        row += `<td class="px-2 py-3 text-center text-xs font-bold text-primary">${info.avg_bleu||0}</td>`;
+        domains.forEach(d => { const ds = (info.domains||{})[d] || {}; row += `<td class="px-2 py-3 text-center text-xs">${ds.avg_bleu||'-'}</td>`; });
+        row += `<td class="px-2 py-3 text-center text-xs">${info.avg_meteor||0}</td>`;
+        row += `<td class="px-2 py-3 text-center text-xs">${info.avg_response_time||0}s</td>`;
+        return `<tr class="hover:bg-surface-container-low">${row}</tr>`;
+    }).join('');
+    renderExp1DomainBreakdown();
+}
+
+function renderExp1DomainBreakdown() {
+    const data = experiment1Data;
+    const tableHead = document.getElementById('exp1-domain-table-head');
+    const tableBody = document.getElementById('exp1-domain-table-body');
+    if (!data || !data.summary) { tableHead.innerHTML=''; tableBody.innerHTML='<tr><td colspan="5" class="px-3 py-6 text-center text-outline text-sm">暂无数据，请先运行实验</td></tr>'; return; }
+    const entries = data.summary?.models || {};
+    if (!Object.keys(entries).length) { tableHead.innerHTML=''; tableBody.innerHTML='<tr><td colspan="5" class="px-3 py-6 text-center text-outline text-sm">暂无数据</td></tr>'; return; }
+    const allDomains = new Set();
+    for (const info of Object.values(entries)) { for (const d of Object.keys(info.domains || {})) { allDomains.add(d); } }
+    const domainList = Array.from(allDomains).sort();
+    if (!domainList.length) { tableHead.innerHTML=''; tableBody.innerHTML='<tr><td colspan="5" class="px-3 py-6 text-center text-outline text-sm">无领域细分数据</td></tr>'; return; }
+    tableHead.innerHTML = '<tr><th class="px-3 py-2">模型</th>' + domainList.map(d => `<th class="px-3 py-2 text-center">${d}<br><span class="text-outline font-normal">样本/BLEU/METEOR</span></th>`).join('') + '</tr>';
+    tableBody.innerHTML = Object.entries(entries).map(([k, info]) => {
+        let row = `<td class="px-3 py-2 text-xs font-semibold">${(info.model_name||k).substring(0,14)}</td>`;
+        for (const d of domainList) {
+            const ds = (info.domains||{})[d]||{};
+            const n=ds.count||0, sn=ds.sample_total||n, bleu=ds.avg_bleu||0, meteor=ds.avg_meteor||0;
+            const colorClass = bleu>=20?'text-green-600':bleu>=10?'text-yellow-600':'text-red-500';
+            row+=`<td class="px-2 py-2 text-center text-xs"><span class="text-outline">${n}/${sn}</span> <span class="font-bold ${colorClass}">${bleu}</span>/<span class="text-on-surface-variant">${meteor}</span></td>`;
+        }
+        return `<tr class="hover:bg-surface-container-low">${row}</tr>`;
+    }).join('');
+}
+
+// ======== Experiment 2: Strategy Comparison ========
+let _exp2PollTimer = null;
+async function runExp2() {
+    const status = await fetch(`${API_BASE}/api/status`).then(r => r.json()).catch(() => null);
+    if (!status || !status.running) { alert('请先启动模型服务'); return; }
+    if (!status.current_model) { alert('未检测到当前运行的模型，请先点击「启动/切换」'); return; }
+
+    // 连点保护
+    if (_experimentRunning) {
+        const toast = document.createElement('div');
+        toast.textContent = '⏳ 实验正在运行中，请等待完成或先点「停止实验」';
+        toast.style.cssText = 'position:fixed;top:80px;right:24px;background:#e0e7ff;color:#3730a3;padding:12px 20px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.15);font-weight:600;z-index:9999;transition:opacity .3s';
+        document.body.appendChild(toast);
+        setTimeout(() => { toast.style.opacity = '0'; setTimeout(() => toast.remove(), 300); }, 2500);
+        return;
+    }
+
+    const btn = document.getElementById('btn-run-exp2');
+    const n = parseInt(document.getElementById('exp2-sample').value);
+    const langPair = document.getElementById('exp2-lang').value;
+    const dataset = document.getElementById('exp2-dataset').value || 'default';
+    const strategies = Array.from(document.querySelectorAll('.exp2-strategy-cb:checked')).map(cb=>cb.value);
+
+    _experimentRunning = true;
+    btn.classList.add('opacity-60', 'cursor-not-allowed');
+    btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> 运行中...';
+
+    const prog = document.getElementById('exp2-progress');
+    prog.classList.remove('hidden');
+    document.getElementById('exp2-progress-pct').textContent = '0%';
+    document.getElementById('exp2-progress-bar').style.width = '0%';
+    document.getElementById('exp2-progress-msg').textContent = '准备中...';
+
+    try {
+        const resp = await fetch(`${API_BASE}/api/experiment/strategy`, {
+            method: 'POST', headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({sample_size: n, lang_pair: langPair, dataset: dataset, strategies: strategies})
+        });
+        const d = await resp.json();
+        if (!d.success) {
+            _experimentRunning = false;
+            alert(d.error);
+            btn.classList.remove('opacity-60', 'cursor-not-allowed');
+            btn.innerHTML = '<span class="material-symbols-outlined">play_arrow</span>运行实验二';
+            prog.classList.add('hidden');
+            return;
+        }
+
+        if (_exp2PollTimer) clearInterval(_exp2PollTimer);
+        _exp2PollTimer = setInterval(async () => {
+            try {
+                const pr = await fetch(`${API_BASE}/api/experiment/progress`);
+                const pd = await pr.json();
+                const pct = pd.total > 0 ? Math.round(pd.current / pd.total * 100) : 0;
+                document.getElementById('exp2-progress-bar').style.width = pct + '%';
+                document.getElementById('exp2-progress-pct').textContent = pct + '%';
+                document.getElementById('exp2-progress-msg').textContent = pd.message || '';
+
+                if (!pd.running) {
+                    clearInterval(_exp2PollTimer);
+                    const er = await fetch(`${API_BASE}/api/experiment/data?dataset=${dataset}`);
+                    const ed = await er.json();
+                    if (ed.experiment2) { experiment2Data = ed.experiment2; renderExp2Table(); }
+
+                    const stopped = pd.total > 0 && pd.current < pd.total;
+                    document.getElementById('exp2-progress-msg').textContent = stopped ? '⚠️ 已被用户停止' : '✅ 实验完成！';
+
+                    setTimeout(() => prog.classList.add('hidden'), 3000);
+                    _experimentRunning = false;
+                    btn.classList.remove('opacity-60', 'cursor-not-allowed');
+                    btn.innerHTML = '<span class="material-symbols-outlined">play_arrow</span>运行实验二';
+                }
+            } catch(e) {}
+        }, 2000);
+    } catch(e) {
+        clearInterval(_exp2PollTimer);
+        _experimentRunning = false;
+        alert('失败: ' + e.message);
+        btn.classList.remove('opacity-60', 'cursor-not-allowed');
+        btn.innerHTML = '<span class="material-symbols-outlined">play_arrow</span>运行实验二';
+        prog.classList.add('hidden');
+    }
+}
+
+function renderExp2Table() {
+    const data = experiment2Data;
+    const head = document.getElementById('exp2-table-head');
+    const body = document.getElementById('exp2-table-body');
+    if (!data || !data.summary) {
+        head.innerHTML = '<tr><th class="px-3 py-2">策略</th><th class="px-3 py-2 text-center">成功率</th><th class="px-3 py-2 text-center">BLEU</th><th class="px-3 py-2 text-center">METEOR</th><th class="px-3 py-2 text-center">响应(s)</th></tr>';
+        body.innerHTML = '<tr><td colspan="5" class="px-4 py-3 text-center text-outline">暂无实验数据，请运行实验</td></tr>';
+        return;
+    }
+    const entries = data.summary?.strategies || {};
+    if (!Object.keys(entries).length) {
+        head.innerHTML = '<tr><th class="px-3 py-2">策略</th><th class="px-3 py-2 text-center">成功率</th><th class="px-3 py-2 text-center">BLEU</th><th class="px-3 py-2 text-center">METEOR</th><th class="px-3 py-2 text-center">响应(s)</th></tr>';
+        body.innerHTML = '<tr><td colspan="5" class="px-4 py-3 text-center text-outline">暂无数据</td></tr>';
+        return;
+    }
+    head.innerHTML = '<tr><th class="px-3 py-2">策略</th><th class="px-3 py-2 text-center">成功率</th><th class="px-3 py-2 text-center">BLEU</th><th class="px-3 py-2 text-center">METEOR</th><th class="px-3 py-2 text-center">响应(s)</th></tr>';
+    body.innerHTML = Object.entries(entries).map(([key, info]) =>
+        `<tr class="hover:bg-surface-container-low"><td class="px-3 py-3">${key.substring(0,30)}</td><td class="px-3 py-3 text-center">${info.success_rate||0}%</td><td class="px-3 py-3 text-center font-bold text-primary">${info.avg_bleu||0}</td><td class="px-3 py-3 text-center">${info.avg_meteor||0}</td><td class="px-3 py-3 text-center">${info.avg_response_time||0}s</td></tr>`
+    ).join('');
+    renderExp2DomainBreakdown();
+}
+
+function renderExp2DomainBreakdown() {
+    const data = experiment2Data;
+    const tableHead = document.getElementById('exp2-domain-table-head');
+    const tableBody = document.getElementById('exp2-domain-table-body');
+    if (!data || !data.summary) { tableHead.innerHTML=''; tableBody.innerHTML='<tr><td colspan="5" class="px-3 py-6 text-center text-outline text-sm">暂无数据，请先运行实验</td></tr>'; return; }
+    const entries = data.summary?.strategies || {};
+    if (!Object.keys(entries).length) { tableHead.innerHTML=''; tableBody.innerHTML='<tr><td colspan="5" class="px-3 py-6 text-center text-outline text-sm">暂无数据</td></tr>'; return; }
+    const allDomains = new Set();
+    for (const info of Object.values(entries)) { for (const d of Object.keys(info.domains || {})) { allDomains.add(d); } }
+    const domainList = Array.from(allDomains).sort();
+    if (!domainList.length) { tableHead.innerHTML=''; tableBody.innerHTML='<tr><td colspan="5" class="px-3 py-6 text-center text-outline text-sm">无领域细分数据</td></tr>'; return; }
+    tableHead.innerHTML = '<tr><th class="px-3 py-2">策略</th>' + domainList.map(d => `<th class="px-3 py-2 text-center">${d}<br><span class="text-outline font-normal">样本/BLEU/METEOR</span></th>`).join('') + '</tr>';
+    tableBody.innerHTML = Object.entries(entries).map(([k, info]) => {
+        let row = `<td class="px-3 py-2 text-xs font-semibold">${(info.strategy_name||k).substring(0,14)}</td>`;
+        for (const d of domainList) {
+            const ds = (info.domains||{})[d]||{};
+            const n=ds.count||0, sn=ds.sample_total||n, bleu=ds.avg_bleu||0, meteor=ds.avg_meteor||0;
+            const colorClass = bleu>=20?'text-green-600':bleu>=10?'text-yellow-600':'text-red-500';
+            row+=`<td class="px-2 py-2 text-center text-xs"><span class="text-outline">${n}/${sn}</span> <span class="font-bold ${colorClass}">${bleu}</span>/<span class="text-on-surface-variant">${meteor}</span></td>`;
+        }
+        return `<tr class="hover:bg-surface-container-low">${row}</tr>`;
+    }).join('');
+}
+
+// ======== Experiment 3: Multi-Language Pair ========
+let _mlPollTimer = null;
+async function runMultilangExp() {
+    const status = await fetch(`${API_BASE}/api/status`).then(r => r.json()).catch(() => null);
+    if (!status || !status.running) { alert('请先启动模型服务'); return; }
+    if (!status.current_model) { alert('未检测到当前运行的模型，请先点击「启动/切换」'); return; }
+
+    if (_experimentRunning) {
+        const toast = document.createElement('div');
+        toast.textContent = '⏳ 实验正在运行中，请等待完成或先点「停止实验」';
+        toast.style.cssText = 'position:fixed;top:80px;right:24px;background:#e0e7ff;color:#3730a3;padding:12px 20px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.15);font-weight:600;z-index:9999;transition:opacity .3s';
+        document.body.appendChild(toast);
+        setTimeout(() => { toast.style.opacity = '0'; setTimeout(() => toast.remove(), 300); }, 2500);
+        return;
+    }
+
+    const btn = document.getElementById('btn-run-ml');
+    const n = parseInt(document.getElementById('ml-sample').value);
+    const ds = document.getElementById('ml-dataset').value || 'default';
+
+    _experimentRunning = true;
+    btn.classList.add('opacity-60', 'cursor-not-allowed');
+    btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> 运行中...';
+
+    const prog = document.getElementById('ml-progress');
+    prog.classList.remove('hidden');
+    document.getElementById('ml-progress-pct').textContent = '0%';
+    document.getElementById('ml-progress-bar').style.width = '0%';
+    document.getElementById('ml-progress-msg').textContent = '准备中...';
+
+    try {
+        const resp = await fetch(`${API_BASE}/api/experiment/langpairs`, {
+            method:'POST', headers:{'Content-Type':'application/json'},
+            body: JSON.stringify({sample_size: n, dataset: ds})
+        });
+        const d = await resp.json();
+        if (!d.success) {
+            _experimentRunning = false;
+            alert(d.error);
+            btn.classList.remove('opacity-60', 'cursor-not-allowed');
+            btn.innerHTML = '<span class="material-symbols-outlined">play_arrow</span>运行多语言对对比';
+            prog.classList.add('hidden');
+            return;
+        }
+
+        if (_mlPollTimer) clearInterval(_mlPollTimer);
+        _mlPollTimer = setInterval(async () => {
+            try {
+                const pr = await fetch(`${API_BASE}/api/experiment/progress`);
+                const pd = await pr.json();
+                const pct = pd.total > 0 ? Math.round(pd.current / pd.total * 100) : 0;
+                document.getElementById('ml-progress-bar').style.width = pct + '%';
+                document.getElementById('ml-progress-pct').textContent = pct + '%';
+                document.getElementById('ml-progress-msg').textContent = pd.message || '';
+
+                if (!pd.running) {
+                    clearInterval(_mlPollTimer);
+                    prog.classList.add('hidden');
+                    const stopped = pd.total > 0 && pd.current < pd.total;
+                    if (stopped) {
+                        alert('⚠️ 已被用户停止');
+                    }
+                    _experimentRunning = false;
+                    btn.classList.remove('opacity-60', 'cursor-not-allowed');
+                    btn.innerHTML = '<span class="material-symbols-outlined">play_arrow</span>运行多语言对对比';
+                    await loadMultilangData(ds);
+                }
+            } catch(e) {}
+        }, 3000);
+    } catch(e) {
+        alert('失败: ' + e.message);
+        _experimentRunning = false;
+        btn.classList.remove('opacity-60', 'cursor-not-allowed');
+        btn.innerHTML = '<span class="material-symbols-outlined">play_arrow</span>运行多语言对对比';
+        prog.classList.add('hidden');
+    }
+}
+
+async function loadMultilangData(dataset) {
+    const ds = dataset || 'default';
+    try {
+        const resp = await fetch(`${API_BASE}/api/experiment/data?dataset=${ds}`);
+        const d = await resp.json();
+        const mlData = d.experiment_langpairs;
+        multilangData = mlData;
+        const body = document.getElementById('ml-table-body');
+        if (!mlData || !mlData.per_pair) {
+            body.innerHTML = '<tr><td colspan="5" class="px-4 py-6 text-center text-outline text-sm">暂无数据</td></tr>';
+            return;
+        }
+        document.getElementById('ml-view-dataset').value = ds;
+        const per_pair = mlData.per_pair;
+        const allRows = [];
+        // 展开所有 (模型, 语言对) — 后续换模型跑结果能自动聚合
+        for (const [pairKey, pairData] of Object.entries(per_pair)) {
+            const models = pairData.summary?.models || {};
+            for (const [mk, info] of Object.entries(models)) {
+                allRows.push({
+                    modelName: info.model_name || mk.replace(/__.*$/, ''),
+                    pairKey,
+                    info,
+                });
+            }
+        }
+        let html = '';
+        if (allRows.length === 0) {
+            html = '<tr><td colspan="6" class="px-4 py-6 text-center text-outline text-sm">暂无数据</td></tr>';
+        } else {
+            html = allRows.map(r =>
+                `<tr class="hover:bg-surface-container-low"><td class="px-3 py-3 text-xs font-semibold">${r.modelName.substring(0,18)}</td><td class="px-3 py-3">${r.pairKey}</td><td class="px-3 py-3 text-center">${r.info.success_rate||0}%</td><td class="px-3 py-3 text-center font-bold text-primary">${r.info.avg_bleu||0}</td><td class="px-3 py-3 text-center">${r.info.avg_meteor||0}</td><td class="px-3 py-3 text-center">${r.info.avg_response_time||0}s</td></tr>`
+            ).join('');
+            // 总体平均
+            const n = allRows.length;
+            const avgSuccess = (allRows.reduce((s,r)=>s+(r.info.success_rate||0),0) / n).toFixed(1);
+            const avgBleu = (allRows.reduce((s,r)=>s+(r.info.avg_bleu||0),0) / n).toFixed(2);
+            const avgMeteor = (allRows.reduce((s,r)=>s+(r.info.avg_meteor||0),0) / n).toFixed(2);
+            const avgTime = (allRows.reduce((s,r)=>s+(r.info.avg_response_time||0),0) / n).toFixed(3);
+            html += `<tr class="bg-surface-container-low font-bold"><td class="px-3 py-3" colspan="2">📊 总体平均 (${Object.keys(per_pair).length}个语言对)</td><td class="px-3 py-3 text-center">${avgSuccess}%</td><td class="px-3 py-3 text-center text-primary">${avgBleu}</td><td class="px-3 py-3 text-center">${avgMeteor}</td><td class="px-3 py-3 text-center">${avgTime}s</td></tr>`;
+        }
+        body.innerHTML = html;
+    } catch(e) {}
+}
+
+async function loadMLDataForDataset(dataset) { await loadMultilangData(dataset); }
+async function refreshMLView() { await loadDatasets(); await loadMultilangData(document.getElementById('ml-view-dataset').value); }
+
+async function generateMLCharts() {
+    const ds = document.getElementById('ml-view-dataset')?.value || 'default';
+    try {
+        const resp = await fetch(`${API_BASE}/api/experiment/langcharts/${ds}`);
+        const data = await resp.json();
+        if (data.success && data.chart_urls) {
+            document.getElementById('ml-chart-area').classList.remove('hidden');
+            document.getElementById('ml-chart-area').innerHTML = '<div class="px-4 py-3 border-b border-outline-variant bg-surface-container-low font-semibold text-sm">多语言对对比图表</div>' + data.chart_urls.map(url => `<img src="${url}" class="w-full border border-outline-variant" alt="多语言对对比"/>`).join('');
+        } else {
+            document.getElementById('ml-chart-area').classList.remove('hidden');
+            document.getElementById('ml-chart-area').innerHTML = '<p class="text-outline text-sm p-4">' + (data.error||'无数据') + '</p>';
+        }
+    } catch(e) { alert('请求失败: ' + e.message); }
+}
+
+async function generateMLReport() {
+    const ds = document.getElementById('ml-view-dataset')?.value || 'default';
+    try {
+        const resp = await fetch(`${API_BASE}/api/experiment/langpairs/report?dataset=${ds}`);
+        const data = await resp.json();
+        if (data.success) { alert(data.report_path + '\\n报告已保存至服务器。'); }
+        else { alert('请先运行实验'); }
+    } catch(e) { alert('请求失败: ' + e.message); }
+}
+
+// ======== Experiment 4: Ablation 1 — 场景识别 ========
+let _abl1PollTimer = null;
+async function runAbl1Exp() {
+    const status = await fetch(`${API_BASE}/api/status`).then(r => r.json()).catch(() => null);
+    if (!status || !status.running) { alert('请先启动模型服务'); return; }
+    if (!status.current_model) { alert('未检测到当前运行的模型，请先点击「启动/切换」'); return; }
+
+    if (_experimentRunning) {
+        const toast = document.createElement('div');
+        toast.textContent = '⏳ 实验正在运行中，请等待完成或先点「停止实验」';
+        toast.style.cssText = 'position:fixed;top:80px;right:24px;background:#e0e7ff;color:#3730a3;padding:12px 20px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.15);font-weight:600;z-index:9999;transition:opacity .3s';
+        document.body.appendChild(toast);
+        setTimeout(() => { toast.style.opacity = '0'; setTimeout(() => toast.remove(), 300); }, 2500);
+        return;
+    }
+
+    const btn = document.getElementById('btn-run-abl1');
+    const n = parseInt(document.getElementById('abl1-sample').value);
+    const langPair = document.getElementById('abl1-lang').value;
+    const ds = 'default';
+
+    _experimentRunning = true;
+    btn.classList.add('opacity-60', 'cursor-not-allowed');
+    btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> 运行中...';
+
+    const prog = document.getElementById('abl1-progress');
+    prog.classList.remove('hidden');
+    document.getElementById('abl1-progress-pct').textContent = '0%';
+    document.getElementById('abl1-progress-bar').style.width = '0%';
+    document.getElementById('abl1-progress-msg').textContent = '准备中...';
+
+    try {
+        const resp = await fetch(`${API_BASE}/api/experiment/ablation`, {
+            method:'POST', headers:{'Content-Type':'application/json'},
+            body: JSON.stringify({sample_size: n, lang_pair: langPair, dataset: ds, ablation_type: 'abl1'})
+        });
+        const d = await resp.json();
+        if (!d.success) {
+            _experimentRunning = false;
+            alert(d.error);
+            btn.classList.remove('opacity-60', 'cursor-not-allowed');
+            btn.innerHTML = '<span class="material-symbols-outlined">play_arrow</span>运行消融实验一';
+            prog.classList.add('hidden');
+            return;
+        }
+
+        if (_abl1PollTimer) clearInterval(_abl1PollTimer);
+        _abl1PollTimer = setInterval(async () => {
+            try {
+                const pr = await fetch(`${API_BASE}/api/experiment/progress`);
+                const pd = await pr.json();
+                const pct = pd.total > 0 ? Math.round(pd.current / pd.total * 100) : 0;
+                document.getElementById('abl1-progress-bar').style.width = pct + '%';
+                document.getElementById('abl1-progress-pct').textContent = pct + '%';
+                document.getElementById('abl1-progress-msg').textContent = pd.message || '';
+
+                if (!pd.running) {
+                    clearInterval(_abl1PollTimer);
+                    prog.classList.add('hidden');
+                    const stopped = pd.total > 0 && pd.current < pd.total;
+                    if (stopped) {
+                        alert('⚠️ 已被用户停止');
+                    }
+                    _experimentRunning = false;
+                    btn.classList.remove('opacity-60', 'cursor-not-allowed');
+                    btn.innerHTML = '<span class="material-symbols-outlined">play_arrow</span>运行消融实验一';
+                    await loadAbl1Result(ds);
+                }
+            } catch(e) {}
+        }, 5000);
+    } catch(e) {
+        alert('失败: ' + e.message);
+        _experimentRunning = false;
+        btn.classList.remove('opacity-60', 'cursor-not-allowed');
+        btn.innerHTML = '<span class="material-symbols-outlined">play_arrow</span>运行消融实验一';
+        prog.classList.add('hidden');
+    }
+}
+
+async function loadAbl1Result(dataset) {
+    const ds = dataset || 'default';
+    try { 
+        const resp = await fetch(`${API_BASE}/api/experiment/ablation/data?dataset=${ds}&type=abl1`);
+        const data = await resp.json();
+        if (!data.success) { document.getElementById('abl1-result-area').innerHTML = '<div class="px-4 py-3 border-b border-outline-variant bg-surface-container-low font-semibold text-sm">消融实验一对比</div><div class="p-4 text-center text-outline text-sm">无数据</div>'; return; }
+        const d = data.data;
+        abl1Data = d;
+        const onData = d.custom_on || d.all_on, offData = d.all_off;
+        if (!onData?.summary || !offData?.summary) { document.getElementById('abl1-result-area').innerHTML = '<div class="px-4 py-3 border-b border-outline-variant bg-surface-container-low font-semibold text-sm">消融实验一对比</div><div class="p-4 text-center text-outline text-sm">数据不完整</div>'; return; }
+        const onModel = Object.values(onData.summary.models||{})[0]||{};
+        const offModel = Object.values(offData.summary.models||{})[0]||{};
+        const delta = (onModel.avg_bleu||0)-(offModel.avg_bleu||0);
+        let html = '<div class="px-4 py-3 border-b border-outline-variant bg-surface-container-low font-semibold text-sm">消融实验一：场景识别+领域提示 ON vs OFF（全部七领域）</div><table class="w-full text-left text-xs"><thead class="bg-surface-container-low"><tr><th class="px-3 py-2">条件</th><th class="px-3 py-2 text-center">成功率</th><th class="px-3 py-2 text-center">BLEU</th><th class="px-3 py-2 text-center">METEOR</th><th class="px-3 py-2 text-center">响应(s)</th></tr></thead><tbody>' +
+            '<tr class="hover:bg-green-50"><td class="px-3 py-2 text-green-700 font-semibold">🟢 场景识别+领域提示 ON</td><td class="px-3 py-2 text-center">'+(onModel.success_rate||0)+'%</td><td class="px-3 py-2 text-center font-bold text-primary">'+(onModel.avg_bleu||0)+'</td><td class="px-3 py-2 text-center">'+(onModel.avg_meteor||0)+'</td><td class="px-3 py-2 text-center">'+(onModel.avg_response_time||0)+'s</td></tr>' +
+            '<tr class="hover:bg-red-50"><td class="px-3 py-2 text-red-700 font-semibold">🔴 纯翻译（无领域增强）</td><td class="px-3 py-2 text-center">'+(offModel.success_rate||0)+'%</td><td class="px-3 py-2 text-center font-bold text-primary">'+(offModel.avg_bleu||0)+'</td><td class="px-3 py-2 text-center">'+(offModel.avg_meteor||0)+'</td><td class="px-3 py-2 text-center">'+(offModel.avg_response_time||0)+'s</td></tr>' +
+            '<tr class="bg-surface-container-low"><td colspan="5" class="px-3 py-2 text-xs text-center font-semibold">BLEU增益: <span class="'+(delta>=0?'text-green-600':'text-red-600')+'">'+(delta>=0?'+':'')+delta+'</span> | 场景检测准确率: '+(onData.detection_accuracy||'?')+'% ('+(onData.detection_correct||0)+'/'+(onData.detection_total||0)+') | n='+(d.config?.sample_size||'?')+'</td></tr></tbody></table>';
+        const onDomains = onModel.domains||{}, offDomains = offModel.domains||{};
+        const allDomains = [...new Set([...Object.keys(onDomains),...Object.keys(offDomains)])].sort();
+        if (allDomains.length) {
+            html += '<div class="mt-3"><div class="px-4 py-2 border-b border-outline-variant bg-surface-container-low font-semibold text-xs">📂 各领域 BLEU 对比（含场景检测准确率）</div><table class="w-full text-left text-xs"><thead class="bg-surface-container-low"><tr><th class="px-3 py-2">领域</th><th class="px-3 py-2 text-center">ON BLEU</th><th class="px-3 py-2 text-center">OFF BLEU</th><th class="px-3 py-2 text-center">增益</th><th class="px-3 py-2 text-center">检测正确率</th></tr></thead><tbody>';
+            allDomains.forEach(dd => {
+                const oB=(onDomains[dd]||{}).avg_bleu||0, fB=(offDomains[dd]||{}).avg_bleu||0, dDelta=oB-fB;
+                const dc = (onDomains[dd]||{}).count||0;
+                const st = (onDomains[dd]||{}).sample_total||dc;
+                html+='<tr><td class="px-3 py-2 text-xs font-semibold">'+dd+'</td><td class="px-3 py-2 text-center font-bold text-primary">'+oB+'</td><td class="px-3 py-2 text-center">'+fB+'</td><td class="px-3 py-2 text-center font-semibold '+(dDelta>=0?'text-green-600':'text-red-600')+'">'+(dDelta>=0?'+':'')+dDelta+'</td><td class="px-3 py-2 text-center text-xs">'+(dd==='overall'?'—':'—')+'</td></tr>';
+            });
+            html+='</tbody></table></div>';
+        }
+        document.getElementById('abl1-result-area').innerHTML = html;
+    } catch(e) {}
+}
+
+async function loadAbl1DataForDataset(dataset) { await loadAbl1Result(dataset); }
+async function refreshAbl1View() { await loadDatasets(); await loadAbl1Result(document.getElementById('abl1-view-dataset').value); }
+async function generateAbl1Charts() {
+    const ds = 'default';
+    try {
+        const resp = await fetch(`${API_BASE}/api/experiment/ablation/charts?dataset=${ds}&type=abl1`);
+        const data = await resp.json();
+        document.getElementById('abl1-chart-area').classList.remove('hidden');
+        if (data.success && data.chart_urls) document.getElementById('abl1-chart-area').innerHTML = data.chart_urls.map(url => '<img src="'+url+'" class="max-w-full border border-outline-variant rounded-lg" alt="图表"/>').join('');
+        else document.getElementById('abl1-chart-area').innerHTML = '<p class="text-outline text-sm p-4">'+(data.error||'无数据')+'</p>';
+    } catch(e) {}
+}
+async function generateAbl1Report() {
+    const ds = 'default';
+    try {
+        const resp = await fetch(`${API_BASE}/api/experiment/ablation/report?dataset=${ds}&type=abl1`);
+        const data = await resp.json();
+        if (data.success) alert(data.report_path+'\n报告已保存。');
+        else alert('请先运行实验');
+    } catch(e) {}
+}
+
+// ======== Experiment 5: Ablation 2 — 术语注入 ========
+let _abl2PollTimer = null;
+async function runAbl2Exp() {
+    const status = await fetch(`${API_BASE}/api/status`).then(r => r.json()).catch(() => null);
+    if (!status || !status.running) { alert('请先启动模型服务'); return; }
+    if (!status.current_model) { alert('未检测到当前运行的模型，请先点击「启动/切换」'); return; }
+
+    if (_experimentRunning) {
+        const toast = document.createElement('div');
+        toast.textContent = '⏳ 实验正在运行中，请等待完成或先点「停止实验」';
+        toast.style.cssText = 'position:fixed;top:80px;right:24px;background:#e0e7ff;color:#3730a3;padding:12px 20px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.15);font-weight:600;z-index:9999;transition:opacity .3s';
+        document.body.appendChild(toast);
+        setTimeout(() => { toast.style.opacity = '0'; setTimeout(() => toast.remove(), 300); }, 2500);
+        return;
+    }
+
+    const btn = document.getElementById('btn-run-abl2');
+    const n = parseInt(document.getElementById('abl2-sample').value);
+    const ds = 'ablation';
+
+    _experimentRunning = true;
+    btn.classList.add('opacity-60', 'cursor-not-allowed');
+    btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> 运行中...';
+
+    const prog = document.getElementById('abl2-progress');
+    prog.classList.remove('hidden');
+    document.getElementById('abl2-progress-pct').textContent = '0%';
+    document.getElementById('abl2-progress-bar').style.width = '0%';
+    document.getElementById('abl2-progress-msg').textContent = '准备中...';
+
+    try {
+        const resp = await fetch(`${API_BASE}/api/experiment/ablation`, {
+            method:'POST', headers:{'Content-Type':'application/json'},
+            body: JSON.stringify({sample_size: n, lang_pair: 'zh-en', dataset: ds, ablation_type: 'abl2'})
+        });
+        const d = await resp.json();
+        if (!d.success) {
+            _experimentRunning = false;
+            alert(d.error);
+            btn.classList.remove('opacity-60', 'cursor-not-allowed');
+            btn.innerHTML = '<span class="material-symbols-outlined">play_arrow</span>运行消融实验二';
+            prog.classList.add('hidden');
+            return;
+        }
+
+        if (_abl2PollTimer) clearInterval(_abl2PollTimer);
+        _abl2PollTimer = setInterval(async () => {
+            try {
+                const pr = await fetch(`${API_BASE}/api/experiment/progress`);
+                const pd = await pr.json();
+                const pct = pd.total > 0 ? Math.round(pd.current / pd.total * 100) : 0;
+                document.getElementById('abl2-progress-bar').style.width = pct + '%';
+                document.getElementById('abl2-progress-pct').textContent = pct + '%';
+                document.getElementById('abl2-progress-msg').textContent = pd.message || '';
+
+                if (!pd.running) {
+                    clearInterval(_abl2PollTimer);
+                    prog.classList.add('hidden');
+                    const stopped = pd.total > 0 && pd.current < pd.total;
+                    if (stopped) {
+                        alert('⚠️ 已被用户停止');
+                    }
+                    _experimentRunning = false;
+                    btn.classList.remove('opacity-60', 'cursor-not-allowed');
+                    btn.innerHTML = '<span class="material-symbols-outlined">play_arrow</span>运行消融实验二';
+                    await loadAbl2Result(ds);
+                }
+            } catch(e) {}
+        }, 5000);
+    } catch(e) {
+        alert('失败: ' + e.message);
+        _experimentRunning = false;
+        btn.classList.remove('opacity-60', 'cursor-not-allowed');
+        btn.innerHTML = '<span class="material-symbols-outlined">play_arrow</span>运行消融实验二';
+        prog.classList.add('hidden');
+    }
+}
+
+async function loadAbl2Result(dataset) {
+    const ds = dataset || 'default';
+    try { 
+        const resp = await fetch(`${API_BASE}/api/experiment/ablation/data?dataset=${ds}&type=abl2`);
+        const data = await resp.json();
+        if (!data.success) { document.getElementById('abl2-result-area').innerHTML = '<div class="px-4 py-3 border-b border-outline-variant bg-surface-container-low font-semibold text-sm">消融实验二对比</div><div class="p-4 text-center text-outline text-sm">无数据</div>'; return; }
+        const d = data.data;
+        abl2Data = d;
+        const onData = d.custom_on || d.all_on, offData = d.all_off;
+        if (!onData?.summary || !offData?.summary) { document.getElementById('abl2-result-area').innerHTML = '<div class="px-4 py-3 border-b border-outline-variant bg-surface-container-low font-semibold text-sm">消融实验二对比</div><div class="p-4 text-center text-outline text-sm">数据不完整</div>'; return; }
+        const onModel = Object.values(onData.summary.models||{})[0]||{};
+        const offModel = Object.values(offData.summary.models||{})[0]||{};
+        const delta = (onModel.avg_bleu||0)-(offModel.avg_bleu||0);
+        let html = '<div class="px-4 py-3 border-b border-outline-variant bg-surface-container-low font-semibold text-sm">消融实验二：术语词典注入 ON vs OFF（仅法律/医学/计算机）</div><table class="w-full text-left text-xs"><thead class="bg-surface-container-low"><tr><th class="px-3 py-2">条件</th><th class="px-3 py-2 text-center">成功率</th><th class="px-3 py-2 text-center">BLEU</th><th class="px-3 py-2 text-center">METEOR</th><th class="px-3 py-2 text-center">响应(s)</th></tr></thead><tbody>' +
+            '<tr class="hover:bg-green-50"><td class="px-3 py-2 text-green-700 font-semibold">🟢 术语注入 ON（场景识别+提示词+术语）</td><td class="px-3 py-2 text-center">'+(onModel.success_rate||0)+'%</td><td class="px-3 py-2 text-center font-bold text-primary">'+(onModel.avg_bleu||0)+'</td><td class="px-3 py-2 text-center">'+(onModel.avg_meteor||0)+'</td><td class="px-3 py-2 text-center">'+(onModel.avg_response_time||0)+'s</td></tr>' +
+            '<tr class="hover:bg-red-50"><td class="px-3 py-2 text-red-700 font-semibold">🔴 场景识别+提示词（无术语注入）</td><td class="px-3 py-2 text-center">'+(offModel.success_rate||0)+'%</td><td class="px-3 py-2 text-center font-bold text-primary">'+(offModel.avg_bleu||0)+'</td><td class="px-3 py-2 text-center">'+(offModel.avg_meteor||0)+'</td><td class="px-3 py-2 text-center">'+(offModel.avg_response_time||0)+'s</td></tr>' +
+            '<tr class="bg-surface-container-low"><td colspan="5" class="px-3 py-2 text-xs text-center font-semibold">BLEU增益: <span class="'+(delta>=0?'text-green-600':'text-red-600')+'">'+(delta>=0?'+':'')+delta+'</span> | n='+(d.config?.sample_size||'?')+'</td></tr></tbody></table>';
+        // 各领域对比
+        const onDomains = onModel.domains||{}, offDomains = offModel.domains||{};
+        const allDomains = [...new Set([...Object.keys(onDomains),...Object.keys(offDomains)])].sort();
+        if (allDomains.length) {
+            html += '<div class="mt-3"><div class="px-4 py-2 border-b border-outline-variant bg-surface-container-low font-semibold text-xs">📂 各领域 BLEU 对比（⚡术语注入仅对法律/医学/计算机生效）</div><table class="w-full text-left text-xs"><thead class="bg-surface-container-low"><tr><th class="px-3 py-2">领域</th><th class="px-3 py-2 text-center">ON BLEU</th><th class="px-3 py-2 text-center">OFF BLEU</th><th class="px-3 py-2 text-center">增益</th></tr></thead><tbody>';
+            allDomains.forEach(dd => {
+                const oB=(onDomains[dd]||{}).avg_bleu||0, fB=(offDomains[dd]||{}).avg_bleu||0, dDelta=oB-fB;
+                const hl=['law','medicine','cs'].includes(dd);
+                html+='<tr class="'+(hl?'bg-yellow-50/50':'')+'"><td class="px-3 py-2 text-xs font-semibold">'+(hl?'⚡':'')+' '+dd+'</td><td class="px-3 py-2 text-center font-bold text-primary">'+oB+'</td><td class="px-3 py-2 text-center">'+fB+'</td><td class="px-3 py-2 text-center font-semibold '+(dDelta>=0?'text-green-600':'text-red-600')+'">'+(dDelta>=0?'+':'')+dDelta+'</td></tr>';
+            });
+            html+='</tbody></table></div>';
+        }
+        document.getElementById('abl2-result-area').innerHTML = html;
+    } catch(e) {}
+}
+
+async function loadAbl2DataForDataset(dataset) { await loadAbl2Result(dataset); }
+async function refreshAbl2View() { await loadDatasets(); await loadAbl2Result(document.getElementById('abl2-view-dataset').value); }
+async function generateAbl2Charts() {
+    const ds = 'ablation';
+    try {
+        const resp = await fetch(`${API_BASE}/api/experiment/ablation/charts?dataset=${ds}&type=abl2`);
+        const data = await resp.json();
+        document.getElementById('abl2-chart-area').classList.remove('hidden');
+        if (data.success && data.chart_urls) document.getElementById('abl2-chart-area').innerHTML = data.chart_urls.map(url => '<img src="'+url+'" class="max-w-full border border-outline-variant rounded-lg" alt="图表"/>').join('');
+        else document.getElementById('abl2-chart-area').innerHTML = '<p class="text-outline text-sm p-4">'+(data.error||'无数据')+'</p>';
+    } catch(e) {}
+}
+async function generateAbl2Report() {
+    const ds = 'ablation';
+    try {
+        const resp = await fetch(`${API_BASE}/api/experiment/ablation/report?dataset=${ds}&type=abl2`);
+        const data = await resp.json();
+        if (data.success) alert(data.report_path+'\n报告已保存。');
+        else alert('请先运行实验');
+    } catch(e) {}
+}
+
+// ======== Experiment Stop ========
+async function stopExperiment() {
+    try {
+        const resp = await fetch(`${API_BASE}/api/experiment/stop`, {method:'POST'});
+        const data = await resp.json();
+        const isSuccess = data.success;
+
+        const toast = document.createElement('div');
+        toast.textContent = (isSuccess ? '⏸️ ' : '⚠️ ') + (data.message || (isSuccess ? '停止信号已发送' : '停止失败'));
+        toast.style.cssText = `position:fixed;top:80px;right:24px;padding:12px 20px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.15);font-weight:600;z-index:9999;transition:opacity .3s;` +
+            (isSuccess ? 'background:#fef3c7;color:#92400e;' : 'background:#fee2e2;color:#991b1b;');
+        document.body.appendChild(toast);
+        setTimeout(() => { toast.style.opacity = '0'; setTimeout(() => toast.remove(), 300); }, 3000);
+
+        if (!isSuccess) return;
+
+        // 停止成功后，等下一次轮询检测到 running=false 自动收尾，但这里可以给个 UI 提示
+        document.getElementById('exp1-progress-msg').textContent = '⏸️ 已发送停止信号，等待当前样本完成...';
+        document.getElementById('exp2-progress-msg').textContent = '⏸️ 已发送停止信号，等待当前样本完成...';
+        document.getElementById('ml-progress-msg').textContent = '⏸️ 已发送停止信号，等待当前样本完成...';
+        document.getElementById('abl1-progress-msg').textContent = '⏸️ 已发送停止信号，等待当前样本完成...';
+        document.getElementById('abl2-progress-msg').textContent = '⏸️ 已发送停止信号，等待当前样本完成...';
+    } catch(e) {
+        console.error(e);
+    }
+}
+
+// ======== Charts & Report for Exp1/Exp2 ========
+async function generateExp1Charts() {
+    try {
+        const dataset = document.getElementById('exp1-view-dataset').value || 'default';
+        const resp = await fetch(`${API_BASE}/api/experiment/charts/model?dataset=${dataset}`);
+        const data = await resp.json();
+        if (data.success && data.chart_urls?.length) {
+            document.getElementById('exp1-chart-area').classList.remove('hidden');
+            document.getElementById('exp1-chart-area').innerHTML = data.chart_urls.map(url => `<img src="${url}" class="max-w-full border border-outline-variant rounded-lg mb-3" alt="实验一图表"/>`).join('');
+        } else {
+            document.getElementById('exp1-chart-area').classList.remove('hidden');
+            document.getElementById('exp1-chart-area').innerHTML = '<p class="text-outline text-sm py-8">' + (data.error||'无数据') + '</p>';
+        }
+    } catch(e) { alert('请求失败: ' + e.message); }
+}
+
+async function generateExp2Charts() {
+    try {
+        const dataset = document.getElementById('exp2-view-dataset').value || 'default';
+        const resp = await fetch(`${API_BASE}/api/experiment/charts/strategy?dataset=${dataset}`);
+        const data = await resp.json();
+        if (data.success && data.chart_urls?.length) {
+            document.getElementById('exp2-chart-area').classList.remove('hidden');
+            document.getElementById('exp2-chart-area').innerHTML = data.chart_urls.map(url => `<img src="${url}" class="max-w-full border border-outline-variant rounded-lg mb-3" alt="实验二图表"/>`).join('');
+        } else {
+            document.getElementById('exp2-chart-area').classList.remove('hidden');
+            document.getElementById('exp2-chart-area').innerHTML = '<p class="text-outline text-sm py-8">' + (data.error||'无数据') + '</p>';
+        }
+    } catch(e) { alert('请求失败: ' + e.message); }
+}
+
+async function generateExpReport() {
+    try {
+        const dataset = document.getElementById('exp1-view-dataset')?.value || document.getElementById('exp2-view-dataset')?.value || 'default';
+        const resp = await fetch(`${API_BASE}/api/experiment/report?dataset=${dataset}`);
+        const data = await resp.json();
+        if (data.success) { alert(data.report_path + '\\n报告已保存至服务器。'); }
+        else { alert('请先运行实验'); }
+    } catch(e) { alert('请求失败: ' + e.message); }
+}
+
+// ======== Dataset Management ========
+let availableDatasets = [];
+let activeDataset = 'default';
+
+async function loadDatasets() {
+    try {
+        const resp = await fetch(`${API_BASE}/api/datasets`);
+        const data = await resp.json();
+        if (data.success) {
+            availableDatasets = data.datasets;
+            renderDatasetCards();
+            populateAllDatasetSelectors();
+        }
+    } catch(e) { console.error('Failed to load datasets:', e); }
+}
+
+function renderDatasetCards() {
+    const container = document.getElementById('dataset-cards');
+    if (!availableDatasets.length) {
+        container.innerHTML = '<div class="col-span-3 text-outline text-sm text-center py-8">无可用数据集</div>';
+        return;
+    }
+    container.innerHTML = availableDatasets.map(ds => {
+        const domainLabels = Object.entries(ds.domains || {}).map(([k,v]) => `${k}(${v})`).join(', ');
+        const langBadges = (ds.languages || []).map(l => `<span class="px-1.5 py-0.5 bg-primary/10 text-primary text-[10px] font-semibold rounded">${l}</span>`).join(' ');
+        return `<div class="bg-white border border-outline-variant rounded-xl p-4 hover:border-primary cursor-pointer transition-colors shadow-sm" onclick="showDatasetDetail('${ds.key}')">
+            <h4 class="font-semibold mb-1 flex items-center gap-2">${ds.name} ${ds.key === activeDataset ? '<span class="text-[10px] bg-green-100 text-green-700 px-1.5 py-0.5 rounded-full">活跃</span>' : ''}</h4>
+            <p class="text-xs text-on-surface-variant mb-2">${ds.description}</p>
+            <div class="flex flex-wrap items-center gap-2 text-xs">
+                <span class="font-bold">${ds.total} 条</span>
+                <span class="text-outline">|</span>
+                <span class="text-on-surface-variant">${domainLabels || '无领域'}</span>
+            </div>
+            <div class="mt-2 flex gap-1">${langBadges}</div>
+        </div>`;
+    }).join('');
+}
+
+async function showDatasetDetail(key) {
+    try {
+        const resp = await fetch(`${API_BASE}/api/datasets/${key}`);
+        const data = await resp.json();
+        if (!data.success) { alert('加载失败: ' + data.error); return; }
+        const stats = data.stats;
+        document.getElementById('dataset-detail').style.display = 'block';
+        document.getElementById('dataset-detail-title').textContent = stats.name || key;
+        document.getElementById('dataset-active-badge').style.display = (key === activeDataset) ? 'inline' : 'none';
+        document.getElementById('dataset-stats-grid').innerHTML = `
+            <div class="bg-surface-container-low rounded-lg p-3 text-center"><div class="text-2xl font-extrabold text-primary">${stats.total}</div><div class="text-xs text-outline mt-1">总条数</div></div>
+            <div class="bg-surface-container-low rounded-lg p-3 text-center"><div class="text-2xl font-extrabold text-primary">${Object.keys(stats.domains||{}).length}</div><div class="text-xs text-outline mt-1">领域数</div></div>
+            <div class="bg-surface-container-low rounded-lg p-3 text-center"><div class="text-2xl font-extrabold text-primary">${(stats.languages||[]).length}</div><div class="text-xs text-outline mt-1">语言数</div></div>
+        `;
+        document.getElementById('dataset-preview-body').innerHTML = (data.preview || []).map(item =>
+            `<tr class="hover:bg-surface-container-low"><td class="px-3 py-2">#${item.id + 1}</td><td class="px-3 py-2 max-w-[200px] truncate">${item.zh}</td><td class="px-3 py-2 max-w-[200px] truncate">${item.en}</td><td class="px-3 py-2"><span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] rounded-full font-semibold">${item.domain}</span></td></tr>`
+        ).join('');
+    } catch(e) { console.error(e); }
+}
+
+function populateAllDatasetSelectors() {
+    const opts = availableDatasets.map(ds =>
+        `<option value="${ds.key}" ${ds.key === 'default' ? 'selected' : ''}>${ds.name}</option>`
+    ).join('');
+    ['exp1-dataset','exp2-dataset','ml-dataset','exp1-view-dataset','exp2-view-dataset','ml-view-dataset'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = opts;
+    });
+}
+
+async function loadExp1DataForDataset(dataset) {
+    const resp = await fetch(`${API_BASE}/api/experiment/data?dataset=${dataset}`);
+    const d = await resp.json();
+    if (d.experiment1) { experiment1Data = d.experiment1; renderExp1Table(); }
+}
+
+async function loadExp2DataForDataset(dataset) {
+    const resp = await fetch(`${API_BASE}/api/experiment/data?dataset=${dataset}`);
+    const d = await resp.json();
+    if (d.experiment2) { experiment2Data = d.experiment2; renderExp2Table(); }
+}
+
+async function refreshExp1View() {
+    await loadDatasets();
+    const dataset = document.getElementById('exp1-view-dataset').value;
+    await loadExp1DataForDataset(dataset);
+}
+
+async function refreshExp2View() {
+    await loadDatasets();
+    const dataset = document.getElementById('exp2-view-dataset').value;
+    await loadExp2DataForDataset(dataset);
+}
+
+// ======== Batch Processing ========
+let batchMode = 'file';
+let _batchPollTimer = null;
+let _ltPollTimer = null;
+let longTextMerged = '';
+let longTextDetails = [];
+
+function setBatchMode(mode) {
+    batchMode = mode;
+    document.getElementById('btn-batch-mode-file').className = mode==='file' ? 'flex-1 py-1.5 px-4 rounded-md text-sm font-semibold bg-white shadow-sm text-primary transition-all' : 'flex-1 py-1.5 px-4 rounded-md text-sm text-on-surface-variant transition-all';
+    document.getElementById('btn-batch-mode-long').className = mode==='longtext' ? 'flex-1 py-1.5 px-4 rounded-md text-sm font-semibold bg-white shadow-sm text-primary transition-all' : 'flex-1 py-1.5 px-4 rounded-md text-sm text-on-surface-variant transition-all';
+    document.getElementById('batch-mode-file').classList.toggle('hidden', mode !== 'file');
+    document.getElementById('batch-mode-longtext').classList.toggle('hidden', mode !== 'longtext');
+}
+
+// 字符计数
+document.getElementById('lt-input')?.addEventListener('input', function() {
+    document.getElementById('lt-char-count').textContent = '字符数: ' + this.value.length;
+});
+
+function handleFileSelect(e) {
+    const file = e.target.files[0];
+    if (file) document.getElementById('batch-file-name').textContent = `${file.name} (${(file.size/1024).toFixed(1)} KB)`;
+}
+
+async function startBatch() {
+    const fileInput = document.getElementById('batch-file-input');
+    if (!fileInput.files[0]) { alert('请先选择文件'); return; }
+    if (!await checkStatus()) { alert('请先启动 vLLM 服务'); return; }
+
+    const formData = new FormData();
+    formData.append('file', fileInput.files[0]);
+    formData.append('source_lang', document.getElementById('batch-lang').value.split('-')[0]);
+    formData.append('target_lang', document.getElementById('batch-lang').value.split('-')[1]);
+    formData.append('strategy', document.getElementById('batch-strategy').value);
+    formData.append('polish_level', document.getElementById('batch-polish').value);
+    formData.append('context_window', document.getElementById('batch-ctx-window').value);
+
+    document.getElementById('batch-progress').classList.remove('hidden');
+    document.getElementById('batch-status-text').textContent = '启动中...';
+
+    try {
+        const startResp = await fetch(`${API_BASE}/api/batch/upload`, {method:'POST', body:formData});
+        const startData = await startResp.json();
+        if (!startData.success) { alert('启动失败: ' + (startData.error||'未知错误')); return; }
+        if (_batchPollTimer) clearInterval(_batchPollTimer);
+        _batchPollTimer = setInterval(async () => {
+            const pr = await fetch(`${API_BASE}/api/batch/progress`);
+            const pd = await pr.json();
+            const p = pd.progress;
+            const pct = p.total > 0 ? Math.round(p.current / p.total * 100) : 5;
+            document.getElementById('batch-bar').style.width = pct + '%';
+            document.getElementById('batch-percent').textContent = pct + '%';
+            document.getElementById('batch-status-text').textContent = p.running ? `处理中: ${p.current}/${p.total}` : '完成！';
+            if (!p.running && p.current >= p.total && p.total > 0) {
+                clearInterval(_batchPollTimer);
+                batchResults = pd.results || [];
+                renderBatchTable();
+                const stats = p.stats;
+                if (stats) {
+                    document.getElementById('batch-status-text').textContent = `完成！${stats.success_count}/${stats.total_segments}段 | 总耗时${stats.total_time_s}s | 平均${stats.avg_time_s}s/段 | 最快${stats.min_time_s}s | 最慢${stats.max_time_s}s`;
+                } else {
+                    document.getElementById('batch-status-text').textContent = `完成！共处理 ${batchResults.length} 段`;
+                }
+            }
+        }, 1000);
+    } catch(e) { alert('请求失败: ' + e.message); }
+}
+
+function renderBatchTable() {
+    const tbody = document.getElementById('batch-table-body');
+    tbody.innerHTML = batchResults.map(r =>
+        `<tr class="hover:bg-surface-container-low"><td class="px-3 py-2 text-xs">${String(r.index).padStart(3,'0')}${r.has_context?' 🔗':''}</td><td class="px-3 py-2 text-sm">${(r.original||'').substring(0,60)}...</td><td class="px-3 py-2 text-sm">${r.success ? (r.translated||'').substring(0,60)+'...' : '❌ 失败'}</td><td class="px-3 py-2 text-sm">${r.polished ? (r.polished).substring(0,60)+'...' : '—'}</td><td class="px-3 py-2 text-xs text-center font-mono">${r.elapsed_s||'—'}s</td></tr>`
+    ).join('');
+}
+
+function downloadBatchResults() {
+    if (!batchResults.length) { alert('暂无数据'); return; }
+    const blob = new Blob([JSON.stringify(batchResults, null, 2)], {type:'application/json'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href = url; a.download = `batch_results_${new Date().toISOString().slice(0,10)}.json`; a.click();
+}
+
+// ======== Long Text Split-Translate ========
+async function startLongText(btn) {
+    const text = document.getElementById('lt-input').value.trim();
+    if (!text) { alert('请输入文本'); return; }
+    if (!await checkStatus()) { alert('请先启动 vLLM 服务'); return; }
+
+    if (btn) { btn.disabled = true; btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> 翻译中...'; }
+
+    document.getElementById('lt-progress').classList.remove('hidden');
+    document.getElementById('lt-result-area').classList.add('hidden');
+    document.getElementById('lt-details-card').classList.add('hidden');
+
+    try {
+        const resp = await fetch(`${API_BASE}/api/translate/longtext`, {
+            method: 'POST', headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({
+                text: text,
+                source_lang: document.getElementById('lt-lang').value.split('-')[0],
+                target_lang: document.getElementById('lt-lang').value.split('-')[1],
+                strategy: document.getElementById('lt-strategy').value,
+                domain: document.getElementById('lt-domain').value,
+                preserve_format: document.getElementById('lt-preserve-format').checked,
+                context_window: parseInt(document.getElementById('lt-ctx-window').value),
+            })
+        });
+        const d = await resp.json();
+        if (!d.success) { alert(d.error||'启动失败'); if(btn){btn.disabled=false;btn.innerHTML='<span class="material-symbols-outlined">auto_awesome</span>开始分句翻译';} return; }
+
+        if (_ltPollTimer) clearInterval(_ltPollTimer);
+        _ltPollTimer = setInterval(async () => {
+            const pr = await fetch(`${API_BASE}/api/translate/longtext/progress`);
+            const pd = await pr.json();
+            const p = pd.progress;
+            if (p.total > 0) {
+                const pct = Math.round(p.current / p.total * 100);
+                document.getElementById('lt-bar').style.width = pct + '%';
+                document.getElementById('lt-percent').textContent = pct + '%';
+            }
+            document.getElementById('lt-status-text').textContent = p.message || (p.running ? '翻译中...' : '完成');
+            if (!p.running) {
+                clearInterval(_ltPollTimer);
+                if (pd.results && pd.results.length) {
+                    longTextDetails = pd.results;
+                    longTextMerged = p.merged || pd.results.map(r => r.translated).join('');
+                    document.getElementById('lt-merged-result').textContent = longTextMerged;
+                    document.getElementById('lt-result-area').classList.remove('hidden');
+                    // Sentence details
+                    document.getElementById('lt-details-body').innerHTML = longTextDetails.map(r =>
+                        `<div class="p-2 hover:bg-surface-container-low rounded-lg border-b border-surface-variant last:border-0">
+                            <p class="text-xs font-semibold text-outline">#${r.index+1}${r.has_context?' 🔗':''}</p>
+                            <p class="text-xs text-on-surface-variant truncate">${r.original.substring(0,100)}...</p>
+                            <p class="text-xs text-primary truncate">${(r.translated||'').substring(0,100)}...</p>
+                        </div>`
+                    ).join('');
+                    document.getElementById('lt-details-card').classList.remove('hidden');
+                }
+                if (btn) { btn.disabled = false; btn.innerHTML = '<span class="material-symbols-outlined">auto_awesome</span>开始分句翻译'; }
+            }
+            if (pd.results) longTextDetails = pd.results;
+        }, 2000);
+    } catch(e) { alert('失败: '+e.message); if(btn){btn.disabled=false;btn.innerHTML='<span class="material-symbols-outlined">auto_awesome</span>开始分句翻译';} }
+}
+
+function copyLongTextResult() {
+    navigator.clipboard.writeText(longTextMerged).then(() => {});
+}
+
+function downloadLongTextResult() {
+    const blob = new Blob([longTextMerged], {type:'text/plain;charset=utf-8'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href = url; a.download = `translated_${new Date().toISOString().slice(0,10)}.txt`; a.click();
+}
+
+// ======== Export ========
+let exportHistory = [];
+
+function doExport() {
+    const format = document.getElementById('export-format').value;
+    const items = [];
+    if (document.getElementById('exp-trans').checked) items.push('translation_history');
+    if (document.getElementById('exp-polish').checked) items.push('polish_history');
+    if (document.getElementById('exp-convert').checked) items.push('conversion_history');
+    if (document.getElementById('exp-eval').checked) items.push('evaluation_results');
+    if (document.getElementById('exp-batch').checked) items.push('batch_results');
+    if (document.getElementById('exp-exp1').checked) items.push('experiment1_data');
+    if (document.getElementById('exp-exp2').checked) items.push('experiment2_data');
+    if (document.getElementById('exp-exp3').checked) items.push('experiment3_data');
+    if (document.getElementById('exp-exp4').checked) items.push('experiment4_data');
+    if (document.getElementById('exp-exp5').checked) items.push('experiment5_data');
+    if (!items.length) { alert('请选择导出内容'); return; }
+
+    const btn = document.getElementById('exportBtn');
+    btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> 处理中...';
+    btn.disabled = true;
+
+    const dataMap = {
+        translation_history: translationHistory,
+        polish_history: polishHistory,
+        conversion_history: convertHistory,
+        evaluation_results: evaluationResults,
+        batch_results: batchResults,
+        experiment1_data: experiment1Data,
+        experiment2_data: experiment2Data,
+        experiment3_data: multilangData,
+        experiment4_data: abl1Data,
+        experiment5_data: abl2Data,
+    };
+    const exportData = {};
+    for (const key of items) { if (dataMap[key]) exportData[key] = dataMap[key]; }
+    if (Object.keys(exportData).length === 0) { alert('所选内容无可用数据'); btn.innerHTML = '<span class="material-symbols-outlined">download</span> 导出资产'; btn.disabled = false; return; }
+
+    let content, mime, ext;
+    const ts = new Date().toISOString().slice(0,19).replace(/[T:]/g,'-');
+    if (format === 'json') {
+        content = JSON.stringify(exportData, null, 2); mime = 'application/json'; ext = 'json';
+    } else if (format === 'markdown') {
+        content = buildMarkdownExport(exportData); mime = 'text/markdown'; ext = 'md';
+    } else {
+        content = buildTextExport(exportData); mime = 'text/plain'; ext = 'txt';
+    }
+
+    const blob = new Blob([content], {type: mime});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href = url; a.download = `export_${ts}.${ext}`; a.click();
+    URL.revokeObjectURL(url);
+
+    exportHistory.push({filename: `export_${ts}.${ext}`, format: format.toUpperCase(), timestamp: new Date().toISOString()});
+    renderExportHistory();
+    btn.innerHTML = '<span class="material-symbols-outlined">download</span> 导出资产';
+    btn.disabled = false;
+}
+
+function buildMarkdownExport(data) {
+    let md = '# 翻译润色工具 - 导出报告\n\n';
+    md += `> 导出时间: ${new Date().toISOString()}\n\n`;
+    for (const [key, val] of Object.entries(data)) {
+        md += `## ${key}\n\n`;
+        if (Array.isArray(val)) {
+            for (const item of val.slice(0, 50)) {
+                md += `- ${JSON.stringify(item).substring(0, 300)}\n`;
+            }
+            if (val.length > 50) md += `- ... (共 ${val.length} 条)\n`;
+        } else {
+            md += '```json\n' + JSON.stringify(val, null, 2) + '\n```\n';
+        }
+        md += '\n';
+    }
+    return md;
+}
+
+function buildTextExport(data) {
+    let txt = '=== 翻译润色工具 - 导出报告 ===\n\n';
+    for (const [key, val] of Object.entries(data)) {
+        txt += `--- ${key} ---\n`;
+        if (Array.isArray(val)) {
+            for (const item of val.slice(0, 50)) {
+                txt += JSON.stringify(item) + '\n';
+            }
+            if (val.length > 50) txt += `... (共 ${val.length} 条)\n`;
+        } else {
+            txt += JSON.stringify(val, null, 2) + '\n';
+        }
+        txt += '\n';
+    }
+    return txt;
+}
+
+function renderExportHistory() {
+    const tbody = document.getElementById('export-history-body');
+    if (!exportHistory.length) { tbody.innerHTML = '<tr><td colspan="4" class="px-4 py-6 text-center text-outline text-sm">暂无导出记录</td></tr>'; return; }
+    tbody.innerHTML = exportHistory.slice(-10).reverse().map(h =>
+        `<tr><td class="px-4 py-2"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">description</span>${h.filename}</div></td><td class="px-4 py-2">${h.format}</td><td class="px-4 py-2">${h.timestamp.substring(0,19)}</td><td class="px-4 py-2 text-right"><span class="px-2 py-0.5 bg-green-100 text-green-700 text-xs font-bold rounded">已导出</span></td></tr>`
+    ).join('');
+}
+
+// ======== Init ========
+document.addEventListener('DOMContentLoaded', () => {
+    checkStatus();
+    setInterval(checkStatus, 15000);
+    // Load datasets
+    loadDatasets();
+    // Load all persisted histories from server
+    fetch(`${API_BASE}/api/scores`).then(r=>r.json()).then(d=>{
+        manualScores = d.scores || [];
+        renderScoreTable();
+        loadFeedbackInsights();
+    }).catch(()=>{});
+    loadHistoryFromServer('translation', data => { translationHistory = data; renderTransHistory(); });
+    loadHistoryFromServer('polish', data => { polishHistory = data; renderPolishHistory(); });
+    loadHistoryFromServer('conversion', data => { convertHistory = data; renderConvertHistory(); });
+    loadHistoryFromServer('evaluation', data => { evaluationResults = data; renderAutoEvalHistory(); });
+    loadHistoryFromServer('batch', data => { batchResults = data; });
+    // Load saved experiment data and render tables
+    fetch(`${API_BASE}/api/experiment/data`).then(r=>r.json()).then(d=>{
+        if (d.experiment1) { experiment1Data = d.experiment1; renderExp1Table(); }
+        if (d.experiment2) { experiment2Data = d.experiment2; renderExp2Table(); }
+        loadMultilangData('default');
+        // 加载消融实验已有数据
+        fetch(`${API_BASE}/api/experiment/ablation/data?type=abl1`).then(r=>r.json()).then(ad=>{
+            if (ad.success) { loadAbl1Result('default'); }
+        }).catch(()=>{});
+        fetch(`${API_BASE}/api/experiment/ablation/data?type=abl2&dataset=ablation`).then(r=>r.json()).then(ad=>{
+            if (ad.success) { loadAbl2Result('ablation'); }
+        }).catch(()=>{});
+    }).catch(()=>{});
+    const dz = document.getElementById('dropzone');
+    if (dz) {
+        dz.addEventListener('dragover', e => { e.preventDefault(); dz.classList.add('border-primary'); });
+        dz.addEventListener('dragleave', () => dz.classList.remove('border-primary'));
+        dz.addEventListener('drop', e => { e.preventDefault(); dz.classList.remove('border-primary'); if (e.dataTransfer.files[0]) { document.getElementById('batch-file-input').files = e.dataTransfer.files; handleFileSelect({target: e.dataTransfer}); }});
+    }
+});
+</script>
+</body>
+</html>

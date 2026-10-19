@@ -1,0 +1,45 @@
+# ============================================================
+# 多语言翻译与润色工具 — requirements.txt
+# Python 3.10+
+# 建议先在 vllm-env conda 环境装 vllm，再装其余依赖
+# ============================================================
+
+# ---------- Web 后端 ----------
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.9        # FastAPI 文件上传 (UploadFile/Form)
+pydantic>=2.5.0
+
+# ---------- 模型推理 ----------
+vllm>=0.4.0                    # vLLM 本地推理服务（需 CUDA）
+openai>=1.10.0                 # 调 vLLM 的 OpenAI 兼容接口
+transformers>=4.38.0           # Hy-MT2 等 transformers 后端
+torch>=2.1.0                   # 由 vllm 依赖带入，显式声明便于版本对齐
+accelerate>=0.26.0             # transformers 加载辅助（可选，trust_remote_code 模型常需）
+sentence-transformers>=2.5.0   # domain_classifier.py 场景分类
+numpy>=1.24.0
+
+# ---------- 评估指标 ----------
+sacrebleu>=2.3.1               # evaluator.py BLEU
+# METEOR 用纯 Python 近似实现（evaluator.compute_meteor_simple），不依赖 NLTK
+
+# ---------- 实验 / 可视化 ----------
+matplotlib>=3.9.0              # experiment.py 图表；< 3.9 需把 tick_labels= 改回 labels=
+pandas>=2.0.0
+plotly>=5.18.0
+
+# ---------- 文档解析（批量处理） ----------
+pypdf>=3.17.0                  # 读取 PDF
+python-docx>=1.1.0             # 读取 .docx
+
+# ---------- Streamlit 旧前端（非主流程，可选） ----------
+streamlit>=1.30.0              # app.py 使用；只跑 FastAPI 主流程可不装
+
+# ---------- 数据集构建脚本（一次性，可选） ----------
+tqdm>=4.66.0                   # build_strategy_corpus.py 进度条
+requests>=2.31.0               # vllm_manager / llm_adapter 健康检查、build_real_datasets 在线拉取
+
+# ---------- 系统依赖（非 pip，注释提醒） ----------
+# - NVIDIA 驱动 + CUDA 12.x
+# - gcc-12 / g++-12（vLLM 编译 flashinfer 需要，start.sh 里已设置 CC/CXX）
+# - fuser（start.sh 清端口用，包名：psmisc）

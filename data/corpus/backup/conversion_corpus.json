@@ -1,0 +1,365 @@
+{
+  "pairs": [
+    {
+      "spoken_zh": "我觉得吧，这个结果还行。",
+      "written_zh": "初步分析表明，该实验结果符合预期。",
+      "spoken_en": "I think the results are okay.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "就是说，数据好像有点问题。",
+      "written_zh": "数据可能存在统计偏差。",
+      "spoken_en": "The data seems to have some issues.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "那个，我意思是这个事情比较复杂。",
+      "written_zh": "应当指出，此事涉及多方面因素。",
+      "spoken_en": "This matter is rather complex.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "哎呀，其实没必要这么麻烦。",
+      "written_zh": "实际上，该流程可以进一步简化。",
+      "spoken_en": "There's actually no need to make it this complicated.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "嗯，就是说这个方法可以改进。",
+      "written_zh": "该方法存在优化空间，建议进一步研究。",
+      "spoken_en": "This method could be improved.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "我意思是，我们得再看看。",
+      "written_zh": "建议进行进一步的验证与审查。",
+      "spoken_en": "We need to take another look.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "反正我觉得不太对。",
+      "written_zh": "综合评估后，结果存在异常。",
+      "spoken_en": "I just don't think it's right.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "就是说，现在的情况不太好。",
+      "written_zh": "当前状况未达到预定的理想标准。",
+      "spoken_en": "The current situation is not good.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "那个，我们接下来要讨论的是。",
+      "written_zh": "以下内容将就相关议题展开深入讨论。",
+      "spoken_en": "What we're going to discuss next is.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "其实吧，没你想的那么复杂。",
+      "written_zh": "需要澄清的是，事态并未如预期般复杂。",
+      "spoken_en": "It's not as complicated as you think.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "我今天真的超级累，不想做饭了。",
+      "written_zh": "本人今日极度疲惫，无法进行烹饪活动。",
+      "spoken_en": "I'm super tired today and don't want to cook.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "你帮我看下这个对不对？",
+      "written_zh": "请协助核实以下内容的准确性。",
+      "spoken_en": "Can you check if this is correct?",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "哎呀我去，这太厉害了吧！",
+      "written_zh": "此成果令人印象深刻，值得高度评价。",
+      "spoken_en": "Wow, that's amazing!",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "就是说，我们得想办法解决这个问题。",
+      "written_zh": "当前需制定有效的解决方案以应对该问题。",
+      "spoken_en": "We need to find a way to fix this.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "嗯，我觉得大概可以试试。",
+      "written_zh": "初步判断，该方案具备尝试的可行性。",
+      "spoken_en": "I think we can give it a try.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "那个谁，你过来一下。",
+      "written_zh": "请有关人员前来商议。",
+      "spoken_en": "Hey you, come over here.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "啊？真的假的？我怎么不知道。",
+      "written_zh": "本人对此事表示质疑，此前并未获悉相关信息。",
+      "spoken_en": "Really? I didn't know that.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "好吧，那就这样吧。",
+      "written_zh": "既已如此，便按此方案执行。",
+      "spoken_en": "Fine, let's go with that.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "我觉得吧，这事没那么难。",
+      "written_zh": "根据初步分析，该任务的难度被高估了。",
+      "spoken_en": "I think it's not that hard.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "哎呀算了算了，不说了。",
+      "written_zh": "鉴于讨论无法继续推进，建议暂且搁置。",
+      "spoken_en": "Forget it, I'm done talking.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "嗯，就是说我大概明白了。",
+      "written_zh": "综上所述，本人已基本理解相关内容。",
+      "spoken_en": "I think I get it now.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "那个，你知道我想说什么对吧？",
+      "written_zh": "相信您已理解我方的意图与诉求。",
+      "spoken_en": "You know what I'm trying to say, right?",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "哇塞，这个真的可以啊！",
+      "written_zh": "该成果表现出超出预期的优异性能。",
+      "spoken_en": "Wow, this really works!",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "就是说，现在的方案还不够好。",
+      "written_zh": "当前方案仍有改进空间，建议进一步优化。",
+      "spoken_en": "The current plan isn't good enough yet.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "其实吧，我就是随口问问。",
+      "written_zh": "需要澄清的是，此问题仅为非正式咨询。",
+      "spoken_en": "Actually, I was just asking casually.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "嗯嗯，好的好的，我知道了。",
+      "written_zh": "确认收到，已了解相关情况。",
+      "spoken_en": "Okay okay, I got it.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "哎呀坏了，我把这事给忘了。",
+      "written_zh": "本人因疏忽未能及时处理此事，深表歉意。",
+      "spoken_en": "Oh no, I forgot about it.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "那个，你先等一下。",
+      "written_zh": "请稍候片刻。",
+      "spoken_en": "Hang on a moment.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "算了，不搞了，太麻烦了。",
+      "written_zh": "鉴于过程过于繁琐，决定终止当前操作。",
+      "spoken_en": "Forget it, it's too much trouble.",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "就是说，你觉得怎么样？",
+      "written_zh": "请问您对此有何意见或建议？",
+      "spoken_en": "So, what do you think?",
+      "direction": "spoken_to_written",
+      "source": "hand-written"
+    },
+    {
+      "spoken_zh": "你回来的时候，我已经走了呢。",
+      "written_zh": "你回来的时候，我已经走了。",
+      "spoken_en": "When you returned, I had already left.",
+      "direction": "written_to_spoken",
+      "source": "Tatoeba"
+    },
+    {
+      "spoken_zh": "要是他们没有发现，就没问题了咯。",
+      "written_zh": "要是他们没有发现，就没问题了。",
+      "spoken_en": "If they hadn't noticed, there wouldn't have been any problems.",
+      "direction": "written_to_spoken",
+      "source": "Tatoeba"
+    },
+    {
+      "spoken_zh": "“我必须检查下伤口，”医生说道吧。",
+      "written_zh": "“我必须检查下伤口，”医生说道。",
+      "spoken_en": "\"I need to inspect the wound,\" said the doctor.",
+      "direction": "written_to_spoken",
+      "source": "Tatoeba"
+    },
+    {
+      "spoken_zh": "想長命百歲有一個萬無一失的方法：每天吃一顆獅子頭，吃一百年吧。",
+      "written_zh": "想長命百歲有一個萬無一失的方法：每天吃一顆獅子頭，吃一百年。",
+      "spoken_en": "There's one surefire way to live to a ripe old age: eat a meatball a day for a hundred years.",
+      "direction": "written_to_spoken",
+      "source": "Tatoeba"
+    },
+    {
+      "spoken_zh": "我想Tom需要写一些东西哈。",
+      "written_zh": "我想Tom需要写一些东西。",
+      "spoken_en": "I think Tom needs something to write.",
+      "direction": "written_to_spoken",
+      "source": "Tatoeba"
+    },
+    {
+      "spoken_zh": "要做怪事必须有两个人才行呢。",
+      "written_zh": "要做怪事必须有两个人才行。",
+      "spoken_en": "It takes two to do something strange.",
+      "direction": "written_to_spoken",
+      "source": "Tatoeba"
+    },
+    {
+      "spoken_zh": "我的笔记本电脑是Linux系统吧。",
+      "written_zh": "我的笔记本电脑是Linux系统。",
+      "spoken_en": "My laptop is running Linux.",
+      "direction": "written_to_spoken",
+      "source": "Tatoeba"
+    },
+    {
+      "spoken_zh": "我天生具有希伯來人的說服才能，但當我年紀大了的時候，我把它轉換成了自戀啊。",
+      "written_zh": "我天生具有希伯來人的說服才能，但當我年紀大了的時候，我把它轉換成了自戀。",
+      "spoken_en": "I was born into the Hebrew persuasion, but when I got older I converted to narcissism.",
+      "direction": "written_to_spoken",
+      "source": "Tatoeba"
+    },
+    {
+      "spoken_zh": "我哥哥已经在英格兰生活三十多年了哈。",
+      "written_zh": "我哥哥已经在英格兰生活三十多年了。",
+      "spoken_en": "My brother has lived in England for more than thirty years.",
+      "direction": "written_to_spoken",
+      "source": "Tatoeba"
+    },
+    {
+      "spoken_zh": "我們目前正在尋找具有客服工作經驗的人員咯。",
+      "written_zh": "我們目前正在尋找具有客服工作經驗的人員。",
+      "spoken_en": "We are currently looking for individuals who have experience in customer service.",
+      "direction": "written_to_spoken",
+      "source": "Tatoeba"
+    },
+    {
+      "spoken_zh": "你会需要一个特殊的工具来做这件事哈。",
+      "written_zh": "你会需要一个特殊的工具来做这件事。",
+      "spoken_en": "You'll need a special tool to do it.",
+      "direction": "written_to_spoken",
+      "source": "Tatoeba"
+    },
+    {
+      "spoken_zh": "我已经开始了我的安卓编程之旅哈。",
+      "written_zh": "我已经开始了我的安卓编程之旅。",
+      "spoken_en": "I've started Android programming.",
+      "direction": "written_to_spoken",
+      "source": "Tatoeba"
+    },
+    {
+      "spoken_zh": "他提出改革研究方法的意见咯。",
+      "written_zh": "他提出改革研究方法的意见。",
+      "spoken_en": "He's proposing a suggestion for altering the research method.",
+      "direction": "written_to_spoken",
+      "source": "Tatoeba"
+    },
+    {
+      "spoken_zh": "從車站步行到那房子只需要五分鐘的時間咯。",
+      "written_zh": "從車站步行到那房子只需要五分鐘的時間。",
+      "spoken_en": "Walking from the station to the house takes only five minutes.",
+      "direction": "written_to_spoken",
+      "source": "Tatoeba"
+    },
+    {
+      "spoken_zh": "被判严重违反新的行为准则的青少年将失去免费乘坐公交车的权利，如果想重新取得必须做无报酬的社区工作哈。",
+      "written_zh": "被判严重违反新的行为准则的青少年将失去免费乘坐公交车的权利，如果想重新取得必须做无报酬的社区工作。",
+      "spoken_en": "Youths who are caught violating the new rules on behaviour will lose their right to free travel, and will have to complete unpaid community work to earn it back.",
+      "direction": "written_to_spoken",
+      "source": "Tatoeba"
+    },
+    {
+      "spoken_zh": "我企图与她保持友好的关系，不过那是不可能的咯。",
+      "written_zh": "我企图与她保持友好的关系，不过那是不可能的。",
+      "spoken_en": "I tried to stay on friendly terms with her, but it was impossible.",
+      "direction": "written_to_spoken",
+      "source": "Tatoeba"
+    },
+    {
+      "spoken_zh": "很抱歉那个问题我不赞成你哈。",
+      "written_zh": "很抱歉那个问题我不赞成你。",
+      "spoken_en": "I'm sorry I don't agree with you on that matter.",
+      "direction": "written_to_spoken",
+      "source": "Tatoeba"
+    },
+    {
+      "spoken_zh": "我正在做一些历史研究工作，想问您几个问题咯。",
+      "written_zh": "我正在做一些历史研究工作，想问您几个问题。",
+      "spoken_en": "I'm doing some history research and would like to ask you a few questions.",
+      "direction": "written_to_spoken",
+      "source": "Tatoeba"
+    },
+    {
+      "spoken_zh": "有很多事情要做。你需要我帮忙吗？啊。",
+      "written_zh": "有很多事情要做。你需要我帮忙吗？",
+      "spoken_en": "There's quite a lot of things to do; do you want some help?",
+      "direction": "written_to_spoken",
+      "source": "Tatoeba"
+    },
+    {
+      "spoken_zh": "Tatoeba 恢復開放，但有些部分可能會出現異常咯。",
+      "written_zh": "Tatoeba 恢復開放，但有些部分可能會出現異常。",
+      "spoken_en": "Tatoeba is back, but not everything will be working perfectly.",
+      "direction": "written_to_spoken",
+      "source": "Tatoeba"
+    }
+  ],
+  "meta": {
+    "name": "口语↔书面语转换数据集",
+    "directions": {
+      "spoken_to_written": 30,
+      "written_to_spoken": 20
+    },
+    "total": 50,
+    "source": "Tatoeba (CC-BY 2.0 FR) — 口语→书面语30对手写 + 书面语→口语20对Tatoeba",
+    "usage": "Tab 3 口语/书面语转换功能的质量评估",
+    "created": "2026-06-24"
+  }
+}

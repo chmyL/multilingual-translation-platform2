@@ -1,0 +1,1022 @@
+[
+  {
+    "zh": "本研究旨在探索深度学习在自然语言处理中的应用效果。",
+    "en": "This study aims to explore the effectiveness of deep learning in natural language processing.",
+    "ja": "本研究は、自然言語処理における深層学習の応用効果を探ることを目的とする。",
+    "ko": "본 연구는 자연어 처리에서 딥러닝의 응용 효과를 탐구하는 것을 목표로 한다.",
+    "domain": "academic",
+    "en_semantic": "This study aims to explore the effectiveness of deep learning in natural language processing.",
+    "en_literal": "This research aims to explore deep learning in natural language processing application effects.",
+    "en_academic": "The present investigation is directed at elucidating the efficacy of deep learning methodologies within the domain of natural language processing."
+  },
+  {
+    "zh": "实验结果表明，所提方法在多个基准数据集上取得了最优性能。",
+    "en": "Experimental results demonstrate that the proposed method achieves state-of-the-art performance on multiple benchmark datasets.",
+    "ja": "実験結果は、提案手法が複数のベンチマークデータセットにおいて最先端の性能を達成したことを示している。",
+    "ko": "실험 결과, 제안된 방법이 여러 벤치마크 데이터셋에서 최첨단 성능을 달성했음을 보여준다.",
+    "domain": "academic",
+    "en_semantic": "Experimental results demonstrate that the proposed method achieves state-of-the-art performance on multiple benchmark datasets.",
+    "en_literal": "Experiment results show, proposed method on multiple benchmark datasets achieve optimal performance.",
+    "en_academic": "It has been demonstrated through rigorous experimentation that the proposed methodology attains state-of-the-art performance across a diverse array of benchmark datasets."
+  },
+  {
+    "zh": "我们提出了一种基于注意力机制的新型神经网络架构。",
+    "en": "We propose a novel neural network architecture based on the attention mechanism.",
+    "ja": "我々は注意機構に基づく新しいニューラルネットワークアーキテクチャを提案する。",
+    "ko": "우리는 어텐션 메커니즘에 기반한 새로운 신경망 아키텍처를 제안한다.",
+    "domain": "academic",
+    "en_semantic": "We propose a novel neural network architecture based on the attention mechanism.",
+    "en_literal": "We propose one kind based on attention mechanism new neural network architecture.",
+    "en_academic": "A novel neural network architecture predicated upon the attention mechanism is put forward herein."
+  },
+  {
+    "zh": "模型在训练过程中采用了Adam优化器和交叉熵损失函数。",
+    "en": "The model employs the Adam optimizer and cross-entropy loss function during training.",
+    "ja": "モデルは訓練中にAdam最適化器と交差エントロピー損失関数を採用している。",
+    "ko": "모델은 훈련 과정에서 Adam 최적화기와 크로스 엔트로피 손실 함수를 사용한다.",
+    "domain": "academic",
+    "en_semantic": "The model employs the Adam optimizer and cross-entropy loss function during training.",
+    "en_literal": "Model in training process adopted Adam optimizer and cross-entropy loss function.",
+    "en_academic": "The model architecture incorporated the Adam optimization algorithm in conjunction with a cross-entropy loss function throughout the training procedure."
+  },
+  {
+    "zh": "消融实验验证了每个模块对整体性能的贡献。",
+    "en": "Ablation experiments validate the contribution of each module to overall performance.",
+    "ja": "アブレーション実験により、各モジュールの全体的な性能への寄与が検証された。",
+    "ko": "제거 실험을 통해 각 모듈이 전체 성능에 기여하는 바를 검증했다.",
+    "domain": "academic",
+    "en_semantic": "Ablation experiments validate the contribution of each module to overall performance.",
+    "en_literal": "Ablation experiment verify each module to overall performance contribution.",
+    "en_academic": "A comprehensive series of ablation studies substantiated the individual contribution of each constituent module to aggregate system performance."
+  },
+  {
+    "zh": "这项工作填补了该领域的一项重要研究空白。",
+    "en": "This work fills an important research gap in this field.",
+    "ja": "この研究は、当該分野における重要な研究ギャップを埋めるものである。",
+    "ko": "이 연구는 해당 분야의 중요한 연구 공백을 메운다.",
+    "domain": "academic",
+    "en_semantic": "This work fills an important research gap in this field.",
+    "en_literal": "This work fill an important research gap in this field.",
+    "en_academic": "The present investigation addresses a critical lacuna within the extant body of scholarly literature in this domain."
+  },
+  {
+    "zh": "数据预处理包括分词、去停用词和词干提取三个步骤。",
+    "en": "Data preprocessing includes three steps: tokenization, stop word removal, and stemming.",
+    "ja": "データ前処理は、トークン化、ストップワード除去、ステミングの3つのステップを含む。",
+    "ko": "데이터 전처리는 토큰화, 불용어 제거, 어간 추출의 세 단계를 포함한다.",
+    "domain": "academic",
+    "en_semantic": "Data preprocessing includes three steps: tokenization, stop word removal, and stemming.",
+    "en_literal": "Data preprocessing include three steps: tokenization, stop word removal and stemming.",
+    "en_academic": "The data preprocessing pipeline encompasses three discrete stages: tokenization, the elimination of stop words, and morphological stemming."
+  },
+  {
+    "zh": "本文的贡献主要包括以下三个方面。",
+    "en": "The contributions of this paper mainly include the following three aspects.",
+    "ja": "本論文の貢献は主に以下の3つの側面を含む。",
+    "ko": "본 논문의 기여는 주로 다음 세 가지 측면을 포함한다.",
+    "domain": "academic",
+    "en_semantic": "The contributions of this paper mainly include the following three aspects.",
+    "en_literal": "This paper contribution mainly include following three aspects.",
+    "en_academic": "The contributions articulated within this manuscript are principally organized under the three thematic dimensions delineated below."
+  },
+  {
+    "zh": "我们使用五折交叉验证来评估模型的泛化能力。",
+    "en": "We use five-fold cross-validation to evaluate the generalization ability of the model.",
+    "ja": "我々は5分割交差検証を用いてモデルの汎化能力を評価する。",
+    "ko": "우리는 5-겹 교차 검증을 사용하여 모델의 일반화 능력을 평가한다.",
+    "domain": "academic",
+    "en_semantic": "We use five-fold cross-validation to evaluate the generalization ability of the model.",
+    "en_literal": "We use five-fold cross-validation to evaluate model generalization ability.",
+    "en_academic": "A five-fold cross-validation paradigm was rigorously applied to assess the generalization capacity of the proposed model."
+  },
+  {
+    "zh": "与基线模型相比，我们的方法在F1分数上提高了3.2个百分点。",
+    "en": "Compared with baseline models, our method improves the F1 score by 3.2 percentage points.",
+    "ja": "ベースラインモデルと比較して、我々の手法はF1スコアを3.2パーセントポイント向上させた。",
+    "ko": "기준 모델과 비교하여, 우리의 방법은 F1 점수를 3.2퍼센트 포인트 향상시켰다.",
+    "domain": "academic",
+    "en_semantic": "Compared with baseline models, our method improves the F1 score by 3.2 percentage points.",
+    "en_literal": "Compare with baseline models, our method on F1 score improve 3.2 percentage point.",
+    "en_academic": "Relative to established baseline methodologies, the proposed approach yielded a measurable improvement of 3.2 percentage points in the F1 metric."
+  },
+  {
+    "zh": "统计分析采用了独立样本t检验和单因素方差分析。",
+    "en": "Statistical analysis employed independent sample t-tests and one-way ANOVA.",
+    "ja": "統計分析には独立標本t検定と一元配置分散分析を採用した。",
+    "ko": "통계 분석에는 독립 표본 t-검정과 일원 분산 분석을 사용했다.",
+    "domain": "academic",
+    "en_semantic": "Statistical analysis employed independent sample t-tests and one-way ANOVA.",
+    "en_literal": "Statistical analysis adopt independent sample t-test and one-way ANOVA.",
+    "en_academic": "The statistical analytical framework employed independent-samples t-tests in conjunction with one-way analysis of variance."
+  },
+  {
+    "zh": "该算法的计算复杂度为O(n log n)，具有良好的可扩展性。",
+    "en": "The computational complexity of this algorithm is O(n log n), demonstrating good scalability.",
+    "ja": "このアルゴリズムの計算複雑度はO(n log n)であり、良好なスケーラビリティを示す。",
+    "ko": "이 알고리즘의 계산 복잡도는 O(n log n)이며, 우수한 확장성을 보여준다.",
+    "domain": "academic",
+    "en_semantic": "The computational complexity of this algorithm is O(n log n), demonstrating good scalability.",
+    "en_literal": "This algorithm computational complexity is O(n log n), has good scalability.",
+    "en_academic": "The algorithmic complexity is bounded by O(n log n), thereby conferring favorable scalability and throughput characteristics."
+  },
+  {
+    "zh": "循环神经网络在处理序列数据方面具有天然优势。",
+    "en": "Recurrent neural networks have inherent advantages in processing sequential data.",
+    "ja": "再帰型ニューラルネットワークは系列データの処理において本質的な利点を持つ。",
+    "ko": "순환 신경망은 시퀀스 데이터 처리에 내재된 장점을 가지고 있다.",
+    "domain": "academic",
+    "en_semantic": "Recurrent neural networks have inherent advantages in processing sequential data.",
+    "en_literal": "Recurrent neural network in processing sequence data have natural advantage.",
+    "en_academic": "Recurrent neural architectures possess intrinsic and pronounced advantages in the computational treatment of temporally ordered sequential data."
+  },
+  {
+    "zh": "为确保实验的可重复性，我们在GitHub上公开了全部源代码。",
+    "en": "To ensure experimental reproducibility, we have released all source code on GitHub.",
+    "ja": "実験の再現性を確保するため、全ソースコードをGitHub上で公開した。",
+    "ko": "실험의 재현성을 보장하기 위해 모든 소스 코드를 GitHub에 공개했다.",
+    "domain": "academic",
+    "en_semantic": "To ensure experimental reproducibility, we have released all source code on GitHub.",
+    "en_literal": "To ensure experiment reproducibility, we on GitHub make public all source code.",
+    "en_academic": "In order to guarantee experimental reproducibility, the entirety of the source code repository has been made publicly accessible via the GitHub platform."
+  },
+  {
+    "zh": "超参数搜索采用了贝叶斯优化的方法。",
+    "en": "Hyperparameter search employed the Bayesian optimization method.",
+    "ja": "ハイパーパラメータ探索にはベイズ最適化手法を採用した。",
+    "ko": "하이퍼파라미터 탐색에는 베이지안 최적화 방법을 사용했다.",
+    "domain": "academic",
+    "en_semantic": "Hyperparameter search employed the Bayesian optimization method.",
+    "en_literal": "Hyperparameter search use Bayesian optimization method.",
+    "en_academic": "The hyperparameter optimization procedure was effected through the systematic application of Bayesian optimization techniques."
+  },
+  {
+    "zh": "损失函数在训练约50个epoch后趋于收敛。",
+    "en": "The loss function converged after approximately 50 epochs of training.",
+    "ja": "損失関数は約50エポックの訓練後に収束した。",
+    "ko": "손실 함수는 약 50 에포크의 훈련 후에 수렴했다.",
+    "domain": "academic",
+    "en_semantic": "The loss function converged after approximately 50 epochs of training.",
+    "en_literal": "Loss function after training about 50 epochs tend to converge.",
+    "en_academic": "The loss function exhibited asymptotic convergence behavior subsequent to approximately fifty complete epochs of the training regimen."
+  },
+  {
+    "zh": "词嵌入向量可以有效地捕捉词语之间的语义关系。",
+    "en": "Word embedding vectors can effectively capture semantic relationships between words.",
+    "ja": "単語埋め込みベクトルは単語間の意味的関係を効果的に捉えることができる。",
+    "ko": "단어 임베딩 벡터는 단어 간의 의미적 관계를 효과적으로 포착할 수 있다.",
+    "domain": "academic",
+    "en_semantic": "Word embedding vectors can effectively capture semantic relationships between words.",
+    "en_literal": "Word embedding vector can effectively capture between words semantic relationship.",
+    "en_academic": "Lexical embedding vectors possess the capacity to effectively encode and preserve semantic interrelationships among lexical items within a continuous representational space."
+  },
+  {
+    "zh": "这项技术有望在医疗诊断领域产生深远影响。",
+    "en": "This technology is expected to have a profound impact in the field of medical diagnosis.",
+    "ja": "この技術は医療診断分野において深遠な影響をもたらすと期待される。",
+    "ko": "이 기술은 의료 진단 분야에서 깊은 영향을 미칠 것으로 기대된다.",
+    "domain": "academic",
+    "en_semantic": "This technology is expected to have a profound impact in the field of medical diagnosis.",
+    "en_literal": "This technology is expected to in medical diagnosis field produce deep influence.",
+    "en_academic": "It is anticipated that this technology will exert a profound and transformative influence upon the discipline of medical diagnostics."
+  },
+  {
+    "zh": "未来的研究方向包括将该方法扩展到多模态任务中。",
+    "en": "Future research directions include extending this method to multi-modal tasks.",
+    "ja": "今後の研究方向として、本手法をマルチモーダルタスクに拡張することが含まれる。",
+    "ko": "향후 연구 방향에는 이 방법을 다중 모달 작업으로 확장하는 것이 포함된다.",
+    "domain": "academic",
+    "en_semantic": "Future research directions include extending this method to multi-modal tasks.",
+    "en_literal": "Future research direction include extend this method to multimodal task.",
+    "en_academic": "Prospective avenues of scholarly investigation encompass the extension of the current methodological framework to encompass multimodal task paradigms."
+  },
+  {
+    "zh": "我们对比了三种不同的注意力机制：点积注意力、加性注意力和多头注意力。",
+    "en": "We compared three different attention mechanisms.",
+    "ja": "我々はドット積注意、加算注意、マルチヘッド注意の3つの異なる注意機構を比較した。",
+    "ko": "우리는 점곱 어텐션, 가산 어텐션, 다중 헤드 어텐션의 세 가지 다른 어텐션 메커니즘을 비교했다.",
+    "domain": "academic",
+    "en_semantic": "We compared three different attention mechanisms.",
+    "en_literal": "We compare three different attention mechanism: dot-product attention, additive attention and multi-head attention.",
+    "en_academic": "A comparative evaluation was conducted across three distinct attentional mechanisms, namely: dot-product attention, additive attention, and multi-head attention configurations."
+  },
+  {
+    "zh": "随机梯度下降是大规模训练中最常用的优化算法之一。",
+    "en": "Stochastic gradient descent is one of the most commonly used optimization algorithms in large-scale training.",
+    "ja": "確率的勾配降下法は大規模訓練において最も一般的に使用される最適化アルゴリズムの一つである。",
+    "ko": "확률적 경사 하강법은 대규모 훈련에서 가장 일반적으로 사용되는 최적화 알고리즘 중 하나이다.",
+    "domain": "academic",
+    "en_semantic": "Stochastic gradient descent is one of the most commonly used optimization algorithms in large-scale training.",
+    "en_literal": "Stochastic gradient descent is one of most commonly used optimization algorithm in large-scale training.",
+    "en_academic": "Stochastic gradient descent constitutes among the most ubiquitously deployed optimization algorithms within large-scale model training paradigms."
+  },
+  {
+    "zh": "卷积神经网络在图像分类任务中表现优异。",
+    "en": "Convolutional neural networks perform excellently in image classification tasks.",
+    "ja": "畳み込みニューラルネットワークは画像分類タスクにおいて優れた性能を発揮する。",
+    "ko": "합성곱 신경망은 이미지 분류 작업에서 우수한 성능을 발휘한다.",
+    "domain": "academic",
+    "en_semantic": "Convolutional neural networks perform excellently in image classification tasks.",
+    "en_literal": "Convolutional neural network in image classification task perform excellent.",
+    "en_academic": "Convolutional neural architectures demonstrate superlative performance characteristics within the sphere of image classification tasks."
+  },
+  {
+    "zh": "自然语言处理是人工智能领域最重要的研究方向之一。",
+    "en": "Natural language processing is one of the most important research directions in artificial intelligence.",
+    "ja": "自然言語処理は人工知能分野において最も重要な研究方向の一つである。",
+    "ko": "자연어 처리는 인공지능 분야에서 가장 중요한 연구 방향 중 하나이다.",
+    "domain": "academic",
+    "en_semantic": "Natural language processing is one of the most important research directions in artificial intelligence.",
+    "en_literal": "Natural language processing is one of most important research direction in artificial intelligence.",
+    "en_academic": "Natural language processing constitutes one of the preeminent research trajectories within the broader field of artificial intelligence."
+  },
+  {
+    "zh": "该研究为解决长期存在的技术难题提供了新思路。",
+    "en": "This research provides new insights for solving long-standing technical challenges.",
+    "ja": "この研究は長年にわたる技術的課題を解決するための新しい視点を提供する。",
+    "ko": "이 연구는 오랜 기술적 과제를 해결하기 위한 새로운 통찰력을 제공한다.",
+    "domain": "academic",
+    "en_semantic": "This research provides new insights for solving long-standing technical challenges.",
+    "en_literal": "This research provide new thought for solve long-standing technical challenge.",
+    "en_academic": "The present investigation furnishes novel conceptual frameworks for addressing longstanding technical impediments of considerable complexity."
+  },
+  {
+    "zh": "深度学习模型的性能很大程度上取决于训练数据的质量和数量。",
+    "en": "The performance of deep learning models largely depends on the quality and quantity of training data.",
+    "ja": "深層学習モデルの性能は訓練データの質と量に大きく依存する。",
+    "ko": "딥러닝 모델의 성능은 훈련 데이터의 품질과 양에 크게 의존한다.",
+    "domain": "academic",
+    "en_semantic": "The performance of deep learning models largely depends on the quality and quantity of training data.",
+    "en_literal": "Deep learning model performance very large degree depend on training data quality and quantity.",
+    "en_academic": "Performance metrics of deep learning models are substantially contingent upon both the qualitative attributes and quantitative magnitude of the training data corpus."
+  },
+  {
+    "zh": "近年来，预训练语言模型在多项自然语言处理任务中取得了突破性进展。",
+    "en": "In recent years, pre-trained language models have achieved breakthroughs in multiple NLP tasks.",
+    "ja": "近年、事前学習済み言語モデルは複数の自然言語処理タスクにおいて画期的な進歩を遂げている。",
+    "ko": "최근 몇 년간 사전 훈련된 언어 모델은 여러 자연어 처리 작업에서 획기적인 진전을 이루었다.",
+    "domain": "academic",
+    "en_semantic": "In recent years, pre-trained language models have achieved breakthroughs in multiple NLP tasks.",
+    "en_literal": "In recent year, pre-trained language model in multiple NLP task achieve breakthrough progress.",
+    "en_academic": "Over the course of recent years, pre-trained language models have attained paradigmatic breakthroughs across a multiplicity of natural language processing tasks."
+  },
+  {
+    "zh": "语义分割任务要求模型对图像中的每个像素进行分类。",
+    "en": "Semantic segmentation tasks require the model to classify every pixel in an image.",
+    "ja": "セマンティックセグメンテーションタスクは、画像内の各ピクセルを分類することをモデルに要求する。",
+    "ko": "의미적 분할 작업은 모델이 이미지의 모든 픽셀을 분류하도록 요구한다.",
+    "domain": "academic",
+    "en_semantic": "Semantic segmentation tasks require the model to classify every pixel in an image.",
+    "en_literal": "This method innovation lies in combine graph neural network with attention mechanism.",
+    "en_academic": "The innovative contribution of the proposed methodology resides in the synergistic integration of graph neural network architectures with attention mechanisms."
+  },
+  {
+    "zh": "自监督学习在计算机视觉和自然语言处理领域都取得了显著进展。",
+    "en": "Self-supervised learning has achieved significant progress in both computer vision and natural language processing.",
+    "ja": "自己教師あり学習はコンピュータビジョンと自然言語処理の両分野で顕著な進展を遂げている。",
+    "ko": "자기 지도 학습은 컴퓨터 비전과 자연어 처리 분야에서 모두 현저한 진전을 이루었다.",
+    "domain": "academic",
+    "en_semantic": "Self-supervised learning has achieved significant progress in both computer vision and natural language processing.",
+    "en_literal": "Semantic segmentation task require model to for every pixel in image classify.",
+    "en_academic": "Semantic segmentation tasks necessitate that the model perform granular pixel-level classification across the entirety of the input image."
+  },
+  {
+    "zh": "多模态融合策略包括早期融合、晚期融合和混合融合三种范式。",
+    "en": "Multi-modal fusion strategies include three paradigms: early fusion, late fusion, and hybrid fusion.",
+    "ja": "マルチモーダル融合戦略には、早期融合、後期融合、ハイブリッド融合の3つのパラダイムがある。",
+    "ko": "다중 모달 융합 전략에는 조기 융합, 후기 융합, 하이브리드 융합의 세 가지 패러다임이 있다.",
+    "domain": "academic",
+    "en_semantic": "Multi-modal fusion strategies include three paradigms: early fusion, late fusion, and hybrid fusion.",
+    "en_literal": "Self-supervised learning in computer vision and natural language processing both achieve significant progress.",
+    "en_academic": "Self-supervised learning paradigms have registered substantial advancements across both the computer vision and natural language processing domains."
+  },
+  {
+    "zh": "图神经网络可以有效地建模非欧几里得空间中的关系数据。",
+    "en": "Graph neural networks can effectively model relational data in non-Euclidean spaces.",
+    "ja": "グラフニューラルネットワークは非ユークリッド空間における関係データを効果的にモデル化できる。",
+    "ko": "그래프 신경망은 비유클리드 공간에서의 관계 데이터를 효과적으로 모델링할 수 있다.",
+    "domain": "academic",
+    "en_semantic": "Graph neural networks can effectively model relational data in non-Euclidean spaces.",
+    "en_literal": "Multi-modal fusion strategy include three paradigm: early fusion, late fusion, and hybrid fusion.",
+    "en_academic": "Multi-modal fusion strategies may be taxonomized into three principal paradigms: early-stage fusion, late-stage fusion, and hybrid fusion architectures."
+  },
+  {
+    "zh": "我们假设数据服从高斯分布，并使用最大似然估计来拟合参数。",
+    "en": "We assume the data follows a Gaussian distribution and use maximum likelihood estimation to fit parameters.",
+    "ja": "データがガウス分布に従うと仮定し、最尤推定を用いてパラメータをフィッティングする。",
+    "ko": "데이터가 가우스 분포를 따른다고 가정하고, 최대 우도 추정을 사용하여 매개변수를 피팅한다.",
+    "domain": "academic",
+    "en_semantic": "We assume the data follows a Gaussian distribution and use maximum likelihood estimation to fit parameters.",
+    "en_literal": "Graph neural network can effective model non-Euclidean space in relational data.",
+    "en_academic": "Graph neural network architectures are capable of effectively modeling relational data structures situated within non-Euclidean topological spaces."
+  },
+  {
+    "zh": "过拟合是机器学习中常见的问题，可以通过正则化技术来缓解。",
+    "en": "Overfitting is a common problem in machine learning that can be mitigated through regularization techniques.",
+    "ja": "過学習は機械学習における一般的な問題であり、正則化技術によって緩和できる。",
+    "ko": "과적합은 머신러닝에서 흔한 문제이며, 정규화 기법을 통해 완화할 수 있다.",
+    "domain": "academic",
+    "en_semantic": "Overfitting is a common problem in machine learning that can be mitigated through regularization techniques.",
+    "en_literal": "We assume data follow Gaussian distribution, and use maximum likelihood estimation to fit parameter.",
+    "en_academic": "It is posited that the data adheres to a Gaussian distributional form, and maximum likelihood estimation is employed for determining parameter values."
+  },
+  {
+    "zh": "该数据集包含一万条人工标注的高质量训练样本。",
+    "en": "This dataset contains ten thousand manually annotated high-quality training samples.",
+    "ja": "このデータセットは1万件の人手による高品質な注釈付き訓練サンプルを含む。",
+    "ko": "이 데이터셋은 1만 개의 수동으로 주석이 달린 고품질 훈련 샘플을 포함한다.",
+    "domain": "academic",
+    "en_semantic": "This dataset contains ten thousand manually annotated high-quality training samples.",
+    "en_literal": "Overfitting is common problem in machine learning, can through regularization technique alleviate.",
+    "en_academic": "The phenomenon of overfitting constitutes a pervasive challenge within machine learning, which may be ameliorated through the judicious application of regularization techniques."
+  },
+  {
+    "zh": "迁移学习允许我们将在一个任务上学到的知识应用到另一个相关任务中。",
+    "en": "Transfer learning allows us to apply knowledge learned on one task to another related task.",
+    "ja": "転移学習により、あるタスクで学習した知識を別の関連タスクに適用することができる。",
+    "ko": "전이 학습을 통해 한 작업에서 학습한 지식을 다른 관련 작업에 적용할 수 있다.",
+    "domain": "academic",
+    "en_semantic": "Transfer learning allows us to apply knowledge learned on one task to another related task.",
+    "en_literal": "This dataset contain ten thousand manual annotated high-quality training sample.",
+    "en_academic": "The dataset in question encompasses ten thousand high-quality training exemplars that have been subjected to meticulous manual annotation."
+  },
+  {
+    "zh": "批归一化技术能够显著加速深度神经网络的训练过程。",
+    "en": "Batch normalization can significantly accelerate the training process of deep neural networks.",
+    "ja": "バッチ正規化は深層ニューラルネットワークの訓練プロセスを大幅に加速することができる。",
+    "ko": "배치 정규화는 심층 신경망의 훈련 과정을 크게 가속화할 수 있다.",
+    "domain": "academic",
+    "en_semantic": "Batch normalization can significantly accelerate the training process of deep neural networks.",
+    "en_literal": "Transfer learning allow us to apply on one task learn knowledge to another related task.",
+    "en_academic": "Transfer learning facilitates the transposition of knowledge acquired from one task domain to a distinct yet related task domain."
+  },
+  {
+    "zh": "对抗训练可以提高模型对对抗样本的鲁棒性。",
+    "en": "Adversarial training can improve model robustness against adversarial examples.",
+    "ja": "敵対的訓練はモデルの敵対的サンプルに対する頑健性を向上させることができる。",
+    "ko": "적대적 훈련은 모델의 적대적 샘플에 대한 강건성을 향상시킬 수 있다.",
+    "domain": "academic",
+    "en_semantic": "Adversarial training can improve model robustness against adversarial examples.",
+    "en_literal": "Batch normalization technique can significant accelerate deep neural network training process.",
+    "en_academic": "Batch normalization techniques are capable of substantially accelerating the convergence trajectory of deep neural network training procedures."
+  },
+  {
+    "zh": "对比学习通过拉近正样本推远负样本来学习有效表示。",
+    "en": "Contrastive learning learns effective representations by pulling positive samples closer and pushing negative samples apart.",
+    "ja": "対照学習は正例を近づけ負例を遠ざけることで効果的な表現を学習する。",
+    "ko": "대조 학습은 양성 샘플을 가까이 끌어당기고 음성 샘플을 멀리 밀어내어 효과적인 표현을 학습한다.",
+    "domain": "academic",
+    "en_semantic": "Contrastive learning learns effective representations by pulling positive samples closer and pushing negative samples apart.",
+    "en_literal": "Adversarial training can improve model to adversarial sample robustness.",
+    "en_academic": "Adversarial training regimens can appreciably enhance model robustness when confronting adversarially crafted input perturbations."
+  },
+  {
+    "zh": "零样本学习使模型能够识别训练中未见过的类别。",
+    "en": "Zero-shot learning enables models to recognize categories not seen during training.",
+    "ja": "ゼロショット学習はモデルが訓練中に見たことのないカテゴリを認識することを可能にする。",
+    "ko": "제로샷 학습은 모델이 훈련 중에 보지 못한 범주를 인식할 수 있게 한다.",
+    "domain": "academic",
+    "en_semantic": "Zero-shot learning enables models to recognize categories not seen during training.",
+    "en_literal": "Contrastive learning through pull positive sample close push negative sample far to learn effective representation.",
+    "en_academic": "Contrastive learning paradigms acquire efficacious representations through the simultaneous attraction of positive exemplars and repulsion of negative exemplars within the embedding space."
+  },
+  {
+    "zh": "序列到序列模型广泛用于机器翻译和文本摘要任务。",
+    "en": "Sequence-to-sequence models are widely used in machine translation and text summarization tasks.",
+    "ja": "系列変換モデルは機械翻訳やテキスト要約タスクに広く使用されている。",
+    "ko": "시퀀스-투-시퀀스 모델은 기계 번역 및 텍스트 요약 작업에 널리 사용된다.",
+    "domain": "academic",
+    "en_semantic": "Sequence-to-sequence models are widely used in machine translation and text summarization tasks.",
+    "en_literal": "Zero-shot learning enable model recognize training process not seen category.",
+    "en_academic": "Zero-shot learning endows models with the capability to recognize and categorize entities belonging to classes that were entirely absent from the training corpus."
+  },
+  {
+    "zh": "残差连接有效解决了深层网络中的梯度消失问题。",
+    "en": "Residual connections effectively solve the vanishing gradient problem in deep networks.",
+    "ja": "残差接続は深層ネットワークにおける勾配消失問題を効果的に解決する。",
+    "ko": "잔차 연결은 심층 네트워크의 기울기 소실 문제를 효과적으로 해결한다.",
+    "domain": "academic",
+    "en_semantic": "Residual connections effectively solve the vanishing gradient problem in deep networks.",
+    "en_literal": "Sequence-to-sequence model widely used in machine translation and text summarization task.",
+    "en_academic": "Sequence-to-sequence architectures are extensively deployed across machine translation and text summarization applications."
+  },
+  {
+    "zh": "掩码语言建模是BERT预训练的核心任务之一。",
+    "en": "Masked language modeling is one of the core tasks of BERT pre-training.",
+    "ja": "マスク言語モデリングはBERTの事前学習の中核タスクの一つである。",
+    "ko": "마스크 언어 모델링은 BERT 사전 훈련의 핵심 작업 중 하나이다.",
+    "domain": "academic",
+    "en_semantic": "Masked language modeling is one of the core tasks of BERT pre-training.",
+    "en_literal": "Residual connection effectively solve deep network in gradient vanishing problem.",
+    "en_academic": "Residual connections provide an effective remedy for the vanishing gradient phenomenon that afflicts particularly deep neural network architectures."
+  },
+  {
+    "zh": "束搜索算法在解码时平衡了搜索宽度与计算效率。",
+    "en": "Beam search algorithm balances search width and computational efficiency during decoding.",
+    "ja": "ビームサーチアルゴリズムはデコード時に探索幅と計算効率のバランスを取る。",
+    "ko": "빔 검색 알고리즘은 디코딩 시 검색 폭과 계산 효율성 간의 균형을 유지한다.",
+    "domain": "academic",
+    "en_semantic": "Beam search algorithm balances search width and computational efficiency during decoding.",
+    "en_literal": "Mask language modeling is one of BERT pre-training core task.",
+    "en_academic": "Masked language modeling constitutes one of the cardinal pre-training objectives within the BERT framework."
+  },
+  {
+    "zh": "困惑度是评估语言模型性能的常用指标。",
+    "en": "Perplexity is a commonly used metric for evaluating language model performance.",
+    "ja": "パープレキシティは言語モデルの性能を評価するための一般的な指標である。",
+    "ko": "퍼플렉서티는 언어 모델 성능을 평가하는 데 일반적으로 사용되는 지표이다.",
+    "domain": "academic",
+    "en_semantic": "Perplexity is a commonly used metric for evaluating language model performance.",
+    "en_literal": "Beam search algorithm during decoding balance search width and computation efficiency.",
+    "en_academic": "The beam search algorithm achieves an optimal equilibrium between search breadth and computational efficiency throughout the decoding process."
+  },
+  {
+    "zh": "BERT的双向编码使其能够捕获丰富的上下文信息。",
+    "en": "BERT's bidirectional encoding enables it to capture rich contextual information.",
+    "ja": "BERTの双方向エンコーディングは豊かな文脈情報を捉えることを可能にする。",
+    "ko": "BERT의 양방향 인코딩은 풍부한 문맥 정보를 포착할 수 있게 한다.",
+    "domain": "academic",
+    "en_semantic": "BERT's bidirectional encoding enables it to capture rich contextual information.",
+    "en_literal": "Perplexity is commonly used evaluate language model performance metric.",
+    "en_academic": "Perplexity serves as a widely adopted quantitative metric for the assessment of language model performance characteristics."
+  },
+  {
+    "zh": "GPT系列模型采用自回归方式从左到右生成文本。",
+    "en": "GPT series models generate text from left to right in an autoregressive manner.",
+    "ja": "GPTシリーズモデルは自己回帰的に左から右へテキストを生成する。",
+    "ko": "GPT 시리즈 모델은 자기회귀 방식으로 왼쪽에서 오른쪽으로 텍스트를 생성한다.",
+    "domain": "academic",
+    "en_semantic": "GPT series models generate text from left to right in an autoregressive manner.",
+    "en_literal": "BERT bidirectional encoding enable it capture rich context information.",
+    "en_academic": "The bidirectional encoding mechanism inherent to BERT facilitates the capture of richly contextualized linguistic information."
+  },
+  {
+    "zh": "学习率衰减策略对模型的收敛速度和最终性能有显著影响。",
+    "en": "Learning rate scheduling strategies have a significant impact on model convergence speed and final performance.",
+    "ja": "学習率スケジューリング戦略はモデルの収束速度と最終性能に大きな影響を与える。",
+    "ko": "학습률 스케줄링 전략은 모델의 수렴 속도와 최종 성능에 상당한 영향을 미친다.",
+    "domain": "academic",
+    "en_semantic": "Learning rate scheduling strategies have a significant impact on model convergence speed and final performance.",
+    "en_literal": "GPT series model use autoregressive way from left to right generate text.",
+    "en_academic": "Models within the GPT series generate textual output in a strictly left-to-right, autoregressive fashion."
+  },
+  {
+    "zh": "权重初始化方法的选择会影响深层网络的训练稳定性。",
+    "en": "The choice of weight initialization method affects the training stability of deep networks.",
+    "ja": "重み初期化方法の選択は深層ネットワークの訓練安定性に影響を与える。",
+    "ko": "가중치 초기화 방법의 선택은 심층 네트워크의 훈련 안정성에 영향을 미친다.",
+    "domain": "academic",
+    "en_semantic": "The choice of weight initialization method affects the training stability of deep networks.",
+    "en_literal": "Learning rate scheduling strategy to model convergence speed and final performance has significant influence.",
+    "en_academic": "Learning rate scheduling strategies exert a statistically significant influence upon both convergence velocity and terminal model performance."
+  },
+  {
+    "zh": "数据增强技术可以有效扩充小规模训练数据集。",
+    "en": "Data augmentation techniques can effectively expand small-scale training datasets.",
+    "ja": "データ拡張技術は小規模な訓練データセットを効果的に拡大することができる。",
+    "ko": "데이터 증강 기술은 소규모 훈련 데이터셋을 효과적으로 확장할 수 있다.",
+    "domain": "academic",
+    "en_semantic": "Data augmentation techniques can effectively expand small-scale training datasets.",
+    "en_literal": "Weight initialization method choice affect deep network training stability.",
+    "en_academic": "The selection of the weight initialization methodology exerts a demonstrable effect upon the training stability characteristics of deep neural architectures."
+  },
+  {
+    "zh": "交叉验证是评估机器学习模型泛化能力的重要手段。",
+    "en": "Cross-validation is an important method for evaluating the generalization ability of machine learning models.",
+    "ja": "交差検証は機械学習モデルの汎化能力を評価するための重要な手段である。",
+    "ko": "교차 검증은 머신러닝 모델의 일반화 능력을 평가하는 중요한 방법이다.",
+    "domain": "academic",
+    "en_semantic": "Cross-validation is an important method for evaluating the generalization ability of machine learning models.",
+    "en_literal": "Data augmentation technique can effective expand small scale training dataset.",
+    "en_academic": "Data augmentation techniques are capable of effectively expanding the effective size of small-scale training datasets."
+  },
+  {
+    "zh": "注意力可视化有助于理解模型的决策过程。",
+    "en": "Attention visualization helps understand the decision-making process of models.",
+    "ja": "注意の可視化はモデルの意思決定プロセスを理解するのに役立つ。",
+    "ko": "어텐션 시각화는 모델의 의사 결정 과정을 이해하는 데 도움이 된다.",
+    "domain": "academic",
+    "en_semantic": "Attention visualization helps understand the decision-making process of models.",
+    "en_literal": "Cross-validation is evaluate machine learning model generalization ability important method.",
+    "en_academic": "Cross-validation constitutes a critically important methodological approach for assessing the generalization capabilities of machine learning models."
+  },
+  {
+    "zh": "端到端学习避免了手工设计中间表示的需要。",
+    "en": "End-to-end learning eliminates the need for manual design of intermediate representations.",
+    "ja": "エンドツーエンド学習は中間表現の手動設計の必要性を排除する。",
+    "ko": "엔드-투-엔드 학습은 중간 표현의 수동 설계 필요성을 제거한다.",
+    "domain": "academic",
+    "en_semantic": "End-to-end learning eliminates the need for manual design of intermediate representations.",
+    "en_literal": "Attention visualization help understand model decision-making process.",
+    "en_academic": "Attention visualization techniques facilitate interpretation and comprehension of model decision-making processes."
+  },
+  {
+    "zh": "图像分类是计算机视觉领域的基础任务之一。",
+    "en": "Image classification is one of the fundamental tasks in the field of computer vision.",
+    "ja": "画像分類はコンピュータビジョン分野における基本的なタスクの一つである。",
+    "ko": "이미지 분류는 컴퓨터 비전 분야의 기본 작업 중 하나이다.",
+    "domain": "academic",
+    "en_semantic": "Image classification is one of the fundamental tasks in the field of computer vision.",
+    "en_literal": "End-to-end learning eliminate manual design intermediate representation need.",
+    "en_academic": "End-to-end learning paradigms obviate the necessity for manual engineering of intermediate representational structures."
+  },
+  {
+    "zh": "命名实体识别是信息抽取中最基础的任务之一。",
+    "en": "Named entity recognition is one of the most fundamental tasks in information extraction.",
+    "ja": "固有表現抽出は情報抽出において最も基本的なタスクの一つである。",
+    "ko": "개체명 인식은 정보 추출에서 가장 기본적인 작업 중 하나이다.",
+    "domain": "academic",
+    "en_semantic": "Named entity recognition is one of the most fundamental tasks in information extraction.",
+    "en_literal": "Image classification is one of computer vision field basic task.",
+    "en_academic": "Image classification constitutes one of the most foundational tasks within the discipline of computer vision."
+  },
+  {
+    "zh": "情感分析可以自动识别文本中的主观情绪倾向。",
+    "en": "Sentiment analysis can automatically identify subjective emotional tendencies in text.",
+    "ja": "感情分析はテキスト中の主観的な感情傾向を自動的に識別することができる。",
+    "ko": "감정 분석은 텍스트에서 주관적인 감정 경향을 자동으로 식별할 수 있다.",
+    "domain": "academic",
+    "en_semantic": "Sentiment analysis can automatically identify subjective emotional tendencies in text.",
+    "en_literal": "Named entity recognition is information extraction in most basic task one.",
+    "en_academic": "Named entity recognition represents one of the most elementary subtasks within the broader information extraction pipeline."
+  },
+  {
+    "zh": "文本生成模型可以自动撰写新闻摘要和产品描述。",
+    "en": "Text generation models can automatically write news summaries and product descriptions.",
+    "ja": "テキスト生成モデルはニュース要約や製品説明を自動的に作成することができる。",
+    "ko": "텍스트 생성 모델은 뉴스 요약과 제품 설명을 자동으로 작성할 수 있다.",
+    "domain": "academic",
+    "en_semantic": "Text generation models can automatically write news summaries and product descriptions.",
+    "en_literal": "Sentiment analysis can auto identify text in subjective emotional tendency.",
+    "en_academic": "Sentiment analysis methodologies are capable of autonomously identifying subjective emotional dispositions encoded within textual content."
+  },
+  {
+    "zh": "机器阅读理解要求模型理解段落内容并回答相关问题。",
+    "en": "Machine reading comprehension requires models to understand passage content and answer related questions.",
+    "ja": "機械読解はモデルが文章の内容を理解し関連する質問に答えることを要求する。",
+    "ko": "기계 독해는 모델이 단락 내용을 이해하고 관련 질문에 답변할 것을 요구한다.",
+    "domain": "academic",
+    "en_semantic": "Machine reading comprehension requires models to understand passage content and answer related questions.",
+    "en_literal": "Text generation model can auto write news summary and product description.",
+    "en_academic": "Text generation models possess the capacity to autonomously compose news summaries and product descriptions of considerable fidelity."
+  },
+  {
+    "zh": "语音识别技术近年来借助深度学习取得了长足进步。",
+    "en": "Speech recognition technology has made significant progress in recent years with the help of deep learning.",
+    "ja": "音声認識技術は近年、深層学習の助けを借りて長足の進歩を遂げている。",
+    "ko": "음성 인식 기술은 최근 몇 년간 딥러닝의 도움으로 큰 진전을 이루었다.",
+    "domain": "academic",
+    "en_semantic": "Speech recognition technology has made significant progress in recent years with the help of deep learning.",
+    "en_literal": "Machine reading comprehension need model understand passage content and answer related question.",
+    "en_academic": "Machine reading comprehension necessitates that models comprehend passage content and formulate accurate responses to related interrogatories."
+  },
+  {
+    "zh": "推荐系统通过分析用户行为数据来预测其偏好。",
+    "en": "Recommendation systems predict user preferences by analyzing behavioral data.",
+    "ja": "推薦システムはユーザーの行動データを分析することでその好みを予測する。",
+    "ko": "추천 시스템은 사용자 행동 데이터를 분석하여 선호도를 예측한다.",
+    "domain": "academic",
+    "en_semantic": "Recommendation systems predict user preferences by analyzing behavioral data.",
+    "en_literal": "Speech recognition technology recent year with deep learning help achieve great progress.",
+    "en_academic": "Speech recognition technology has registered substantial progress in recent years, largely attributable to advances in deep learning."
+  },
+  {
+    "zh": "时间序列预测在金融和气象领域有广泛应用。",
+    "en": "Time series forecasting has wide applications in finance and meteorology.",
+    "ja": "時系列予測は金融や気象分野で幅広く応用されている。",
+    "ko": "시계열 예측은 금융 및 기상 분야에서 광범위하게 응용된다.",
+    "domain": "academic",
+    "en_semantic": "Time series forecasting has wide applications in finance and meteorology.",
+    "en_literal": "Recommendation system through analyze user behavior data predict their preference.",
+    "en_academic": "Recommendation systems prognosticate user preferences through the systematic analysis of behavioral data patterns."
+  },
+  {
+    "zh": "异常检测旨在从数据中识别不符合预期模式的样本。",
+    "en": "Anomaly detection aims to identify samples that do not conform to expected patterns in data.",
+    "ja": "異常検知はデータ内の期待されるパターンに適合しないサンプルを識別することを目的とする。",
+    "ko": "이상 탐지는 데이터에서 예상 패턴에 부합하지 않는 샘플을 식별하는 것을 목표로 한다.",
+    "domain": "academic",
+    "en_semantic": "Anomaly detection aims to identify samples that do not conform to expected patterns in data.",
+    "en_literal": "Time series forecast in finance and meteorology field have wide application.",
+    "en_academic": "Time series forecasting finds broad applicability across the financial services and meteorological sciences domains."
+  },
+  {
+    "zh": "聚类算法无需标签即可发现数据中的自然分组。",
+    "en": "Clustering algorithms can discover natural groupings in data without labels.",
+    "ja": "クラスタリングアルゴリズムはラベルなしでデータ内の自然なグループを発見することができる。",
+    "ko": "클러스터링 알고리즘은 레이블 없이 데이터에서 자연스러운 그룹을 발견할 수 있다.",
+    "domain": "academic",
+    "en_semantic": "Clustering algorithms can discover natural groupings in data without labels.",
+    "en_literal": "Anomaly detection aim to from data in identify not conform expected pattern sample.",
+    "en_academic": "Anomaly detection is directed at the identification of samples that deviate from normative behavioral patterns within a given dataset."
+  },
+  {
+    "zh": "主成分分析是一种经典的线性降维方法。",
+    "en": "Principal component analysis is a classical linear dimensionality reduction method.",
+    "ja": "主成分分析は古典的な線形次元削減手法である。",
+    "ko": "주성분 분석은 고전적인 선형 차원 축소 방법이다.",
+    "domain": "academic",
+    "en_semantic": "Principal component analysis is a classical linear dimensionality reduction method.",
+    "en_literal": "Cluster algorithm no need label can discover data in natural grouping.",
+    "en_academic": "Clustering algorithms are capable of discerning inherent groupings within unlabeled datasets without recourse to supervisory signals."
+  },
+  {
+    "zh": "支持向量机通过寻找最大间隔超平面来进行分类。",
+    "en": "Support vector machines perform classification by finding the maximum margin hyperplane.",
+    "ja": "サポートベクターマシンは最大マージン超平面を見つけることで分類を行う。",
+    "ko": "서포트 벡터 머신은 최대 마진 초평면을 찾아 분류를 수행한다.",
+    "domain": "academic",
+    "en_semantic": "Support vector machines perform classification by finding the maximum margin hyperplane.",
+    "en_literal": "Principal component analysis is one kind classical linear dimension reduction method.",
+    "en_academic": "Principal component analysis constitutes a classical linear technique for effecting dimensionality reduction."
+  },
+  {
+    "zh": "随机森林通过集成多棵决策树来提升模型的泛化性能。",
+    "en": "Random forest improves model generalization performance by ensembling multiple decision trees.",
+    "ja": "ランダムフォレストは複数の決定木を集約することでモデルの汎化性能を向上させる。",
+    "ko": "랜덤 포레스트는 여러 결정 트리를 앙상블하여 모델의 일반화 성능을 향상시킨다.",
+    "domain": "academic",
+    "en_semantic": "Random forest improves model generalization performance by ensembling multiple decision trees.",
+    "en_literal": "Support vector machine through find max margin hyperplane to perform classification.",
+    "en_academic": "Support vector machines effect classification through the identification of the maximum-margin separating hyperplane."
+  },
+  {
+    "zh": "梯度提升树在结构化表格数据任务中表现优异。",
+    "en": "Gradient boosting trees perform excellently on structured tabular data tasks.",
+    "ja": "勾配ブースティング木は構造化テーブルデータタスクにおいて優れた性能を発揮する。",
+    "ko": "그래디언트 부스팅 트리는 구조화된 테이블 데이터 작업에서 우수한 성능을 발휘한다.",
+    "domain": "academic",
+    "en_semantic": "Gradient boosting trees perform excellently on structured tabular data tasks.",
+    "en_literal": "Random forest through ensemble multiple decision tree promote model generalization performance.",
+    "en_academic": "Random forest architectures enhance generalization performance through the ensembling of multiple constituent decision tree classifiers."
+  },
+  {
+    "zh": "联邦学习允许多个客户端协作训练模型而不共享原始数据。",
+    "en": "Federated learning allows multiple clients to collaboratively train models without sharing raw data.",
+    "ja": "連合学習は複数のクライアントが生データを共有せずに協調してモデルを訓練することを可能にする。",
+    "ko": "연합 학습은 여러 클라이언트가 원시 데이터를 공유하지 않고 협력하여 모델을 훈련할 수 있게 한다.",
+    "domain": "academic",
+    "en_semantic": "Federated learning allows multiple clients to collaboratively train models without sharing raw data.",
+    "en_literal": "Gradient boost tree on structure table data task perform excellent.",
+    "en_academic": "Gradient-boosted tree ensembles demonstrate superlative performance characteristics on structured tabular data tasks."
+  },
+  {
+    "zh": "知识蒸馏可以将大模型的知识压缩到小模型中。",
+    "en": "Knowledge distillation can compress knowledge from large models into smaller ones.",
+    "ja": "知識蒸留は大規模モデルの知識を小規模モデルに圧縮することができる。",
+    "ko": "지식 증류는 대규모 모델의 지식을 소규모 모델로 압축할 수 있다.",
+    "domain": "academic",
+    "en_semantic": "Knowledge distillation can compress knowledge from large models into smaller ones.",
+    "en_literal": "Federated learning allow multiple client not share raw data collaborative train model.",
+    "en_academic": "Federated learning paradigms enable multiple clients to collaboratively train models without the necessity of sharing raw data."
+  },
+  {
+    "zh": "模型量化可降低模型大小并加速推理过程。",
+    "en": "Model quantization can reduce model size and accelerate the inference process.",
+    "ja": "モデル量子化はモデルサイズを削減し推論プロセスを加速することができる。",
+    "ko": "모델 양자화는 모델 크기를 줄이고 추론 과정을 가속화할 수 있다.",
+    "domain": "academic",
+    "en_semantic": "Model quantization can reduce model size and accelerate the inference process.",
+    "en_literal": "Knowledge distillation can big model knowledge compress to small model.",
+    "en_academic": "Knowledge distillation techniques are capable of compressing the representational knowledge of large-scale models into more compact architectural configurations."
+  },
+  {
+    "zh": "提示工程是引导大语言模型完成特定任务的关键技术。",
+    "en": "Prompt engineering is a key technique for guiding large language models to complete specific tasks.",
+    "ja": "プロンプトエンジニアリングは大規模言語モデルを特定のタスクに導くための重要な技術である。",
+    "ko": "프롬프트 엔지니어링은 대규모 언어 모델을 특정 작업으로 안내하는 핵심 기술이다.",
+    "domain": "academic",
+    "en_semantic": "Prompt engineering is a key technique for guiding large language models to complete specific tasks.",
+    "en_literal": "Model quantization can reduce model size and speed up inference process.",
+    "en_academic": "Model quantization can appreciably reduce model footprint while simultaneously accelerating the inference process."
+  },
+  {
+    "zh": "半监督学习同时利用有标签和无标签数据进行训练。",
+    "en": "Semi-supervised learning utilizes both labeled and unlabeled data for training.",
+    "ja": "半教師あり学習はラベル付きデータとラベルなしデータの両方を訓練に利用する。",
+    "ko": "준지도 학습은 레이블이 있는 데이터와 없는 데이터를 모두 훈련에 활용한다.",
+    "domain": "academic",
+    "en_semantic": "Semi-supervised learning utilizes both labeled and unlabeled data for training.",
+    "en_literal": "Prompt engineering is guide large language model complete specific task key technique.",
+    "en_academic": "Prompt engineering constitutes a pivotal technique for directing large language models toward the successful completion of domain-specific tasks."
+  },
+  {
+    "zh": "强化学习通过智能体与环境的交互来学习最优策略。",
+    "en": "Reinforcement learning learns optimal policies through agent-environment interaction.",
+    "ja": "強化学習はエージェントと環境の相互作用を通じて最適な方策を学習する。",
+    "ko": "강화 학습은 에이전트와 환경의 상호작용을 통해 최적의 정책을 학습한다.",
+    "domain": "academic",
+    "en_semantic": "Reinforcement learning learns optimal policies through agent-environment interaction.",
+    "en_literal": "Semi-supervised learning simultaneously use labeled and unlabeled data for training.",
+    "en_academic": "Semi-supervised learning paradigms harness both labeled and unlabeled data streams within the training protocol."
+  },
+  {
+    "zh": "生成对抗网络由生成器和判别器两个网络组成。",
+    "en": "Generative adversarial networks consist of two networks: a generator and a discriminator.",
+    "ja": "敵対的生成ネットワークは生成器と識別器の2つのネットワークから構成される。",
+    "ko": "생성적 적대 신경망은 생성자와 판별자의 두 네트워크로 구성된다.",
+    "domain": "academic",
+    "en_semantic": "Generative adversarial networks consist of two networks: a generator and a discriminator.",
+    "en_literal": "Reinforcement learning through agent with environment interaction learn optimal strategy.",
+    "en_academic": "Reinforcement learning acquires optimal behavioral policies through iterative agent-environment interaction."
+  },
+  {
+    "zh": "变分自编码器能够学习数据的潜在概率分布表示。",
+    "en": "Variational autoencoders can learn latent probabilistic distribution representations of data.",
+    "ja": "変分オートエンコーダはデータの潜在確率分布表現を学習することができる。",
+    "ko": "변분 오토인코더는 데이터의 잠재 확률 분포 표현을 학습할 수 있다.",
+    "domain": "academic",
+    "en_semantic": "Variational autoencoders can learn latent probabilistic distribution representations of data.",
+    "en_literal": "Generative adversarial network consist of generator and discriminator two networks.",
+    "en_academic": "Generative adversarial networks comprise two constituent subnetworks operating in an adversarial configuration: a generator and a discriminator."
+  },
+  {
+    "zh": "扩散模型在图像生成领域近年来获得了突破性进展。",
+    "en": "Diffusion models have achieved breakthrough progress in the field of image generation in recent years.",
+    "ja": "拡散モデルは近年、画像生成分野において画期的な進歩を遂げている。",
+    "ko": "확산 모델은 최근 몇 년간 이미지 생성 분야에서 획기적인 진전을 이루었다.",
+    "domain": "academic",
+    "en_semantic": "Diffusion models have achieved breakthrough progress in the field of image generation in recent years.",
+    "en_literal": "Variational autoencoder can learn data latent probability distribution representation.",
+    "en_academic": "Variational autoencoders are capable of learning latent probabilistic distributional representations of input data."
+  },
+  {
+    "zh": "参数高效微调只需训练极少量的额外参数即可适应下游任务。",
+    "en": "Parameter-efficient fine-tuning only requires training a very small number of additional parameters to adapt to downstream tasks.",
+    "ja": "パラメータ効率的なファインチューニングは下流タスクに適応するためにごく少数の追加パラメータのみを訓練すればよい。",
+    "ko": "매개변수 효율적 미세 조정은 다운스트림 작업에 적응하기 위해 극소수의 추가 매개변수만 훈련하면 된다.",
+    "domain": "academic",
+    "en_semantic": "Parameter-efficient fine-tuning only requires training a very small number of additional parameters to adapt to downstream tasks.",
+    "en_literal": "Diffusion model recent year in image generation field obtain breakthrough progress.",
+    "en_academic": "Diffusion models have attained transformative breakthroughs within the image generation domain over the course of recent years."
+  },
+  {
+    "zh": "多任务学习通过同时训练多个相关任务来共享表示学习。",
+    "en": "Multi-task learning shares representation learning by simultaneously training multiple related tasks.",
+    "ja": "マルチタスク学習は複数の関連タスクを同時に訓練することで表現学習を共有する。",
+    "ko": "다중 작업 학습은 여러 관련 작업을 동시에 훈련하여 표현 학습을 공유한다.",
+    "domain": "academic",
+    "en_semantic": "Multi-task learning shares representation learning by simultaneously training multiple related tasks.",
+    "en_literal": "Parameter efficient fine-tune only need train very few additional parameter can adapt downstream task.",
+    "en_academic": "Parameter-efficient fine-tuning necessitates the training of only a negligible number of supplementary parameters to facilitate adaptation to downstream task requirements."
+  },
+  {
+    "zh": "课程学习按照由易到难的顺序组织训练数据。",
+    "en": "Curriculum learning organizes training data in order from easy to difficult.",
+    "ja": "カリキュラム学習は易から難への順序で訓練データを組織化する。",
+    "ko": "커리큘럼 학습은 쉬운 것부터 어려운 것 순서로 훈련 데이터를 구성한다.",
+    "domain": "academic",
+    "en_semantic": "Curriculum learning organizes training data in order from easy to difficult.",
+    "en_literal": "Multi-task learning through simultaneously train multiple related task to share representation learning.",
+    "en_academic": "Multi-task learning paradigms facilitate shared representation learning through the simultaneous training of multiple interrelated task objectives."
+  },
+  {
+    "zh": "元学习的目标是让模型学会如何快速学习新任务。",
+    "en": "The goal of meta-learning is to enable models to learn how to quickly learn new tasks.",
+    "ja": "メタ学習の目標はモデルが新しいタスクを迅速に学習する方法を学ぶことを可能にすることである。",
+    "ko": "메타 학습의 목표는 모델이 새로운 작업을 빠르게 학습하는 방법을 배우도록 하는 것이다.",
+    "domain": "academic",
+    "en_semantic": "The goal of meta-learning is to enable models to learn how to quickly learn new tasks.",
+    "en_literal": "Curriculum learning from easy to difficult order organize training data.",
+    "en_academic": "Curriculum learning strategies organize training exemplars in a progressively escalating sequence extending from simple to complex instances."
+  },
+  {
+    "zh": "可解释人工智能是构建可信AI系统的关键要素。",
+    "en": "Explainable artificial intelligence is a key element in building trustworthy AI systems.",
+    "ja": "説明可能な人工知能は信頼できるAIシステムを構築するための重要な要素である。",
+    "ko": "설명 가능한 인공지능은 신뢰할 수 있는 AI 시스템을 구축하는 데 핵심 요소이다.",
+    "domain": "academic",
+    "en_semantic": "Explainable artificial intelligence is a key element in building trustworthy AI systems.",
+    "en_literal": "Meta-learning goal is to make model learn how to fast learn new task.",
+    "en_academic": "The objective of meta-learning is to endow models with the capacity to rapidly acquire proficiency in previously unseen task domains."
+  },
+  {
+    "zh": "因果推断帮助机器学习模型超越相关性分析。",
+    "en": "Causal inference helps machine learning models go beyond correlation analysis.",
+    "ja": "因果推論は機械学習モデルが相関分析を超えるのを助ける。",
+    "ko": "인과 추론은 머신러닝 모델이 상관관계 분석을 넘어서도록 돕는다.",
+    "domain": "academic",
+    "en_semantic": "Causal inference helps machine learning models go beyond correlation analysis.",
+    "en_literal": "Explainable artificial intelligence is build trusted AI system key element.",
+    "en_academic": "Explainable artificial intelligence constitutes a foundational element in the construction of trustworthy and reliable AI systems."
+  },
+  {
+    "zh": "持续学习使模型能够逐步获取新知识而不遗忘旧知识。",
+    "en": "Continual learning enables models to gradually acquire new knowledge without forgetting old knowledge.",
+    "ja": "継続学習はモデルが古い知識を忘れることなく新しい知識を徐々に獲得することを可能にする。",
+    "ko": "지속적 학습은 모델이 오래된 지식을 잊지 않고 새로운 지식을 점진적으로 습득할 수 있게 한다.",
+    "domain": "academic",
+    "en_semantic": "Continual learning enables models to gradually acquire new knowledge without forgetting old knowledge.",
+    "en_literal": "Causal inference help machine learning model exceed correlation analysis.",
+    "en_academic": "Causal inference enables machine learning models to transcend the inherent limitations of purely correlational analysis."
+  },
+  {
+    "zh": "A/B测试是评估在线模型效果的标准方法。",
+    "en": "A/B testing is the standard method for evaluating online model performance.",
+    "ja": "A/Bテストはオンラインモデルの効果を評価するための標準的な方法である。",
+    "ko": "A/B 테스트는 온라인 모델 성능을 평가하는 표준 방법이다.",
+    "domain": "academic",
+    "en_semantic": "A/B testing is the standard method for evaluating online model performance.",
+    "en_literal": "Continual learning enable model gradually acquire new knowledge without forget old knowledge.",
+    "en_academic": "Continual learning paradigms enable models to progressively acquire novel knowledge without the catastrophic forgetting of previously consolidated information."
+  },
+  {
+    "zh": "模型部署需要考虑推理延迟、吞吐量和资源消耗。",
+    "en": "Model deployment needs to consider inference latency, throughput, and resource consumption.",
+    "ja": "モデル展開は推論遅延、スループット、リソース消費を考慮する必要がある。",
+    "ko": "모델 배포는 추론 지연 시간, 처리량, 리소스 소비를 고려해야 한다.",
+    "domain": "academic",
+    "en_semantic": "Model deployment needs to consider inference latency, throughput, and resource consumption.",
+    "en_literal": "A/B test is evaluate online model effect standard method.",
+    "en_academic": "A/B testing constitutes the gold-standard methodological approach for the evaluation of online model performance characteristics."
+  },
+  {
+    "zh": "混合精度训练利用半精度浮点数来加速计算过程。",
+    "en": "Mixed precision training uses half-precision floating point numbers to accelerate computation.",
+    "ja": "混合精度訓練は半精度浮動小数点数を利用して計算プロセスを加速する。",
+    "ko": "혼합 정밀도 훈련은 반정밀도 부동소수점 숫자를 사용하여 계산 과정을 가속화한다.",
+    "domain": "academic",
+    "en_semantic": "Mixed precision training uses half-precision floating point numbers to accelerate computation.",
+    "en_literal": "Model deploy need consider inference delay, throughput and resource consumption.",
+    "en_academic": "Model deployment necessitates the careful consideration of inference latency, throughput capacity, and computational resource consumption."
+  },
+  {
+    "zh": "分布式训练将大规模计算任务分配到多个GPU节点上并行处理。",
+    "en": "Distributed training distributes large-scale computation tasks across multiple GPU nodes for parallel processing.",
+    "ja": "分散訓練は大規模な計算タスクを複数のGPUノードに分散して並列処理する。",
+    "ko": "분산 훈련은 대규모 계산 작업을 여러 GPU 노드에 분산하여 병렬 처리한다.",
+    "domain": "academic",
+    "en_semantic": "Distributed training distributes large-scale computation tasks across multiple GPU nodes for parallel processing.",
+    "en_literal": "Mixed precision training use half precision float point number to speed up computation.",
+    "en_academic": "Mixed precision training harnesses half-precision floating-point arithmetic to substantially accelerate the computational process."
+  },
+  {
+    "zh": "注意力机制已成为现代深度学习架构的核心组件。",
+    "en": "The attention mechanism has become a core component of modern deep learning architectures.",
+    "ja": "注意機構は現代の深層学習アーキテクチャの中核コンポーネントとなっている。",
+    "ko": "어텐션 메커니즘은 현대 딥러닝 아키텍처의 핵심 구성 요소가 되었다.",
+    "domain": "academic",
+    "en_semantic": "The attention mechanism has become a core component of modern deep learning architectures.",
+    "en_literal": "Distributed training assign large scale computation task to multiple GPU node for parallel processing.",
+    "en_academic": "Distributed training paradigms allocate large-scale computational workloads across multiple GPU nodes for parallelized processing."
+  },
+  {
+    "zh": "Transformer架构已经在自然语言处理领域确立了主导地位。",
+    "en": "The Transformer architecture has established dominance in the field of natural language processing.",
+    "ja": "Transformerアーキテクチャは自然言語処理分野において支配的な地位を確立している。",
+    "ko": "Transformer 아키텍처는 자연어 처리 분야에서 지배적인 위치를 확립했다.",
+    "domain": "academic",
+    "en_semantic": "The Transformer architecture has established dominance in the field of natural language processing.",
+    "en_literal": "Attention mechanism already become modern deep learning architecture core component.",
+    "en_academic": "The attention mechanism has evolved into an indispensable core component of contemporary deep learning architectural designs."
+  },
+  {
+    "zh": "深度学习技术已经在医疗影像诊断中展现出巨大潜力。",
+    "en": "Deep learning technology has demonstrated enormous potential in medical imaging diagnosis.",
+    "ja": "深層学習技術は医療画像診断において大きな可能性を示している。",
+    "ko": "딥러닝 기술은 의료 영상 진단에서 거대한 잠재력을 보여주고 있다.",
+    "domain": "academic",
+    "en_semantic": "Deep learning technology has demonstrated enormous potential in medical imaging diagnosis.",
+    "en_literal": "Transformer architecture already in natural language processing field establish dominant position.",
+    "en_academic": "The Transformer architecture has established unquestioned dominance within the field of natural language processing."
+  },
+  {
+    "zh": "这项研究首次将Transformer模型应用于蛋白质结构预测。",
+    "en": "This research applies Transformer models to protein structure prediction for the first time.",
+    "ja": "本研究はTransformerモデルをタンパク質構造予測に初めて応用した。",
+    "ko": "이 연구는 Transformer 모델을 단백질 구조 예측에 처음으로 적용했다.",
+    "domain": "academic",
+    "en_semantic": "This research applies Transformer models to protein structure prediction for the first time.",
+    "en_literal": "Pre-training fine-tune paradigm significant reduce specific task to large scale label data need.",
+    "en_academic": "The pre-training and fine-tuning paradigm substantially diminishes the requirement for large-scale annotated data for specific downstream task applications."
+  },
+  {
+    "zh": "实验结果证实了我们的理论假设。",
+    "en": "Experimental results confirmed our theoretical hypothesis.",
+    "ja": "実験結果は我々の理論的仮説を確認した。",
+    "ko": "실험 결과가 우리의 이론적 가설을 확인해 주었다.",
+    "domain": "academic",
+    "en_semantic": "Experimental results confirmed our theoretical hypothesis.",
+    "en_literal": "Position encoding for self-attention mechanism provide sequence in position information.",
+    "en_academic": "Positional encoding furnishes critical positional information within sequential data for consumption by the self-attention mechanism."
+  },
+  {
+    "zh": "大规模预训练模型在低资源语言上的表现仍有提升空间。",
+    "en": "Large-scale pre-trained models still have room for improvement on low-resource languages.",
+    "ja": "大規模事前学習モデルの低リソース言語における性能にはまだ向上の余地がある。",
+    "ko": "대규모 사전 훈련 모델의 저자원 언어에서의 성능은 아직 개선의 여지가 있다.",
+    "domain": "academic",
+    "en_literal": "This technology in medical imaging diagnosis already show huge potential.",
+    "en_academic": "Considerable potential has been demonstrated by this technological approach within the sphere of medical imaging diagnostics.",
+    "en_semantic": "Large-scale pre-trained models still have room for improvement on low-resource languages."
+  },
+  {
+    "zh": "该研究团队由来自五个国家的十五位研究人员组成。",
+    "en": "The research team consists of fifteen researchers from five countries.",
+    "ja": "この研究チームは5カ国からの15人の研究者で構成されている。",
+    "ko": "이 연구팀은 5개국에서 온 15명의 연구원으로 구성되어 있다.",
+    "domain": "academic",
+    "en_literal": "This research first time apply Transformer model to protein structure prediction.",
+    "en_academic": "The present investigation represents the inaugural application of Transformer-based models to the task of protein structure prediction.",
+    "en_semantic": "The research team consists of fifteen researchers from five countries."
+  },
+  {
+    "zh": "神经网络的可解释性是目前人工智能研究的核心挑战之一。",
+    "en": "The interpretability of neural networks is one of the core challenges in current AI research.",
+    "ja": "ニューラルネットワークの解釈可能性は現在のAI研究の中核的課題の一つである。",
+    "ko": "신경망의 해석 가능성은 현재 AI 연구의 핵심 과제 중 하나이다.",
+    "domain": "academic",
+    "en_literal": "Experiment result confirm our theoretical hypothesis.",
+    "en_academic": "The experimental findings provided empirical confirmation of the theoretical hypothesis advanced.",
+    "en_semantic": "The interpretability of neural networks is one of the core challenges in current AI research."
+  },
+  {
+    "zh": "实验配置包括四个NVIDIA A100 GPU和128GB内存。",
+    "en": "The experimental setup includes four NVIDIA A100 GPUs and 128GB of memory.",
+    "ja": "実験構成は4台のNVIDIA A100 GPUと128GBのメモリを含む。",
+    "ko": "실험 구성은 4개의 NVIDIA A100 GPU와 128GB 메모리를 포함한다.",
+    "domain": "academic",
+    "en_literal": "Large-scale pre-train model on low-resource language performance still has room to improve.",
+    "en_academic": "Considerable scope for improvement remains in the performance of large-scale pre-trained models when applied to low-resource language settings.",
+    "en_semantic": "The experimental setup includes four NVIDIA A100 GPUs and 128GB of memory."
+  },
+  {
+    "zh": "这项技术的应用前景非常广阔。",
+    "en": "The application prospects of this technology are very broad.",
+    "ja": "この技術の応用展望は非常に広い。",
+    "ko": "이 기술의 응용 전망은 매우 넓다.",
+    "domain": "academic",
+    "en_literal": "This research team consist of five country fifteen researcher.",
+    "en_academic": "The investigative team comprises fifteen researchers drawn from five participating nations.",
+    "en_semantic": "The application prospects of this technology are very broad."
+  },
+  {
+    "zh": "定量分析显示模型在准确率方面提升了12.5%。",
+    "en": "Quantitative analysis shows that the model improved by 12.5% in accuracy.",
+    "ja": "定量分析によると、モデルの精度が12.5%向上したことが示されている。",
+    "ko": "정량 분석 결과 모델의 정확도가 12.5% 향상된 것으로 나타났다.",
+    "domain": "academic",
+    "en_literal": "Neural network interpretability is current AI research core challenge one.",
+    "en_academic": "The interpretability of neural network architectures constitutes one of the core challenges confronting contemporary AI research.",
+    "en_semantic": "Quantitative analysis shows that the model improved by 12.5% in accuracy."
+  },
+  {
+    "zh": "该方法已在三个公开数据集上进行了全面验证。",
+    "en": "The method has been comprehensively validated on three public datasets.",
+    "ja": "本手法は3つの公開データセットで全面的に検証されている。",
+    "ko": "이 방법은 세 개의 공개 데이터셋에서 전면적으로 검증되었다.",
+    "domain": "academic",
+    "en_literal": "Experiment setup include four NVIDIA A100 GPU and 128GB memory.",
+    "en_academic": "The experimental apparatus comprised four NVIDIA A100 GPU accelerators in conjunction with 128 gigabytes of system memory.",
+    "en_semantic": "The method has been comprehensively validated on three public datasets."
+  },
+  {
+    "zh": "长短期记忆网络在时序预测任务中表现出色。",
+    "en": "Long short-term memory networks perform well in time series forecasting tasks.",
+    "ja": "長短期記憶ネットワークは時系列予測タスクにおいて優れた性能を発揮する。",
+    "ko": "장단기 메모리 네트워크는 시계열 예측 작업에서 우수한 성능을 보인다.",
+    "domain": "academic",
+    "en_literal": "This technology application prospect is very broad.",
+    "en_academic": "The application prospects for this technological approach are of considerable breadth and significance.",
+    "en_semantic": "Long short-term memory networks perform well in time series forecasting tasks."
+  },
+  {
+    "zh": "模型压缩技术在边缘设备部署中发挥着重要作用。",
+    "en": "Model compression techniques play an important role in edge device deployment.",
+    "ja": "モデル圧縮技術はエッジデバイスへの展開において重要な役割を果たす。",
+    "ko": "모델 압축 기술은 엣지 디바이스 배포에서 중요한 역할을 한다。",
+    "domain": "academic",
+    "en_literal": "Quantitative analysis show model in accuracy aspect improve 12.5%.",
+    "en_academic": "Quantitative analysis revealed that the model demonstrated an accuracy improvement amounting to 12.5 percent.",
+    "en_semantic": "Model compression techniques play an important role in edge device deployment."
+  },
+  {
+    "zh": "该综述文章梳理了近五年来相关领域的研究进展。",
+    "en": "This survey article reviews the research progress in related fields over the past five years.",
+    "ja": "このレビュー論文は過去5年間の関連分野の研究進展を整理している。",
+    "ko": "이 리뷰 논문은 지난 5년간 관련 분야의 연구 진전을 정리하고 있다.",
+    "domain": "academic",
+    "en_literal": "This method already on three public dataset conduct full verification.",
+    "en_academic": "The proposed methodology has been subjected to comprehensive validation across three publicly available benchmark datasets.",
+    "en_semantic": "This survey article reviews the research progress in related fields over the past five years."
+  },
+  {
+    "zh": "数据隐私保护是联邦学习研究的核心动机之一。",
+    "en": "Data privacy protection is one of the core motivations for federated learning research.",
+    "ja": "データプライバシー保護は連合学習研究の中核的動機の一つである。",
+    "ko": "데이터 프라이버시 보호는 연합 학습 연구의 핵심 동기 중 하나이다.",
+    "domain": "academic",
+    "en_literal": "Long short-term memory network in time series forecast task perform excellent.",
+    "en_academic": "Long short-term memory networks exhibit exemplary performance characteristics within time series forecasting applications.",
+    "en_semantic": "Data privacy protection is one of the core motivations for federated learning research."
+  },
+  {
+    "zh": "模型评估采用了精确率、召回率和F1分数三个指标。",
+    "en": "Model evaluation employed three metrics: precision, recall, and F1 score.",
+    "ja": "モデル評価には適合率、再現率、F1スコアの3つの指標を採用した。",
+    "ko": "모델 평가에는 정밀도, 재현율, F1 점수의 세 가지 지표를 사용했다.",
+    "domain": "academic",
+    "en_literal": "Model compression technique in edge device deployment play important role.",
+    "en_academic": "Model compression techniques fulfill a critical function in facilitating deployment upon resource-constrained edge computing devices.",
+    "en_semantic": "Model evaluation employed three metrics: precision, recall, and F1 score."
+  }
+]

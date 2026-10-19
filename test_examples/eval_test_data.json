@@ -1,0 +1,77 @@
+{
+  "description": "翻译质量评估模块三功能测试数据",
+  "功能一_单条评估": {
+    "说明": "复制原文点先翻译→填入参考译文→点计算BLEU",
+    "测试样例": [
+      {
+        "原文": "消融实验验证了每个模块对整体性能的贡献。",
+        "参考译文": "Ablation experiments validated the contribution of each module to overall performance."
+      },
+      {
+        "原文": "根据合同条款，违约方应承担赔偿责任。",
+        "参考译文": "According to the contract terms, the breaching party shall bear liability for damages."
+      },
+      {
+        "原文": "双盲随机对照试验证实了新药的安全性与有效性。",
+        "参考译文": "Double-blind randomized controlled trials confirmed the safety and efficacy of the new drug."
+      },
+      {
+        "原文": "该算法的复杂度为O(n log n)，空间复杂度为O(n)。",
+        "参考译文": "The algorithm has a time complexity of O(n log n) and a space complexity of O(n)."
+      },
+      {
+        "原文": "この研究は機械翻訳の精度を大幅に向上させました。",
+        "参考译文": "This research has significantly improved the accuracy of machine translation."
+      }
+    ]
+  },
+  "功能二_批量评估": {
+    "说明": "点批量评估→设样本数10→开始自动评估，系统从语料库抽样翻译后自动对比",
+    "预期": "表格显示原文/模型翻译/参考译文/BLEU/METEOR，顶部显示平均分"
+  },
+  "功能三_人工打分": {
+    "说明": "复制源文和翻译结果→拖动1-5分滑块→勾选错误类型→提交评分",
+    "测试样例": [
+      {
+        "源文本": "近年来，深度学习技术在医疗影像分析领域取得了突破性进展。卷积神经网络能够自动从大规模医学影像数据集中提取层次化特征。",
+        "翻译结果": "In recent years, deep learning technology has made breakthrough progress in medical image analysis. Convolutional neural networks can automatically extract hierarchical features from large-scale medical image datasets.",
+        "参考译文": "In recent years, deep learning techniques have achieved significant breakthroughs in medical imaging analysis. Convolutional neural networks (CNNs) can automatically extract hierarchical features from large-scale medical imaging datasets.",
+        "建议评分": {"准确度": 4, "流畅度": 5, "充分性": 3},
+        "错误类型": ["术语错误"],
+        "备注": "technology→techniques更学术; breakthrough progress不太地道; 缺CNN缩写"
+      },
+      {
+        "源文本": "本协议自双方签署之日起生效，有效期为三年。",
+        "翻译结果": "This agreement will take effect from the date of signing by both parties, with a valid period of three years.",
+        "参考译文": "This Agreement shall become effective upon execution by both parties and shall remain in force for a term of three years.",
+        "建议评分": {"准确度": 3, "流畅度": 4, "充分性": 3},
+        "错误类型": ["风格不当"],
+        "备注": "生效之日起→shall/upon execution更符合法律英语; 有效期→term比valid period准确"
+      },
+      {
+        "源文本": "谢谢你帮了我这么大的忙，改天请你吃饭。",
+        "翻译结果": "Thank you for helping me so much. I will treat you to dinner someday.",
+        "参考译文": "Thanks for your huge help. I'll treat you to dinner sometime.",
+        "建议评分": {"准确度": 4, "流畅度": 3, "充分性": 4},
+        "错误类型": ["风格不当"],
+        "备注": "口语场景; someday偏正式应改用sometime; I will→I'll自然; helping...so much→huge help精简"
+      },
+      {
+        "源文本": "该分布式系统采用微服务架构，通过容器编排实现自动扩缩容。",
+        "翻译结果": "This distributed system uses a microservice architecture and realizes automatic scaling through container arrangement.",
+        "参考译文": "The distributed system adopts a microservice architecture and achieves auto-scaling through container orchestration.",
+        "建议评分": {"准确度": 2, "流畅度": 4, "充分性": 3},
+        "错误类型": ["术语错误"],
+        "备注": "容器编排→container orchestration不是arrangement; 自动扩缩→auto-scaling不是automatic scaling; 采用→adopts更正式"
+      },
+      {
+        "源文本": "免疫治疗在多种恶性肿瘤中显示出持久的抗肿瘤应答。",
+        "翻译结果": "Immune therapy has shown long-lasting anti-tumor responses in many types of malignant tumors.",
+        "参考译文": "Immunotherapy has demonstrated durable antitumor responses in multiple malignant tumors.",
+        "建议评分": {"准确度": 3, "流畅度": 4, "充分性": 3},
+        "错误类型": ["术语错误", "冗余"],
+        "备注": "免疫治疗→immunotherapy不是immune therapy; 持久→durable不是long-lasting; 多种→multiple不用many types"
+      }
+    ]
+  }
+}

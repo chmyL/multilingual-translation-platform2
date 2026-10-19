@@ -1,0 +1,502 @@
+[
+  {
+    "zh": "该API端点响应延迟应控制在50毫秒以内。",
+    "en": "The API endpoint response latency should be kept under 50 milliseconds.",
+    "ja": "このAPIエンドポイントの応答遅延は50ミリ秒以内に制御されるべきである。",
+    "ko": "이 API 엔드포인트의 응답 지연은 50밀리초 이내로 제어되어야 한다.",
+    "domain": "technical",
+    "en_semantic": "The API endpoint response latency should be kept under 50 milliseconds.",
+    "en_literal": "This API endpoint response delay should control under 50 millisecond.",
+    "en_academic": "The response latency for this API endpoint ought to be constrained such that it does not exceed a maximum threshold of 50 milliseconds."
+  },
+  {
+    "zh": "请将配置文件中的DEBUG模式设置为False后再部署。",
+    "en": "Please set the DEBUG mode to False in the configuration file before deployment.",
+    "ja": "デプロイ前に設定ファイルのDEBUGモードをFalseに設定してください。",
+    "ko": "배포 전에 구성 파일의 DEBUG 모드를 False로 설정하십시오.",
+    "domain": "technical",
+    "en_semantic": "Please set the DEBUG mode to False in the configuration file before deployment.",
+    "en_literal": "Please configuration file inside DEBUG mode set to False before deploy.",
+    "en_academic": "It is advised that the DEBUG flag within the configuration file be assigned a value of False prior to the commencement of deployment operations."
+  },
+  {
+    "zh": "该系统采用微服务架构，各模块通过RESTful接口通信。",
+    "en": "The system adopts a microservice architecture, with modules communicating via RESTful interfaces.",
+    "ja": "このシステムはマイクロサービスアーキテクチャを採用し、各モジュールはRESTfulインターフェースを介して通信する。",
+    "ko": "이 시스템은 마이크로서비스 아키텍처를 채택하고 있으며, 각 모듈은 RESTful 인터페이스를 통해 통신한다.",
+    "domain": "technical",
+    "en_semantic": "The system adopts a microservice architecture, with modules communicating via RESTful interfaces.",
+    "en_literal": "This system adopt microservice architecture, each module through RESTful interface communicate.",
+    "en_academic": "The system architecture is predicated upon a microservice paradigm, with inter-module communication being facilitated through RESTful application programming interfaces."
+  },
+  {
+    "zh": "数据库查询优化后，响应时间从2.3秒降至0.4秒。",
+    "en": "After database query optimization, the response time dropped from 2.3 seconds to 0.4 seconds.",
+    "ja": "データベースクエリの最適化後、応答時間は2.3秒から0.4秒に短縮された。",
+    "ko": "데이터베이스 쿼리 최적화 후 응답 시간이 2.3초에서 0.4초로 단축되었다.",
+    "domain": "technical",
+    "en_semantic": "After database query optimization, the response time dropped from 2.3 seconds to 0.4 seconds.",
+    "en_literal": "Database query after optimization, response time from 2.3 second drop to 0.4 second.",
+    "en_academic": "Subsequent to the optimization of database query execution, the response latency was reduced from 2.3 seconds to a mere 0.4 seconds."
+  },
+  {
+    "zh": "请使用HTTPS协议加密所有API通信以保障数据安全。",
+    "en": "Please use HTTPS protocol to encrypt all API communications to ensure data security.",
+    "ja": "データセキュリティを確保するため、すべてのAPI通信をHTTPSプロトコルで暗号化してください。",
+    "ko": "데이터 보안을 보장하기 위해 모든 API 통신을 HTTPS 프로토콜로 암호화하십시오.",
+    "domain": "technical",
+    "en_semantic": "Please use HTTPS protocol to encrypt all API communications to ensure data security.",
+    "en_literal": "Please use HTTPS protocol encrypt all API communication to ensure data security.",
+    "en_academic": "It is imperative that all API communications be encrypted via the HTTPS protocol to safeguard the integrity and confidentiality of transmitted data."
+  },
+  {
+    "zh": "线程池大小应根据CPU核心数动态调整以避免资源浪费。",
+    "en": "The thread pool size should be dynamically adjusted based on the number of CPU cores to avoid resource waste.",
+    "ja": "スレッドプールサイズはリソースの無駄を避けるため、CPUコア数に基づいて動的に調整されるべきである。",
+    "ko": "스레드 풀 크기는 리소스 낭비를 방지하기 위해 CPU 코어 수에 따라 동적으로 조정되어야 한다.",
+    "domain": "technical",
+    "en_semantic": "The thread pool size should be dynamically adjusted based on the number of CPU cores to avoid resource waste.",
+    "en_literal": "Thread pool size should according to CPU core count dynamic adjust to avoid resource waste.",
+    "en_academic": "The dimension of the thread pool should be dynamically recalibrated in accordance with the available CPU core count to preclude the wasteful allocation of computational resources."
+  },
+  {
+    "zh": "该容器的内存限制设定为512MB，CPU限制为2核。",
+    "en": "The container's memory limit is set to 512MB and the CPU limit to 2 cores.",
+    "ja": "このコンテナのメモリ制限は512MB、CPU制限は2コアに設定されている。",
+    "ko": "이 컨테이너의 메모리 제한은 512MB, CPU 제한은 2코어로 설정되어 있다.",
+    "domain": "technical",
+    "en_semantic": "The container's memory limit is set to 512MB and the CPU limit to 2 cores.",
+    "en_literal": "This container memory limit set as 512MB, CPU limit set as 2 core.",
+    "en_academic": "The container configuration stipulates a memory allocation ceiling of 512 megabytes in conjunction with a computational processing limit of two cores."
+  },
+  {
+    "zh": "日志系统采用ELK技术栈进行集中式管理与分析。",
+    "en": "The logging system uses the ELK stack for centralized management and analysis.",
+    "ja": "ログシステムはELK技術スタックを採用して集中的な管理と分析を行う。",
+    "ko": "로그 시스템은 ELK 기술 스택을 사용하여 중앙 집중식 관리 및 분석을 수행한다.",
+    "domain": "technical",
+    "en_semantic": "The logging system uses the ELK stack for centralized management and analysis.",
+    "en_literal": "Log system use ELK technology stack for centralized management and analysis.",
+    "en_academic": "The logging infrastructure harnesses the ELK technology stack for the purposes of centralized log aggregation, management, and analytical processing."
+  },
+  {
+    "zh": "编译错误：缺少libssl.so.1.1动态链接库，请安装openssl-devel。",
+    "en": "Compilation error: missing libssl.so.1.1 shared library, please install openssl-devel.",
+    "ja": "コンパイルエラー：libssl.so.1.1動的リンクライブラリが不足しています。openssl-develをインストールしてください。",
+    "ko": "컴파일 오류: libssl.so.1.1 동적 링크 라이브러리가 누락되었습니다. openssl-devel을 설치하십시오.",
+    "domain": "technical",
+    "en_semantic": "Compilation error: missing libssl.so.1.1 shared library, please install openssl-devel.",
+    "en_literal": "Compile error: missing libssl.so.1.1 shared library, please install openssl-devel.",
+    "en_academic": "A compilation fault has been encountered attributable to the absence of the libssl.so.1.1 dynamic link library. The installation of the openssl-devel package is strongly recommended."
+  },
+  {
+    "zh": "前端使用React框架，后端采用FastAPI，数据通过WebSocket实时推送。",
+    "en": "The frontend uses the React framework, the backend adopts FastAPI, and data is pushed in real-time via WebSocket.",
+    "ja": "フロントエンドはReactフレームワークを使用し、バックエンドはFastAPIを採用し、データはWebSocketを介してリアルタイムでプッシュされる。",
+    "ko": "프론트엔드는 React 프레임워크를 사용하고, 백엔드는 FastAPI를 채택하며, 데이터는 WebSocket을 통해 실시간으로 푸시된다.",
+    "domain": "technical",
+    "en_semantic": "The frontend uses the React framework, the backend adopts FastAPI, and data is pushed in real-time via WebSocket.",
+    "en_literal": "Frontend use React framework, backend use FastAPI, data through WebSocket real-time push.",
+    "en_academic": "The frontend architecture leverages the React framework, whereas the backend is implemented utilizing FastAPI. Real-time data distribution is accomplished through WebSocket connections."
+  },
+  {
+    "zh": "请将Nginx反向代理配置中的超时时间从30秒增加至120秒。",
+    "en": "Please increase the timeout in the Nginx reverse proxy configuration from 30 seconds to 120 seconds.",
+    "ja": "Nginxリバースプロキシ設定のタイムアウト時間を30秒から120秒に増加させてください。",
+    "ko": "Nginx 리버스 프록시 설정의 타임아웃 시간을 30초에서 120초로 늘리십시오.",
+    "domain": "technical",
+    "en_semantic": "Please increase the timeout in the Nginx reverse proxy configuration from 30 seconds to 120 seconds.",
+    "en_literal": "Please Nginx reverse proxy timeout from 30 second increase to 120 second.",
+    "en_academic": "The timeout parameter within the Nginx reverse proxy configuration should be adjusted from its present value of 30 seconds to a revised duration of 120 seconds."
+  },
+  {
+    "zh": "该算法在GPU集群上的并行效率达到了92%以上。",
+    "en": "The parallel efficiency of this algorithm on the GPU cluster reached over 92%.",
+    "ja": "このアルゴリズムのGPUクラスタ上での並列効率は92%以上に達した。",
+    "ko": "이 알고리즘의 GPU 클러스터에서의 병렬 효율은 92% 이상에 도달했다.",
+    "domain": "technical",
+    "en_semantic": "The parallel efficiency of this algorithm on the GPU cluster reached over 92%.",
+    "en_literal": "This algorithm on GPU cluster parallel efficiency reach more than 92%.",
+    "en_academic": "The parallel computational efficiency attained by this algorithm on the GPU cluster surpassed the threshold of 92 percent."
+  },
+  {
+    "zh": "请确保所有SQL查询使用参数化语句以防止注入攻击。",
+    "en": "Please ensure all SQL queries use parameterized statements to prevent injection attacks.",
+    "ja": "インジェクション攻撃を防ぐため、すべてのSQLクエリでパラメータ化ステートメントを使用してください。",
+    "ko": "인젝션 공격을 방지하기 위해 모든 SQL 쿼리에서 매개변수화된 문을 사용하십시오.",
+    "domain": "technical",
+    "en_semantic": "Please ensure all SQL queries use parameterized statements to prevent injection attacks.",
+    "en_literal": "Please ensure all SQL query use parameterized statement to prevent injection attack.",
+    "en_academic": "It is of paramount importance that all SQL queries be implemented as parameterized statements so as to mitigate the risk of injection-based security attacks."
+  },
+  {
+    "zh": "CI/CD流水线集成了单元测试、集成测试和端到端测试三个阶段。",
+    "en": "The CI/CD pipeline integrates three stages: unit testing, integration testing, and end-to-end testing.",
+    "ja": "CI/CDパイプラインはユニットテスト、統合テスト、エンドツーエンドテストの3段階を統合している。",
+    "ko": "CI/CD 파이프라인은 단위 테스트, 통합 테스트, 엔드투엔드 테스트의 세 단계를 통합한다.",
+    "domain": "technical",
+    "en_semantic": "The CI/CD pipeline integrates three stages: unit testing, integration testing, and end-to-end testing.",
+    "en_literal": "CI/CD pipeline integrate unit test, integration test and end-to-end test three stage.",
+    "en_academic": "The continuous integration and deployment pipeline incorporates three sequential phases of validation: unit testing, integration testing, and end-to-end testing."
+  },
+  {
+    "zh": "该分布式系统采用Raft共识算法保证多节点间的数据一致性。",
+    "en": "The distributed system uses the Raft consensus algorithm to ensure data consistency across multiple nodes.",
+    "ja": "この分散システムはRaft合意アルゴリズムを採用し、複数ノード間のデータ一貫性を保証する。",
+    "ko": "이 분산 시스템은 Raft 합의 알고리즘을 사용하여 여러 노드 간의 데이터 일관성을 보장한다.",
+    "domain": "technical",
+    "en_semantic": "The distributed system uses the Raft consensus algorithm to ensure data consistency across multiple nodes.",
+    "en_literal": "This distributed system use Raft consensus algorithm guarantee multi-node data consistency.",
+    "en_academic": "The distributed system architecture employs the Raft consensus protocol to ensure strict data consistency across multiple computational nodes within the cluster."
+  },
+  {
+    "zh": "请将Redis缓存过期策略设置为LRU模式，最大内存限制为1GB。",
+    "en": "Please set the Redis cache eviction policy to LRU mode with a maximum memory limit of 1GB.",
+    "ja": "Redisキャッシュの有効期限ポリシーをLRUモードに設定し、最大メモリ制限を1GBにしてください。",
+    "ko": "Redis 캐시 만료 정책을 LRU 모드로 설정하고 최대 메모리 제한을 1GB로 하십시오.",
+    "domain": "technical",
+    "en_semantic": "Please set the Redis cache eviction policy to LRU mode with a maximum memory limit of 1GB.",
+    "en_literal": "Please Redis cache expire policy set to LRU mode, max memory limit 1GB.",
+    "en_academic": "The Redis cache eviction policy should be configured to operate in LRU mode, with a maximum memory ceiling established at one gigabyte."
+  },
+  {
+    "zh": "TCP三次握手完成后，客户端与服务器之间建立可靠连接。",
+    "en": "After the TCP three-way handshake is completed, a reliable connection is established between the client and server.",
+    "ja": "TCPの3ウェイハンドシェイクが完了すると、クライアントとサーバー間で信頼性の高い接続が確立される。",
+    "ko": "TCP 3방향 핸드셰이크가 완료되면 클라이언트와 서버 간에 안정적인 연결이 설정된다.",
+    "domain": "technical",
+    "en_semantic": "After the TCP three-way handshake is completed, a reliable connection is established between the client and server.",
+    "en_literal": "TCP three way handshake after complete, client and server between establish reliable connection.",
+    "en_academic": "Upon the successful completion of the TCP three-way handshake procedure, a reliable communication channel is established between the client and server endpoints."
+  },
+  {
+    "zh": "请检查防火墙规则是否放行了端口443和8080。",
+    "en": "Please check whether the firewall rules allow ports 443 and 8080.",
+    "ja": "ファイアウォールルールがポート443と8080を許可しているか確認してください。",
+    "ko": "방화벽 규칙이 포트 443과 8080을 허용하는지 확인하십시오.",
+    "domain": "technical",
+    "en_semantic": "Please check whether the firewall rules allow ports 443 and 8080.",
+    "en_literal": "Please check firewall rule whether release port 443 and 8080.",
+    "en_academic": "It is advisable to verify whether the currently operative firewall rule set permits inbound traffic through ports 443 and 8080."
+  },
+  {
+    "zh": "该Python脚本通过异步IO实现了每秒处理超过5000个请求。",
+    "en": "The Python script achieves over 5000 requests per second through asynchronous IO.",
+    "ja": "このPythonスクリプトは非同期IOによって毎秒5000以上のリクエストを処理する。",
+    "ko": "이 Python 스크립트는 비동기 IO를 통해 초당 5000개 이상의 요청을 처리한다.",
+    "domain": "technical",
+    "en_semantic": "The Python script achieves over 5000 requests per second through asynchronous IO.",
+    "en_literal": "This Python script through asynchronous IO achieve per second process more than 5000 request.",
+    "en_academic": "The Python script in question achieves a throughput exceeding 5,000 requests per second through the implementation of asynchronous input-output operations."
+  },
+  {
+    "zh": "服务降级策略：当QPS超过阈值时自动返回缓存数据而非实时查询。",
+    "en": "Service degradation strategy: when QPS exceeds the threshold, automatically return cached data instead of real-time queries.",
+    "ja": "サービス劣化戦略：QPSが閾値を超えた場合、リアルタイムクエリではなくキャッシュデータを自動的に返す。",
+    "ko": "서비스 저하 전략: QPS가 임계값을 초과하면 실시간 쿼리 대신 캐시된 데이터를 자동으로 반환한다.",
+    "domain": "technical",
+    "en_semantic": "Service degradation strategy: when QPS exceeds the threshold, automatically return cached data instead of real-time queries.",
+    "en_literal": "Service degrade strategy: when QPS exceed threshold auto return cache data not real-time query.",
+    "en_academic": "The service degradation strategy mandates the automatic return of cached data in lieu of real-time query execution whenever the QPS metric exceeds the prescribed operational threshold."
+  },
+  {
+    "zh": "请使用Dockerfile多阶段构建以减小最终镜像体积。",
+    "en": "Please use Dockerfile multi-stage builds to reduce the final image size.",
+    "ja": "最終イメージサイズを削減するためにDockerfileマルチステージビルドを使用してください。",
+    "ko": "최종 이미지 크기를 줄이기 위해 Dockerfile 다중 단계 빌드를 사용하십시오.",
+    "domain": "technical",
+    "en_literal": "Please use Dockerfile multi-stage build to reduce final image size.",
+    "en_academic": "It is recommended that multi-stage Dockerfile builds be employed to effect a reduction in the dimensions of the final container image.",
+    "en_semantic": "Please use Dockerfile multi-stage builds to reduce the final image size."
+  },
+  {
+    "zh": "Kubernetes集群中的Pod重启策略设置为OnFailure。",
+    "en": "The Pod restart policy in the Kubernetes cluster is set to OnFailure.",
+    "ja": "Kubernetesクラスタ内のPod再起動ポリシーはOnFailureに設定されている。",
+    "ko": "Kubernetes 클러스터의 Pod 재시작 정책이 OnFailure로 설정되어 있다.",
+    "domain": "technical",
+    "en_literal": "Kubernetes cluster inside Pod restart policy set to OnFailure.",
+    "en_academic": "The Pod restart policy within the Kubernetes cluster has been configured to assume a value of OnFailure.",
+    "en_semantic": "The Pod restart policy in the Kubernetes cluster is set to OnFailure."
+  },
+  {
+    "zh": "该系统使用JWT令牌进行无状态认证，令牌有效期为2小时。",
+    "en": "The system uses JWT tokens for stateless authentication, with a token validity period of 2 hours.",
+    "ja": "このシステムはJWTトークンを使用してステートレス認証を行い、トークンの有効期間は2時間である。",
+    "ko": "이 시스템은 JWT 토큰을 사용하여 무상태 인증을 수행하며, 토큰 유효 기간은 2시간이다.",
+    "domain": "technical",
+    "en_literal": "This system use JWT token do stateless auth, token valid period 2 hour.",
+    "en_academic": "The system employs JWT tokens for the purpose of stateless authentication, with the token validity period being configured at two hours.",
+    "en_semantic": "The system uses JWT tokens for stateless authentication, with a token validity period of 2 hours."
+  },
+  {
+    "zh": "请通过SSH密钥对而非密码登录生产服务器。",
+    "en": "Please log in to production servers via SSH key pairs instead of passwords.",
+    "ja": "パスワードではなくSSHキーペアで本番サーバーにログインしてください。",
+    "ko": "비밀번호 대신 SSH 키 쌍을 통해 프로덕션 서버에 로그인하십시오.",
+    "domain": "technical",
+    "en_literal": "Please through SSH key pair not password login production server.",
+    "en_academic": "It is advised that access to production servers be authenticated via SSH key pairs rather than password-based credentials.",
+    "en_semantic": "Please log in to production servers via SSH key pairs instead of passwords."
+  },
+  {
+    "zh": "监控面板使用Prometheus采集指标并用Grafana实现可视化。",
+    "en": "The monitoring dashboard uses Prometheus to collect metrics and Grafana for visualization.",
+    "ja": "監視ダッシュボードはPrometheusでメトリクスを収集し、Grafanaで可視化を実現する。",
+    "ko": "모니터링 대시보드는 Prometheus로 메트릭을 수집하고 Grafana로 시각화를 구현한다.",
+    "domain": "technical",
+    "en_literal": "Monitor dashboard use Prometheus collect metric, use Grafana realize visualization.",
+    "en_academic": "The monitoring dashboard harnesses Prometheus for the collection of metrics and employs Grafana to effect their visualization.",
+    "en_semantic": "The monitoring dashboard uses Prometheus to collect metrics and Grafana for visualization."
+  },
+  {
+    "zh": "代码审查发现了三处潜在的空指针异常和两处资源泄漏问题。",
+    "en": "Code review identified three potential null pointer exceptions and two resource leak issues.",
+    "ja": "コードレビューにより3つの潜在的なヌルポインタ例外と2つのリソースリーク問題が発見された。",
+    "ko": "코드 리뷰에서 세 곳의 잠재적 널 포인터 예외와 두 곳의 리소스 누수 문제가 발견되었다.",
+    "domain": "technical",
+    "en_literal": "Code review find 3 potential null pointer exception and 2 resource leak.",
+    "en_academic": "The code review process identified three potential null pointer exceptions and two instances of resource leakage.",
+    "en_semantic": "Code review identified three potential null pointer exceptions and two resource leak issues."
+  },
+  {
+    "zh": "该模块的单元测试覆盖率达到95%，所有关键路径均已覆盖。",
+    "en": "The unit test coverage of this module reached 95%, with all critical paths covered.",
+    "ja": "このモジュールのユニットテストカバレッジは95%に達し、すべてのクリティカルパスがカバーされている。",
+    "ko": "이 모듈의 단위 테스트 커버리지가 95%에 도달했으며, 모든 중요 경로가 커버되었다.",
+    "domain": "technical",
+    "en_literal": "This module unit test coverage reach 95%, all key path already cover.",
+    "en_academic": "The unit test coverage for this module has attained a level of 95 percent, with all critical execution paths having been adequately covered.",
+    "en_semantic": "The unit test coverage of this module reached 95%, with all critical paths covered."
+  },
+  {
+    "zh": "请将Git提交信息规范为Conventional Commits格式。",
+    "en": "Please standardize Git commit messages to the Conventional Commits format.",
+    "ja": "GitコミットメッセージをConventional Commits形式に標準化してください。",
+    "ko": "Git 커밋 메시지를 Conventional Commits 형식으로 표준화하십시오.",
+    "domain": "technical",
+    "en_literal": "Please Git commit message standardize to Conventional Commits format.",
+    "en_academic": "It is recommended that Git commit messages be standardized to conform with the Conventional Commits formatting specification.",
+    "en_semantic": "Please standardize Git commit messages to the Conventional Commits format."
+  },
+  {
+    "zh": "数据库采用主从复制架构，写操作路由到主库，读操作分发到从库。",
+    "en": "The database uses a master-slave replication architecture, with write operations routed to the master and reads distributed to slaves.",
+    "ja": "データベースはマスタースレーブレプリケーションアーキテクチャを採用し、書き込み操作はマスターにルーティングされ、読み取り操作はスレーブに分散される。",
+    "ko": "데이터베이스는 마스터-슬레이브 복제 아키텍처를 사용하며, 쓰기 작업은 마스터로 라우팅되고 읽기 작업은 슬레이브로 분산된다.",
+    "domain": "technical",
+    "en_literal": "Database use master-slave replication architecture, write operation route to master, read operation dispatch to slave.",
+    "en_academic": "The database architecture employs a master-slave replication configuration, with write operations being routed to the master node and read operations distributed among slave nodes.",
+    "en_semantic": "The database uses a master-slave replication architecture, with write operations routed to the master and reads distributed to slaves."
+  },
+  {
+    "zh": "负载均衡器使用加权轮询算法将流量分配给后端服务器。",
+    "en": "The load balancer uses a weighted round-robin algorithm to distribute traffic to backend servers.",
+    "ja": "ロードバランサーは重み付きラウンドロビンアルゴリズムを使用してバックエンドサーバーにトラフィックを分配する。",
+    "ko": "로드 밸런서는 가중 라운드 로빈 알고리즘을 사용하여 백엔드 서버에 트래픽을 분산한다.",
+    "domain": "technical",
+    "en_literal": "Load balancer use weighted round-robin algorithm distribute traffic to backend server.",
+    "en_academic": "The load balancer utilizes a weighted round-robin algorithmic approach to distribute incoming traffic among the pool of backend servers.",
+    "en_semantic": "The load balancer uses a weighted round-robin algorithm to distribute traffic to backend servers."
+  },
+  {
+    "zh": "该正则表达式用于匹配标准IPv6地址格式。",
+    "en": "This regular expression is used to match standard IPv6 address formats.",
+    "ja": "この正規表現は標準IPv6アドレス形式にマッチするために使用される。",
+    "ko": "이 정규 표현식은 표준 IPv6 주소 형식을 일치시키는 데 사용된다.",
+    "domain": "technical",
+    "en_literal": "This regular expression use for match standard IPv6 address format.",
+    "en_academic": "A novel regular expression pattern is utilized within this implementation for the matching of standard IPv6 address formats.",
+    "en_semantic": "This regular expression is used to match standard IPv6 address formats."
+  },
+  {
+    "zh": "消息队列使用Kafka保证事件的高吞吐量与持久化。",
+    "en": "The message queue uses Kafka to ensure high throughput and persistence of events.",
+    "ja": "メッセージキューはKafkaを使用してイベントの高スループットと永続性を保証する。",
+    "ko": "메시지 큐는 Kafka를 사용하여 이벤트의 높은 처리량과 영속성을 보장한다.",
+    "domain": "technical",
+    "en_literal": "message queue uses Kafka to ensure high throughput and persistence of events.",
+    "en_academic": "The message queuing infrastructure harnesses Apache Kafka to guarantee both elevated throughput and the durable persistence of event data.",
+    "en_semantic": "The message queue uses Kafka to ensure high throughput and persistence of events."
+  },
+  {
+    "zh": "请将SSL证书更新为通配符证书以覆盖所有子域名。",
+    "en": "Please update the SSL certificate to a wildcard certificate to cover all subdomains.",
+    "ja": "すべてのサブドメインをカバーするためにSSL証明書をワイルドカード証明書に更新してください。",
+    "ko": "모든 하위 도메인을 커버하기 위해 SSL 인증서를 와일드카드 인증서로 업데이트하십시오.",
+    "domain": "technical",
+    "en_literal": "Please update SSL certificate to wildcard certificate to cover all subdomains.",
+    "en_academic": "It is recommended that the SSL certificate be upgraded to a wildcard certificate configuration to provide coverage across all subordinate domain names.",
+    "en_semantic": "Please update the SSL certificate to a wildcard certificate to cover all subdomains."
+  },
+  {
+    "zh": "该微服务启动时依赖三个外部配置中心，任一不可用将导致启动失败。",
+    "en": "This microservice depends on three external configuration centers at startup; unavailability of any will cause startup failure.",
+    "ja": "このマイクロサービスは起動時に3つの外部構成センターに依存しており、いずれかが利用できないと起動に失敗する。",
+    "ko": "이 마이크로서비스는 시작 시 세 개의 외부 구성 센터에 의존하며, 어느 하나라도 사용할 수 없으면 시작이 실패한다.",
+    "domain": "technical",
+    "en_literal": "This microservice when start depend on 3 external config center, any one unavailable will cause start fail.",
+    "en_academic": "Upon initialization, this microservice architecture exhibits a dependency upon three external configuration centers; the unavailability of any single one shall result in a failure of the startup sequence.",
+    "en_semantic": "This microservice depends on three external configuration centers at startup; unavailability of any will cause startup failure."
+  },
+  {
+    "zh": "请检查Kubernetes的Ingress Controller是否正确配置了TLS termination。",
+    "en": "Please check whether the Kubernetes Ingress Controller is correctly configured with TLS termination.",
+    "ja": "KubernetesのIngress ControllerがTLS terminationで正しく設定されているか確認してください。",
+    "ko": "Kubernetes의 Ingress Controller가 TLS 종료로 올바르게 구성되었는지 확인하십시오.",
+    "domain": "technical",
+    "en_literal": "Please check whether Kubernetes Ingress Controller is correctly configured with TLS termination.",
+    "en_academic": "Verification should be conducted to ascertain whether the Kubernetes Ingress Controller has been correctly configured with TLS termination capabilities.",
+    "en_semantic": "Please check whether the Kubernetes Ingress Controller is correctly configured with TLS termination."
+  },
+  {
+    "zh": "数据库迁移脚本应包含回滚逻辑以应对部署失败。",
+    "en": "The database migration script should include rollback logic to handle deployment failures.",
+    "ja": "データベースマイグレーションスクリプトはデプロイ失敗に対処するためのロールバックロジックを含むべきである。",
+    "ko": "데이터베이스 마이그레이션 스크립트는 배포 실패에 대처하기 위한 롤백 로직을 포함해야 한다.",
+    "domain": "technical",
+    "en_literal": "database migration script should include rollback logic to handle deployment failures.",
+    "en_academic": "The database migration script ought to include rollback logic to handle deployment failures.",
+    "en_semantic": "The database migration script should include rollback logic to handle deployment failures."
+  },
+  {
+    "zh": "请使用非对称加密保护传输中的敏感配置数据。",
+    "en": "Please use asymmetric encryption to protect sensitive configuration data in transit.",
+    "ja": "転送中の機密構成データを保護するために非対称暗号化を使用してください。",
+    "ko": "전송 중인 민감한 구성 데이터를 보호하기 위해 비대칭 암호화를 사용하십시오.",
+    "domain": "technical",
+    "en_literal": "Please use asymmetric encryption protect transmit sensitive config data.",
+    "en_academic": "It is strongly advised that asymmetric encryption methodologies be employed to safeguard sensitive configuration data during transmission.",
+    "en_semantic": "Please use asymmetric encryption to protect sensitive configuration data in transit."
+  },
+  {
+    "zh": "该接口的QPS上限设计为10000，超限后将触发限流策略。",
+    "en": "The QPS limit for this interface is designed at 10,000; rate limiting will be triggered when exceeded.",
+    "ja": "このインターフェースのQPS上限は10000に設計されており、超過するとレート制限がトリガーされる。",
+    "ko": "이 인터페이스의 QPS 상한은 10000으로 설계되었으며, 초과 시 속도 제한이 트리거된다.",
+    "domain": "technical",
+    "en_literal": "QPS limit for this interface is designed at 10,000; rate limiting will be triggered when exceeded.",
+    "en_academic": "The QPS ceiling for this interface has been designed with a threshold of 10,000; rate limiting mechanisms shall be activated upon exceeding this limit.",
+    "en_semantic": "The QPS limit for this interface is designed at 10,000; rate limiting will be triggered when exceeded."
+  },
+  {
+    "zh": "缓存穿透问题通过布隆过滤器预判无效键来解决。",
+    "en": "The cache penetration problem is solved by pre-checking invalid keys with a Bloom filter.",
+    "ja": "キャッシュペネトレーション問題はブルームフィルターで無効キーを事前チェックすることで解決される。",
+    "ko": "캐시 침투 문제는 블룸 필터로 유효하지 않은 키를 사전 확인하여 해결된다.",
+    "domain": "technical",
+    "en_literal": "cache penetration problem is solved by pre-checking invalid keys with Bloom filter.",
+    "en_academic": "The cache penetration vulnerability is mitigated through the pre-emptive identification of invalid keys via the implementation of a Bloom filter.",
+    "en_semantic": "The cache penetration problem is solved by pre-checking invalid keys with a Bloom filter."
+  },
+  {
+    "zh": "请使用幂等性设计确保重复请求不会产生副作用。",
+    "en": "Please use idempotent design to ensure that duplicate requests do not produce side effects.",
+    "ja": "重複リクエストが副作用を生じないように冪等性設計を使用してください。",
+    "ko": "중복 요청이 부작용을 일으키지 않도록 멱등성 설계를 사용하십시오.",
+    "domain": "technical",
+    "en_literal": "Please use idempotent design ensure repeat request not produce side effect.",
+    "en_academic": "Idempotent design principles should be applied to ensure that duplicate requests do not give rise to unintended side effects.",
+    "en_semantic": "Please use idempotent design to ensure that duplicate requests do not produce side effects."
+  },
+  {
+    "zh": "该系统的服务发现机制基于Consul的健康检查动态更新。",
+    "en": "The service discovery mechanism of this system is dynamically updated based on Consul health checks.",
+    "ja": "このシステムのサービスディスカバリメカニズムはConsulのヘルスチェックに基づいて動的に更新される。",
+    "ko": "이 시스템의 서비스 디스커버리 메커니즘은 Consul 헬스 체크를 기반으로 동적으로 업데이트된다.",
+    "domain": "technical",
+    "en_literal": "service discovery mechanism of this system is dynamically updated based on Consul health checks.",
+    "en_academic": "The service discovery mechanism of the system undergoes dynamic updating based upon the health check protocols of Consul.",
+    "en_semantic": "The service discovery mechanism of this system is dynamically updated based on Consul health checks."
+  },
+  {
+    "zh": "请确保所有RPC调用设置了合理的超时时间以避免级联故障。",
+    "en": "Please ensure all RPC calls have reasonable timeout settings to avoid cascading failures.",
+    "ja": "連鎖障害を回避するために、すべてのRPC呼び出しに適切なタイムアウト時間を設定してください。",
+    "ko": "연쇄 장애를 방지하기 위해 모든 RPC 호출에 합리적인 타임아웃 시간을 설정하십시오.",
+    "domain": "technical",
+    "en_literal": "Please ensure all RPC call set reasonable timeout time to avoid cascade failure.",
+    "en_academic": "It is imperative that all RPC invocations be configured with appropriate timeout parameters to avert the propagation of cascading failures.",
+    "en_semantic": "Please ensure all RPC calls have reasonable timeout settings to avoid cascading failures."
+  },
+  {
+    "zh": "代码合并前必须通过SonarQube静态分析且无Critical级别的问题。",
+    "en": "Code must pass SonarQube static analysis with no Critical-level issues before merging.",
+    "ja": "コードマージ前にSonarQube静的解析を通過し、Criticalレベルの問題がないことが必要である。",
+    "ko": "코드 병합 전에 SonarQube 정적 분석을 통과하고 Critical 수준의 문제가 없어야 한다.",
+    "domain": "technical",
+    "en_literal": "Code before merge must pass SonarQube static analysis and no Critical level problem.",
+    "en_academic": "Prior to code merging, it is mandated that the codebase successfully pass SonarQube static analysis with zero critical-level issues remaining.",
+    "en_semantic": "Code must pass SonarQube static analysis with no Critical-level issues before merging."
+  },
+  {
+    "zh": "该虚拟网络通过VLAN划分实现了租户间的网络隔离。",
+    "en": "This virtual network achieves network isolation between tenants through VLAN segmentation.",
+    "ja": "この仮想ネットワークはVLAN分割によってテナント間のネットワーク分離を実現している。",
+    "ko": "이 가상 네트워크는 VLAN 분할을 통해 테넌트 간의 네트워크 격리를 실현한다.",
+    "domain": "technical",
+    "en_literal": "This virtual network through VLAN divide realize between tenant network isolation.",
+    "en_academic": "The virtual network infrastructure achieves inter-tenant network isolation through the implementation of VLAN segmentation techniques.",
+    "en_semantic": "This virtual network achieves network isolation between tenants through VLAN segmentation."
+  },
+  {
+    "zh": "系统采用蓝绿部署策略实现零停机时间的版本升级。",
+    "en": "The system uses a blue-green deployment strategy to achieve zero-downtime version upgrades.",
+    "ja": "システムはブルーグリーンデプロイメント戦略を採用し、ゼロダウンタイムのバージョンアップグレードを実現する。",
+    "ko": "시스템은 블루-그린 배포 전략을 사용하여 무중단 버전 업그레이드를 달성한다.",
+    "domain": "technical",
+    "en_literal": "system uses blue-green deployment strategy to achieve zero-downtime version upgrades.",
+    "en_academic": "The system architecture uses a blue-green deployment strategy to achieve zero-downtime version upgrades.",
+    "en_semantic": "The system uses a blue-green deployment strategy to achieve zero-downtime version upgrades."
+  },
+  {
+    "zh": "请将日志级别在生产环境中设置为WARN以减少磁盘IO开销。",
+    "en": "Please set the log level to WARN in production environments to reduce disk IO overhead.",
+    "ja": "本番環境ではディスクIOオーバーヘッドを削減するためにログレベルをWARNに設定してください。",
+    "ko": "프로덕션 환경에서 디스크 IO 오버헤드를 줄이기 위해 로그 레벨을 WARN으로 설정하십시오.",
+    "domain": "technical",
+    "en_literal": "Please set log level to WARN in production environments to reduce disk IO overhead.",
+    "en_academic": "In production environments, the log level should be configured to WARN in order to minimize the overhead incurred by disk input-output operations.",
+    "en_semantic": "Please set the log level to WARN in production environments to reduce disk IO overhead."
+  },
+  {
+    "zh": "该系统采用读写分离架构，写操作经过主库确认后异步同步至从库。",
+    "en": "The system uses a read-write separation architecture, with write operations confirmed by the master and asynchronously synced to slaves.",
+    "ja": "このシステムは読み書き分離アーキテクチャを採用し、書き込み操作はマスターで確認された後、非同期でスレーブに同期される。",
+    "ko": "이 시스템은 읽기-쓰기 분리 아키텍처를 사용하며, 쓰기 작업은 마스터에서 확인된 후 비동기적으로 슬레이브에 동기화된다.",
+    "domain": "technical",
+    "en_literal": "system uses read-write separation architecture, with write operations confirmed by master and asynchronously synced to slaves.",
+    "en_academic": "The system architecture uses a read-write separation architecture, with write operations confirmed by the master and asynchronously synced to slaves.",
+    "en_semantic": "The system uses a read-write separation architecture, with write operations confirmed by the master and asynchronously synced to slaves."
+  },
+  {
+    "zh": "请检查HTTPS证书的过期时间是否在30天以内并设置自动续期。",
+    "en": "Please check whether the HTTPS certificate expires within 30 days and set up auto-renewal.",
+    "ja": "HTTPS証明書の有効期限が30日以内かどうかを確認し、自動更新を設定してください。",
+    "ko": "HTTPS 인증서의 만료 시간이 30일 이내인지 확인하고 자동 갱신을 설정하십시오.",
+    "domain": "technical",
+    "en_literal": "Please check whether HTTPS certificate expires within 30 days and set up auto-renewal.",
+    "en_academic": "It is advisable to verify whether the HTTPS certificate is scheduled to expire within a 30-day window and to configure automated renewal accordingly.",
+    "en_semantic": "Please check whether the HTTPS certificate expires within 30 days and set up auto-renewal."
+  },
+  {
+    "zh": "项目采用了Trunk-Based Development分支策略，所有开发者直接提交到主干。",
+    "en": "The project adopts a Trunk-Based Development branching strategy where all developers commit directly to the trunk.",
+    "ja": "プロジェクトはTrunk-Based Developmentブランチ戦略を採用し、すべての開発者が直接トランクにコミットする。",
+    "ko": "프로젝트는 Trunk-Based Development 브랜치 전략을 채택하여 모든 개발자가 직접 트렁크에 커밋한다.",
+    "domain": "technical",
+    "en_literal": "project adopts Trunk-Based Development branching strategy where all developers commit directly to trunk.",
+    "en_academic": "The project has adopted a Trunk-Based Development branching strategy pursuant to which all developers commit directly to the mainline trunk.",
+    "en_semantic": "The project adopts a Trunk-Based Development branching strategy where all developers commit directly to the trunk."
+  },
+  {
+    "zh": "请确保敏感配置通过环境变量注入而非硬编码在代码中。",
+    "en": "Please ensure sensitive configurations are injected via environment variables rather than hardcoded in the code.",
+    "ja": "機密構成はコードにハードコードするのではなく、環境変数を介して注入されるようにしてください。",
+    "ko": "민감한 구성이 코드에 하드코딩되지 않고 환경 변수를 통해 주입되도록 하십시오.",
+    "domain": "technical",
+    "en_literal": "Please ensure sensitive configurations are injected via environment variables rather than hardcoded in code.",
+    "en_academic": "Sensitive configuration parameters should be injected via environment variables rather than being hardcoded within the application source code.",
+    "en_semantic": "Please ensure sensitive configurations are injected via environment variables rather than hardcoded in the code."
+  }
+]

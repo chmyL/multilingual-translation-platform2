@@ -1,0 +1,1002 @@
+[
+  {
+    "zh": "今天天气真不错，我们出去散步吧。",
+    "en": "The weather is really nice today. Let's go out for a walk.",
+    "ja": "今日は本当にいい天気ですね。散歩に出かけましょう。",
+    "ko": "오늘 날씨가 정말 좋네요. 산책하러 나가요.",
+    "domain": "daily",
+    "en_semantic": "The weather is really nice today. Let's go out for a walk.",
+    "en_literal": "Today weather really good, we go out walk.",
+    "en_academic": "The meteorological conditions prevailing at present are of an exceptionally agreeable nature. A leisurely promenade is recommended."
+  },
+  {
+    "zh": "你能帮我带一杯咖啡吗？加糖不加奶。",
+    "en": "Could you get me a cup of coffee? With sugar, no milk.",
+    "ja": "コーヒーを一杯持ってきてくれませんか？砂糖入り、ミルク抜きで。",
+    "ko": "커피 한 잔 가져다 주실 수 있나요? 설탕 넣고 우유 빼고요.",
+    "domain": "daily",
+    "en_semantic": "Could you get me a cup of coffee? With sugar, no milk.",
+    "en_literal": "Can you help me bring one cup coffee? Add sugar no milk.",
+    "en_academic": "Would you be so kind as to procure a cup of coffee on my behalf? The addition of sugar is requested, though milk should be omitted."
+  },
+  {
+    "zh": "不好意思，我迟到了。路上堵车很严重。",
+    "en": "Sorry I'm late. The traffic was really bad.",
+    "ja": "すみません、遅れました。道路がとても渋滞していて。",
+    "ko": "죄송합니다, 늦었습니다. 길이 많이 막혔어요.",
+    "domain": "daily",
+    "en_semantic": "Sorry I'm late. The traffic was really bad.",
+    "en_literal": "Sorry, I late. Road traffic very heavy.",
+    "en_academic": "I tender my sincere apologies for the delay in my arrival. The roadway was subject to severe traffic congestion."
+  },
+  {
+    "zh": "周末我想去看电影，你有兴趣吗？",
+    "en": "I want to go see a movie this weekend. Are you interested?",
+    "ja": "週末に映画を見に行きたいのですが、興味ありますか？",
+    "ko": "주말에 영화 보러 가고 싶은데, 관심 있으세요?",
+    "domain": "daily",
+    "en_semantic": "I want to go see a movie this weekend. Are you interested?",
+    "en_literal": "Weekend I want go see movie, you have interest?",
+    "en_academic": "I am contemplating attending a cinematic screening this weekend. Would this prospect be of interest to you?"
+  },
+  {
+    "zh": "这道菜味道挺好的，你是怎么做的？",
+    "en": "This dish tastes really good. How did you make it?",
+    "ja": "この料理はとても美味しいですね。どのように作りましたか？",
+    "ko": "이 요리 맛이 정말 좋네요. 어떻게 만들었어요?",
+    "domain": "daily",
+    "en_semantic": "This dish tastes really good. How did you make it?",
+    "en_literal": "This dish taste very good, you how make?",
+    "en_academic": "This culinary preparation possesses a most agreeable flavor profile. Might I inquire as to the methodology of its preparation?"
+  },
+  {
+    "zh": "最近工作压力很大，感觉需要休个假。",
+    "en": "Work has been very stressful lately. I feel like I need a vacation.",
+    "ja": "最近仕事のストレスが大きくて、休暇が必要だと感じています。",
+    "ko": "요즘 업무 스트레스가 심해서 휴가가 필요할 것 같아요.",
+    "domain": "daily",
+    "en_semantic": "Work has been very stressful lately. I feel like I need a vacation.",
+    "en_literal": "Lately work pressure very big, feel need take a vacation.",
+    "en_academic": "The occupational demands to which I have been subjected of late have been considerable. A period of restorative leave is deemed necessary."
+  },
+  {
+    "zh": "明天上午你有空吗？我想约你喝杯茶。",
+    "en": "Are you free tomorrow morning? I'd like to invite you for a cup of tea.",
+    "ja": "明日の午前中、お時間ありますか？お茶に誘いたいのですが。",
+    "ko": "내일 오전에 시간 있으세요? 차 한잔 하고 싶어서요.",
+    "domain": "daily",
+    "en_semantic": "Are you free tomorrow morning? I'd like to invite you for a cup of tea.",
+    "en_literal": "Tomorrow morning you have time? I want invite you drink tea.",
+    "en_academic": "Might your schedule permit an engagement tomorrow morning? I should like to extend a cordial invitation for tea."
+  },
+  {
+    "zh": "这家店的奶茶特别好喝，你一定要试一下。",
+    "en": "The milk tea at this shop is especially good. You have to give it a try.",
+    "ja": "この店のミルクティーは特においしいですよ。ぜひ試してみてください。",
+    "ko": "이 가게의 밀크티가 특히 맛있어요. 꼭 드셔 보세요.",
+    "domain": "daily",
+    "en_semantic": "The milk tea at this shop is especially good. You have to give it a try.",
+    "en_literal": "This shop milk tea especially good drink, you must try one time.",
+    "en_academic": "The milk tea purveyed at this establishment is of truly exceptional quality. I strongly recommend that you partake of it on at least one occasion."
+  },
+  {
+    "zh": "晚上吃点什么好呢？我实在懒得做饭了。",
+    "en": "What should we eat tonight? I really don't feel like cooking.",
+    "ja": "今夜は何を食べましょうか？本当に料理する気がしないんです。",
+    "ko": "저녁에 뭐 먹을까요? 정말 요리하기 귀찮네요.",
+    "domain": "daily",
+    "en_semantic": "What should we eat tonight? I really don't feel like cooking.",
+    "en_literal": "Evening eat what good? I really lazy to cook.",
+    "en_academic": "What might constitute a suitable repast for this evening? I find myself entirely disinclined to engage in culinary preparation."
+  },
+  {
+    "zh": "我手机快没电了，你有充电器吗？",
+    "en": "My phone is about to die. Do you have a charger?",
+    "ja": "携帯の電池が切れそうです。充電器を持っていますか？",
+    "ko": "핸드폰 배터리가 거의 다 됐어요. 충전기 있으세요?",
+    "domain": "daily",
+    "en_semantic": "My phone is about to die. Do you have a charger?",
+    "en_literal": "My phone almost no battery, you have charger?",
+    "en_academic": "The power reserve of my mobile device is approaching complete depletion. Are you in possession of a compatible charging apparatus?"
+  },
+  {
+    "zh": "等一下，我马上就到，还有两站地铁。",
+    "en": "Wait a moment, I'll be there soon. Just two more subway stops.",
+    "ja": "ちょっと待って、すぐ着きます。あと地下鉄で2駅です。",
+    "ko": "잠깐만요, 곧 도착해요. 지하철 두 정거장 남았어요.",
+    "domain": "daily",
+    "en_semantic": "Wait a moment, I'll be there soon. Just two more subway stops.",
+    "en_literal": "Wait a moment, I soon arrive, still two subway stop.",
+    "en_academic": "Kindly allow a brief interval. I shall arrive imminently, as a mere two stations remain upon the subway line."
+  },
+  {
+    "zh": "周末跟朋友一起去爬山了，虽然累但是很开心。",
+    "en": "I went hiking with friends over the weekend. It was tiring but really fun.",
+    "ja": "週末に友達と山登りに行きました。疲れたけどとても楽しかったです。",
+    "ko": "주말에 친구들과 등산 갔다 왔어요. 힘들었지만 정말 즐거웠어요.",
+    "domain": "daily",
+    "en_semantic": "I went hiking with friends over the weekend. It was tiring but really fun.",
+    "en_literal": "Weekend with friend go hiking, though tired but very happy.",
+    "en_academic": "I participated in a hiking expedition with friends over the weekend. Notwithstanding the physical exertion involved, the experience proved profoundly enjoyable."
+  },
+  {
+    "zh": "你觉得这件衣服怎么样？我纠结了好久。",
+    "en": "What do you think of this piece of clothing? I've been debating about it for a while.",
+    "ja": "この服どう思いますか？ずっと迷っていて。",
+    "ko": "이 옷 어때요? 오랫동안 고민 중이에요.",
+    "domain": "daily",
+    "en_semantic": "What do you think of this piece of clothing? I've been debating about it for a while.",
+    "en_literal": "You feel this clothing how? I struggle quite long time.",
+    "en_academic": "What is your considered assessment of this particular garment? I have been engaged in deliberation regarding the matter for an extended period."
+  },
+  {
+    "zh": "糟糕，我把钥匙忘在办公室了。",
+    "en": "Oh no, I left my keys at the office.",
+    "ja": "しまった、鍵をオフィスに忘れてきた。",
+    "ko": "이런, 사무실에 열쇠를 두고 왔어요.",
+    "domain": "daily",
+    "en_semantic": "Oh no, I left my keys at the office.",
+    "en_literal": "Oh no, I key forget in office.",
+    "en_academic": "I regret to report that my keys appear to have been inadvertently left at the office premises."
+  },
+  {
+    "zh": "听说下个月要涨房租了，真是不小的负担。",
+    "en": "I heard the rent is going up next month. That's quite a burden.",
+    "ja": "来月から家賃が上がるそうで、なかなかの負担ですね。",
+    "ko": "다음 달부터 월세가 오른다고 들었어요. 꽤 부담이네요.",
+    "domain": "daily",
+    "en_semantic": "I heard the rent is going up next month. That's quite a burden.",
+    "en_literal": "Hear next month rent will go up, really not small burden.",
+    "en_academic": "I have been informed that the rental tariff is to be increased commencing next month, which constitutes a financial encumbrance of considerable magnitude."
+  },
+  {
+    "zh": "刚到家，外面下大雨，全身都淋湿了。",
+    "en": "Just got home. It's pouring outside and I'm soaked all over.",
+    "ja": "たった今帰宅しました。外は大雨で、全身ずぶ濡れです。",
+    "ko": "방금 집에 도착했어요. 밖에 비가 많이 와서 온몸이 다 젖었어요.",
+    "domain": "daily",
+    "en_semantic": "Just got home. It's pouring outside and I'm soaked all over.",
+    "en_literal": "Just arrive home, outside heavy rain, whole body all wet through.",
+    "en_academic": "I have just arrived at my residence. A torrential downpour is in progress outdoors, as a consequence of which my person has been thoroughly saturated."
+  },
+  {
+    "zh": "你最近在看什么电视剧？给我推荐一个呗。",
+    "en": "What TV shows are you watching lately? Recommend one to me.",
+    "ja": "最近どんなドラマを見ていますか？おすすめを教えてください。",
+    "ko": "요즘 무슨 드라마 보고 있어요? 하나 추천해 주세요.",
+    "domain": "daily",
+    "en_semantic": "What TV shows are you watching lately? Recommend one to me.",
+    "en_literal": "You lately watch what TV show? Give me recommend one.",
+    "en_academic": "What televisual content have you been following of late? I would be most grateful for a recommendation."
+  },
+  {
+    "zh": "今天上班又迟到了，闹钟响了我都没听见。",
+    "en": "I was late for work again today. I didn't even hear my alarm go off.",
+    "ja": "今日も仕事に遅刻しました。目覚ましが鳴ったのに聞こえませんでした。",
+    "ko": "오늘 또 회사에 지각했어요. 알람이 울렸는데도 못 들었어요.",
+    "domain": "daily",
+    "en_semantic": "I was late for work again today. I didn't even hear my alarm go off.",
+    "en_literal": "Today go work again late, alarm ring I all not hear.",
+    "en_academic": "I was once more tardy in arriving at my place of employment today. I entirely failed to perceive the sounding of my alarm device."
+  },
+  {
+    "zh": "快递到了吗？我昨天下的单，应该今天配送。",
+    "en": "Has the package arrived? I placed the order yesterday, and it should be delivered today.",
+    "ja": "宅配便は届きましたか？昨日注文したので、今日配達されるはずです。",
+    "ko": "택배 도착했나요? 어제 주문해서 오늘 배송될 예정이에요.",
+    "domain": "daily",
+    "en_semantic": "Has the package arrived? I placed the order yesterday, and it should be delivered today.",
+    "en_literal": "Package arrive not yet? I yesterday place order, should today deliver.",
+    "en_academic": "Has the delivery of the package been effected? The order was placed yesterday and was scheduled for delivery today."
+  },
+  {
+    "zh": "周末想去博物馆逛逛，你去过新开的那家吗？",
+    "en": "I want to visit the museum this weekend. Have you been to the newly opened one?",
+    "ja": "週末に博物館に行きたいのですが、新しくオープンしたところに行ったことありますか？",
+    "ko": "주말에 박물관에 가보고 싶은데, 새로 열린 곳 가보셨어요?",
+    "domain": "daily",
+    "en_semantic": "I want to visit the museum this weekend. Have you been to the newly opened one?",
+    "en_literal": "Weekend want go museum walk walk, you been new open that one?",
+    "en_academic": "I am contemplating a visit to the museum this weekend. Have you had occasion to visit the newly inaugurated establishment?"
+  },
+  {
+    "zh": "最近睡眠质量不太好，总是半夜醒来。",
+    "en": "My sleep quality hasn't been great lately; I keep waking up in the middle of the night.",
+    "ja": "最近睡眠の質があまり良くなくて、いつも夜中に目が覚めてしまいます。",
+    "ko": "요즘 수면 질이 별로 좋지 않아요. 자꾸 한밤중에 깨요.",
+    "domain": "daily",
+    "en_literal": "Lately sleep quality not too good, always midnight wake up.",
+    "en_academic": "My sleep quality has been suboptimal of late, characterized by recurrent nocturnal awakenings during the middle of the night.",
+    "en_semantic": "My sleep quality hasn't been great lately; I keep waking up in the middle of the night."
+  },
+  {
+    "zh": "这周末有什么计划吗？想约几个朋友聚一聚。",
+    "en": "Any plans for this weekend? I'd like to get together with some friends.",
+    "ja": "今週末何か予定ありますか？友達と集まりたいのですが。",
+    "ko": "이번 주말에 계획 있으세요? 친구들 몇 명 모이려고요.",
+    "domain": "daily",
+    "en_literal": "This weekend have what plan? Want gather few friend together.",
+    "en_academic": "What arrangements have you made for this weekend? I should like to convene a gathering of several friends.",
+    "en_semantic": "Any plans for this weekend? I'd like to get together with some friends."
+  },
+  {
+    "zh": "你家离公司远吗？每天通勤要多久？",
+    "en": "Is your home far from the office? How long is your daily commute?",
+    "ja": "ご自宅は会社から遠いですか？毎日の通勤にどのくらいかかりますか？",
+    "ko": "집이 회사에서 머나요? 매일 통근하는 데 얼마나 걸려요?",
+    "domain": "daily",
+    "en_literal": "Your home from company far? Every day commute need how long?",
+    "en_academic": "What is the distance between your residence and place of employment? What duration is required for your daily commute?",
+    "en_semantic": "Is your home far from the office? How long is your daily commute?"
+  },
+  {
+    "zh": "这个电影评分很高，我们去看首映吧。",
+    "en": "This movie has very high ratings. Let's go see the premiere.",
+    "ja": "この映画は評価がとても高いです。初日に行きましょう。",
+    "ko": "이 영화 평점이 아주 높아요. 개봉 첫날 보러 가요.",
+    "domain": "daily",
+    "en_literal": "This movie score very high, we go see premiere.",
+    "en_academic": "This cinematic production has garnered exceptionally high ratings. Let us attend the premiere screening.",
+    "en_semantic": "This movie has very high ratings. Let's go see the premiere."
+  },
+  {
+    "zh": "我最近在学做菜，已经会做几个简单的菜了。",
+    "en": "I've been learning to cook recently and can already make a few simple dishes.",
+    "ja": "最近料理を習っていて、もういくつかの簡単な料理が作れるようになりました。",
+    "ko": "요즘 요리 배우고 있는데, 벌써 간단한 요리 몇 가지는 할 수 있어요.",
+    "domain": "daily",
+    "en_literal": "I lately learn cook, already can make several simple dish.",
+    "en_academic": "I have been acquiring culinary skills of late and have already achieved proficiency in preparing several straightforward dishes.",
+    "en_semantic": "I've been learning to cook recently and can already make a few simple dishes."
+  },
+  {
+    "zh": "身体健康最重要，别总是熬夜加班。",
+    "en": "Health is the most important thing. Don't always stay up late working overtime.",
+    "ja": "健康が一番大切です。いつも夜更かしして残業しないでください。",
+    "ko": "건강이 제일 중요해요. 항상 밤새워 야근하지 마세요.",
+    "domain": "daily",
+    "en_literal": "Body health most important, don't always stay up late overtime.",
+    "en_academic": "One's physical health is of paramount importance. It is inadvisable to habitually remain awake late engaging in overtime work.",
+    "en_semantic": "Health is the most important thing. Don't always stay up late working overtime."
+  },
+  {
+    "zh": "下个月打算去日本旅游，有什么推荐的地方吗？",
+    "en": "I'm planning to travel to Japan next month. Any recommended places?",
+    "ja": "来月日本に旅行する予定です。おすすめの場所はありますか？",
+    "ko": "다음 달에 일본 여행 가려고 하는데, 추천할 만한 곳 있어요?",
+    "domain": "daily",
+    "en_literal": "Next month plan go Japan travel, have what recommend place?",
+    "en_academic": "I am planning to undertake a journey to Japan next month. Are there any locations you would recommend?",
+    "en_semantic": "I'm planning to travel to Japan next month. Any recommended places?"
+  },
+  {
+    "zh": "最近健身效果不错，瘦了三公斤。",
+    "en": "My fitness routine has been paying off lately; I've lost three kilograms.",
+    "ja": "最近のフィットネスの効果が出ていて、3キロ痩せました。",
+    "ko": "요즘 운동 효과가 좋아서 3킬로그램 빠졌어요.",
+    "domain": "daily",
+    "en_literal": "Lately fitness effect good, lose three kilogram.",
+    "en_academic": "My fitness regimen has been yielding favorable results of late, as evidenced by a reduction of three kilograms in body mass.",
+    "en_semantic": "My fitness routine has been paying off lately; I've lost three kilograms."
+  },
+  {
+    "zh": "你听说了吗？隔壁新开了家很不错的日料店。",
+    "en": "Have you heard? A really good Japanese restaurant just opened next door.",
+    "ja": "聞きましたか？隣にすごくいい日本料理店が新しくオープンしたんです。",
+    "ko": "들었어요? 옆에 꽤 괜찮은 일식집이 새로 열렸대요.",
+    "domain": "daily",
+    "en_literal": "You hear not yet? Next door new open one very good Japanese restaurant.",
+    "en_academic": "Have you been apprised of this development? An excellent Japanese restaurant has recently commenced operations in the adjacent premises.",
+    "en_semantic": "Have you heard? A really good Japanese restaurant just opened next door."
+  },
+  {
+    "zh": "这双鞋穿着很舒服，我打算再买一双。",
+    "en": "These shoes are very comfortable. I'm thinking of buying another pair.",
+    "ja": "この靴はとても履き心地がいいので、もう一足買おうと思っています。",
+    "ko": "이 신발 정말 편해서 하나 더 살까 생각 중이에요.",
+    "domain": "daily",
+    "en_literal": "This pair shoe wear very comfortable, I plan again buy one pair.",
+    "en_academic": "These shoes provide an exceptionally comfortable wearing experience. I am contemplating the purchase of an additional pair.",
+    "en_semantic": "These shoes are very comfortable. I'm thinking of buying another pair."
+  },
+  {
+    "zh": "最近天气变化很大，要注意保暖。",
+    "en": "The weather has been changing a lot lately. Make sure to stay warm.",
+    "ja": "最近天気の変化が大きいので、暖かくしてくださいね。",
+    "ko": "요즘 날씨 변화가 심하니까 따뜻하게 입으세요.",
+    "domain": "daily",
+    "en_literal": "Lately weather change very big, need pay attention keep warm.",
+    "en_academic": "Meteorological conditions have been subject to considerable fluctuation of late. It is advisable to take measures to maintain adequate warmth.",
+    "en_semantic": "The weather has been changing a lot lately. Make sure to stay warm."
+  },
+  {
+    "zh": "你觉得我们应该几点出发比较合适？",
+    "en": "What time do you think we should leave?",
+    "ja": "何時に出発するのが適切だと思いますか？",
+    "ko": "몇 시에 출발하는 게 적당할 것 같아요?",
+    "domain": "daily",
+    "en_literal": "You think we should what time set out more appropriate?",
+    "en_academic": "At what time do you consider it most appropriate for us to depart?",
+    "en_semantic": "What time do you think we should leave?"
+  },
+  {
+    "zh": "这件事我得好好考虑一下再做决定。",
+    "en": "I need to think this through carefully before making a decision.",
+    "ja": "この件はよく考えてから決めなければなりません。",
+    "ko": "이 일은 잘 생각해 보고 결정해야 해요.",
+    "domain": "daily",
+    "en_literal": "This matter I need good good consider then make decision.",
+    "en_academic": "This matter warrants thorough deliberation on my part prior to the formulation of a decision.",
+    "en_semantic": "I need to think this through carefully before making a decision."
+  },
+  {
+    "zh": "周末在家看看书喝喝茶，挺好的。",
+    "en": "It's nice to stay home on weekends reading books and drinking tea.",
+    "ja": "週末は家で本を読んだりお茶を飲んだりするのがいいですね。",
+    "ko": "주말에 집에서 책 읽고 차 마시는 게 좋아요.",
+    "domain": "daily",
+    "en_literal": "Weekend at home read book drink tea, very good.",
+    "en_academic": "Remaining at home during the weekend engaged in reading and tea consumption constitutes a most agreeable pastime.",
+    "en_semantic": "It's nice to stay home on weekends reading books and drinking tea."
+  },
+  {
+    "zh": "谢谢你帮了我这么大的忙，改天请你吃饭。",
+    "en": "Thank you for helping me so much. I'll treat you to a meal sometime.",
+    "ja": "こんなに助けてくれてありがとう。今度ご飯をごちそうします。",
+    "ko": "이렇게 많이 도와줘서 고마워요. 다음에 밥 살게요.",
+    "domain": "daily",
+    "en_literal": "Thank you help me so big favor, another day treat you eat meal.",
+    "en_academic": "I am most grateful for the considerable assistance you have rendered. I shall treat you to a meal on a future occasion.",
+    "en_semantic": "Thank you for helping me so much. I'll treat you to a meal sometime."
+  },
+  {
+    "zh": "好久没见了，你最近过得怎么样？",
+    "en": "Long time no see. How have you been lately?",
+    "ja": "久しぶりですね。最近いかがお過ごしですか？",
+    "ko": "오랜만이에요. 요즘 어떻게 지내세요?",
+    "domain": "daily",
+    "en_literal": "Long time no see, you lately how?",
+    "en_academic": "A considerable interval has elapsed since our last encounter. How have you been faring of late?",
+    "en_semantic": "Long time no see. How have you been lately?"
+  },
+  {
+    "zh": "我家附近新修了一个公园，环境很好。",
+    "en": "A new park has been built near my home, and the environment is great.",
+    "ja": "家の近くに新しい公園ができて、環境がとてもいいです。",
+    "ko": "우리 집 근처에 새 공원이 생겼는데, 환경이 아주 좋아요.",
+    "domain": "daily",
+    "en_literal": "My home nearby new build one park, environment very good.",
+    "en_academic": "A new park has been constructed in the vicinity of my residence, wherein the environmental conditions are of excellent quality.",
+    "en_semantic": "A new park has been built near my home, and the environment is great."
+  },
+  {
+    "zh": "今晚的夕阳特别美，我拍了好多照片。",
+    "en": "The sunset tonight was especially beautiful. I took a lot of photos.",
+    "ja": "今夜の夕日は特に美しくて、たくさん写真を撮りました。",
+    "ko": "오늘 저녁 노을이 특히 예뻐서 사진을 많이 찍었어요.",
+    "domain": "daily",
+    "en_literal": "Tonight sunset especially beautiful, I take many photo.",
+    "en_academic": "This evening's sunset was of exceptional beauty. I captured numerous photographic images of the spectacle.",
+    "en_semantic": "The sunset tonight was especially beautiful. I took a lot of photos."
+  },
+  {
+    "zh": "最近在看一本很有意思的小说，推荐给你。",
+    "en": "I've been reading a really interesting novel lately. I recommend it to you.",
+    "ja": "最近とても面白い小説を読んでいます。おすすめします。",
+    "ko": "요즘 아주 재미있는 소설을 읽고 있어요. 추천합니다.",
+    "domain": "daily",
+    "en_literal": "Lately reading one very interesting novel, recommend to you.",
+    "en_academic": "I have been perusing a novel of considerable interest of late. I commend it to your attention.",
+    "en_semantic": "I've been reading a really interesting novel lately. I recommend it to you."
+  },
+  {
+    "zh": "明天要早起赶火车，今晚得早点睡。",
+    "en": "I need to get up early tomorrow to catch a train, so I should go to bed early tonight.",
+    "ja": "明日は早く起きて電車に乗らなければならないので、今夜は早く寝なければ。",
+    "ko": "내일 일찍 일어나서 기차 타야 해서, 오늘 밤 일찍 자야 해요.",
+    "domain": "daily",
+    "en_literal": "Tomorrow need early get up catch train, tonight must early sleep.",
+    "en_academic": "An early rising is necessitated tomorrow in order to catch a train. Consequently, I must retire to bed at an early hour this evening.",
+    "en_semantic": "I need to get up early tomorrow to catch a train, so I should go to bed early tonight."
+  },
+  {
+    "zh": "这家咖啡店的氛围很好，适合安静地工作。",
+    "en": "This café has a great atmosphere and is suitable for quiet work.",
+    "ja": "このカフェは雰囲気がとても良くて、静かに仕事をするのに適しています。",
+    "ko": "이 카페 분위기가 정말 좋아서 조용히 일하기 좋아요.",
+    "domain": "daily",
+    "en_literal": "This coffee shop atmosphere very good, suitable quiet work.",
+    "en_academic": "The ambiance of this coffee establishment is of a most agreeable nature. It is conducive to quiet and productive work.",
+    "en_semantic": "This café has a great atmosphere and is suitable for quiet work."
+  },
+  {
+    "zh": "今天在超市看到打折，买了好多东西。",
+    "en": "I saw a sale at the supermarket today and bought a lot of things.",
+    "ja": "今日スーパーでセールを見かけて、たくさん買い物をしました。",
+    "ko": "오늘 마트에서 세일을 봐서 이것저것 많이 샀어요.",
+    "domain": "daily",
+    "en_literal": "Today in supermarket see discount, buy many thing.",
+    "en_academic": "I observed a promotional discount at the supermarket today and consequently purchased a considerable quantity of items.",
+    "en_semantic": "I saw a sale at the supermarket today and bought a lot of things."
+  },
+  {
+    "zh": "感冒了要多喝热水，好好休息。",
+    "en": "When you have a cold, you should drink more hot water and get plenty of rest.",
+    "ja": "風邪をひいたら、温かいお湯をたくさん飲んで、よく休んでください。",
+    "ko": "감기 걸렸으면 따뜻한 물 많이 마시고 푹 쉬세요.",
+    "domain": "daily",
+    "en_literal": "Catch cold need drink more hot water, good good rest.",
+    "en_academic": "When afflicted with a cold, it is advisable to consume an increased quantity of warm water and obtain adequate rest.",
+    "en_semantic": "When you have a cold, you should drink more hot water and get plenty of rest."
+  },
+  {
+    "zh": "你觉得养猫好还是养狗好？",
+    "en": "Do you think it's better to have a cat or a dog?",
+    "ja": "猫を飼うのと犬を飼うのと、どちらがいいと思いますか？",
+    "ko": "고양이 키우는 게 좋을까요, 강아지 키우는 게 좋을까요?",
+    "domain": "daily",
+    "en_literal": "You think keep cat good or keep dog good?",
+    "en_academic": "What is your considered opinion: would it be preferable to keep a cat or a dog as a companion animal?",
+    "en_semantic": "Do you think it's better to have a cat or a dog?"
+  },
+  {
+    "zh": "这个假期我打算回老家看望父母。",
+    "en": "I plan to go back to my hometown to visit my parents during this holiday.",
+    "ja": "この休暇は実家に帰って両親に会うつもりです。",
+    "ko": "이번 휴가 때 고향에 가서 부모님을 뵐 계획이에요.",
+    "domain": "daily",
+    "en_literal": "This holiday I plan go back hometown visit parents.",
+    "en_academic": "During this holiday period, I intend to return to my hometown to pay a visit to my parents.",
+    "en_semantic": "I plan to go back to my hometown to visit my parents during this holiday."
+  },
+  {
+    "zh": "最近的天气忽冷忽热，很容易生病。",
+    "en": "The weather has been fluctuating between hot and cold lately, making it easy to get sick.",
+    "ja": "最近の天気は寒暖の差が激しくて、体調を崩しやすいです。",
+    "ko": "요즘 날씨가 춥다 더웠다 해서 감기 걸리기 쉬워요.",
+    "domain": "daily",
+    "en_literal": "Lately sometimes cold sometimes hot, very easy get sick.",
+    "en_academic": "The weather has been fluctuating between cold and warm conditions of late, rendering individuals highly susceptible to illness.",
+    "en_semantic": "The weather has been fluctuating between hot and cold lately, making it easy to get sick."
+  },
+  {
+    "zh": "你帮我看看这个英文邮件写得对不对？",
+    "en": "Can you help me check if this English email is written correctly?",
+    "ja": "この英文メールが正しく書かれているか見てもらえますか？",
+    "ko": "이 영어 이메일 제대로 썼는지 좀 봐주실래요?",
+    "domain": "daily",
+    "en_literal": "You help me look this English email write correct not correct?",
+    "en_academic": "Could you render me the assistance of examining this English-language email for correctness of composition?",
+    "en_semantic": "Can you help me check if this English email is written correctly?"
+  },
+  {
+    "zh": "今天走了一万多步，感觉很有成就感。",
+    "en": "I walked over ten thousand steps today and feel a great sense of accomplishment.",
+    "ja": "今日は一万歩以上歩いて、達成感があります。",
+    "ko": "오늘 만 보 넘게 걸었더니 성취감이 느껴져요.",
+    "domain": "daily",
+    "en_literal": "Today walk over ten thousand step, feel very accomplished.",
+    "en_academic": "I have traversed in excess of ten thousand steps today and consequently experience a pronounced sense of accomplishment.",
+    "en_semantic": "I walked over ten thousand steps today and feel a great sense of accomplishment."
+  },
+  {
+    "zh": "朋友送了我一盆植物，希望我能养活它。",
+    "en": "A friend gave me a potted plant. I hope I can keep it alive.",
+    "ja": "友達から観葉植物をもらいました。ちゃんと育てられるといいのですが。",
+    "ko": "친구가 화분을 하나 선물해 줬는데, 잘 키울 수 있으면 좋겠어요.",
+    "domain": "daily",
+    "en_literal": "Friend give me one pot plant, hope I can keep it alive.",
+    "en_academic": "A friend presented me with a potted plant. I earnestly hope that I shall succeed in maintaining its vitality.",
+    "en_semantic": "A friend gave me a potted plant. I hope I can keep it alive."
+  },
+  {
+    "zh": "最近迷上了烘焙，周末做了一整个蛋糕。",
+    "en": "I've recently gotten into baking and made an entire cake over the weekend.",
+    "ja": "最近ベーキングにはまって、週末に丸ごとケーキを作りました。",
+    "ko": "요즘 베이킹에 빠져서 주말에 케이크 하나를 통째로 만들었어요.",
+    "domain": "daily",
+    "en_literal": "Lately addicted to baking, weekend make one whole cake.",
+    "en_academic": "I have recently developed an enthusiasm for the art of baking and produced an entire cake over the course of the weekend.",
+    "en_semantic": "I've recently gotten into baking and made an entire cake over the weekend."
+  },
+  {
+    "zh": "你说的对，确实是我考虑不周。",
+    "en": "You're right. I really didn't think it through carefully enough.",
+    "ja": "おっしゃる通りです。確かに私の配慮が足りませんでした。",
+    "ko": "네 말이 맞아. 내가 생각이 짧았어.",
+    "domain": "daily",
+    "en_literal": "You correct, indeed I consider not thorough.",
+    "en_academic": "The veracity of your statement is acknowledged; it is indeed the case that my consideration of the matter was insufficiently thorough.",
+    "en_semantic": "You're right. I really didn't think it through carefully enough."
+  },
+  {
+    "zh": "这家店的牛肉面很出名，要排很久的队。",
+    "en": "The beef noodles at this restaurant are very famous, and you have to wait in a long line.",
+    "ja": "この店の牛肉麺はとても有名で、かなり並ばなければなりません。",
+    "ko": "이 집 소고기 국수가 아주 유명해서 오래 줄 서야 해요.",
+    "domain": "daily",
+    "en_literal": "beef noodles at this restaurant are very famous, and you have to wait in a long line.",
+    "en_academic": "The beef noodles at this restaurant are highly famous, and you have to wait in a long line.",
+    "en_semantic": "The beef noodles at this restaurant are very famous, and you have to wait in a long line."
+  },
+  {
+    "zh": "我打算明年换个工作，现在的岗位没什么发展空间。",
+    "en": "I'm planning to change jobs next year. There's not much room for growth in my current position.",
+    "ja": "来年転職しようと思っています。今の職場はあまり成長の余地がありません。",
+    "ko": "내년에 이직하려고 생각 중이에요. 지금 자리는 발전 가능성이 별로 없어서요.",
+    "domain": "daily",
+    "en_literal": "I am planning to change jobs next year. There's not much room for growth in my current position.",
+    "en_academic": "It is my intention to effect a change of employment in the coming year, as the current position offers limited scope for professional advancement.",
+    "en_semantic": "I'm planning to change jobs next year. There's not much room for growth in my current position."
+  },
+  {
+    "zh": "今天突然下雨了，还好我带了伞。",
+    "en": "It suddenly started raining today. Fortunately, I brought an umbrella.",
+    "ja": "今日突然雨が降り出しましたが、傘を持っていてよかったです。",
+    "ko": "오늘 갑자기 비가 왔는데, 다행히 우산을 가져왔어요.",
+    "domain": "daily",
+    "en_literal": "It suddenly started raining today. Fortunately, I brought a umbrella.",
+    "en_academic": "Precipitation commenced unexpectedly today; it was fortuitous that I had the foresight to bring an umbrella.",
+    "en_semantic": "It suddenly started raining today. Fortunately, I brought an umbrella."
+  },
+  {
+    "zh": "我昨天去面试了，希望能有好消息。",
+    "en": "I went for an interview yesterday. I hope there's good news.",
+    "ja": "昨日面接に行ってきました。いい知らせがあるといいのですが。",
+    "ko": "어제 면접 봤는데, 좋은 소식 있으면 좋겠어요.",
+    "domain": "daily",
+    "en_literal": "I went for a interview yesterday. I hope there's good news.",
+    "en_academic": "I went for an interview yesterday. I hope there's favorable news.",
+    "en_semantic": "I went for an interview yesterday. I hope there's good news."
+  },
+  {
+    "zh": "你觉得减肥最有效的方法是什么？",
+    "en": "What do you think is the most effective way to lose weight?",
+    "ja": "ダイエットに最も効果的な方法は何だと思いますか？",
+    "ko": "다이어트에 가장 효과적인 방법이 뭐라고 생각해요?",
+    "domain": "daily",
+    "en_literal": "What do you think is most effective way to lose weight?",
+    "en_academic": "What conduct you think is the most effective way to lose weight?",
+    "en_semantic": "What do you think is the most effective way to lose weight?"
+  },
+  {
+    "zh": "每次回想起大学生活，都觉得那是一段美好的时光。",
+    "en": "Every time I think back to my college days, I feel it was a wonderful period of my life.",
+    "ja": "大学生活を思い出すたびに、素晴らしい時間だったと感じます。",
+    "ko": "대학 생활을 떠올릴 때마다 정말 좋은 시간이었다고 느껴요.",
+    "domain": "daily",
+    "en_literal": "Each time recall university life, all feel that is one period beautiful time.",
+    "en_academic": "Upon each occasion of reflecting upon my university experience, I am filled with the conviction that it constituted a most wonderful period of my existence.",
+    "en_semantic": "Every time I think back to my college days, I feel it was a wonderful period of my life."
+  },
+  {
+    "zh": "今天没什么胃口，随便吃一点就好。",
+    "en": "I don't have much appetite today. I'll just eat something light.",
+    "ja": "今日はあまり食欲がありません。適当に軽く食べるだけでいいです。",
+    "ko": "오늘 입맛이 없어서 그냥 간단히 먹을게요.",
+    "domain": "daily",
+    "en_literal": "Today no much appetite, casually eat a little bit just okay.",
+    "en_academic": "I do not have much appetite today. I'll just eat something light.",
+    "en_semantic": "I don't have much appetite today. I'll just eat something light."
+  },
+  {
+    "zh": "辛苦了，今天的会议开得很顺利。",
+    "en": "Good work. Today's meeting went very smoothly.",
+    "ja": "お疲れ様でした。今日の会議はとてもスムーズに進みました。",
+    "ko": "수고하셨어요. 오늘 회의 아주 순조로웠어요.",
+    "domain": "daily",
+    "en_literal": "Hard work, today meeting open very smooth.",
+    "en_academic": "Favorable work. Today's meeting went highly smoothly.",
+    "en_semantic": "Good work. Today's meeting went very smoothly."
+  },
+  {
+    "zh": "我家楼下新开的健身房环境不错。",
+    "en": "The new gym downstairs in my building has a nice environment.",
+    "ja": "うちのマンションの下に新しくできたジムは環境がいいです。",
+    "ko": "우리 집 아래층에 새로 생긴 헬스장 환경이 괜찮아요.",
+    "domain": "daily",
+    "en_literal": "new gym downstairs in my building has a nice environment.",
+    "en_academic": "The novel gym downstairs in my building has a nice environment.",
+    "en_semantic": "The new gym downstairs in my building has a nice environment."
+  },
+  {
+    "zh": "今天中午吃什么好呢？食堂的菜吃腻了。",
+    "en": "What should I eat for lunch today? I'm tired of the cafeteria food.",
+    "ja": "今日のお昼は何を食べようかな。食堂の料理に飽きてしまって。",
+    "ko": "오늘 점심 뭐 먹지? 구내식당 음식이 질렸어.",
+    "domain": "daily",
+    "en_literal": "What should I eat for lunch today? I am tired of cafeteria food.",
+    "en_academic": "What would constitute a suitable luncheon selection today? I have grown weary of the cafeteria's culinary offerings.",
+    "en_semantic": "What should I eat for lunch today? I'm tired of the cafeteria food."
+  },
+  {
+    "zh": "最近手机上瘾太严重了，得控制一下。",
+    "en": "I've been too addicted to my phone lately. I need to cut back.",
+    "ja": "最近スマホ依存がひどすぎて、ちょっと控えないと。",
+    "ko": "요즘 스마트폰 중독이 너무 심해서 좀 줄여야겠어요.",
+    "domain": "daily",
+    "en_literal": "Today noon eat what good? Canteen dishes already tire of eating.",
+    "en_academic": "My dependence upon mobile devices has become excessively pronounced of late; a measure of restraint is required.",
+    "en_semantic": "I've been too addicted to my phone lately. I need to cut back."
+  },
+  {
+    "zh": "明天气温会降到零下，记得多穿点衣服。",
+    "en": "The temperature will drop below zero tomorrow. Remember to wear more layers.",
+    "ja": "明日は気温が氷点下まで下がるので、厚着を忘れずに。",
+    "ko": "내일 기온이 영하로 떨어지니까 옷 따뜻하게 입으세요.",
+    "domain": "daily",
+    "en_literal": "temperature will drop below zero tomorrow. Remember to wear more layers.",
+    "en_academic": "Temperatures are forecast to descend below the freezing point tomorrow; it is advisable to don additional layers of clothing.",
+    "en_semantic": "The temperature will drop below zero tomorrow. Remember to wear more layers."
+  },
+  {
+    "zh": "这款新手机性价比挺高的，可以考虑入手。",
+    "en": "This new phone has great value for money. You might consider getting one.",
+    "ja": "この新スマホはコスパがかなり高いので、購入を検討してもいいですね。",
+    "ko": "이 새 핸드폰 가성비가 꽤 좋아서 구매를 고려해볼 만해요.",
+    "domain": "daily",
+    "en_literal": "This new phone price ratio quite high, can consider buy it.",
+    "en_academic": "This novel phone has great value for money. You might consider getting one.",
+    "en_semantic": "This new phone has great value for money. You might consider getting one."
+  },
+  {
+    "zh": "周末去了一趟海边，整个人都放松了。",
+    "en": "I went to the beach over the weekend and felt completely relaxed.",
+    "ja": "週末に海に行ってきて、心身ともにリラックスできました。",
+    "ko": "주말에 바다에 다녀왔더니 몸과 마음이 다 풀렸어요.",
+    "domain": "daily",
+    "en_literal": "I went to beach over weekend and felt completely relaxed.",
+    "en_academic": "I visited the seaside over the weekend and experienced a profound sense of complete relaxation.",
+    "en_semantic": "I went to the beach over the weekend and felt completely relaxed."
+  },
+  {
+    "zh": "今天的任务终于完成了，可以早点下班了。",
+    "en": "I've finally finished today's tasks. I can leave work early.",
+    "ja": "今日のタスクがようやく終わったので、早く退社できます。",
+    "ko": "오늘 할 일을 드디어 다 끝내서 일찍 퇴근할 수 있어요.",
+    "domain": "daily",
+    "en_literal": "Today task finally finish, can early go home.",
+    "en_academic": "Having successfully completed the day's assigned tasks, I am now in a position to conclude my work at an early hour.",
+    "en_semantic": "I've finally finished today's tasks. I can leave work early."
+  },
+  {
+    "zh": "你家孩子多大了？上幼儿园了吗？",
+    "en": "How old is your child? Are they in kindergarten yet?",
+    "ja": "お子さんはおいくつですか？幼稚園に通っていますか？",
+    "ko": "아이가 몇 살이에요? 유치원 다니고 있어요?",
+    "domain": "daily",
+    "en_literal": "Your home from work far? Every day commute how long?",
+    "en_academic": "What is the age of your child? Has enrollment in kindergarten been undertaken?",
+    "en_semantic": "How old is your child? Are they in kindergarten yet?"
+  },
+  {
+    "zh": "最近在学一门新的编程语言，感觉很有挑战性。",
+    "en": "I've been learning a new programming language recently. It feels quite challenging.",
+    "ja": "最近新しいプログラミング言語を学んでいて、とてもやりがいを感じています。",
+    "ko": "요즘 새로운 프로그래밍 언어를 배우고 있는데, 꽤 도전적이에요.",
+    "domain": "daily",
+    "en_literal": "This movie score very high, we go watch premiere.",
+    "en_academic": "I've been learning a novel programming language recently. It feels quite challenging.",
+    "en_semantic": "I've been learning a new programming language recently. It feels quite challenging."
+  },
+  {
+    "zh": "今天在地铁上看到一位老人，大家都争着让座。",
+    "en": "I saw an elderly person on the subway today, and everyone was eager to give up their seat.",
+    "ja": "今日地下鉄でお年寄りを見かけて、みんな進んで席を譲っていました。",
+    "ko": "오늘 지하철에서 어르신을 봤는데, 다들 앞다투어 자리를 양보했어요.",
+    "domain": "daily",
+    "en_literal": "I saw a elderly person on subway today, and everyone was eager to give up their seat.",
+    "en_academic": "On the subway today, an elderly individual was observed, and fellow passengers competed earnestly to offer their seats in a display of commendable civic virtue.",
+    "en_semantic": "I saw an elderly person on the subway today, and everyone was eager to give up their seat."
+  },
+  {
+    "zh": "听说这周末有台风，最好不要出门。",
+    "en": "I heard there's a typhoon this weekend. It's best not to go out.",
+    "ja": "今週末は台風が来るそうなので、外出しないほうがいいです。",
+    "ko": "이번 주말에 태풍이 온다니까 외출하지 않는 게 좋을 것 같아요.",
+    "domain": "daily",
+    "en_literal": "I heard there's a typhoon this weekend. it is best not to go out.",
+    "en_academic": "I heard there's a typhoon this weekend. it is best not to go out.",
+    "en_semantic": "I heard there's a typhoon this weekend. It's best not to go out."
+  },
+  {
+    "zh": "这首歌最近很火，到处都能听到。",
+    "en": "This song is really popular lately. You can hear it everywhere.",
+    "ja": "この曲は最近とても人気で、どこでも耳にします。",
+    "ko": "이 노래 요즘 엄청 인기 있어서 어디서나 들려요.",
+    "domain": "daily",
+    "en_literal": "This song recent very hot, everywhere can hear.",
+    "en_academic": "This particular musical composition has achieved considerable popularity of late and may be heard in virtually every location.",
+    "en_semantic": "This song is really popular lately. You can hear it everywhere."
+  },
+  {
+    "zh": "我要去超市买菜，有什么需要帮你带的吗？",
+    "en": "I'm going to the supermarket to buy groceries. Need me to pick up anything for you?",
+    "ja": "スーパーに買い物に行きますが、何か買ってきましょうか？",
+    "ko": "마트에 장 보러 가는데, 필요한 거 있어요?",
+    "domain": "daily",
+    "en_literal": "I am going to supermarket to buy groceries. Need me to pick up anything for you?",
+    "en_academic": "I am proceeding to the supermarket to procure groceries; might there be any items you require me to obtain on your behalf?",
+    "en_semantic": "I'm going to the supermarket to buy groceries. Need me to pick up anything for you?"
+  },
+  {
+    "zh": "昨天熬夜看球赛，今天困得不行。",
+    "en": "I stayed up late watching the game last night and I'm so tired today.",
+    "ja": "昨夜夜更かしして試合を見ていたので、今日はとても眠いです。",
+    "ko": "어제 밤새 축구 보느라 오늘 너무 졸려요.",
+    "domain": "daily",
+    "en_literal": "I stayed up late watching game last night and I am so tired today.",
+    "en_academic": "I remained awake until a late hour watching sports yesterday evening and am consequently experiencing considerable fatigue today.",
+    "en_semantic": "I stayed up late watching the game last night and I'm so tired today."
+  },
+  {
+    "zh": "小区里的樱花开了，特别漂亮。",
+    "en": "The cherry blossoms in our neighborhood have bloomed and they're especially beautiful.",
+    "ja": "団地の桜が咲いて、とてもきれいです。",
+    "ko": "우리 아파트 단지에 벚꽃이 피었는데 정말 예뻐요.",
+    "domain": "daily",
+    "en_literal": "cherry blossoms in our neighborhood have bloomed and they're especially beautiful.",
+    "en_academic": "The cherry blossoms within our residential community have reached full bloom, presenting a spectacle of exceptional beauty.",
+    "en_semantic": "The cherry blossoms in our neighborhood have bloomed and they're especially beautiful."
+  },
+  {
+    "zh": "今天心情不太好，想一个人静静。",
+    "en": "I'm not in a great mood today. I just want some peace and quiet.",
+    "ja": "今日はあまり気分が良くなくて、一人で静かにしたいです。",
+    "ko": "오늘 기분이 별로 좋지 않아서 혼자 조용히 있고 싶어요.",
+    "domain": "daily",
+    "en_literal": "I am not in a great mood today. I just want some peace and quiet.",
+    "en_academic": "My emotional state is somewhat less than optimal today; I desire a period of solitary tranquility.",
+    "en_semantic": "I'm not in a great mood today. I just want some peace and quiet."
+  },
+  {
+    "zh": "快过年了，你准备什么时候回家？",
+    "en": "The New Year is coming soon. When are you planning to go home?",
+    "ja": "もうすぐお正月ですね。いつ帰省する予定ですか？",
+    "ko": "곧 설날인데, 언제 고향에 갈 계획이에요?",
+    "domain": "daily",
+    "en_literal": "New Year is coming soon. When are you planning to go home?",
+    "en_academic": "The novel Year is coming soon. When are you planning to go home?",
+    "en_semantic": "The New Year is coming soon. When are you planning to go home?"
+  },
+  {
+    "zh": "这周的工作量太大了，每天都在加班。",
+    "en": "The workload this week is too heavy. I've been working overtime every day.",
+    "ja": "今週の仕事量が多すぎて、毎日残業しています。",
+    "ko": "이번 주 업무량이 너무 많아서 매일 야근하고 있어요.",
+    "domain": "daily",
+    "en_literal": "workload this week is too heavy. I've been working overtime every day.",
+    "en_academic": "The volume of work this week has been excessively burdensome, necessitating overtime labor on a daily basis.",
+    "en_semantic": "The workload this week is too heavy. I've been working overtime every day."
+  },
+  {
+    "zh": "你觉得线上课程和线下课程哪个效果好？",
+    "en": "Which do you think is more effective, online courses or offline courses?",
+    "ja": "オンライン授業と対面授業、どちらの方が効果的だと思いますか？",
+    "ko": "온라인 수업과 오프라인 수업 중 어느 쪽이 더 효과적이라고 생각해요?",
+    "domain": "daily",
+    "en_literal": "You think online class and offline class which effect good?",
+    "en_academic": "Which conduct you think is more effective, online courses or offline courses?",
+    "en_semantic": "Which do you think is more effective, online courses or offline courses?"
+  },
+  {
+    "zh": "夏天来了，该去买几件新衣服了。",
+    "en": "Summer is here. Time to buy some new clothes.",
+    "ja": "夏が来たから、新しい服を何着か買いに行かないと。",
+    "ko": "여름이 왔으니 새 옷 몇 벌 사러 가야겠어요.",
+    "domain": "daily",
+    "en_literal": "Summer arrive, should go buy several pieces new clothes.",
+    "en_academic": "Summer is here. Time to buy some novel clothes.",
+    "en_semantic": "Summer is here. Time to buy some new clothes."
+  },
+  {
+    "zh": "今天路上看到一个流浪猫，好可爱。",
+    "en": "I saw a stray cat on the road today. It was so cute.",
+    "ja": "今日道で野良猫を見かけました。とてもかわいかったです。",
+    "ko": "오늘 길에서 길고양이를 봤는데 너무 귀여웠어요.",
+    "domain": "daily",
+    "en_literal": "I saw a stray cat on road today. It was so cute.",
+    "en_academic": "A stray cat was observed on the roadway today, and it proved to be a creature of considerable charm.",
+    "en_semantic": "I saw a stray cat on the road today. It was so cute."
+  },
+  {
+    "zh": "听说你要搬家了？需要帮忙的话说一声。",
+    "en": "I heard you're moving? Let me know if you need any help.",
+    "ja": "引っ越しするって聞きましたよ。手伝いが必要なら言ってください。",
+    "ko": "이사 간다고 들었어요. 도움 필요하면 말해요.",
+    "domain": "daily",
+    "en_literal": "I heard you are moving? Let me know if you need any help.",
+    "en_academic": "I have received information indicating that you are relocating; please inform me should you require any form of assistance.",
+    "en_semantic": "I heard you're moving? Let me know if you need any help."
+  },
+  {
+    "zh": "每天坚持跑步半小时，坚持了一个月了。",
+    "en": "I've been running for half an hour every day for a month now.",
+    "ja": "毎日30分のランニングを1ヶ月続けています。",
+    "ko": "매일 30분씩 달리기를 한 달째 계속하고 있어요.",
+    "domain": "daily",
+    "en_literal": "I've been running for half a hour every day for a month now.",
+    "en_academic": "I have maintained a daily regimen of half-hour running sessions for a period extending to one month.",
+    "en_semantic": "I've been running for half an hour every day for a month now."
+  },
+  {
+    "zh": "这款游戏最近特别火，朋友圈都在玩。",
+    "en": "This game is super popular recently. Everyone in my social circle is playing it.",
+    "ja": "このゲームは最近特に人気で、友達みんながプレイしています。",
+    "ko": "이 게임 요즘 엄청 유행이라 친구들 다 하고 있어요.",
+    "domain": "daily",
+    "en_literal": "This holiday I plan go back hometown visit parents.",
+    "en_academic": "This game has attained remarkable popularity of late, with all members of my social circle engaged in its play.",
+    "en_semantic": "This game is super popular recently. Everyone in my social circle is playing it."
+  },
+  {
+    "zh": "明天约了朋友去吃火锅，好期待。",
+    "en": "I'm going out for hotpot with friends tomorrow. I'm really looking forward to it.",
+    "ja": "明日友達と火鍋を食べに行く約束をしていて、とても楽しみです。",
+    "ko": "내일 친구들이랑 훠궈 먹으러 가기로 했는데 정말 기대돼요.",
+    "domain": "daily",
+    "en_literal": "I am going out for hotpot with friends tomorrow. I am really looking forward to it.",
+    "en_academic": "I have arranged to partake in a hotpot dining experience with friends tomorrow, and I am anticipating the occasion with considerable enthusiasm.",
+    "en_semantic": "I'm going out for hotpot with friends tomorrow. I'm really looking forward to it."
+  },
+  {
+    "zh": "终于周末了，这一周过得真慢。",
+    "en": "Finally the weekend. This week went by so slowly.",
+    "ja": "やっと週末だ。今週は本当に長く感じました。",
+    "ko": "드디어 주말이다. 이번 주 정말 길게 느껴졌어.",
+    "domain": "daily",
+    "en_literal": "Finally weekend. This week went by so slowly.",
+    "en_academic": "The weekend has finally arrived; this week has passed with particular slowness.",
+    "en_semantic": "Finally the weekend. This week went by so slowly."
+  },
+  {
+    "zh": "今天下班后一起去打羽毛球吧。",
+    "en": "Let's play badminton together after work today.",
+    "ja": "今日の仕事の後、一緒にバドミントンをしませんか。",
+    "ko": "오늘 퇴근 후에 같이 배드민턴 칠래요?",
+    "domain": "daily",
+    "en_literal": "Today after work together go play badminton.",
+    "en_academic": "It is proposed that we engage in a game of badminton together following the conclusion of the work day.",
+    "en_semantic": "Let's play badminton together after work today."
+  },
+  {
+    "zh": "最近蔬菜价格涨了不少，买菜都贵了。",
+    "en": "Vegetable prices have gone up a lot recently. Grocery shopping has become more expensive.",
+    "ja": "最近野菜の値段がかなり上がって、買い物が高くなりました。",
+    "ko": "요즘 채소 가격이 많이 올라서 장 보기가 비싸졌어요.",
+    "domain": "daily",
+    "en_literal": "Recent vegetable price rise quite a lot, buy vegetables all become expensive.",
+    "en_academic": "The prices of vegetables have undergone a substantial increase in recent times, rendering grocery shopping a more costly endeavor.",
+    "en_semantic": "Vegetable prices have gone up a lot recently. Grocery shopping has become more expensive."
+  },
+  {
+    "zh": "明天是妈妈的生日，我订了一个蛋糕。",
+    "en": "Tomorrow is my mom's birthday. I ordered a cake for her.",
+    "ja": "明日は母の誕生日なので、ケーキを注文しました。",
+    "ko": "내일은 어머니 생신이라 케이크를 주문했어요.",
+    "domain": "daily",
+    "en_literal": "Tomorrow is mom birthday, I order one cake.",
+    "en_academic": "Tomorrow marks the occasion of my mother's birthday, for which I have arranged the ordering of a celebratory cake.",
+    "en_semantic": "Tomorrow is my mom's birthday. I ordered a cake for her."
+  },
+  {
+    "zh": "今天地铁人太多了，挤得喘不过气来。",
+    "en": "The subway was so crowded today. I could barely breathe.",
+    "ja": "今日は地下鉄が混みすぎていて、息ができないくらいでした。",
+    "ko": "오늘 지하철에 사람이 너무 많아서 숨 쉬기 힘들 정도였어요.",
+    "domain": "daily",
+    "en_literal": "subway was so crowded today. I could barely breathe.",
+    "en_academic": "The subway was so densely populated today that I experienced considerable difficulty in drawing breath.",
+    "en_semantic": "The subway was so crowded today. I could barely breathe."
+  },
+  {
+    "zh": "最近在网上学做菜，进步还挺大的。",
+    "en": "I've been learning to cook online recently and I've made quite a lot of progress.",
+    "ja": "最近ネットで料理を習っていて、かなり上達しました。",
+    "ko": "요즘 인터넷으로 요리 배우는데, 꽤 많이 늘었어요.",
+    "domain": "daily",
+    "en_literal": "Recent online learn cook, progress quite big.",
+    "en_academic": "I have been acquiring culinary skills via online instruction of late and have made considerable advancement in proficiency.",
+    "en_semantic": "I've been learning to cook online recently and I've made quite a lot of progress."
+  },
+  {
+    "zh": "昨天去看了牙医，建议我拔智齿。",
+    "en": "I went to the dentist yesterday and they recommended I get my wisdom teeth removed.",
+    "ja": "昨日歯医者に行ったら、親知らずを抜くように勧められました。",
+    "ko": "어제 치과 갔더니 사랑니를 빼라고 하더라고요.",
+    "domain": "daily",
+    "en_literal": "I went to dentist yesterday and they recommended I get my wisdom teeth removed.",
+    "en_academic": "I went to the dentist yesterday and they recommended I obtain my wisdom teeth removed.",
+    "en_semantic": "I went to the dentist yesterday and they recommended I get my wisdom teeth removed."
+  },
+  {
+    "zh": "好久没回家看父母了，有点想他们。",
+    "en": "I haven't been home to see my parents in a while. I miss them a bit.",
+    "ja": "長い間実家に帰って両親に会っていなくて、少し寂しいです。",
+    "ko": "오랜만에 부모님 뵈러 집에 못 갔더니 좀 보고 싶네요.",
+    "domain": "daily",
+    "en_literal": "Long time no go home see parents, a little miss them.",
+    "en_academic": "A considerable interval has elapsed since I last visited my parents, and I find myself experiencing a degree of longing for them.",
+    "en_semantic": "I haven't been home to see my parents in a while. I miss them a bit."
+  },
+  {
+    "zh": "刚刚看到一只小狗穿衣服过马路，太可爱了。",
+    "en": "I just saw a little dog crossing the road wearing clothes. It was too cute.",
+    "ja": "さっき洋服を着た子犬が道路を渡っているのを見て、とてもかわいかったです。",
+    "ko": "방금 옷 입은 강아지가 길을 건너는 걸 봤는데 너무 귀여웠어요.",
+    "domain": "daily",
+    "en_literal": "I just saw a little dog crossing road wearing clothes. It was too cute.",
+    "en_academic": "I have just observed a small canine crossing the thoroughfare attired in garments; the sight was of an exceptionally endearing nature.",
+    "en_semantic": "I just saw a little dog crossing the road wearing clothes. It was too cute."
+  },
+  {
+    "zh": "今天工作了一天好累，想早点休息。",
+    "en": "I've been working all day and I'm so tired. I want to rest early.",
+    "ja": "今日は一日中仕事をしてすごく疲れたので、早く休みたいです。",
+    "ko": "오늘 하루 종일 일해서 너무 피곤해요. 일찍 쉬고 싶어요.",
+    "domain": "daily",
+    "en_literal": "I've been working all day and I am so tired. I want to rest early.",
+    "en_academic": "Having been engaged in labor for the entirety of the day, I am experiencing considerable fatigue and desire an early period of rest.",
+    "en_semantic": "I've been working all day and I'm so tired. I want to rest early."
+  },
+  {
+    "zh": "明早要去机场接人，得早点起床。",
+    "en": "I need to pick someone up at the airport tomorrow morning. I have to get up early.",
+    "ja": "明日の朝空港に人を迎えに行かなければならないので、早く起きなければ。",
+    "ko": "내일 아침에 공항에 사람 마중 가야 해서 일찍 일어나야 해요.",
+    "domain": "daily",
+    "en_literal": "I need to pick someone up at airport tomorrow morning. I have to get up early.",
+    "en_academic": "I need to pick someone up at the airport tomorrow morning. I have to obtain up early.",
+    "en_semantic": "I need to pick someone up at the airport tomorrow morning. I have to get up early."
+  },
+  {
+    "zh": "最近在读村上春树的小说，写得真好啊。",
+    "en": "I've been reading Haruki Murakami's novels recently. He writes so well.",
+    "ja": "最近村上春樹の小説を読んでいますが、本当に上手ですね。",
+    "ko": "요즘 무라카미 하루키의 소설을 읽고 있는데, 정말 잘 쓰네요.",
+    "domain": "daily",
+    "en_literal": "Recent reading Murakami Haruki novel, write really good.",
+    "en_academic": "I have been perusing the novels of Haruki Murakami of late; the quality of his literary craftsmanship is truly commendable.",
+    "en_semantic": "I've been reading Haruki Murakami's novels recently. He writes so well."
+  },
+  {
+    "zh": "今天中午吃的麻辣烫，味道还不错。",
+    "en": "I had spicy hot pot for lunch today. It tasted pretty good.",
+    "ja": "今日のお昼に麻辣湯を食べましたが、なかなかおいしかったです。",
+    "ko": "오늘 점심에 마라탕 먹었는데, 맛이 꽤 괜찮았어요.",
+    "domain": "daily",
+    "en_literal": "Tomorrow need early rise catch train, tonight must early sleep.",
+    "en_academic": "I had spicy hot pot for lunch today. It tasted pretty favorable.",
+    "en_semantic": "I had spicy hot pot for lunch today. It tasted pretty good."
+  },
+  {
+    "zh": "共享单车真的太方便了，解决了最后两公里的问题。",
+    "en": "Shared bikes are really convenient. They solve the last-mile problem.",
+    "ja": "シェア自転車は本当に便利で、ラストワンマイルの問題を解決してくれます。",
+    "ko": "공유 자전거는 정말 편리해요. 마지막 2km 문제를 해결해 줘요.",
+    "domain": "daily",
+    "en_literal": "Shared bikes are really convenient. They solve last-mile problem.",
+    "en_academic": "Shared bicycle systems have proven to be remarkably convenient, effectively resolving the challenge of the final two kilometers of transit.",
+    "en_semantic": "Shared bikes are really convenient. They solve the last-mile problem."
+  },
+  {
+    "zh": "周末准备去爬山，有好几条路线可以选择。",
+    "en": "I'm planning to go hiking this weekend. There are several routes to choose from.",
+    "ja": "週末に登山に行く予定で、いくつかのルートから選べます。",
+    "ko": "주말에 등산 가려고 하는데, 여러 코스 중에 고를 수 있어요.",
+    "domain": "daily",
+    "en_literal": "I am planning to go hiking this weekend. There are several routes to choose from.",
+    "en_academic": "I am contemplating undertaking a hiking excursion this weekend; there exist several alternative routes from which to make a selection.",
+    "en_semantic": "I'm planning to go hiking this weekend. There are several routes to choose from."
+  },
+  {
+    "zh": "我最近报了瑜伽课，一周上两次。",
+    "en": "I recently signed up for yoga classes. I go twice a week.",
+    "ja": "最近ヨガ教室に申し込んで、週に2回通っています。",
+    "ko": "요즘 요가 수업을 등록해서 일주일에 두 번 다니고 있어요.",
+    "domain": "daily",
+    "en_literal": "I recent report yoga class, one week two times.",
+    "en_academic": "I recently enrolled in a program of yoga instruction, attending sessions on two occasions per week.",
+    "en_semantic": "I recently signed up for yoga classes. I go twice a week."
+  }
+]

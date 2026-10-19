@@ -1,0 +1,536 @@
+[
+  {
+    "zh": "服务网格提供了服务间的可观测性、流量管理和安全通信，采用微服务技术栈实现。",
+    "en": "The service mesh provides observability, traffic management, and secure communication between services.",
+    "ja": "サービスメッシュは、サービス間の可観測性、トラフィック管理、および安全な通信を提供する。",
+    "ko": "서비스 메시는 서비스 간 가시성, 트래픽 관리 및 보안 통신을 제공한다.",
+    "domain": "cs",
+    "en_semantic": "The service mesh provides observability, traffic management, and secure communication between services.",
+    "en_literal": "Service mesh provide between service observability, traffic management and safe communication.",
+    "en_academic": "The service mesh infrastructure provides inter-service observability, traffic management capabilities, and secure communication channels."
+  },
+  {
+    "zh": "排序是cs领域的关键研究方向。",
+    "en": "Recent studies demonstrate that sorting can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "cs",
+    "en_semantic": "Recent studies demonstrate that sorting can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that sorting can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that sorting can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "关于一致性的应用，已有大量临床数据支持，基于持续交付架构模式设计。",
+    "en": "Recent studies demonstrate that consistency can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "cs",
+    "en_semantic": "Recent studies demonstrate that consistency can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that consistency can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that consistency can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "最新容器化相关研究表明，持续集成能显著提升诊断准确率。",
+    "en": "Recent studies demonstrate that continuous integration (CI) can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "cs",
+    "en_semantic": "Recent studies demonstrate that continuous integration (CI) can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that continuous integration (CI) can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that continuous integration (CI) can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "关于索引的前瞻性随机对照试验显示积极结果，基于服务网格架构模式设计。",
+    "en": "Recent studies demonstrate that index can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "cs",
+    "en_semantic": "Recent studies demonstrate that index can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that index can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that index can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "持续交付合同条款必须明确约定双方权利义务及违约责任，采用负载均衡技术栈实现。",
+    "en": "The continuous delivery (CD) provisions in the contract must clearly define the rights, obligations, and liabilities of all parties involved.",
+    "domain": "cs",
+    "en_semantic": "The continuous delivery (CD) provisions in the contract must clearly define the rights, obligations, and liabilities of all parties involved.",
+    "en_literal": "The continuous delivery (CD) provisions in the contract must clearly define the rights, obligations, and liabilities of all parties involved.",
+    "en_academic": "The continuous delivery (CD) provisions in the contract must clearly define the rights, obligations, and liabilities of all parties involved."
+  },
+  {
+    "zh": "持续交付的双盲随机对照试验证实了其安全性与有效性，基于时间复杂度架构模式设计。",
+    "en": "Recent studies demonstrate that continuous delivery (CD) can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "cs",
+    "en_semantic": "Recent studies demonstrate that continuous delivery (CD) can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that continuous delivery (CD) can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that continuous delivery (CD) can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "根据观察者模式的相关规定，本协议自签署之日起生效，基于算法架构模式设计。",
+    "en": "Under the relevant provisions regarding observer pattern, this agreement shall take effect upon execution by both parties.",
+    "domain": "cs",
+    "en_semantic": "Under the relevant provisions regarding observer pattern, this agreement shall take effect upon execution by both parties.",
+    "en_literal": "Under the relevant provisions regarding observer pattern, this agreement shall take effect upon execution by both parties.",
+    "en_academic": "Under the relevant provisions regarding observer pattern, this agreement shall take effect upon execution by both parties."
+  },
+  {
+    "zh": "工厂模式是cs领域的关键研究方向，基于容错架构模式设计。",
+    "en": "Recent studies demonstrate that factory pattern can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "cs",
+    "en_semantic": "Recent studies demonstrate that factory pattern can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that factory pattern can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that factory pattern can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "关于并行计算的应用，已有大量临床数据支持，采用部署技术栈实现。",
+    "en": "Recent studies demonstrate that parallel computing can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "cs",
+    "en_semantic": "Recent studies demonstrate that parallel computing can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that parallel computing can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that parallel computing can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "微服务的标准化流程与持续交付评估体系需进一步优化。",
+    "en": "The microservice architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "cs",
+    "en_semantic": "The microservice architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The microservice architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The microservice architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "最新动态规划相关研究表明，负载均衡能显著提升诊断准确率。",
+    "en": "Recent studies demonstrate that load balancing can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "cs",
+    "en_semantic": "Recent studies demonstrate that load balancing can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that load balancing can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that load balancing can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "该动态规划的审查标准已于去年更新，基于缓存架构模式设计。",
+    "en": "Regulatory oversight mechanisms for dynamic programming should be strengthened to ensure compliance with applicable standards.",
+    "domain": "cs",
+    "en_semantic": "Regulatory oversight mechanisms for dynamic programming should be strengthened to ensure compliance with applicable standards.",
+    "en_literal": "Regulatory oversight mechanisms for dynamic programming should be strengthened to ensure compliance with applicable standards.",
+    "en_academic": "Regulatory oversight mechanisms for dynamic programming should be strengthened to ensure compliance with applicable standards."
+  },
+  {
+    "zh": "回溯关于时间复杂度的系统架构设计需充分考虑高可用性与容错性。",
+    "en": "The backtracking architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "cs",
+    "en_semantic": "The backtracking architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The backtracking architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The backtracking architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "该微服务架构采用容器化部署，使用Docker和Kubernetes进行编排管理。",
+    "en": "The microservice architecture adopts containerized deployment, using Docker and Kubernetes for orchestration and management.",
+    "ja": "このマイクロサービスアーキテクチャはコンテナ化されたデプロイメントを採用し、DockerとKubernetesを使用してオーケストレーションと管理を行っている。",
+    "ko": "이 마이크로서비스 아키텍처는 컨테이너화된 배포를 채택하여 Docker와 Kubernetes를 사용해 오케스트레이션 및 관리를 수행한다.",
+    "domain": "cs",
+    "en_semantic": "This microservice architecture uses containerized deployment with Docker and Kubernetes for orchestration.",
+    "en_literal": "This microservice architecture adopt containerization deploy, use Docker and Kubernetes do orchestration management.",
+    "en_academic": "The proposed microservice architecture employs containerized deployment methodologies, utilizing Docker and Kubernetes for container orchestration and lifecycle management."
+  },
+  {
+    "zh": "该算法的时间复杂度为O(n log n)，空间复杂度为O(n)。",
+    "en": "The time complexity of this algorithm is O(n log n), and its space complexity is O(n).",
+    "ja": "このアルゴリズムの時間複雑度はO(n log n)であり、空間複雑度はO(n)である。",
+    "ko": "이 알고리즘의 시간 복잡도는 O(n log n)이며 공간 복잡도는 O(n)이다.",
+    "domain": "cs",
+    "en_semantic": "This algorithm has a time complexity of O(n log n) and space complexity of O(n).",
+    "en_literal": "This algorithm time complexity is O(n log n), space complexity is O(n).",
+    "en_academic": "The algorithm exhibits a time complexity of O(n log n) and a space complexity of O(n)."
+  },
+  {
+    "zh": "分布式系统通过消息队列实现异步通信，降低了服务之间的耦合度。",
+    "en": "The distributed system achieves asynchronous communication through message queues, reducing coupling between services.",
+    "ja": "分散システムはメッセージキューを通じて非同期通信を実現し、サービス間の結合度を低減する。",
+    "ko": "분산 시스템은 메시지 큐를 통해 비동기 통신을 구현하여 서비스 간 결합도를 낮춘다.",
+    "domain": "cs",
+    "en_semantic": "The distributed system uses message queues for asynchronous communication, reducing coupling between services.",
+    "en_literal": "Distributed system through message queue achieve async communication, reduce between service coupling degree.",
+    "en_academic": "The distributed system architecture leverages message queuing mechanisms to facilitate asynchronous communication, thereby reducing inter-service coupling."
+  },
+  {
+    "zh": "为了保证数据一致性，系统采用了Raft共识算法。",
+    "en": "To ensure data consistency, the system adopts the Raft consensus algorithm.",
+    "ja": "データの一貫性を保証するために、システムはRaft合意アルゴリズムを採用している。",
+    "ko": "데이터 일관성을 보장하기 위해 시스템은 Raft 합의 알고리즘을 채택했다.",
+    "domain": "cs",
+    "en_semantic": "To ensure data consistency, the system uses the Raft consensus algorithm.",
+    "en_literal": "For guarantee data consistency, system adopt Raft consensus algorithm.",
+    "en_academic": "To guarantee data consistency, the system implements the Raft consensus protocol."
+  },
+  {
+    "zh": "负载均衡器将请求均匀分配到多个后端服务器，以提升系统的高可用性。",
+    "en": "The load balancer evenly distributes requests across multiple backend servers to enhance the system's high availability.",
+    "ja": "ロードバランサーはリクエストを複数のバックエンドサーバーに均等に分散し、システムの高可用性を向上させる。",
+    "ko": "로드 밸런서는 요청을 여러 백엔드 서버에 균등하게 분배하여 시스템의 고가용성을 향상시킨다.",
+    "domain": "cs",
+    "en_semantic": "The load balancer distributes requests evenly across multiple backend servers to improve high availability.",
+    "en_literal": "Load balancer will requests evenly split to many backend servers, to raise system high availability.",
+    "en_academic": "The load balancer distributes incoming requests uniformly across multiple backend server instances, thereby enhancing the overall high availability of the system."
+  },
+  {
+    "zh": "缓存策略采用LRU淘汰算法，热点数据的命中率超过95%。",
+    "en": "The caching strategy employs an LRU eviction algorithm, achieving a hit rate exceeding 95% for hot data.",
+    "ja": "キャッシュ戦略にはLRU淘汰アルゴリズムを採用し、ホットデータのヒット率は95%を超えている。",
+    "ko": "캐싱 전략은 LRU 퇴거 알고리즘을 사용하며 핫 데이터의 적중률이 95%를 초과한다.",
+    "domain": "cs",
+    "en_semantic": "The caching strategy uses an LRU eviction algorithm, with a hot data hit rate exceeding 95%.",
+    "en_literal": "Cache strategy use LRU eliminate algorithm, hot data hit rate over 95%.",
+    "en_academic": "The caching strategy implements a least-recently-used (LRU) eviction policy, achieving a cache hit rate in excess of 95% for frequently accessed data."
+  },
+  {
+    "zh": "持续集成流水线在每次代码提交后自动执行构建、测试和部署。",
+    "en": "The continuous integration (CI) pipeline automatically performs building, testing, and deployment after each code commit.",
+    "ja": "継続的インテグレーションパイプラインは、各コードコミット後に自動的にビルド、テスト、デプロイを実行する。",
+    "ko": "지속적 통합(CI) 파이프라인은 각 코드 커밋 후 자동으로 빌드, 테스트 및 배포를 수행한다.",
+    "domain": "cs",
+    "en_semantic": "The CI pipeline automatically builds, tests, and deploys after each code commit.",
+    "en_literal": "Continuous integration pipeline after each code commit auto do build, test and deploy.",
+    "en_academic": "The continuous integration pipeline automatically executes build, test, and deployment procedures upon each code commit."
+  },
+  {
+    "zh": "该编译器将高级语言源代码翻译为目标平台的机器码。",
+    "en": "The compiler translates high-level language source code into machine code for the target platform.",
+    "ja": "このコンパイラは高水準言語のソースコードをターゲットプラットフォームのマシンコードに変換する。",
+    "ko": "이 컴파일러는 고수준 언어 소스 코드를 대상 플랫폼의 기계어로 변환한다.",
+    "domain": "cs",
+    "en_semantic": "The compiler translates high-level source code into machine code for the target platform.",
+    "en_literal": "This compiler will high level language source code translate to target platform machine code.",
+    "en_academic": "The compiler transforms high-level language source code into target-platform-specific machine code."
+  },
+  {
+    "zh": "虚拟化技术允许在一台物理服务器上运行多个独立的操作系统实例。",
+    "en": "Virtualization technology allows multiple independent operating system instances to run on a single physical server.",
+    "ja": "仮想化技術は、1台の物理サーバー上で複数の独立したオペレーティングシステムインスタンスの実行を可能にする。",
+    "ko": "가상화 기술은 단일 물리 서버에서 여러 독립적인 운영 체제 인스턴스를 실행할 수 있게 한다.",
+    "domain": "cs",
+    "en_semantic": "Virtualization allows multiple independent OS instances to run on a single physical server.",
+    "en_literal": "Virtualization technology allow on one physical server run many independent OS instances.",
+    "en_academic": "Virtualization technology enables the concurrent execution of multiple independent operating system instances on a single physical server."
+  },
+  {
+    "zh": "服务网格提供了服务间的可观测性、流量管理和安全通信。",
+    "en": "The service mesh provides observability, traffic management, and secure communication between services.",
+    "ja": "サービスメッシュは、サービス間の可観測性、トラフィック管理、および安全な通信を提供する。",
+    "ko": "서비스 메시는 서비스 간 가시성, 트래픽 관리 및 보안 통신을 제공한다.",
+    "domain": "cs",
+    "en_semantic": "The service mesh provides observability, traffic management, and secure communication between services.",
+    "en_literal": "Service mesh provide between service observability, traffic management and safe communication.",
+    "en_academic": "The service mesh infrastructure provides inter-service observability, traffic management capabilities, and secure communication channels."
+  },
+  {
+    "zh": "排序是当前研究的热点方向之一。",
+    "en": "Recent studies demonstrate that sorting can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "cs",
+    "en_semantic": "Recent studies demonstrate that sorting can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that sorting can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that sorting can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "关于一致性的应用，已有大量临床数据支持。",
+    "en": "Recent studies demonstrate that consistency can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "cs",
+    "en_semantic": "Recent studies demonstrate that consistency can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that consistency can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that consistency can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "本文探讨了并发在专业实践中的重要性。",
+    "en": "This article examines the importance of concurrency in professional practice.",
+    "domain": "cs",
+    "en_semantic": "This article examines the importance of concurrency in professional practice.",
+    "en_literal": "This article examines the importance of concurrency in professional practice.",
+    "en_academic": "This article examines the importance of concurrency in professional practice."
+  },
+  {
+    "zh": "缓存的标准化流程需要进一步优化。",
+    "en": "The standardization process for cache requires further optimization.",
+    "domain": "cs",
+    "en_semantic": "The standardization process for cache requires further optimization.",
+    "en_literal": "The standardization process for cache requires further optimization.",
+    "en_academic": "The standardization process for cache requires further optimization."
+  },
+  {
+    "zh": "最新研究表明，持续集成能显著提升诊断准确率。",
+    "en": "Recent studies demonstrate that continuous integration (CI) can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "cs",
+    "en_semantic": "Recent studies demonstrate that continuous integration (CI) can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that continuous integration (CI) can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that continuous integration (CI) can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "在二叉树领域，国际合作至关重要。",
+    "en": "International collaboration is essential in the field of binary tree.",
+    "domain": "cs",
+    "en_semantic": "International collaboration is essential in the field of binary tree.",
+    "en_literal": "International collaboration is essential in the field of binary tree.",
+    "en_academic": "International collaboration is essential in the field of binary tree."
+  },
+  {
+    "zh": "该缓存的审查标准已于去年更新。",
+    "en": "Regulatory oversight mechanisms for cache should be strengthened to ensure compliance with applicable standards.",
+    "domain": "cs",
+    "en_semantic": "Regulatory oversight mechanisms for cache should be strengthened to ensure compliance with applicable standards.",
+    "en_literal": "Regulatory oversight mechanisms for cache should be strengthened to ensure compliance with applicable standards.",
+    "en_academic": "Regulatory oversight mechanisms for cache should be strengthened to ensure compliance with applicable standards."
+  },
+  {
+    "zh": "工厂模式相关法律法规仍需完善。",
+    "en": "The laws and regulations concerning factory pattern still require further refinement.",
+    "domain": "cs",
+    "en_semantic": "The laws and regulations concerning factory pattern still require further refinement.",
+    "en_literal": "The laws and regulations concerning factory pattern still require further refinement.",
+    "en_academic": "The laws and regulations concerning factory pattern still require further refinement."
+  },
+  {
+    "zh": "针对排序，我们提出了新的评估框架。",
+    "en": "We propose a novel evaluation framework for sorting.",
+    "domain": "cs",
+    "en_semantic": "We propose a novel evaluation framework for sorting.",
+    "en_literal": "We propose a novel evaluation framework for sorting.",
+    "en_academic": "We propose a novel evaluation framework for sorting."
+  },
+  {
+    "zh": "在回溯的实际应用中，需注意数据安全与隐私保护。",
+    "en": "In the practical application of backtracking, attention must be paid to data security and privacy protection.",
+    "domain": "cs",
+    "en_semantic": "In the practical application of backtracking, attention must be paid to data security and privacy protection.",
+    "en_literal": "In the practical application of backtracking, attention must be paid to data security and privacy protection.",
+    "en_academic": "In the practical application of backtracking, attention must be paid to data security and privacy protection."
+  },
+  {
+    "zh": "负载均衡技术的发展推动了行业变革与创新。",
+    "en": "Advances in load balancing technology have driven industry-wide transformation and innovation.",
+    "domain": "cs",
+    "en_semantic": "Advances in load balancing technology have driven industry-wide transformation and innovation.",
+    "en_literal": "Advances in load balancing technology have driven industry-wide transformation and innovation.",
+    "en_academic": "Advances in load balancing technology have driven industry-wide transformation and innovation."
+  },
+  {
+    "zh": "该分布式系统案例为后续判决提供了重要参考依据。",
+    "en": "This case concerning distributed system provides important precedent for subsequent judicial decisions.",
+    "domain": "cs",
+    "en_semantic": "This case concerning distributed system provides important precedent for subsequent judicial decisions.",
+    "en_literal": "This case concerning distributed system provides important precedent for subsequent judicial decisions.",
+    "en_academic": "This case concerning distributed system provides important precedent for subsequent judicial decisions."
+  },
+  {
+    "zh": "容器化的系统架构设计需充分考虑高可用性与容错性。",
+    "en": "The containerization architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "cs",
+    "en_semantic": "The containerization architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The containerization architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The containerization architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "关于索引的前瞻性随机对照试验显示积极结果。",
+    "en": "Recent studies demonstrate that index can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "cs",
+    "en_semantic": "Recent studies demonstrate that index can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that index can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that index can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "应加强对部署的监管力度与合规性审查机制。",
+    "en": "Regulatory oversight mechanisms for deployment should be strengthened to ensure compliance with applicable standards.",
+    "domain": "cs",
+    "en_semantic": "Regulatory oversight mechanisms for deployment should be strengthened to ensure compliance with applicable standards.",
+    "en_literal": "Regulatory oversight mechanisms for deployment should be strengthened to ensure compliance with applicable standards.",
+    "en_academic": "Regulatory oversight mechanisms for deployment should be strengthened to ensure compliance with applicable standards."
+  },
+  {
+    "zh": "RESTful架构的治疗方案应根据患者具体情况个体化制定。",
+    "en": "The RESTful architecture architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "cs",
+    "en_semantic": "The RESTful architecture architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The RESTful architecture architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The RESTful architecture architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "使用分布式系统框架可以显著降低开发成本并提高代码可维护性。",
+    "en": "The distributed system architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "cs",
+    "en_semantic": "The distributed system architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The distributed system architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The distributed system architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "持续交付合同条款必须明确约定双方权利义务及违约责任。",
+    "en": "The continuous delivery (CD) provisions in the contract must clearly define the rights, obligations, and liabilities of all parties involved.",
+    "domain": "cs",
+    "en_semantic": "The continuous delivery (CD) provisions in the contract must clearly define the rights, obligations, and liabilities of all parties involved.",
+    "en_literal": "The continuous delivery (CD) provisions in the contract must clearly define the rights, obligations, and liabilities of all parties involved.",
+    "en_academic": "The continuous delivery (CD) provisions in the contract must clearly define the rights, obligations, and liabilities of all parties involved."
+  },
+  {
+    "zh": "该动态规划算法的时间复杂度为O(n log n)，空间复杂度为O(n)。",
+    "en": "The dynamic programming architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "cs",
+    "en_semantic": "The dynamic programming architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The dynamic programming architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The dynamic programming architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "持续交付的双盲随机对照试验证实了其安全性与有效性。",
+    "en": "Recent studies demonstrate that continuous delivery (CD) can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "cs",
+    "en_semantic": "Recent studies demonstrate that continuous delivery (CD) can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that continuous delivery (CD) can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that continuous delivery (CD) can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "建立健全排序的评估体系对于保障服务质量具有重要意义。",
+    "en": "Establishing a comprehensive assessment framework for sorting is crucial for ensuring service quality.",
+    "domain": "cs",
+    "en_semantic": "Establishing a comprehensive assessment framework for sorting is crucial for ensuring service quality.",
+    "en_literal": "Establishing a comprehensive assessment framework for sorting is crucial for ensuring service quality.",
+    "en_academic": "Establishing a comprehensive assessment framework for sorting is crucial for ensuring service quality."
+  },
+  {
+    "zh": "针对递归的分布式架构设计能够有效应对高并发场景。",
+    "en": "The recursion architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "cs",
+    "en_semantic": "The recursion architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The recursion architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The recursion architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "在判决书中，法官引用了数据库作为裁判依据的一部分。",
+    "en": "This case concerning database provides important precedent for subsequent judicial decisions.",
+    "domain": "cs",
+    "en_semantic": "This case concerning database provides important precedent for subsequent judicial decisions.",
+    "en_literal": "This case concerning database provides important precedent for subsequent judicial decisions.",
+    "en_academic": "This case concerning database provides important precedent for subsequent judicial decisions."
+  },
+  {
+    "zh": "采用容器化的微服务架构能够提升系统整体可扩展性。",
+    "en": "The containerization architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "cs",
+    "en_semantic": "The containerization architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The containerization architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The containerization architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "根据观察者模式的相关规定，本协议自签署之日起生效。",
+    "en": "Under the relevant provisions regarding observer pattern, this agreement shall take effect upon execution by both parties.",
+    "domain": "cs",
+    "en_semantic": "Under the relevant provisions regarding observer pattern, this agreement shall take effect upon execution by both parties.",
+    "en_literal": "Under the relevant provisions regarding observer pattern, this agreement shall take effect upon execution by both parties.",
+    "en_academic": "Under the relevant provisions regarding observer pattern, this agreement shall take effect upon execution by both parties."
+  },
+  {
+    "zh": "工厂模式是当前研究的热点方向之一。",
+    "en": "Recent studies demonstrate that factory pattern can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "cs",
+    "en_semantic": "Recent studies demonstrate that factory pattern can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that factory pattern can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that factory pattern can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "关于并行计算的应用，已有大量临床数据支持。",
+    "en": "Recent studies demonstrate that parallel computing can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "cs",
+    "en_semantic": "Recent studies demonstrate that parallel computing can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that parallel computing can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that parallel computing can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "本文探讨了操作系统在专业实践中的重要性。",
+    "en": "This article examines the importance of operating system in professional practice.",
+    "domain": "cs",
+    "en_semantic": "This article examines the importance of operating system in professional practice.",
+    "en_literal": "This article examines the importance of operating system in professional practice.",
+    "en_academic": "This article examines the importance of operating system in professional practice."
+  },
+  {
+    "zh": "微服务的标准化流程需要进一步优化。",
+    "en": "The microservice architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "cs",
+    "en_semantic": "The microservice architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The microservice architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The microservice architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "最新研究表明，负载均衡能显著提升诊断准确率。",
+    "en": "Recent studies demonstrate that load balancing can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "cs",
+    "en_semantic": "Recent studies demonstrate that load balancing can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that load balancing can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that load balancing can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "在容错领域，国际合作至关重要。",
+    "en": "International collaboration is essential in the field of fault tolerance.",
+    "domain": "cs",
+    "en_semantic": "International collaboration is essential in the field of fault tolerance.",
+    "en_literal": "International collaboration is essential in the field of fault tolerance.",
+    "en_academic": "International collaboration is essential in the field of fault tolerance."
+  },
+  {
+    "zh": "该动态规划的审查标准已于去年更新。",
+    "en": "Regulatory oversight mechanisms for dynamic programming should be strengthened to ensure compliance with applicable standards.",
+    "domain": "cs",
+    "en_semantic": "Regulatory oversight mechanisms for dynamic programming should be strengthened to ensure compliance with applicable standards.",
+    "en_literal": "Regulatory oversight mechanisms for dynamic programming should be strengthened to ensure compliance with applicable standards.",
+    "en_academic": "Regulatory oversight mechanisms for dynamic programming should be strengthened to ensure compliance with applicable standards."
+  },
+  {
+    "zh": "容器编排相关法律法规仍需完善。",
+    "en": "The laws and regulations concerning container orchestration still require further refinement.",
+    "domain": "cs",
+    "en_semantic": "The laws and regulations concerning container orchestration still require further refinement.",
+    "en_literal": "The laws and regulations concerning container orchestration still require further refinement.",
+    "en_academic": "The laws and regulations concerning container orchestration still require further refinement."
+  },
+  {
+    "zh": "针对并发，我们提出了新的评估框架。",
+    "en": "We propose a novel evaluation framework for concurrency.",
+    "domain": "cs",
+    "en_semantic": "We propose a novel evaluation framework for concurrency.",
+    "en_literal": "We propose a novel evaluation framework for concurrency.",
+    "en_academic": "We propose a novel evaluation framework for concurrency."
+  },
+  {
+    "zh": "在迭代的实际应用中，需注意数据安全与隐私保护。",
+    "en": "In the practical application of iteration, attention must be paid to data security and privacy protection.",
+    "domain": "cs",
+    "en_semantic": "In the practical application of iteration, attention must be paid to data security and privacy protection.",
+    "en_literal": "In the practical application of iteration, attention must be paid to data security and privacy protection.",
+    "en_academic": "In the practical application of iteration, attention must be paid to data security and privacy protection."
+  },
+  {
+    "zh": "迭代技术的发展推动了行业变革与创新。",
+    "en": "Advances in iteration technology have driven industry-wide transformation and innovation.",
+    "domain": "cs",
+    "en_semantic": "Advances in iteration technology have driven industry-wide transformation and innovation.",
+    "en_literal": "Advances in iteration technology have driven industry-wide transformation and innovation.",
+    "en_academic": "Advances in iteration technology have driven industry-wide transformation and innovation."
+  },
+  {
+    "zh": "该容器编排案例为后续判决提供了重要参考依据。",
+    "en": "This case concerning container orchestration provides important precedent for subsequent judicial decisions.",
+    "domain": "cs",
+    "en_semantic": "This case concerning container orchestration provides important precedent for subsequent judicial decisions.",
+    "en_literal": "This case concerning container orchestration provides important precedent for subsequent judicial decisions.",
+    "en_academic": "This case concerning container orchestration provides important precedent for subsequent judicial decisions."
+  },
+  {
+    "zh": "回溯的系统架构设计需充分考虑高可用性与容错性。",
+    "en": "The backtracking architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "cs",
+    "en_semantic": "The backtracking architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The backtracking architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The backtracking architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "关于API端点的前瞻性随机对照试验显示积极结果。",
+    "en": "Recent studies demonstrate that API endpoint can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "cs",
+    "en_semantic": "Recent studies demonstrate that API endpoint can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that API endpoint can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that API endpoint can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "应加强对分布式系统的监管力度与合规性审查机制。",
+    "en": "The distributed system architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "cs",
+    "en_semantic": "The distributed system architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The distributed system architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The distributed system architecture ensures system availability, scalability, and maintainability in production environments."
+  }
+]

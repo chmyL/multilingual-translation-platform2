@@ -1,0 +1,19 @@
+{
+  "total": 546,
+  "domains": {
+    "academic": 102,
+    "business": 105,
+    "cs": 64,
+    "daily": 100,
+    "law": 62,
+    "medicine": 63,
+    "technical": 50
+  },
+  "languages": [
+    "en",
+    "ja",
+    "ko",
+    "zh"
+  ],
+  "updated": "2026-06-30"
+}

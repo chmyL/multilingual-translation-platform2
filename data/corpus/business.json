@@ -1,0 +1,1052 @@
+[
+  {
+    "zh": "请查收附件中的项目进度报告。如有任何疑问，请随时与我联系。",
+    "en": "Please find attached the project progress report. Please feel free to contact me if you have any questions.",
+    "ja": "添付のプロジェクト進捗報告書をご確認ください。ご質問がございましたら、いつでもご連絡ください。",
+    "ko": "첨부된 프로젝트 진행 보고서를 확인해 주시기 바랍니다. 문의사항이 있으시면 언제든지 연락 주십시오.",
+    "domain": "business",
+    "en_semantic": "Please find attached the project progress report. Please feel free to contact me if you have any questions.",
+    "en_literal": "Please check attachment inside project progress report. If have any question, feel free contact me.",
+    "en_academic": "Kindly find the project progress report appended hereto for your perusal. Should any inquiries arise, you are cordially invited to contact the undersigned at your earliest convenience."
+  },
+  {
+    "zh": "我们诚挚邀请贵公司参加本次供应商洽谈会。",
+    "en": "We sincerely invite your company to participate in this supplier negotiation meeting.",
+    "ja": "貴社を本サプライヤー商談会にご招待申し上げます。",
+    "ko": "귀사를 본 공급업체 협의회에 초청합니다.",
+    "domain": "business",
+    "en_semantic": "We sincerely invite your company to participate in this supplier negotiation meeting.",
+    "en_literal": "We sincere invite your company participate this supplier negotiation meeting.",
+    "en_academic": "It is with the utmost sincerity that we extend to your esteemed organization a formal invitation to participate in the forthcoming supplier negotiation forum."
+  },
+  {
+    "zh": "根据市场调研数据，该产品的目标客群为25至35岁的城市白领。",
+    "en": "According to market research data, the target audience for this product is urban white-collar workers aged 25 to 35.",
+    "ja": "市場調査データによると、本製品のターゲット顧客は25〜35歳の都市部ホワイトカラー層である。",
+    "ko": "시장 조사 데이터에 따르면, 이 제품의 목표 고객층은 25세에서 35세 사이의 도시 화이트칼라입니다.",
+    "domain": "business",
+    "en_semantic": "According to market research data, the target audience for this product is urban white-collar workers aged 25 to 35.",
+    "en_literal": "According to market research data, this product target customer group is 25 to 35 age city white-collar worker.",
+    "en_academic": "In accordance with comprehensive market research findings, the target demographic for this product consists of urban white-collar professionals within the 25 to 35 age cohort."
+  },
+  {
+    "zh": "第三季度营收同比增长15%，超出分析师预期。",
+    "en": "Third-quarter revenue increased by 15% year-over-year, exceeding analyst expectations.",
+    "ja": "第3四半期の収益は前年同期比15%増加し、アナリストの予想を上回った。",
+    "ko": "3분기 매출이 전년 동기 대비 15% 증가하여 애널리스트 예상을 초과했습니다.",
+    "domain": "business",
+    "en_semantic": "Third-quarter revenue increased by 15% year-over-year, exceeding analyst expectations.",
+    "en_literal": "Third quarter revenue year-on-year increase 15%, exceed analyst expectation.",
+    "en_academic": "Third-quarter revenue figures registered a year-on-year increase of 15 percent, thereby surpassing the consensus forecasts of financial analysts."
+  },
+  {
+    "zh": "我们需要在下周五之前完成供应商评估报告。",
+    "en": "We need to complete the supplier evaluation report by next Friday.",
+    "ja": "来週の金曜日までにサプライヤー評価報告書を完成させる必要がある。",
+    "ko": "다음 주 금요일까지 공급업체 평가 보고서를 완성해야 합니다.",
+    "domain": "business",
+    "en_semantic": "We need to complete the supplier evaluation report by next Friday.",
+    "en_literal": "We need before next Friday complete supplier evaluation report.",
+    "en_academic": "It is imperative that the supplier evaluation report be completed and formally submitted prior to the close of business on Friday of the forthcoming week."
+  },
+  {
+    "zh": "合同条款中的保密协议适用于双方的全体员工。",
+    "en": "The confidentiality agreement in the contract terms applies to all employees of both parties.",
+    "ja": "契約条件の秘密保持契約は、両当事者の全従業員に適用される。",
+    "ko": "계약 조항의 비밀 유지 계약은 양 당사자의 모든 직원에게 적용됩니다.",
+    "domain": "business",
+    "en_semantic": "The confidentiality agreement in the contract terms applies to all employees of both parties.",
+    "en_literal": "Contract terms inside confidentiality agreement apply to both sides all employee.",
+    "en_academic": "The confidentiality provisions set forth within the contractual terms are binding upon the entirety of the workforce employed by both contracting parties."
+  },
+  {
+    "zh": "我们建议将交付周期从四周缩短至两周半。",
+    "en": "We recommend shortening the delivery cycle from four weeks to two and a half weeks.",
+    "ja": "納品サイクルを4週間から2週間半に短縮することを提案する。",
+    "ko": "배송 주기를 4주에서 2주 반으로 단축할 것을 제안합니다.",
+    "domain": "business",
+    "en_semantic": "We recommend shortening the delivery cycle from four weeks to two and a half weeks.",
+    "en_literal": "We suggest delivery cycle from four week shorten to two and half week.",
+    "en_academic": "A formal recommendation is hereby advanced to reduce the delivery cycle from its current duration of four weeks to a revised interval of two and a half weeks."
+  },
+  {
+    "zh": "本项目总预算为500万元，其中研发费用占40%。",
+    "en": "The total budget for this project is 5 million yuan, of which R&D expenses account for 40%.",
+    "ja": "本プロジェクトの総予算は500万元で、そのうち研究開発費が40%を占める。",
+    "ko": "본 프로젝트의 총 예산은 500만 위안이며, 그 중 연구개발비가 40%를 차지합니다.",
+    "domain": "business",
+    "en_semantic": "The total budget for this project is 5 million yuan, of which R&D expenses account for 40%.",
+    "en_literal": "This project total budget is 5 million yuan, R&D expense account for 40%.",
+    "en_academic": "The aggregate budgetary allocation for the project stands at five million yuan, with research and development expenditures constituting forty percent of the total fiscal outlay."
+  },
+  {
+    "zh": "请准备一份涵盖风险评估和市场分析的商业计划书。",
+    "en": "Please prepare a business plan covering risk assessment and market analysis.",
+    "ja": "リスク評価と市場分析を含む事業計画書を作成してください。",
+    "ko": "위험 평가와 시장 분석을 포함한 사업 계획서를 준비해 주십시오.",
+    "domain": "business",
+    "en_semantic": "Please prepare a business plan covering risk assessment and market analysis.",
+    "en_literal": "Please prepare one cover risk evaluation and market analysis business plan.",
+    "en_academic": "A comprehensive business plan encompassing both rigorous risk assessment and detailed market analysis is required for executive review."
+  },
+  {
+    "zh": "关于价格调整的协商会议定于下周一上午九点举行。",
+    "en": "The negotiation meeting regarding price adjustments is scheduled for next Monday at 9 a.m.",
+    "ja": "価格調整に関する協議会議は来週月曜日午前9時に予定されている。",
+    "ko": "가격 조정에 관한 협의 회의는 다음 주 월요일 오전 9시에 예정되어 있습니다.",
+    "domain": "business",
+    "en_semantic": "The negotiation meeting regarding price adjustments is scheduled for next Monday at 9 a.m.",
+    "en_literal": "About price adjustment negotiate meeting set for next Monday morning nine o'clock.",
+    "en_academic": "The consultative conference pertaining to price adjustments has been formally scheduled for 9:00 a.m. on Monday of the forthcoming week."
+  },
+  {
+    "zh": "该季度的客户留存率达到了历史新高的92%。",
+    "en": "The customer retention rate for this quarter reached a record high of 92%.",
+    "ja": "今四半期の顧客維持率は過去最高の92%に達した。",
+    "ko": "이번 분기의 고객 유지율은 사상 최고치인 92%에 도달했습니다.",
+    "domain": "business",
+    "en_semantic": "The customer retention rate for this quarter reached a record high of 92%.",
+    "en_literal": "This quarter customer keep rate reach history new high 92%.",
+    "en_academic": "The customer retention metric for the current fiscal quarter attained an unprecedented level of 92 percent, representing a historic organizational high."
+  },
+  {
+    "zh": "我们会根据市场反馈及时调整营销策略。",
+    "en": "We will adjust our marketing strategy promptly based on market feedback.",
+    "ja": "市場のフィードバックに基づいて、マーケティング戦略を適時に調整する。",
+    "ko": "시장 피드백에 따라 마케팅 전략을 적시에 조정하겠습니다.",
+    "domain": "business",
+    "en_semantic": "We will adjust our marketing strategy promptly based on market feedback.",
+    "en_literal": "We will according to market feedback timely adjust marketing strategy.",
+    "en_academic": "Marketing strategies shall be recalibrated in an expeditious manner predicated upon the continuous assimilation of incoming market intelligence."
+  },
+  {
+    "zh": "投标文件必须在下周三下午五点前提交。",
+    "en": "The bidding documents must be submitted by 5 p.m. next Wednesday.",
+    "ja": "入札書類は来週水曜日午後5時までに提出しなければならない。",
+    "ko": "입찰 서류는 다음 주 수요일 오후 5시까지 제출해야 합니다.",
+    "domain": "business",
+    "en_semantic": "The bidding documents must be submitted by 5 p.m. next Wednesday.",
+    "en_literal": "Bid document must before next Wednesday afternoon five o'clock submit.",
+    "en_academic": "All bidding documentation must be duly submitted no later than 5:00 p.m. on Wednesday of the ensuing week."
+  },
+  {
+    "zh": "本次合作将重点围绕供应链优化和成本控制两个方向展开。",
+    "en": "This cooperation will focus on two directions: supply chain optimization and cost control.",
+    "ja": "今回の協力は、サプライチェーン最適化とコスト管理の2つの方向に焦点を当てて展開される。",
+    "ko": "이번 협력은 공급망 최적화와 비용 통제라는 두 가지 방향에 중점을 두고 진행됩니다.",
+    "domain": "business",
+    "en_semantic": "This cooperation will focus on two directions: supply chain optimization and cost control.",
+    "en_literal": "This time cooperation will focus on supply chain optimization and cost control two direction.",
+    "en_academic": "The collaborative engagement shall be strategically centered upon two principal vectors: supply chain optimization and rigorous fiscal cost containment."
+  },
+  {
+    "zh": "请在签署前仔细阅读本协议的全部条款与条件。",
+    "en": "Please carefully read all terms and conditions of this agreement before signing.",
+    "ja": "署名前に本契約の全ての条件をよくお読みください。",
+    "ko": "서명하기 전에 본 계약의 모든 조건을 주의 깊게 읽어 주십시오.",
+    "domain": "business",
+    "en_semantic": "Please carefully read all terms and conditions of this agreement before signing.",
+    "en_literal": "Please before sign carefully read this agreement all terms and conditions.",
+    "en_academic": "The undersigned is respectfully advised to undertake a meticulous review of all contractual terms and conditions prior to the formal execution of this agreement."
+  },
+  {
+    "zh": "我们预计新产品将在年底前完成Beta测试。",
+    "en": "We expect the new product to complete beta testing by the end of the year.",
+    "ja": "新製品は年末までにベータテストを完了する見込みである。",
+    "ko": "신제품은 연말까지 베타 테스트를 완료할 예정입니다.",
+    "domain": "business",
+    "en_semantic": "We expect the new product to complete beta testing by the end of the year.",
+    "en_literal": "We expect new product before year end complete beta test.",
+    "en_academic": "It is anticipated that the new product will successfully complete its beta testing phase prior to the conclusion of the current calendar year."
+  },
+  {
+    "zh": "经过多轮谈判，双方就合作框架达成了初步共识。",
+    "en": "After multiple rounds of negotiations, both parties reached a preliminary consensus on the cooperation framework.",
+    "ja": "複数回の交渉を経て、双方は協力枠組みについて初步的な合意に達した。",
+    "ko": "여러 차례의 협상을 거쳐 양측은 협력 프레임워크에 대한 초기 합의에 도달했습니다.",
+    "domain": "business",
+    "en_semantic": "After multiple rounds of negotiations, both parties reached a preliminary consensus on the cooperation framework.",
+    "en_literal": "After many round negotiation, both side reach preliminary consensus on cooperation framework.",
+    "en_academic": "Subsequent to multiple iterative rounds of negotiation, the two parties arrived at a preliminary consensus regarding the overarching cooperation framework."
+  },
+  {
+    "zh": "财务报表已通过外部审计，未发现重大差错。",
+    "en": "The financial statements have passed external audit with no material errors found.",
+    "ja": "財務諸表は外部監査を通過し、重大な誤りは発見されなかった。",
+    "ko": "재무제표가 외부 감사를 통과했으며, 중대한 오류는 발견되지 않았습니다.",
+    "domain": "business",
+    "en_semantic": "The financial statements have passed external audit with no material errors found.",
+    "en_literal": "Financial statement already pass external audit, not find major error.",
+    "en_academic": "The financial statements have successfully undergone external auditing procedures without the identification of any material discrepancies or irregularities."
+  },
+  {
+    "zh": "我们将提供为期三年的售后技术支持和维护服务。",
+    "en": "We will provide three years of after-sales technical support and maintenance services.",
+    "ja": "3年間のアフターセールス技術サポートとメンテナンスサービスを提供する。",
+    "ko": "3년간의 사후 기술 지원 및 유지보수 서비스를 제공할 것입니다.",
+    "domain": "business",
+    "en_semantic": "We will provide three years of after-sales technical support and maintenance services.",
+    "en_literal": "We will provide three year after-sale technical support and maintenance service.",
+    "en_academic": "A comprehensive three-year package of after-sales technical support and maintenance services shall be provided to the client."
+  },
+  {
+    "zh": "人力资源部正在招募具有跨境电商经验的高级运营经理。",
+    "en": "The human resources department is recruiting a senior operations manager with cross-border e-commerce experience.",
+    "ja": "人事部は越境EC経験を持つシニアオペレーションマネージャーを募集している。",
+    "ko": "인사부에서 국경 간 전자상거래 경험이 있는 시니어 운영 관리자를 모집하고 있습니다.",
+    "domain": "business",
+    "en_semantic": "The human resources department is recruiting a senior operations manager with cross-border e-commerce experience.",
+    "en_literal": "HR department is recruiting have cross-border e-commerce experience senior operation manager.",
+    "en_academic": "The human resources division is actively seeking to recruit a senior operations manager possessing demonstrable expertise within the cross-border e-commerce sector."
+  },
+  {
+    "zh": "销售团队在上一财年超额完成了业绩指标的12%。",
+    "en": "The sales team exceeded the performance target by 12% in the last fiscal year.",
+    "ja": "営業チームは前会計年度に業績指標を12%超過達成した。",
+    "ko": "영업팀이 지난 회계연도에 실적 목표를 12% 초과 달성했습니다.",
+    "domain": "business",
+    "en_semantic": "The sales team exceeded the performance target by 12% in the last fiscal year.",
+    "en_literal": "Sales team in last fiscal year exceed performance target 12%.",
+    "en_academic": "The sales division surpassed the prescribed performance targets by a margin of twelve percent during the preceding fiscal year."
+  },
+  {
+    "zh": "董事会批准了下一阶段的海外市场扩张计划。",
+    "en": "The board of directors approved the next phase of the overseas market expansion plan.",
+    "ja": "取締役会は次段階の海外市場拡大計画を承認した。",
+    "ko": "이사회가 다음 단계의 해외 시장 확장 계획을 승인했습니다.",
+    "domain": "business",
+    "en_semantic": "The board of directors approved the next phase of the overseas market expansion plan.",
+    "en_literal": "Board of director approve next phase overseas market expansion plan.",
+    "en_academic": "The board of directors has formally ratified and approved the subsequent phase of the overseas market expansion initiative."
+  },
+  {
+    "zh": "客户投诉率在过去六个月内持续下降至0.5%以下。",
+    "en": "The customer complaint rate has consistently dropped below 0.5% over the past six months.",
+    "ja": "顧客苦情率は過去6ヶ月間継続的に低下し、0.5%を下回った。",
+    "ko": "고객 불만율이 지난 6개월 동안 지속적으로 감소하여 0.5% 미만으로 떨어졌습니다.",
+    "domain": "business",
+    "en_semantic": "The customer complaint rate has consistently dropped below 0.5% over the past six months.",
+    "en_literal": "Customer complaint rate in past six month continuous drop to below 0.5%.",
+    "en_academic": "The customer complaint incidence rate has exhibited a consistent downward trajectory, declining to below 0.5 percent over the preceding six-month period."
+  },
+  {
+    "zh": "初步尽职调查未发现任何实质性法律风险。",
+    "en": "Preliminary due diligence did not identify any material legal risks.",
+    "ja": "初期デューデリジェンスでは実質的な法的リスクは特定されなかった。",
+    "ko": "예비 실사에서 실질적인 법적 위험이 발견되지 않았습니다.",
+    "domain": "business",
+    "en_semantic": "Preliminary due diligence did not identify any material legal risks.",
+    "en_literal": "Preliminary due diligence not discover any material legal risk.",
+    "en_academic": "The preliminary due diligence investigation did not uncover any substantive legal risks warranting organizational concern or remedial action."
+  },
+  {
+    "zh": "物流部门正在评估三个候选仓库的地理位置与运营成本。",
+    "en": "The logistics department is evaluating the geographical locations and operating costs of three candidate warehouses.",
+    "ja": "物流部門は3つの候補倉庫の地理的位置と運営コストを評価中である。",
+    "ko": "물류 부서에서 세 개의 후보 창고의 지리적 위치와 운영 비용을 평가하고 있습니다.",
+    "domain": "business",
+    "en_semantic": "The logistics department is evaluating the geographical locations and operating costs of three candidate warehouses.",
+    "en_literal": "Logistics department is evaluate three candidate warehouse geographic position and operation cost.",
+    "en_academic": "The logistics division is currently engaged in the evaluation of the geographic positioning and operational cost structures of three candidate warehouse facilities."
+  },
+  {
+    "zh": "公司计划在未来两年内将海外业务占比提升至30%。",
+    "en": "The company plans to increase the proportion of overseas business to 30% within the next two years.",
+    "ja": "同社は今後2年以内に海外事業の比率を30%まで引き上げる計画である。",
+    "ko": "회사는 향후 2년 내에 해외 사업 비중을 30%까지 끌어올릴 계획입니다.",
+    "domain": "business",
+    "en_literal": "Company plan in future two year raise overseas business proportion to 30%.",
+    "en_academic": "The corporation intends to elevate the proportion of overseas business to thirty percent within the forthcoming biennial period.",
+    "en_semantic": "The company plans to increase the proportion of overseas business to 30% within the next two years."
+  },
+  {
+    "zh": "新产品的市场推广方案已经获得管理层批准。",
+    "en": "The marketing plan for the new product has been approved by management.",
+    "ja": "新製品の市場プロモーション案は経営陣の承認を得ている。",
+    "ko": "신제품의 마케팅 방안이 경영진의 승인을 받았습니다.",
+    "domain": "business",
+    "en_literal": "New product market promotion plan already obtain management approval.",
+    "en_academic": "The market promotion strategy for the new product line has secured formal approval from the senior management echelon.",
+    "en_semantic": "The marketing plan for the new product has been approved by management."
+  },
+  {
+    "zh": "我们需要重新评估供应商的资质以确保产品质量。",
+    "en": "We need to reassess the supplier's qualifications to ensure product quality.",
+    "ja": "製品品質を確保するためにサプライヤーの資格を再評価する必要がある。",
+    "ko": "제품 품질을 보장하기 위해 공급업체의 자격을 재평가해야 합니다.",
+    "domain": "business",
+    "en_literal": "We need re-evaluate supplier qualification to ensure product quality.",
+    "en_academic": "A reassessment of supplier qualifications is necessitated in order to guarantee the maintenance of requisite product quality standards.",
+    "en_semantic": "We need to reassess the supplier's qualifications to ensure product quality."
+  },
+  {
+    "zh": "本次招标采用公开竞标方式，欢迎符合条件的供应商参与。",
+    "en": "This tender adopts an open bidding method, and qualified suppliers are welcome to participate.",
+    "ja": "今回の入札は公開入札方式を採用しており、条件を満たすサプライヤーの参加を歓迎する。",
+    "ko": "이번 입찰은 공개 입찰 방식을 채택하며, 자격을 갖춘 공급업체의 참여를 환영합니다.",
+    "domain": "business",
+    "en_literal": "This time bid adopt open bid method, welcome qualified supplier participate.",
+    "en_academic": "The present tender adopts an open competitive bidding methodology, and qualified supplier organizations are cordially welcomed to submit their participation.",
+    "en_semantic": "This tender adopts an open bidding method, and qualified suppliers are welcome to participate."
+  },
+  {
+    "zh": "公司决定对核心员工实施股权激励计划。",
+    "en": "The company has decided to implement an equity incentive plan for core employees.",
+    "ja": "同社は中核従業員に対して株式報酬制度を実施することを決定した。",
+    "ko": "회사는 핵심 직원에 대해 주식 인센티브 계획을 시행하기로 결정했습니다.",
+    "domain": "business",
+    "en_literal": "Company decide to core employee implement equity incentive plan.",
+    "en_academic": "The corporation has resolved to implement an equity-based incentive scheme targeting its cadre of core employees.",
+    "en_semantic": "The company has decided to implement an equity incentive plan for core employees."
+  },
+  {
+    "zh": "下半年的工作重点是拓展东南亚市场。",
+    "en": "The focus of work in the second half of the year is to expand into the Southeast Asian market.",
+    "ja": "下半期の業務の重点は東南アジア市場の開拓である。",
+    "ko": "하반기 업무 중점은 동남아시아 시장 확장입니다.",
+    "domain": "business",
+    "en_literal": "Company plan in future two years raise overseas business proportion to 30%.",
+    "en_academic": "The corporation intends to hold a meeting for all staff members on Monday of the week following the present one.",
+    "en_semantic": "The focus of work in the second half of the year is to expand into the Southeast Asian market."
+  },
+  {
+    "zh": "请各部门负责人于本周五前提交年度工作总结。",
+    "en": "Department heads are requested to submit annual work summaries by this Friday.",
+    "ja": "各部門の責任者は今週金曜日までに年間業務総括を提出してください。",
+    "ko": "각 부서 책임자는 이번 주 금요일까지 연간 업무 총괄을 제출해 주십시오.",
+    "domain": "business",
+    "en_literal": "New product market promotion plan already receive management level approval.",
+    "en_academic": "The corporate website is presently undergoing a comprehensive redesign process, with the launch being anticipated within a two-week timeframe.",
+    "en_semantic": "Department heads are requested to submit annual work summaries by this Friday."
+  },
+  {
+    "zh": "我们的竞争优势在于技术创新和优质的客户服务。",
+    "en": "Our competitive advantages lie in technological innovation and quality customer service.",
+    "ja": "当社の競争優位性は技術革新と高品質な顧客サービスにある。",
+    "ko": "우리의 경쟁 우위는 기술 혁신과 우수한 고객 서비스에 있습니다.",
+    "domain": "business",
+    "en_literal": "Our competitive advantage lie in technology innovation and quality customer service.",
+    "en_academic": "It is deemed imperative that the present contract be subjected to thorough legal departmental review and scrutiny prior to its formal execution.",
+    "en_semantic": "Our competitive advantages lie in technological innovation and quality customer service."
+  },
+  {
+    "zh": "该项目的投资回报周期预计为三年。",
+    "en": "The estimated return on investment period for this project is three years.",
+    "ja": "本プロジェクトの投資回収期間は3年と見込まれている。",
+    "ko": "본 프로젝트의 투자 회수 기간은 3년으로 예상됩니다.",
+    "domain": "business",
+    "en_literal": "estimated return on investment period for this project is three years.",
+    "en_academic": "The corporation has formulated plans to unveil three new product offerings during the first quarter of the upcoming calendar year.",
+    "en_semantic": "The estimated return on investment period for this project is three years."
+  },
+  {
+    "zh": "双方就合作细节进行了深入交流并达成了多项共识。",
+    "en": "Both parties had in-depth exchanges on cooperation details and reached multiple consensuses.",
+    "ja": "双方は協力の詳細について深く交流し、複数の合意に達した。",
+    "ko": "양측은 협력 세부 사항에 대해 심도 있는 교류를 하고 여러 합의에 도달했습니다.",
+    "domain": "business",
+    "en_literal": "Both sides on cooperation detail have deep exchange and reach many consensus.",
+    "en_academic": "Customer satisfaction metrics pertaining to after-sales service provision have attained a level of ninety-six percent.",
+    "en_semantic": "Both parties had in-depth exchanges on cooperation details and reached multiple consensuses."
+  },
+  {
+    "zh": "公司正在积极推进数字化转型战略。",
+    "en": "The company is actively advancing its digital transformation strategy.",
+    "ja": "当社はデジタルトランスフォーメーション戦略を積極的に推進している。",
+    "ko": "회사는 디지털 전환 전략을 적극적으로 추진하고 있습니다.",
+    "domain": "business",
+    "en_literal": "company is actively advancing its digital transformation strategy.",
+    "en_academic": "It is deemed necessary that the annual budgetary compilation process be completed prior to the conclusion of the forthcoming weekend.",
+    "en_semantic": "The company is actively advancing its digital transformation strategy."
+  },
+  {
+    "zh": "本次促销活动的效果超出了预期目标。",
+    "en": "The promotional campaign's results exceeded the expected targets.",
+    "ja": "今回の販促キャンペーンの効果は予想目標を上回った。",
+    "ko": "이번 프로모션 캠페인의 효과가 예상 목표를 초과했습니다.",
+    "domain": "business",
+    "en_literal": "promotional campaign's results exceeded expected targets.",
+    "en_academic": "The supplier organization has provided formal confirmation regarding their capacity to effect timely delivery of the requisite raw materials.",
+    "en_semantic": "The promotional campaign's results exceeded the expected targets."
+  },
+  {
+    "zh": "我们需要加强团队协作以提高项目执行效率。",
+    "en": "We need to strengthen team collaboration to improve project execution efficiency.",
+    "ja": "プロジェクト実行効率を向上させるためにチーム協力を強化する必要がある。",
+    "ko": "프로젝트 실행 효율성을 높이기 위해 팀 협력을 강화해야 합니다.",
+    "domain": "business",
+    "en_literal": "We need strengthen team cooperation to improve project execution efficiency.",
+    "en_academic": "The marketing department is presently engaged in the preparation of the comprehensive plan for the new product launch event.",
+    "en_semantic": "We need to strengthen team collaboration to improve project execution efficiency."
+  },
+  {
+    "zh": "公司年会在三亚举办，请各位准时参加。",
+    "en": "The annual company meeting will be held in Sanya; please attend on time.",
+    "ja": "社内年次総会は三亜で開催されます。皆様のご参加をお待ちしております。",
+    "ko": "회사 연례 회의가 싼야에서 개최됩니다. 모두 정시에 참석해 주십시오.",
+    "domain": "business",
+    "en_literal": "Company annual meeting in Sanya hold, please all on time attend.",
+    "en_academic": "The corporation has formulated plans to deploy advertising materials for promotional purposes.",
+    "en_semantic": "The annual company meeting will be held in Sanya; please attend on time."
+  },
+  {
+    "zh": "合同中的违约责任条款需要进一步明确。",
+    "en": "The breach of contract liability clauses in the contract need further clarification.",
+    "ja": "契約書の違約責任条項はさらなる明確化が必要である。",
+    "ko": "계약서의 위약 책임 조항은 추가 명확화가 필요합니다.",
+    "domain": "business",
+    "en_literal": "breach of contract liability clauses in contract need further clarification.",
+    "en_academic": "The marketing department is hereby directed to expedite the submission of the promotional plan for the forthcoming quarter.",
+    "en_semantic": "The breach of contract liability clauses in the contract need further clarification."
+  },
+  {
+    "zh": "我们已经与多家潜在合作伙伴建立了初步联系。",
+    "en": "We have established initial contact with multiple potential partners.",
+    "ja": "我々はすでに複数の潜在的パートナーと初步的な連絡を確立している。",
+    "ko": "우리는 이미 여러 잠재적 파트너와 초기 연락을 구축했습니다.",
+    "domain": "business",
+    "en_literal": "We already with several potential cooperation partner establish initial contact.",
+    "en_academic": "The sustained and steady growth trajectory of the corporation's financial performance is directly attributable to the effectiveness of its management team.",
+    "en_semantic": "We have established initial contact with multiple potential partners."
+  },
+  {
+    "zh": "请财务部门尽快完成季度报表的编制工作。",
+    "en": "Please have the finance department complete the preparation of the quarterly report as soon as possible.",
+    "ja": "財務部門は四半期報告書の作成を早急に完了させてください。",
+    "ko": "재무 부서에서 분기 보고서 작성을 조속히 완료해 주십시오.",
+    "domain": "business",
+    "en_literal": "Please finance department as soon as possible finish quarter report prepare work.",
+    "en_academic": "It is hereby affirmed that the full payment amount shall be remitted in a punctual manner in strict accordance with the contractual stipulations.",
+    "en_semantic": "Please have the finance department complete the preparation of the quarterly report as soon as possible."
+  },
+  {
+    "zh": "市场环境的变化需要我们及时调整经营策略。",
+    "en": "Changes in the market environment require us to adjust our business strategy in a timely manner.",
+    "ja": "市場環境の変化により、我々は経営戦略を適時に調整する必要がある。",
+    "ko": "시장 환경의 변화에 따라 우리는 경영 전략을 적시에 조정해야 합니다.",
+    "domain": "business",
+    "en_literal": "Changes in market environment require us to adjust our business strategy in a timely manner.",
+    "en_academic": "The corporation is presently engaged in an evaluation of the feasibility of acquiring the startup enterprise in question.",
+    "en_semantic": "Changes in the market environment require us to adjust our business strategy in a timely manner."
+  },
+  {
+    "zh": "公司正在考虑引入战略投资者以加速发展。",
+    "en": "The company is considering introducing strategic investors to accelerate development.",
+    "ja": "当社は発展を加速するために戦略的投資家の導入を検討している。",
+    "ko": "회사는 발전을 가속화하기 위해 전략적 투자자 도입을 고려하고 있습니다.",
+    "domain": "business",
+    "en_literal": "Company is consider introduce strategic investor to speed up development.",
+    "en_academic": "The project timeline necessitates recalibration and adjustment in accordance with the prevailing actual circumstances.",
+    "en_semantic": "The company is considering introducing strategic investors to accelerate development."
+  },
+  {
+    "zh": "新办公楼的装修工程预计下月完工。",
+    "en": "The renovation of the new office building is expected to be completed next month.",
+    "ja": "新オフィスビルの改修工事は来月完了する見込みである。",
+    "ko": "새 사무실 건물의 리노베이션 공사가 다음 달 완공될 예정입니다.",
+    "domain": "business",
+    "en_literal": "New office building renovate project expect next month finish.",
+    "en_academic": "The renovation of the novel office building is expected to be completed next month.",
+    "en_semantic": "The renovation of the new office building is expected to be completed next month."
+  },
+  {
+    "zh": "客户满意度调查显示我们的服务质量有了明显提升。",
+    "en": "Customer satisfaction surveys show that our service quality has improved significantly.",
+    "ja": "顧客満足度調査によると、当社のサービス品質が明らかに向上したことが示されている。",
+    "ko": "고객 만족도 조사 결과 우리의 서비스 품질이 현저히 향상되었음을 보여줍니다.",
+    "domain": "business",
+    "en_literal": "Customer satisfaction survey show our service quality have obvious improvement.",
+    "en_academic": "It is deemed imperative that supply chain management processes be optimized to effect a reduction in operational expenditure.",
+    "en_semantic": "Customer satisfaction surveys show that our service quality has improved significantly."
+  },
+  {
+    "zh": "该方案的实施需要各部门的密切配合。",
+    "en": "The implementation of this plan requires close cooperation among all departments.",
+    "ja": "本計画の実施には各部門の緊密な連携が必要である。",
+    "ko": "이 방안의 시행에는 각 부서의 긴밀한 협조가 필요합니다.",
+    "domain": "business",
+    "en_literal": "This plan implement need each department close cooperate.",
+    "en_academic": "The corporation is actively engaged in the recruitment of senior executive personnel possessing extensive international market experience.",
+    "en_semantic": "The implementation of this plan requires close cooperation among all departments."
+  },
+  {
+    "zh": "公司决定将年度利润的20%用于研发投入。",
+    "en": "The company has decided to allocate 20% of annual profits to R&D investment.",
+    "ja": "同社は年間利益の20%を研究開発投資に充てることを決定した。",
+    "ko": "회사는 연간 이익의 20%를 연구개발 투자에 할당하기로 결정했습니다.",
+    "domain": "business",
+    "en_literal": "Company decide annual profit 20% use for R&D investment.",
+    "en_academic": "The product in question has successfully attained ISO9001 quality management system certification.",
+    "en_semantic": "The company has decided to allocate 20% of annual profits to R&D investment."
+  },
+  {
+    "zh": "请各位提前准备好会议所需的演示材料。",
+    "en": "Please prepare the presentation materials needed for the meeting in advance.",
+    "ja": "会議に必要なプレゼンテーション資料を事前にご準備ください。",
+    "ko": "회의에 필요한 발표 자료를 미리 준비해 주십시오.",
+    "domain": "business",
+    "en_literal": "Please everyone ahead prepare meeting need presentation material.",
+    "en_academic": "The corporation accords considerable importance to employee training and development, allocating substantial resources toward talent cultivation on an annual basis.",
+    "en_semantic": "Please prepare the presentation materials needed for the meeting in advance."
+  },
+  {
+    "zh": "这一季度的销售额环比增长了8个百分点。",
+    "en": "Sales for this quarter increased by 8 percentage points compared to the previous quarter.",
+    "ja": "今四半期の売上高は前期比8ポイント増加した。",
+    "ko": "이번 분기 매출액이 전 분기 대비 8퍼센트 포인트 증가했습니다.",
+    "domain": "business",
+    "en_literal": "Sales for this quarter increased by 8 percentage points compared to previous quarter.",
+    "en_academic": "The corporate brand image enjoys a high degree of recognition and awareness within the consumer consciousness.",
+    "en_semantic": "Sales for this quarter increased by 8 percentage points compared to the previous quarter."
+  },
+  {
+    "zh": "风险管理部门已对潜在威胁进行了全面评估。",
+    "en": "The risk management department has conducted a comprehensive assessment of potential threats.",
+    "ja": "リスク管理部門は潜在的脅威の全面的な評価を実施した。",
+    "ko": "위험 관리 부서에서 잠재적 위협에 대한 전면적 평가를 실시했습니다.",
+    "domain": "business",
+    "en_literal": "risk management department has conduct a comprehensive assessment of potential threats.",
+    "en_academic": "A comprehensive reassessment of the product pricing strategy shall be undertaken.",
+    "en_semantic": "The risk management department has conducted a comprehensive assessment of potential threats."
+  },
+  {
+    "zh": "合作伙伴对我们的专业能力给予了高度评价。",
+    "en": "Our partners have given high praise to our professional capabilities.",
+    "ja": "パートナーは我々の専門能力に対して高い評価を与えた。",
+    "ko": "파트너들이 우리의 전문 역량에 대해 높은 평가를 주었습니다.",
+    "domain": "business",
+    "en_literal": "Cooperation partner to our professional ability give high evaluation.",
+    "en_academic": "The corporation is actively seeking collaborative partnerships with academic institutions for the purpose of undertaking industry-academia-research projects.",
+    "en_semantic": "Our partners have given high praise to our professional capabilities."
+  },
+  {
+    "zh": "公司正在积极推进企业社会责任项目。",
+    "en": "The company is actively advancing corporate social responsibility projects.",
+    "ja": "同社は企業の社会的責任プロジェクトを積極的に推進している。",
+    "ko": "회사는 기업의 사회적 책임 프로젝트를 적극적으로 추진하고 있습니다.",
+    "domain": "business",
+    "en_literal": "company is actively advancing corporate social responsibility projects.",
+    "en_academic": "The objectives designated for the initial phase of the project have been successfully accomplished.",
+    "en_semantic": "The company is actively advancing corporate social responsibility projects."
+  },
+  {
+    "zh": "本次裁员计划将影响约5%的员工。",
+    "en": "This layoff plan will affect approximately 5% of employees.",
+    "ja": "今回の人員削減計画は約5%の従業員に影響を与える。",
+    "ko": "이번 감원 계획은 약 5%의 직원에게 영향을 미칠 것입니다.",
+    "domain": "business",
+    "en_literal": "This time layoff plan will affect about 5% employee.",
+    "en_academic": "It is deemed essential that a more efficient and streamlined internal communication mechanism be established.",
+    "en_semantic": "This layoff plan will affect approximately 5% of employees."
+  },
+  {
+    "zh": "公司未来五年的战略目标是成为行业领导者。",
+    "en": "The company's strategic goal for the next five years is to become an industry leader.",
+    "ja": "同社の今後5年間の戦略目標は業界リーダーになることである。",
+    "ko": "회사의 향후 5년 전략 목표는 업계 리더가 되는 것입니다.",
+    "domain": "business",
+    "en_literal": "Company is actively promote corporate social responsibility project.",
+    "en_academic": "The corporation is presently engaged in an evaluation of the feasibility of relocating its production facilities to the Southeast Asian region.",
+    "en_semantic": "The company's strategic goal for the next five years is to become an industry leader."
+  },
+  {
+    "zh": "新产品的预售情况非常理想，超出了预期。",
+    "en": "Pre-sales of the new product are very promising, exceeding expectations.",
+    "ja": "新製品の予約販売状況は非常に良好で、予想を上回っている。",
+    "ko": "신제품의 사전 판매 상황이 매우 양호하여 예상을 초과했습니다.",
+    "domain": "business",
+    "en_literal": "Pre-sales of new product are very promising, exceeding expectations.",
+    "en_academic": "Pre-sales of the novel product are highly promising, exceeding expectations.",
+    "en_semantic": "Pre-sales of the new product are very promising, exceeding expectations."
+  },
+  {
+    "zh": "我们已经建立起完善的售后服务体系。",
+    "en": "We have established a comprehensive after-sales service system.",
+    "ja": "我々はすでに完備されたアフターサービス体制を構築している。",
+    "ko": "우리는 이미 완비된 사후 서비스 체계를 구축했습니다.",
+    "domain": "business",
+    "en_literal": "We already establish complete after-sale service system.",
+    "en_academic": "The core values of the corporation are defined as integrity, innovation, and mutually beneficial cooperation.",
+    "en_semantic": "We have established a comprehensive after-sales service system."
+  },
+  {
+    "zh": "该协议的有效期为三年，期满后可续签。",
+    "en": "This agreement is valid for three years and can be renewed upon expiration.",
+    "ja": "本契約の有効期間は3年間で、満了後に更新可能である。",
+    "ko": "본 계약의 유효 기간은 3년이며, 만료 후 갱신할 수 있습니다.",
+    "domain": "business",
+    "en_literal": "This agreement valid period is three years, after expire can renew.",
+    "en_academic": "Given the increasingly intense nature of market competition, it is imperative that the corporation continuously enhance its competitive positioning.",
+    "en_semantic": "This agreement is valid for three years and can be renewed upon expiration."
+  },
+  {
+    "zh": "公司正在考虑在海外设立新的分支机构。",
+    "en": "The company is considering establishing new branches overseas.",
+    "ja": "同社は海外に新しい支店を設立することを検討している。",
+    "ko": "회사는 해외에 새로운 지사를 설립하는 것을 고려하고 있습니다.",
+    "domain": "business",
+    "en_literal": "company is considering establishing new branches overseas.",
+    "en_academic": "The company is considering establishing novel branches overseas.",
+    "en_semantic": "The company is considering establishing new branches overseas."
+  },
+  {
+    "zh": "我们将加大在人工智能领域的研发投入。",
+    "en": "We will increase R&D investment in the field of artificial intelligence.",
+    "ja": "我々は人工知能分野への研究開発投資を拡大する。",
+    "ko": "우리는 인공지능 분야에 대한 연구개발 투자를 확대할 것입니다.",
+    "domain": "business",
+    "en_literal": "We will increase R&D investment in field of artificial intelligence.",
+    "en_academic": "The operating performance for the current quarter has attained the highest level recorded for the corresponding period in the organization's history.",
+    "en_semantic": "We will increase R&D investment in the field of artificial intelligence."
+  },
+  {
+    "zh": "请市场部尽快提交下季度的推广方案。",
+    "en": "Please have the marketing department submit the promotion plan for next quarter as soon as possible.",
+    "ja": "マーケティング部は来季のプロモーション案を早急に提出してください。",
+    "ko": "마케팅 부서에서 다음 분기 프로모션 방안을 조속히 제출해 주십시오.",
+    "domain": "business",
+    "en_literal": "Please have marketing department submit promotion plan for next quarter as soon as possible.",
+    "en_academic": "The chairman is scheduled to announce the corporation's new strategic development direction at the meeting to be convened tomorrow.",
+    "en_semantic": "Please have the marketing department submit the promotion plan for next quarter as soon as possible."
+  },
+  {
+    "zh": "公司业绩的稳步增长得益于优秀的管理团队。",
+    "en": "The steady growth of the company is attributed to its excellent management team.",
+    "ja": "同社の着実な成長は優秀な経営チームによるものである。",
+    "ko": "회사 실적의 꾸준한 성장은 우수한 경영진 덕분입니다.",
+    "domain": "business",
+    "en_literal": "steady growth of company is attributed to its excellent management team.",
+    "en_academic": "It is hereby announced that an all-staff general meeting will be convened on the Monday of the forthcoming week.",
+    "en_semantic": "The steady growth of the company is attributed to its excellent management team."
+  },
+  {
+    "zh": "我们将根据合同约定按时支付全部款项。",
+    "en": "We will pay the full amount on time according to the contract agreement.",
+    "ja": "契約の定めに従い、全額を期日通りにお支払いいたします。",
+    "ko": "계약 약정에 따라 전액을 제때 지급하겠습니다.",
+    "domain": "business",
+    "en_literal": "We will pay full amount on time according to contract agreement.",
+    "en_academic": "The corporate website is currently undergoing a comprehensive redesign and is anticipated to be launched within a two-week period.",
+    "en_semantic": "We will pay the full amount on time according to the contract agreement."
+  },
+  {
+    "zh": "公司正在评估并购该初创企业的可行性。",
+    "en": "The company is evaluating the feasibility of acquiring this startup.",
+    "ja": "同社は当該スタートアップ企業の買収の実現可能性を評価中である。",
+    "ko": "회사는 이 스타트업 인수의 타당성을 평가하고 있습니다.",
+    "domain": "business",
+    "en_literal": "company is evaluating feasibility of acquiring this startup.",
+    "en_academic": "It is mandated that the present contract undergo thorough review by the legal department prior to the execution of any signatures.",
+    "en_semantic": "The company is evaluating the feasibility of acquiring this startup."
+  },
+  {
+    "zh": "该项目的时间表需要根据实际情况进行调整。",
+    "en": "The timeline for this project needs to be adjusted according to the actual situation.",
+    "ja": "本プロジェクトのスケジュールは実際の状況に応じて調整する必要がある。",
+    "ko": "본 프로젝트의 일정은 실제 상황에 따라 조정이 필요합니다.",
+    "domain": "business",
+    "en_literal": "timeline for this project needs to be adjusted according to actual situation.",
+    "en_academic": "The corporation has formulated plans to launch three new product offerings during the first quarter of the upcoming calendar year.",
+    "en_semantic": "The timeline for this project needs to be adjusted according to the actual situation."
+  },
+  {
+    "zh": "消费者对环保产品的需求正在持续增长。",
+    "en": "Consumer demand for eco-friendly products is continuously growing.",
+    "ja": "環境に配慮した製品に対する消費者需要は持続的に増加している。",
+    "ko": "친환경 제품에 대한 소비자 수요가 지속적으로 증가하고 있습니다.",
+    "domain": "business",
+    "en_literal": "Consumer to environmental product demand is continuously growing.",
+    "en_academic": "Customer satisfaction levels pertaining to after-sales service provision have been measured at ninety-six percent.",
+    "en_semantic": "Consumer demand for eco-friendly products is continuously growing."
+  },
+  {
+    "zh": "我们需要优化供应链管理以降低运营成本。",
+    "en": "We need to optimize supply chain management to reduce operational costs.",
+    "ja": "運営コストを削減するためにサプライチェーン管理を最適化する必要がある。",
+    "ko": "운영 비용을 절감하기 위해 공급망 관리를 최적화해야 합니다.",
+    "domain": "business",
+    "en_literal": "We need optimize supply chain management to reduce operation cost.",
+    "en_academic": "The annual budget compilation process must be completed and finalized prior to the weekend of the forthcoming week.",
+    "en_semantic": "We need to optimize supply chain management to reduce operational costs."
+  },
+  {
+    "zh": "公司正在招募具有国际市场经验的高级管理人员。",
+    "en": "The company is recruiting senior executives with international market experience.",
+    "ja": "同社は国際市場経験を持つ上級管理職を募集している。",
+    "ko": "회사는 국제 시장 경험이 있는 고위 관리자를 모집하고 있습니다.",
+    "domain": "business",
+    "en_literal": "company is recruiting senior executives with international market experience.",
+    "en_academic": "The supplier organization has provided formal confirmation regarding their capacity to deliver the requisite raw materials in accordance with the specified schedule.",
+    "en_semantic": "The company is recruiting senior executives with international market experience."
+  },
+  {
+    "zh": "该产品已通过ISO9001质量管理体系认证。",
+    "en": "This product has passed ISO9001 quality management system certification.",
+    "ja": "本製品はISO9001品質マネジメントシステム認証を取得している。",
+    "ko": "본 제품은 ISO9001 품질경영시스템 인증을 통과했습니다.",
+    "domain": "business",
+    "en_literal": "Market competition day by day intense, we need continuously improve own competitiveness.",
+    "en_academic": "The marketing department is presently engaged in the preparation of materials for the new product launch presentation.",
+    "en_semantic": "This product has passed ISO9001 quality management system certification."
+  },
+  {
+    "zh": "公司重视员工培训，每年投入大量资源用于人才培养。",
+    "en": "The company values employee training and invests significant resources in talent development every year.",
+    "ja": "当社は従業員研修を重視し、毎年人材育成に多大なリソースを投入している。",
+    "ko": "회사는 직원 교육을 중시하며, 매년 인재 양성에 많은 자원을 투입합니다.",
+    "domain": "business",
+    "en_literal": "Company already with several investment institution reach financing intention.",
+    "en_academic": "Market demand is observed to be undergoing rapid expansion.",
+    "en_semantic": "The company values employee training and invests significant resources in talent development every year."
+  },
+  {
+    "zh": "公司的品牌形象在消费者心中具有很高的认知度。",
+    "en": "The company's brand image enjoys high recognition among consumers.",
+    "ja": "同社のブランドイメージは消費者の間で高い認知度を持っている。",
+    "ko": "회사의 브랜드 이미지는 소비자들 사이에서 높은 인지도를 가지고 있습니다.",
+    "domain": "business",
+    "en_literal": "company's brand image enjoys high recognition among consumers.",
+    "en_academic": "The corporation is currently formulating plans to establish a new branch in a different geographical location.",
+    "en_semantic": "The company's brand image enjoys high recognition among consumers."
+  },
+  {
+    "zh": "我们将对产品定价策略进行重新评估。",
+    "en": "We will reassess the product pricing strategy.",
+    "ja": "製品価格戦略を再評価する。",
+    "ko": "제품 가격 책정 전략을 재평가하겠습니다.",
+    "domain": "business",
+    "en_literal": "We will reassess product pricing strategy.",
+    "en_academic": "It is the intention of the corporation to significantly increase research and development investment in the domain of artificial intelligence.",
+    "en_semantic": "We will reassess the product pricing strategy."
+  },
+  {
+    "zh": "公司正在寻求与高校合作开展产学研项目。",
+    "en": "The company is seeking cooperation with universities on industry-academia-research projects.",
+    "ja": "同社は大学との産学研連携プロジェクトの協力を模索している。",
+    "ko": "회사는 대학과의 산학연 협력 프로젝트를 모색하고 있습니다.",
+    "domain": "business",
+    "en_literal": "company is seeking cooperation with universities on industry-academia-research projects.",
+    "en_academic": "The marketing department is urgently directed to submit the promotional plan for the forthcoming quarter at the earliest possible juncture.",
+    "en_semantic": "The company is seeking cooperation with universities on industry-academia-research projects."
+  },
+  {
+    "zh": "该项目第一阶段的目标已经顺利完成。",
+    "en": "The objectives of the first phase of this project have been successfully completed.",
+    "ja": "本プロジェクトの第1段階の目標はすでに順調に完了した。",
+    "ko": "본 프로젝트의 1단계 목표가 이미 순조롭게 완료되었습니다.",
+    "domain": "business",
+    "en_literal": "objectives of first phase of this project are successfully completed.",
+    "en_academic": "The steady and sustained growth of the corporation's financial performance is directly attributable to the effectiveness of its management team.",
+    "en_semantic": "The objectives of the first phase of this project have been successfully completed."
+  },
+  {
+    "zh": "我们需要建立更加高效的内部沟通机制。",
+    "en": "We need to establish a more efficient internal communication mechanism.",
+    "ja": "より効率的な内部コミュニケーションの仕組みを構築する必要がある。",
+    "ko": "보다 효율적인 내부 소통 체계를 구축해야 합니다.",
+    "domain": "business",
+    "en_literal": "Chairman will tomorrow meeting announce company new development direction.",
+    "en_academic": "It is hereby affirmed that the full payment amount shall be remitted in a punctual manner in strict accordance with the contractual stipulations.",
+    "en_semantic": "We need to establish a more efficient internal communication mechanism."
+  },
+  {
+    "zh": "公司正在评估将生产线转移至东南亚的可行性。",
+    "en": "The company is evaluating the feasibility of relocating production lines to Southeast Asia.",
+    "ja": "同社は生産ラインを東南アジアに移転する実現可能性を評価中である。",
+    "ko": "회사는 생산 라인을 동남아시아로 이전하는 타당성을 평가하고 있습니다.",
+    "domain": "business",
+    "en_literal": "company is evaluating feasibility of relocating production lines to Southeast Asia.",
+    "en_academic": "The corporation is currently engaged in a comprehensive evaluation of the feasibility of acquiring the startup enterprise in question.",
+    "en_semantic": "The company is evaluating the feasibility of relocating production lines to Southeast Asia."
+  },
+  {
+    "zh": "请确保所有文件在提交前经过仔细校对。",
+    "en": "Please ensure all documents are carefully proofread before submission.",
+    "ja": "すべての文書は提出前に注意深く校正されていることを確認してください。",
+    "ko": "모든 문서가 제출 전에 주의 깊게 교정되었는지 확인해 주십시오.",
+    "domain": "business",
+    "en_literal": "Please ensure all document before submit go through careful proofread.",
+    "en_academic": "The project timeline necessitates recalibration and adjustment in accordance with the prevailing operational circumstances.",
+    "en_semantic": "Please ensure all documents are carefully proofread before submission."
+  },
+  {
+    "zh": "公司的核心价值观是诚信、创新和共赢。",
+    "en": "The company's core values are integrity, innovation, and win-win cooperation.",
+    "ja": "当社の中核的価値観は誠実、革新、そしてウィンウィンの協力である。",
+    "ko": "회사의 핵심 가치는 정직, 혁신, 그리고 상생입니다.",
+    "domain": "business",
+    "en_literal": "company's core values are integrity, innovation, and win-win cooperation.",
+    "en_academic": "Consumer demand for environmentally sustainable products has been demonstrating a consistent pattern of sustained growth over time.",
+    "en_semantic": "The company's core values are integrity, innovation, and win-win cooperation."
+  },
+  {
+    "zh": "市场竞争日趋激烈，我们需要不断提升自身竞争力。",
+    "en": "Market competition is becoming increasingly fierce, and we need to continuously improve our competitiveness.",
+    "ja": "市場競争は日増しに激化しており、我々は絶えず競争力を向上させる必要がある。",
+    "ko": "시장 경쟁이 날로 치열해지고 있어, 우리는 지속적으로 경쟁력을 향상시켜야 합니다.",
+    "domain": "business",
+    "en_literal": "Market competition increasingly intense, we need continuously raise own competitiveness.",
+    "en_academic": "Supply chain management processes must be optimized with a view to achieving a meaningful reduction in operational expenditures.",
+    "en_semantic": "Market competition is becoming increasingly fierce, and we need to continuously improve our competitiveness."
+  },
+  {
+    "zh": "公司已与多家投资机构达成了融资意向。",
+    "en": "The company has reached financing intentions with multiple investment institutions.",
+    "ja": "同社はすでに複数の投資機関と資金調達の意向を固めている。",
+    "ko": "회사는 이미 여러 투자 기관과 자금 조달 의향을 확정했습니다.",
+    "domain": "business",
+    "en_literal": "We will next Monday hold all staff general meeting.",
+    "en_academic": "The corporation is actively recruiting senior management personnel possessing substantial and demonstrable international market experience.",
+    "en_semantic": "The company has reached financing intentions with multiple investment institutions."
+  },
+  {
+    "zh": "本季度的经营业绩达到了历史同期最高水平。",
+    "en": "This quarter's operating performance reached the highest level for the same period in history.",
+    "ja": "今四半期の経営業績は過去同期で最高水準に達した。",
+    "ko": "이번 분기의 경영 실적은 사상 동기 최고 수준에 도달했습니다.",
+    "domain": "business",
+    "en_literal": "Company website is doing full redesign, expect two weeks inside go live.",
+    "en_academic": "The product in question has successfully obtained ISO9001 quality management system certification.",
+    "en_semantic": "This quarter's operating performance reached the highest level for the same period in history."
+  },
+  {
+    "zh": "董事长将在明天的会议上宣布公司新的发展方向。",
+    "en": "The chairman will announce the company's new development direction at tomorrow's meeting.",
+    "ja": "会長は明日の会議で同社の新たな発展方向を発表する。",
+    "ko": "회장이 내일 회의에서 회사의 새로운 발전 방향을 발표할 예정입니다.",
+    "domain": "business",
+    "en_literal": "This contract still need legal department review then can sign.",
+    "en_academic": "The chairman will announce the company's novel development direction at tomorrow's meeting.",
+    "en_semantic": "The chairman will announce the company's new development direction at tomorrow's meeting."
+  },
+  {
+    "zh": "我们将于下周一召开全体员工大会。",
+    "en": "We will hold an all-staff meeting next Monday.",
+    "ja": "来週月曜日に全従業員会議を開催します。",
+    "ko": "다음 주 월요일에 전 직원 회의를 개최할 예정입니다.",
+    "domain": "business",
+    "en_literal": "Company plan next year first quarter launch three new products.",
+    "en_academic": "A comprehensive reassessment and recalibration of the product pricing strategy shall be undertaken.",
+    "en_semantic": "We will hold an all-staff meeting next Monday."
+  },
+  {
+    "zh": "公司网站正在进行全面改版，预计两周内上线。",
+    "en": "The company website is undergoing a comprehensive redesign and is expected to go live within two weeks.",
+    "ja": "同社のウェブサイトは全面的なリニューアル中で、2週間以内に公開予定である。",
+    "ko": "회사 웹사이트가 전면 개편 중이며 2주 내에 오픈 예정입니다.",
+    "domain": "business",
+    "en_literal": "Customer to after-sale service satisfaction reach 96%.",
+    "en_academic": "Following a careful assessment of the prevailing circumstances, it has been determined that the adjustment was implemented in a timely manner.",
+    "en_semantic": "The company website is undergoing a comprehensive redesign and is expected to go live within two weeks."
+  },
+  {
+    "zh": "这份合同还需要法务部门审核后才能签署。",
+    "en": "This contract still needs to be reviewed by the legal department before signing.",
+    "ja": "この契約書は署名前に法務部門の審査が必要である。",
+    "ko": "이 계약서는 서명 전에 법무 부서의 검토가 필요합니다.",
+    "domain": "business",
+    "en_literal": "We need before next weekend finish annual budget preparation.",
+    "en_academic": "The corporation is actively seeking collaborative partnerships with academic institutions for the purpose of undertaking industry-academia-research collaboration projects.",
+    "en_semantic": "This contract still needs to be reviewed by the legal department before signing."
+  },
+  {
+    "zh": "公司计划在明年第一季度推出三款新产品。",
+    "en": "The company plans to launch three new products in the first quarter of next year.",
+    "ja": "同社は来年第1四半期に3つの新製品を発売する計画である。",
+    "ko": "회사는 내년 1분기에 3개의 신제품을 출시할 계획입니다.",
+    "domain": "business",
+    "en_literal": "company plans to launch three new products in first quarter of next year.",
+    "en_academic": "The company plans to launch three novel products in the first quarter of next year.",
+    "en_semantic": "The company plans to launch three new products in the first quarter of next year."
+  },
+  {
+    "zh": "客户对售后服务的满意度达到了96%。",
+    "en": "Customer satisfaction with after-sales service has reached 96%.",
+    "ja": "アフターサービスに対する顧客満足度は96%に達した。",
+    "ko": "사후 서비스에 대한 고객 만족도가 96%에 도달했습니다.",
+    "domain": "business",
+    "en_literal": "Customer to after-sale service satisfaction reach 96%.",
+    "en_academic": "It is deemed essential that a more streamlined and efficient internal communication mechanism be established within the organization.",
+    "en_semantic": "Customer satisfaction with after-sales service has reached 96%."
+  },
+  {
+    "zh": "我们需要在下周末前完成年度预算编制。",
+    "en": "We need to complete the annual budget preparation by next weekend.",
+    "ja": "来週末までに年間予算編成を完了する必要がある。",
+    "ko": "다음 주말까지 연간 예산 편성을 완료해야 합니다.",
+    "domain": "business",
+    "en_literal": "We need to complete annual budget preparation by next weekend.",
+    "en_academic": "The corporation is currently engaged in an evaluation of the feasibility of relocating its production lines to the Southeast Asian region.",
+    "en_semantic": "We need to complete the annual budget preparation by next weekend."
+  },
+  {
+    "zh": "供应商已经确认可以按时交付原材料。",
+    "en": "The supplier has confirmed that they can deliver the raw materials on time.",
+    "ja": "サプライヤーは原材料を期限通りに納品できることを確認した。",
+    "ko": "공급업체가 원자재를 제때 납품할 수 있다고 확인했습니다.",
+    "domain": "business",
+    "en_literal": "supplier has confirmed that they can deliver raw materials on time.",
+    "en_academic": "It is to be ensured that all documentation undergoes meticulous proofreading and verification prior to formal submission for review.",
+    "en_semantic": "The supplier has confirmed that they can deliver the raw materials on time."
+  },
+  {
+    "zh": "市场部门正在准备新产品发布会的方案。",
+    "en": "The marketing department is preparing the plan for the new product launch event.",
+    "ja": "マーケティング部門は新製品発表会の案を準備中である。",
+    "ko": "마케팅 부서에서 신제품 발표회 방안을 준비 중입니다.",
+    "domain": "business",
+    "en_literal": "marketing department is preparing plan for new product launch event.",
+    "en_academic": "The marketing department is preparing the plan for the novel product launch event.",
+    "en_semantic": "The marketing department is preparing the plan for the new product launch event."
+  },
+  {
+    "zh": "请在下班前将修改后的方案发送给所有相关人员。",
+    "en": "Please send the revised plan to all relevant personnel before the end of the day.",
+    "ja": "修正後の案を終業前に関係者全員に送信してください。",
+    "ko": "수정된 방안을 퇴근 전에 모든 관련자에게 보내주십시오.",
+    "domain": "business",
+    "en_literal": "Please send revised plan to all relevant personnel before end of day.",
+    "en_academic": "Market competition has been intensifying at an accelerating pace, necessitating continuous enhancement of the corporation's competitive capabilities.",
+    "en_semantic": "Please send the revised plan to all relevant personnel before the end of the day."
+  },
+  {
+    "zh": "公司正在研究远程办公政策的长期实施方案。",
+    "en": "The company is studying the long-term implementation plan for remote work policies.",
+    "ja": "同社はリモートワークポリシーの長期的な実施案を研究中である。",
+    "ko": "회사는 원격 근무 정책의 장기적 시행 방안을 연구 중입니다.",
+    "domain": "business",
+    "en_literal": "company is studying long-term implementation plan for remote work policies.",
+    "en_academic": "The corporation has successfully reached preliminary financing intentions with a number of investment institutions.",
+    "en_semantic": "The company is studying the long-term implementation plan for remote work policies."
+  },
+  {
+    "zh": "我们预计明年第一季度的营收将增长20%以上。",
+    "en": "We expect revenue to grow by more than 20% in the first quarter of next year.",
+    "ja": "来年第1四半期の収益は20%以上増加すると予想している。",
+    "ko": "내년 1분기 매출이 20% 이상 성장할 것으로 예상합니다.",
+    "domain": "business",
+    "en_literal": "We expect revenue to grow by more than 20% in first quarter of next year.",
+    "en_academic": "The operating performance metrics for the current quarter have attained the highest recorded level for the corresponding period in the organization's historical record.",
+    "en_semantic": "We expect revenue to grow by more than 20% in the first quarter of next year."
+  },
+  {
+    "zh": "这份市场分析报告为决策提供了重要参考依据。",
+    "en": "This market analysis report provides important reference for decision-making.",
+    "ja": "この市場分析レポートは意思決定に重要な参考根拠を提供する。",
+    "ko": "이 시장 분석 보고서는 의사 결정에 중요한 참고 근거를 제공합니다.",
+    "domain": "business",
+    "en_literal": "This market analysis report for decision-making provide important reference basis.",
+    "en_academic": "The chairman is scheduled to announce the corporation's new strategic development direction at the meeting to be held on the morrow.",
+    "en_semantic": "This market analysis report provides important reference for decision-making."
+  },
+  {
+    "zh": "请各位团队成员及时更新项目管理系统中的任务状态。",
+    "en": "All team members are requested to update task statuses in the project management system promptly.",
+    "ja": "チームメンバーはプロジェクト管理システムのタスク状況を適時に更新してください。",
+    "ko": "각 팀원은 프로젝트 관리 시스템의 작업 상태를 적시에 업데이트해 주십시오.",
+    "domain": "business",
+    "en_literal": "All team members are requested to update task statuses in project management system promptly.",
+    "en_academic": "It is respectfully advised that salary increments be considered in alignment with the expansion of the corporation's performance metrics.",
+    "en_semantic": "All team members are requested to update task statuses in the project management system promptly."
+  },
+  {
+    "zh": "我们正在积极寻找合适的海外合作伙伴。",
+    "en": "We are actively seeking suitable overseas partners.",
+    "ja": "我々は適切な海外パートナーを積極的に探している。",
+    "ko": "우리는 적합한 해외 파트너를 적극적으로 찾고 있습니다.",
+    "domain": "business",
+    "en_literal": "We are actively find suitable overseas cooperation partner.",
+    "en_academic": "The corporation's strategic objective for the forthcoming five-year period is to establish itself as a preeminent leader within the industry.",
+    "en_semantic": "We are actively seeking suitable overseas partners."
+  },
+  {
+    "zh": "公司决定将今年的年会推迟到春节后举办。",
+    "en": "The company has decided to postpone this year's annual meeting until after the Spring Festival.",
+    "ja": "同社は今年の年次総会を春節後に延期することを決定した。",
+    "ko": "회사는 올해 연례 회의를 춘절 이후로 연기하기로 결정했습니다.",
+    "domain": "business",
+    "en_literal": "company has decided to postpone this year's annual meeting until after Spring Festival.",
+    "en_academic": "The pre-sale performance metrics for the new product have been most promising, substantially exceeding the initial projections.",
+    "en_semantic": "The company has decided to postpone this year's annual meeting until after the Spring Festival."
+  },
+  {
+    "zh": "该项目的风险控制方案已经通过了专家评审。",
+    "en": "The risk control plan for this project has passed expert review.",
+    "ja": "本プロジェクトのリスク管理案は専門家審査を通過した。",
+    "ko": "본 프로젝트의 위험 통제 방안이 전문가 심사를 통과했습니다.",
+    "domain": "business",
+    "en_literal": "risk control plan for this project has passed expert review.",
+    "en_academic": "A comprehensive and well-established after-sales service infrastructure has been successfully constructed by the organization.",
+    "en_semantic": "The risk control plan for this project has passed expert review."
+  },
+  {
+    "zh": "请确认收到邮件后尽快回复确认函。",
+    "en": "Please confirm receipt and reply with the confirmation letter as soon as possible.",
+    "ja": "メール受信後、確認書をできるだけ早くご返信ください。",
+    "ko": "메일 수신 확인 후 가능한 한 빨리 확인서를 회신해 주십시오.",
+    "domain": "business",
+    "en_literal": "Please confirm receipt and reply with confirmation letter as soon as possible.",
+    "en_academic": "The agreement in question remains valid for a period of three years and may be renewed upon the expiration of the initial term.",
+    "en_semantic": "Please confirm receipt and reply with the confirmation letter as soon as possible."
+  },
+  {
+    "zh": "公司将加大对新能源项目的投资力度。",
+    "en": "The company will increase investment in new energy projects.",
+    "ja": "同社は新エネルギープロジェクトへの投資を拡大する。",
+    "ko": "회사는 신에너지 프로젝트에 대한 투자를 확대할 것입니다.",
+    "domain": "business",
+    "en_literal": "company will increase investment in new energy projects.",
+    "en_academic": "The company will increase investment in novel energy projects.",
+    "en_semantic": "The company will increase investment in new energy projects."
+  },
+  {
+    "zh": "本季度销售额下滑主要受季节性因素影响。",
+    "en": "The decline in sales this quarter is mainly affected by seasonal factors.",
+    "ja": "今四半期の売上減少は主に季節的要因によるものである。",
+    "ko": "이번 분기 매출 감소는 주로 계절적 요인의 영향을 받았습니다.",
+    "domain": "business",
+    "en_literal": "decline in sales this quarter is mainly affected by seasonal factors.",
+    "en_academic": "The corporation intends to substantially expand its research and development investment in the field of artificial intelligence.",
+    "en_semantic": "The decline in sales this quarter is mainly affected by seasonal factors."
+  },
+  {
+    "zh": "公司正在开发一款面向中小企业的新产品。",
+    "en": "The company is developing a new product targeting small and medium-sized enterprises.",
+    "ja": "同社は中小企業向けの新製品を開発中である。",
+    "ko": "회사는 중소기업을 대상으로 한 신제품을 개발 중입니다.",
+    "domain": "business",
+    "en_literal": "company is developing a new product targeting small and medium-sized enterprises.",
+    "en_academic": "The company is developing a novel product targeting small and medium-sized enterprises.",
+    "en_semantic": "The company is developing a new product targeting small and medium-sized enterprises."
+  },
+  {
+    "zh": "我们已经收到了您的投诉，将在一个工作日内回复。",
+    "en": "We have received your complaint and will respond within one business day.",
+    "ja": "お客様の苦情を承りました。1営業日以内にご返答いたします。",
+    "ko": "고객님의 불만 사항을 접수했습니다. 1영업일 이내에 답변 드리겠습니다.",
+    "domain": "business",
+    "en_literal": "We already receive your complaint, will within one work day reply.",
+    "en_academic": "The steady growth trajectory of the corporation's performance is attributable to the exceptional quality of its management team.",
+    "en_semantic": "We have received your complaint and will respond within one business day."
+  },
+  {
+    "zh": "双方同意将合同期限延长两年。",
+    "en": "Both parties agreed to extend the contract term by two years.",
+    "ja": "双方は契約期間を2年間延長することで合意した。",
+    "ko": "양측은 계약 기간을 2년 연장하기로 합의했습니다.",
+    "domain": "business",
+    "en_literal": "Both parties agreed to extend contract term by two years.",
+    "en_academic": "It is hereby affirmed that the full payment shall be remitted in strict accordance with the contractual schedule and stipulations.",
+    "en_semantic": "Both parties agreed to extend the contract term by two years."
+  },
+  {
+    "zh": "公司正在对现有的供应链体系进行全面优化。",
+    "en": "The company is conducting a comprehensive optimization of its existing supply chain system.",
+    "ja": "同社は既存のサプライチェーン体制の全面的な最適化を進めている。",
+    "ko": "회사는 기존 공급망 체계에 대한 전면적인 최적화를 진행 중입니다.",
+    "domain": "business",
+    "en_literal": "company is conducting a comprehensive optimization of its existing supply chain system.",
+    "en_academic": "The corporation is currently engaged in an evaluation of the feasibility of acquiring the startup enterprise under consideration.",
+    "en_semantic": "The company is conducting a comprehensive optimization of its existing supply chain system."
+  }
+]

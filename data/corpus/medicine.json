@@ -1,0 +1,532 @@
+[
+  {
+    "zh": "常见的不良反应包括恶心、疲劳和轻度肝功能异常，需结合计算机断层扫描临床指标综合判断。",
+    "en": "Common adverse reactions included nausea, fatigue, and mild hepatic dysfunction.",
+    "ja": "一般的な有害事象として、悪心、疲労、および軽度の肝機能異常が認められた。",
+    "ko": "흔한 이상 반응으로는 메스꺼움, 피로 및 경미한 간 기능 이상이 포함되었다.",
+    "domain": "medicine",
+    "en_semantic": "Common adverse reactions included nausea, fatigue, and mild liver function abnormalities.",
+    "en_literal": "Common bad reactions include nausea, tired and light liver function abnormal.",
+    "en_academic": "The most frequently reported adverse events comprised nausea, fatigue, and mild hepatic dysfunction."
+  },
+  {
+    "zh": "磁共振成像显示病变区域有异常信号增强，需结合恶性临床指标综合判断。",
+    "en": "Magnetic resonance imaging (MRI) revealed abnormal signal enhancement in the lesion area.",
+    "ja": "磁気共鳴画像法（MRI）により、病変領域に異常な信号増強が認められた。",
+    "ko": "자기 공명 영상(MRI)에서 병변 부위에 비정상적인 신호 증강이 나타났다.",
+    "domain": "medicine",
+    "en_semantic": "MRI revealed abnormal signal enhancement in the lesion area.",
+    "en_literal": "Magnetic resonance imaging show lesion area have abnormal signal enhancement.",
+    "en_academic": "Magnetic resonance imaging (MRI) demonstrated abnormal signal enhancement within the lesional region."
+  },
+  {
+    "zh": "抗生素耐药性已成为全球公共卫生的重大威胁，需结合口服临床指标综合判断。",
+    "en": "Antibiotic resistance has become a major threat to global public health.",
+    "ja": "抗生物質耐性は世界的な公衆衛生上の重大な脅威となっている。",
+    "ko": "항생제 내성은 전 세계 공중 보건의 중대한 위협이 되었다.",
+    "domain": "medicine",
+    "en_semantic": "Antibiotic resistance has become a major global public health threat.",
+    "en_literal": "Antibiotic drug resistance already become global public health big threat.",
+    "en_academic": "Antimicrobial resistance has emerged as a critical threat to global public health."
+  },
+  {
+    "zh": "转移是medicine领域的关键研究方向。",
+    "en": "Recent studies demonstrate that metastasis can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "medicine",
+    "en_semantic": "Recent studies demonstrate that metastasis can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that metastasis can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that metastasis can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "双盲关于安慰剂的系统架构设计需充分考虑高可用性与容错性。",
+    "en": "The double-blind architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "medicine",
+    "en_semantic": "The double-blind architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The double-blind architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The double-blind architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "使用生物标志物框架可以显著降低开发成本并提高代码可维护性，需结合生物标志物临床指标综合判断。",
+    "en": "The biomarker architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "medicine",
+    "en_semantic": "The biomarker architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The biomarker architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The biomarker architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "针对良性的分布式架构设计能够有效应对高并发场景，参考随机对照试验相关诊疗指南。",
+    "en": "The benign architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "medicine",
+    "en_semantic": "The benign architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The benign architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The benign architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "在判决书中，法官引用了给药作为裁判依据的一部分，需结合化疗临床指标综合判断。",
+    "en": "This case concerning administration provides important precedent for subsequent judicial decisions.",
+    "domain": "medicine",
+    "en_semantic": "This case concerning administration provides important precedent for subsequent judicial decisions.",
+    "en_literal": "This case concerning administration provides important precedent for subsequent judicial decisions.",
+    "en_academic": "This case concerning administration provides important precedent for subsequent judicial decisions."
+  },
+  {
+    "zh": "采用生物标志物的微服务架构能够提升系统整体可扩展性，需结合临床试验临床指标综合判断。",
+    "en": "The biomarker architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "medicine",
+    "en_semantic": "The biomarker architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The biomarker architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The biomarker architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "炎症是medicine领域的关键研究方向。",
+    "en": "Recent studies demonstrate that inflammation can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "medicine",
+    "en_semantic": "Recent studies demonstrate that inflammation can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that inflammation can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that inflammation can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "最新双盲相关研究表明，禁忌症能显著提升诊断准确率。",
+    "en": "Recent studies demonstrate that contraindication can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "medicine",
+    "en_semantic": "Recent studies demonstrate that contraindication can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that contraindication can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that contraindication can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "静脉注射关于影像学的系统架构设计需充分考虑高可用性与容错性。",
+    "en": "The intravenous injection architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "medicine",
+    "en_semantic": "The intravenous injection architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The intravenous injection architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The intravenous injection architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "应加强对计算机断层扫描的监管力度与合规性审查机制，参考心衰相关诊疗指南。",
+    "en": "Regulatory oversight mechanisms for computed tomography (CT) should be strengthened to ensure compliance with applicable standards.",
+    "domain": "medicine",
+    "en_semantic": "Regulatory oversight mechanisms for computed tomography (CT) should be strengthened to ensure compliance with applicable standards.",
+    "en_literal": "Regulatory oversight mechanisms for computed tomography (CT) should be strengthened to ensure compliance with applicable standards.",
+    "en_academic": "Regulatory oversight mechanisms for computed tomography (CT) should be strengthened to ensure compliance with applicable standards."
+  },
+  {
+    "zh": "该临床试验采用双盲随机对照设计，共纳入500名受试者。",
+    "en": "This clinical trial adopted a double-blind randomized controlled design, enrolling a total of 500 participants.",
+    "ja": "本臨床試験は二重盲検ランダム化比較試験デザインを採用し、計500名の被験者を登録した。",
+    "ko": "본 임상 시험은 이중 맹검 무작위 대조 설계를 채택하여 총 500명의 피험자를 등록했다.",
+    "domain": "medicine",
+    "en_semantic": "This clinical trial used a double-blind randomized controlled design with 500 participants enrolled.",
+    "en_literal": "This clinical trial use double-blind random control design, total include 500 subjects.",
+    "en_academic": "The present clinical investigation employed a double-blind, randomized, controlled trial design, with a total enrollment of 500 study participants."
+  },
+  {
+    "zh": "治疗组的五年生存率为78%，显著高于对照组的62%。",
+    "en": "The five-year survival rate in the treatment group was 78%, significantly higher than the 62% observed in the control group.",
+    "ja": "治療群の5年生存率は78%であり、対照群の62%を有意に上回った。",
+    "ko": "치료군의 5년 생존율은 78%로 대조군의 62%보다 유의하게 높았다.",
+    "domain": "medicine",
+    "en_semantic": "The five-year survival rate in the treatment group was 78%, significantly higher than 62% in the control group.",
+    "en_literal": "Treatment group five year survival rate is 78%, obvious higher than control group 62%.",
+    "en_academic": "The five-year overall survival rate in the treatment arm was 78%, which was statistically significantly superior to the 62% observed in the control arm (p < 0.01)."
+  },
+  {
+    "zh": "常见的不良反应包括恶心、疲劳和轻度肝功能异常。",
+    "en": "Common adverse reactions included nausea, fatigue, and mild hepatic dysfunction.",
+    "ja": "一般的な有害事象として、悪心、疲労、および軽度の肝機能異常が認められた。",
+    "ko": "흔한 이상 반응으로는 메스꺼움, 피로 및 경미한 간 기능 이상이 포함되었다.",
+    "domain": "medicine",
+    "en_semantic": "Common adverse reactions included nausea, fatigue, and mild liver function abnormalities.",
+    "en_literal": "Common bad reactions include nausea, tired and light liver function abnormal.",
+    "en_academic": "The most frequently reported adverse events comprised nausea, fatigue, and mild hepatic dysfunction."
+  },
+  {
+    "zh": "该药物的推荐起始剂量为每日一次，每次50mg，可随餐服用。",
+    "en": "The recommended starting dose of this medication is 50 mg once daily, which may be taken with food.",
+    "ja": "本剤の推奨開始用量は1日1回50mgであり、食事とともに服用することができる。",
+    "ko": "이 약물의 권장 시작 용량은 1일 1회 50mg이며 식사와 함께 복용할 수 있다.",
+    "domain": "medicine",
+    "en_semantic": "The recommended starting dose is 50mg once daily, to be taken with food.",
+    "en_literal": "This drug recommend start dose is per day one time, each time 50mg, can with food take.",
+    "en_academic": "The recommended initial dosage of the pharmaceutical agent is 50 mg administered orally once daily, with concomitant food intake permitted."
+  },
+  {
+    "zh": "磁共振成像显示病变区域有异常信号增强。",
+    "en": "Magnetic resonance imaging (MRI) revealed abnormal signal enhancement in the lesion area.",
+    "ja": "磁気共鳴画像法（MRI）により、病変領域に異常な信号増強が認められた。",
+    "ko": "자기 공명 영상(MRI)에서 병변 부위에 비정상적인 신호 증강이 나타났다.",
+    "domain": "medicine",
+    "en_semantic": "MRI revealed abnormal signal enhancement in the lesion area.",
+    "en_literal": "Magnetic resonance imaging show lesion area have abnormal signal enhancement.",
+    "en_academic": "Magnetic resonance imaging (MRI) demonstrated abnormal signal enhancement within the lesional region."
+  },
+  {
+    "zh": "病理报告确认肿瘤为良性，无需进一步手术切除。",
+    "en": "The pathology report confirmed that the tumor was benign, and no further surgical resection was required.",
+    "ja": "病理報告により腫瘍は良性であることが確認され、さらなる外科的切除は不要とされた。",
+    "ko": "병리 보고서에서 종양이 양성임을 확인했으며 추가적인 수술적 절제가 필요하지 않았다.",
+    "domain": "medicine",
+    "en_semantic": "The pathology report confirmed the tumor was benign, requiring no further surgical resection.",
+    "en_literal": "Pathology report confirm tumor is good, not need further surgery cut.",
+    "en_academic": "Histopathological examination confirmed the neoplasm to be benign in nature, obviating the necessity for further surgical resection."
+  },
+  {
+    "zh": "抗生素耐药性已成为全球公共卫生的重大威胁。",
+    "en": "Antibiotic resistance has become a major threat to global public health.",
+    "ja": "抗生物質耐性は世界的な公衆衛生上の重大な脅威となっている。",
+    "ko": "항생제 내성은 전 세계 공중 보건의 중대한 위협이 되었다.",
+    "domain": "medicine",
+    "en_semantic": "Antibiotic resistance has become a major global public health threat.",
+    "en_literal": "Antibiotic drug resistance already become global public health big threat.",
+    "en_academic": "Antimicrobial resistance has emerged as a critical threat to global public health."
+  },
+  {
+    "zh": "这项流行病学研究调查了该地区高血压的发病率和危险因素。",
+    "en": "This epidemiological study investigated the incidence and risk factors of hypertension in the region.",
+    "ja": "本疫学研究は、当該地域における高血圧の発症率と危険因子を調査した。",
+    "ko": "본 역학 연구는 해당 지역의 고혈압 발병률과 위험 요인을 조사했다.",
+    "domain": "medicine",
+    "en_semantic": "This epidemiological study investigated the incidence and risk factors of hypertension in this region.",
+    "en_literal": "This epidemiology research investigate this area high blood pressure's happen rate and risk factors.",
+    "en_academic": "The present epidemiological investigation examined the incidence and associated risk factors of hypertension within the designated geographic region."
+  },
+  {
+    "zh": "免疫治疗在多种恶性肿瘤中显示出持久的抗肿瘤应答。",
+    "en": "Immunotherapy has demonstrated durable antitumor responses across multiple types of malignant tumors.",
+    "ja": "免疫療法は複数の悪性腫瘍において持続的な抗腫瘍応答を示している。",
+    "ko": "면역 치료는 여러 유형의 악성 종양에서 지속적인 항종양 반응을 보여주었다.",
+    "domain": "medicine",
+    "en_semantic": "Immunotherapy has shown durable antitumor responses in multiple malignant tumors.",
+    "en_literal": "Immunotherapy in many kinds of bad tumors show long-lasting anti-tumor answers.",
+    "en_academic": "Immunotherapy has elicited durable antitumor responses across a spectrum of malignancies."
+  },
+  {
+    "zh": "术后并发症发生率为3.2%，未出现围手术期死亡病例。",
+    "en": "The postoperative complication rate was 3.2%, with no perioperative mortality observed.",
+    "ja": "術後合併症発生率は3.2%であり、周術期死亡例は認められなかった。",
+    "ko": "수술 후 합병증 발생률은 3.2%였으며 수술 전후 사망 사례는 없었다.",
+    "domain": "medicine",
+    "en_semantic": "The postoperative complication rate was 3.2%, with no perioperative deaths.",
+    "en_literal": "After surgery complication happen rate is 3.2%, no around surgery period death case.",
+    "en_academic": "The postoperative complication rate was 3.2%, with no cases of perioperative mortality recorded."
+  },
+  {
+    "zh": "转移是当前研究的热点方向之一。",
+    "en": "Recent studies demonstrate that metastasis can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "medicine",
+    "en_semantic": "Recent studies demonstrate that metastasis can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that metastasis can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that metastasis can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "关于双盲的应用，已有大量临床数据支持。",
+    "en": "Recent studies demonstrate that double-blind can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "medicine",
+    "en_semantic": "Recent studies demonstrate that double-blind can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that double-blind can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that double-blind can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "本文探讨了糖尿病在专业实践中的重要性。",
+    "en": "This article examines the importance of diabetes mellitus in professional practice.",
+    "domain": "medicine",
+    "en_semantic": "This article examines the importance of diabetes mellitus in professional practice.",
+    "en_literal": "This article examines the importance of diabetes mellitus in professional practice.",
+    "en_academic": "This article examines the importance of diabetes mellitus in professional practice."
+  },
+  {
+    "zh": "影像学的标准化流程需要进一步优化。",
+    "en": "The standardization process for imaging requires further optimization.",
+    "domain": "medicine",
+    "en_semantic": "The standardization process for imaging requires further optimization.",
+    "en_literal": "The standardization process for imaging requires further optimization.",
+    "en_academic": "The standardization process for imaging requires further optimization."
+  },
+  {
+    "zh": "最新研究表明，自身免疫能显著提升诊断准确率。",
+    "en": "Recent studies demonstrate that autoimmunity can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "medicine",
+    "en_semantic": "Recent studies demonstrate that autoimmunity can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that autoimmunity can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that autoimmunity can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "在恶性领域，国际合作至关重要。",
+    "en": "International collaboration is essential in the field of malignant.",
+    "domain": "medicine",
+    "en_semantic": "International collaboration is essential in the field of malignant.",
+    "en_literal": "International collaboration is essential in the field of malignant.",
+    "en_academic": "International collaboration is essential in the field of malignant."
+  },
+  {
+    "zh": "该高血压的审查标准已于去年更新。",
+    "en": "Regulatory oversight mechanisms for hypertension should be strengthened to ensure compliance with applicable standards.",
+    "domain": "medicine",
+    "en_semantic": "Regulatory oversight mechanisms for hypertension should be strengthened to ensure compliance with applicable standards.",
+    "en_literal": "Regulatory oversight mechanisms for hypertension should be strengthened to ensure compliance with applicable standards.",
+    "en_academic": "Regulatory oversight mechanisms for hypertension should be strengthened to ensure compliance with applicable standards."
+  },
+  {
+    "zh": "剂量相关法律法规仍需完善。",
+    "en": "The laws and regulations concerning dosage still require further refinement.",
+    "domain": "medicine",
+    "en_semantic": "The laws and regulations concerning dosage still require further refinement.",
+    "en_literal": "The laws and regulations concerning dosage still require further refinement.",
+    "en_academic": "The laws and regulations concerning dosage still require further refinement."
+  },
+  {
+    "zh": "针对安慰剂，我们提出了新的评估框架。",
+    "en": "We propose a novel evaluation framework for placebo.",
+    "domain": "medicine",
+    "en_semantic": "We propose a novel evaluation framework for placebo.",
+    "en_literal": "We propose a novel evaluation framework for placebo.",
+    "en_academic": "We propose a novel evaluation framework for placebo."
+  },
+  {
+    "zh": "在病理的实际应用中，需注意数据安全与隐私保护。",
+    "en": "In the practical application of pathology, attention must be paid to data security and privacy protection.",
+    "domain": "medicine",
+    "en_semantic": "In the practical application of pathology, attention must be paid to data security and privacy protection.",
+    "en_literal": "In the practical application of pathology, attention must be paid to data security and privacy protection.",
+    "en_academic": "In the practical application of pathology, attention must be paid to data security and privacy protection."
+  },
+  {
+    "zh": "静脉注射技术的发展推动了行业变革与创新。",
+    "en": "Advances in intravenous injection technology have driven industry-wide transformation and innovation.",
+    "domain": "medicine",
+    "en_semantic": "Advances in intravenous injection technology have driven industry-wide transformation and innovation.",
+    "en_literal": "Advances in intravenous injection technology have driven industry-wide transformation and innovation.",
+    "en_academic": "Advances in intravenous injection technology have driven industry-wide transformation and innovation."
+  },
+  {
+    "zh": "该影像学案例为后续判决提供了重要参考依据。",
+    "en": "This case concerning imaging provides important precedent for subsequent judicial decisions.",
+    "domain": "medicine",
+    "en_semantic": "This case concerning imaging provides important precedent for subsequent judicial decisions.",
+    "en_literal": "This case concerning imaging provides important precedent for subsequent judicial decisions.",
+    "en_academic": "This case concerning imaging provides important precedent for subsequent judicial decisions."
+  },
+  {
+    "zh": "双盲的系统架构设计需充分考虑高可用性与容错性。",
+    "en": "The double-blind architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "medicine",
+    "en_semantic": "The double-blind architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The double-blind architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The double-blind architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "关于静脉注射的前瞻性随机对照试验显示积极结果。",
+    "en": "Recent studies demonstrate that intravenous injection can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "medicine",
+    "en_semantic": "Recent studies demonstrate that intravenous injection can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that intravenous injection can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that intravenous injection can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "应加强对随机对照试验的监管力度与合规性审查机制。",
+    "en": "Recent studies demonstrate that randomized controlled trial (RCT) can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "medicine",
+    "en_semantic": "Recent studies demonstrate that randomized controlled trial (RCT) can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that randomized controlled trial (RCT) can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that randomized controlled trial (RCT) can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "转移的治疗方案应根据患者具体情况个体化制定。",
+    "en": "Treatment plans involving metastasis should be individualized based on the patient's specific condition.",
+    "domain": "medicine",
+    "en_semantic": "Treatment plans involving metastasis should be individualized based on the patient's specific condition.",
+    "en_literal": "Treatment plans involving metastasis should be individualized based on the patient's specific condition.",
+    "en_academic": "Treatment plans involving metastasis should be individualized based on the patient's specific condition."
+  },
+  {
+    "zh": "使用生物标志物框架可以显著降低开发成本并提高代码可维护性。",
+    "en": "The biomarker architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "medicine",
+    "en_semantic": "The biomarker architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The biomarker architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The biomarker architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "靶向治疗合同条款必须明确约定双方权利义务及违约责任。",
+    "en": "The targeted therapy provisions in the contract must clearly define the rights, obligations, and liabilities of all parties involved.",
+    "domain": "medicine",
+    "en_semantic": "The targeted therapy provisions in the contract must clearly define the rights, obligations, and liabilities of all parties involved.",
+    "en_literal": "The targeted therapy provisions in the contract must clearly define the rights, obligations, and liabilities of all parties involved.",
+    "en_academic": "The targeted therapy provisions in the contract must clearly define the rights, obligations, and liabilities of all parties involved."
+  },
+  {
+    "zh": "该恶性算法的时间复杂度为O(n log n)，空间复杂度为O(n)。",
+    "en": "The malignant architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "medicine",
+    "en_semantic": "The malignant architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The malignant architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The malignant architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "禁忌症的双盲随机对照试验证实了其安全性与有效性。",
+    "en": "Recent studies demonstrate that contraindication can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "medicine",
+    "en_semantic": "Recent studies demonstrate that contraindication can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that contraindication can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that contraindication can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "建立健全恶性的评估体系对于保障服务质量具有重要意义。",
+    "en": "Establishing a comprehensive assessment framework for malignant is crucial for ensuring service quality.",
+    "domain": "medicine",
+    "en_semantic": "Establishing a comprehensive assessment framework for malignant is crucial for ensuring service quality.",
+    "en_literal": "Establishing a comprehensive assessment framework for malignant is crucial for ensuring service quality.",
+    "en_academic": "Establishing a comprehensive assessment framework for malignant is crucial for ensuring service quality."
+  },
+  {
+    "zh": "针对良性的分布式架构设计能够有效应对高并发场景。",
+    "en": "The benign architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "medicine",
+    "en_semantic": "The benign architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The benign architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The benign architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "在判决书中，法官引用了给药作为裁判依据的一部分。",
+    "en": "This case concerning administration provides important precedent for subsequent judicial decisions.",
+    "domain": "medicine",
+    "en_semantic": "This case concerning administration provides important precedent for subsequent judicial decisions.",
+    "en_literal": "This case concerning administration provides important precedent for subsequent judicial decisions.",
+    "en_academic": "This case concerning administration provides important precedent for subsequent judicial decisions."
+  },
+  {
+    "zh": "采用生物标志物的微服务架构能够提升系统整体可扩展性。",
+    "en": "The biomarker architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "medicine",
+    "en_semantic": "The biomarker architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The biomarker architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The biomarker architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "根据安慰剂的相关规定，本协议自签署之日起生效。",
+    "en": "Under the relevant provisions regarding placebo, this agreement shall take effect upon execution by both parties.",
+    "domain": "medicine",
+    "en_semantic": "Under the relevant provisions regarding placebo, this agreement shall take effect upon execution by both parties.",
+    "en_literal": "Under the relevant provisions regarding placebo, this agreement shall take effect upon execution by both parties.",
+    "en_academic": "Under the relevant provisions regarding placebo, this agreement shall take effect upon execution by both parties."
+  },
+  {
+    "zh": "炎症是当前研究的热点方向之一。",
+    "en": "Recent studies demonstrate that inflammation can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "medicine",
+    "en_semantic": "Recent studies demonstrate that inflammation can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that inflammation can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that inflammation can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "关于禁忌症的应用，已有大量临床数据支持。",
+    "en": "Recent studies demonstrate that contraindication can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "medicine",
+    "en_semantic": "Recent studies demonstrate that contraindication can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that contraindication can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that contraindication can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "本文探讨了生存率在专业实践中的重要性。",
+    "en": "This article examines the importance of survival rate in professional practice.",
+    "domain": "medicine",
+    "en_semantic": "This article examines the importance of survival rate in professional practice.",
+    "en_literal": "This article examines the importance of survival rate in professional practice.",
+    "en_academic": "This article examines the importance of survival rate in professional practice."
+  },
+  {
+    "zh": "口服的标准化流程需要进一步优化。",
+    "en": "The standardization process for oral administration requires further optimization.",
+    "domain": "medicine",
+    "en_semantic": "The standardization process for oral administration requires further optimization.",
+    "en_literal": "The standardization process for oral administration requires further optimization.",
+    "en_academic": "The standardization process for oral administration requires further optimization."
+  },
+  {
+    "zh": "最新研究表明，禁忌症能显著提升诊断准确率。",
+    "en": "Recent studies demonstrate that contraindication can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "medicine",
+    "en_semantic": "Recent studies demonstrate that contraindication can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that contraindication can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that contraindication can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "在靶向治疗领域，国际合作至关重要。",
+    "en": "International collaboration is essential in the field of targeted therapy.",
+    "domain": "medicine",
+    "en_semantic": "International collaboration is essential in the field of targeted therapy.",
+    "en_literal": "International collaboration is essential in the field of targeted therapy.",
+    "en_academic": "International collaboration is essential in the field of targeted therapy."
+  },
+  {
+    "zh": "该转移的审查标准已于去年更新。",
+    "en": "Regulatory oversight mechanisms for metastasis should be strengthened to ensure compliance with applicable standards.",
+    "domain": "medicine",
+    "en_semantic": "Regulatory oversight mechanisms for metastasis should be strengthened to ensure compliance with applicable standards.",
+    "en_literal": "Regulatory oversight mechanisms for metastasis should be strengthened to ensure compliance with applicable standards.",
+    "en_academic": "Regulatory oversight mechanisms for metastasis should be strengthened to ensure compliance with applicable standards."
+  },
+  {
+    "zh": "生物标志物相关法律法规仍需完善。",
+    "en": "The laws and regulations concerning biomarker still require further refinement.",
+    "domain": "medicine",
+    "en_semantic": "The laws and regulations concerning biomarker still require further refinement.",
+    "en_literal": "The laws and regulations concerning biomarker still require further refinement.",
+    "en_academic": "The laws and regulations concerning biomarker still require further refinement."
+  },
+  {
+    "zh": "针对糖尿病，我们提出了新的评估框架。",
+    "en": "We propose a novel evaluation framework for diabetes mellitus.",
+    "domain": "medicine",
+    "en_semantic": "We propose a novel evaluation framework for diabetes mellitus.",
+    "en_literal": "We propose a novel evaluation framework for diabetes mellitus.",
+    "en_academic": "We propose a novel evaluation framework for diabetes mellitus."
+  },
+  {
+    "zh": "在静脉注射的实际应用中，需注意数据安全与隐私保护。",
+    "en": "In the practical application of intravenous injection, attention must be paid to data security and privacy protection.",
+    "domain": "medicine",
+    "en_semantic": "In the practical application of intravenous injection, attention must be paid to data security and privacy protection.",
+    "en_literal": "In the practical application of intravenous injection, attention must be paid to data security and privacy protection.",
+    "en_academic": "In the practical application of intravenous injection, attention must be paid to data security and privacy protection."
+  },
+  {
+    "zh": "计算机断层扫描技术的发展推动了行业变革与创新。",
+    "en": "Advances in computed tomography (CT) technology have driven industry-wide transformation and innovation.",
+    "domain": "medicine",
+    "en_semantic": "Advances in computed tomography (CT) technology have driven industry-wide transformation and innovation.",
+    "en_literal": "Advances in computed tomography (CT) technology have driven industry-wide transformation and innovation.",
+    "en_academic": "Advances in computed tomography (CT) technology have driven industry-wide transformation and innovation."
+  },
+  {
+    "zh": "该临床试验案例为后续判决提供了重要参考依据。",
+    "en": "Recent studies demonstrate that clinical trial can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "medicine",
+    "en_semantic": "Recent studies demonstrate that clinical trial can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that clinical trial can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that clinical trial can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "静脉注射的系统架构设计需充分考虑高可用性与容错性。",
+    "en": "The intravenous injection architecture ensures system availability, scalability, and maintainability in production environments.",
+    "domain": "medicine",
+    "en_semantic": "The intravenous injection architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_literal": "The intravenous injection architecture ensures system availability, scalability, and maintainability in production environments.",
+    "en_academic": "The intravenous injection architecture ensures system availability, scalability, and maintainability in production environments."
+  },
+  {
+    "zh": "关于病理的前瞻性随机对照试验显示积极结果。",
+    "en": "Recent studies demonstrate that pathology can significantly improve diagnostic accuracy and treatment outcomes.",
+    "domain": "medicine",
+    "en_semantic": "Recent studies demonstrate that pathology can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_literal": "Recent studies demonstrate that pathology can significantly improve diagnostic accuracy and treatment outcomes.",
+    "en_academic": "Recent studies demonstrate that pathology can significantly improve diagnostic accuracy and treatment outcomes."
+  },
+  {
+    "zh": "应加强对计算机断层扫描的监管力度与合规性审查机制。",
+    "en": "Regulatory oversight mechanisms for computed tomography (CT) should be strengthened to ensure compliance with applicable standards.",
+    "domain": "medicine",
+    "en_semantic": "Regulatory oversight mechanisms for computed tomography (CT) should be strengthened to ensure compliance with applicable standards.",
+    "en_literal": "Regulatory oversight mechanisms for computed tomography (CT) should be strengthened to ensure compliance with applicable standards.",
+    "en_academic": "Regulatory oversight mechanisms for computed tomography (CT) should be strengthened to ensure compliance with applicable standards."
+  }
+]
