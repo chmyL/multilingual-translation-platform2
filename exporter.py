@@ -1,11 +1,11 @@
 # 结果导出模块
-# 支持将翻译和润色结果导出为 JSON、TXT 或 Markdown 格式。
+# 支持将翻译和润色结果导出为JSON、TXT或Markdown格式。
 import json
 import os
 from datetime import datetime
 from typing import Dict, Any, List
 
-# 导出为 JSON 格式
+# 导出为JSON格式
 def export_json(data: Any, output_path: str = "", filename: str = "",) -> str:
     if not filename:
         filename = f"export_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
@@ -17,7 +17,7 @@ def export_json(data: Any, output_path: str = "", filename: str = "",) -> str:
 
     return filepath
 
-# 导出为 TXT 格式（双语对照纯文本）
+# 导出为TXT格式（双语对照纯文本）
 def export_txt(data: Any, output_path: str = "", filename: str = "",) -> str:
     if not filename:
         filename = f"export_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
@@ -46,7 +46,7 @@ def export_txt(data: Any, output_path: str = "", filename: str = "",) -> str:
 
     return filepath
 
-# 将单个翻译条目写入 TXT 行列表
+# 将单个翻译条目写入TXT行列表
 def _write_item_txt(lines: List[str], item: Dict[str, Any]):
     if isinstance(item, dict):
         # 翻译结果
@@ -87,7 +87,7 @@ def _write_item_txt(lines: List[str], item: Dict[str, Any]):
             if isinstance(value, dict):
                 _write_item_txt(lines, value)
 
-# 导出为 Markdown 格式
+# 导出为Markdown格式
 def export_markdown(data: Any, output_path: str = "", filename: str = "",) -> str:
     if not filename:
         filename = f"export_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
@@ -99,7 +99,7 @@ def export_markdown(data: Any, output_path: str = "", filename: str = "",) -> st
     lines.append(f"> 导出时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     lines.append("")
 
-    # 翻译列表 → 表格
+    # 翻译列表→表格
     if isinstance(data, list) and len(data) > 0 and isinstance(data[0], dict):
         _build_translation_table(lines, data)
     elif isinstance(data, dict):
@@ -115,7 +115,7 @@ def export_markdown(data: Any, output_path: str = "", filename: str = "",) -> st
 
     return filepath
 
-# 构建翻译结果 Markdown 表格
+# 构建翻译结果Markdown表格
 def _build_translation_table(lines: List[str], items: List[Dict[str, Any]]):
     # 判断类型
     has_original = any("original_text" in item for item in items)
@@ -153,7 +153,7 @@ def _build_translation_table(lines: List[str], items: List[Dict[str, Any]]):
             row.append(str(meteor_val))
         lines.append("| " + " | ".join(row) + " |")
 
-# 将单个条目写入 Markdown
+# 将单个条目写入Markdown
 def _write_item_markdown(lines: List[str], item: Dict[str, Any]):
     if isinstance(item, dict):
         for key, value in item.items():
@@ -172,7 +172,7 @@ def _write_item_markdown(lines: List[str], item: Dict[str, Any]):
                 lines.append(f"**{key}**: {_escape_md(str(value))}")
                 lines.append("")
 
-# 转义 Markdown 特殊字符
+# 转义Markdown特殊字符
 def _escape_md(text: str) -> str:
     if not isinstance(text, str):
         text = str(text)

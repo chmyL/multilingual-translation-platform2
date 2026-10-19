@@ -1,5 +1,5 @@
-# 从 FLORES-200 和 NewsCommentary 原始数据集筛选法律/医学/计算机语料
-# 构建消融实验语料库（每领域 50 条，共 150 条）
+# 从FLORES-200和NewsCommentary原始数据集筛选法律/医学/计算机语料
+# 构建消融实验语料库（每领域50条，共150条）
 import json
 import random
 
@@ -51,7 +51,7 @@ def is_valid(text: str) -> bool:
     cn_chars = sum(1 for c in text if '一' <= c <= '鿿')
     return cn_chars >= 3
 
-# 1. NewsCommentary (en-zh TSV)
+# 1. NewsCommentary(en-zh TSV)
 NC = "/mnt/d/news-commentary-v16.en-zh.tsv"
 print(f"扫描 NewsCommentary...")
 
@@ -80,7 +80,7 @@ except FileNotFoundError:
     print(f"  跳过: {NC} 不存在")
 
 
-# 2. FLORES-200 devtest (zh/en 平行)
+# 2. FLORES-200 devtest(zh/en平行)
 FLORES_ZH = "/mnt/d/flores200_dataset/devtest/zho_Hans.devtest"
 FLORES_EN = "/mnt/d/flores200_dataset/devtest/eng_Latn.devtest"
 
@@ -105,7 +105,7 @@ except FileNotFoundError:
     print(f"  跳过: FLORES-200 不存在")
 
 
-# 3. 如果某领域不足 50 条，从已匹配的大池补
+# 3. 如果某领域不足50条，从已匹配的大池补
 for d in ("law", "medicine", "cs"):
     if len(entries[d]) < MAX_PER_DOMAIN:
         shortfall = MAX_PER_DOMAIN - len(entries[d])

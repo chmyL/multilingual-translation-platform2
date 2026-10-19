@@ -1,7 +1,8 @@
-# FastAPI 后端服务
-# 将 frontend/app.html 作为前端界面
-# 提供 REST API 对接翻译/润色/转换/评估/实验/导出/模型管理
-# 底层调用 vLLM 本地模型
+# FastAPI后端服务
+# 将frontend/app.html作为前端界面
+# 提供REST API对接翻译/润色/转换/评估/实验/导出/模型管理
+# 底层调用vLLM本地模型
+import glob
 import random
 import sys
 import os
@@ -67,7 +68,7 @@ manual_scoring = ManualScoring(os.path.join(RESULTS_DIR, "manual_scores.json"))
 # 实验数据存储
 exp_store = ExperimentResults(RESULTS_DIR)
 
-# Pydantic 请求模型
+# Pydantic请求模型
 class ModelSwitchRequest(BaseModel):
     model: str
 
@@ -120,7 +121,7 @@ class ExportRequest(BaseModel):
     items: List[str]
     format: str = "json"
 
-# 历史记录持久化（JSON 文件）
+# 历史记录持久化（JSON文件）
 import time
 import threading
 _history_lock = threading.Lock()
@@ -137,7 +138,7 @@ def _save_json(path, data):
         with open(path, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
 
-# 追加一条历史记录到文件，保留最近 max_items 条
+# 追加一条历史记录到文件，保留最近max_items条
 def _append_history(filepath, entry, max_items=100):
     data = _load_json(filepath, [])
     data.append(entry)
@@ -176,8 +177,8 @@ async def root():
     return FileResponse("/mnt/f/PythonProject3/frontend/app.html",
                         headers={"Cache-Control": "no-cache, no-store, must-revalidate"})
 
-# 模型管理 API
-# 获取 vLLM 服务状态
+# 模型管理API
+# 获取vLLM服务状态
 @app.get("/api/status")
 async def api_status():
     status = get_status()
@@ -226,13 +227,13 @@ async def api_start_model(req: ModelSwitchRequest):
 async def api_switch_status():
     return _model_switch_status
 
-# 停止 vLLM 服务
+# 停止vLLM服务
 @app.post("/api/model/stop")
 async def api_stop_model():
     result = stop_vllm()
     return {"success": result, "message": "已停止" if result else "停止失败"}
 
-# 翻译 API
+# 翻译API
 # 单条翻译
 @app.post("/api/translate")
 async def api_translate(req: TranslateRequest):
@@ -256,7 +257,7 @@ async def api_translate_batch(req: TranslateRequest):
     )
     return {"results": results}
 
-# 润色 API
+# 润色API
 # 学术文本润色
 @app.post("/api/polish")
 async def api_polish(req: PolishRequest):
@@ -291,7 +292,7 @@ async def api_polish_compare(req: PolishRequest):
         "results": results,
     }
 
-# 口语/书面语转换 API
+# 口语/书面语转换API
 # 口语/书面语转换
 @app.post("/api/convert")
 async def api_convert(req: ConvertRequest):
@@ -303,14 +304,14 @@ async def api_convert(req: ConvertRequest):
         result = written_to_spoken(req.text, req.lang)
     return result
 
-# 质量评估 API
+# 质量评估API
 # 自动评估（BLEU/METEOR）
 @app.post("/api/evaluate")
 async def api_evaluate(req: EvaluateRequest):
     result = evaluate(req.reference, req.candidate, req.lang)
     return result
 
-# 批量评估进度 + 结果
+# 批量评估进度+结果
 _eval_batch_progress = {"running": False, "current": 0, "total": 0}
 _eval_batch_results = []
 
@@ -324,7 +325,7 @@ class BatchEvalRequest(BaseModel):
     domain: str = ""
     strategy: str = "semantic"
 
-# 从语料抽 N 条，模型逐个翻译，与语料自带金标准对比，汇总 BLEU/METEOR
+# 从语料抽N条，模型逐个翻译，与语料自带金标准对比，汇总BLEU/METEOR
 @app.post("/api/evaluate/batch")
 async def api_evaluate_batch(req: BatchEvalRequest):
     global _eval_batch_progress, _eval_batch_results
@@ -398,7 +399,7 @@ async def api_feedback_insights():
     summary = manual_scoring.get_feedback_summary()
     return {"success": True, "feedback": summary}
 
-# 批量处理进度 + 结果
+# 批量处理进度+结果
 _batch_progress = {"running": False, "current": 0, "total": 0}
 _batch_results = []
 
@@ -406,7 +407,7 @@ _batch_results = []
 async def api_batch_progress():
     return {"progress": dict(_batch_progress), "results": _batch_results}
 
-# 批量文件处理 API
+# 批量文件处理API
 # 上传文件并批量翻译（后台线程，前端轮询进度）
 @app.post("/api/batch/upload")
 async def api_batch_upload(file: UploadFile = File(...), source_lang: str = Form("zh"), target_lang: str = Form("en"),
@@ -586,7 +587,7 @@ async def api_translate_longtext(req: LongTextRequest):
     threading.Thread(target=_run, daemon=True).start()
     return {"success": True, "message": "长文本分句翻译已启动", "started": True}
 
-# 语料库/数据集管理 API
+# 语料库/数据集管理API
 # 列出所有可用数据集
 @app.get("/api/datasets")
 async def api_list_datasets():
@@ -619,7 +620,7 @@ async def api_dataset_detail(dataset_key: str):
     except Exception as e:
         return {"success": False, "error": str(e)}
 
-# 对比实验 API
+# 对比实验API
 _exp_thread = None
 _exp_state = {
     "running": False,
@@ -784,8 +785,7 @@ async def api_experiment_charts(exp_type: str, dataset: str = "default"):
             plot_response_time_distribution(data, "strategy", os.path.join(RESULTS_DIR, f"experiment2_response_distribution{ds_suffix}.png"))
             plot_domain_breakdown(data, "strategy", os.path.join(RESULTS_DIR, f"experiment2_domain_breakdown{ds_suffix}.png"))
 
-        # 返回生成的全部 PNG 图表路径（只返回当前数据集的）
-        import glob
+        # 返回生成的全部PNG图表路径（只返回当前数据集的）
         prefix = "experiment1" if exp_type == "model" else "experiment2"
         pattern = f"{prefix}_*{ds_suffix}.png"
         charts = sorted(glob.glob(os.path.join(RESULTS_DIR, pattern)))
@@ -807,7 +807,7 @@ async def api_chart_image(filename: str):
         return FileResponse(filepath)
     return JSONResponse({"error": "文件不存在"}, status_code=404)
 
-# 返回图表 HTML 文件
+# 返回图表HTML文件
 @app.get("/api/experiment/chart-html/{filename}")
 async def api_chart_html(filename: str):
     filepath = os.path.join(RESULTS_DIR, filename)
@@ -981,7 +981,7 @@ async def api_experiment_langcharts(dataset: str = "default"):
     except Exception as e:
         return {"success": False, "error": str(e)}
 
-# 消融实验 API
+# 消融实验API
 # 获取消融实验开关状态
 @app.get("/api/ablation")
 async def api_get_ablation():
@@ -1016,7 +1016,7 @@ async def api_experiment_ablation(req: ExperimentRequest):
         return {"success": False,
                 "error": f"已有实验进行中（{_exp_state['type']} - {_exp_state['dataset']}），请等待完成或先点「停止实验」"}
 
-    # 【新增】防止模型为空时崩溃
+    # 防止模型为空时崩溃
     current_model = get_current_model()
     if not current_model:
         return {"success": False, "error": "未获取到当前运行模型，请稍后重试或重新启动模型"}
@@ -1078,7 +1078,7 @@ async def api_experiment_ablation(req: ExperimentRequest):
                 result_off["ablation"] = "domain_off"
 
             else:
-                # 消融二：术语注入 ON vs OFF
+                # 消融二：术语注入ONvsOFF
                 set_ablation("glossary_injection", True)
 
                 def _abl2_on(text, source_lang, target_lang, strategy, model="", **kw):
@@ -1181,7 +1181,7 @@ async def api_langpairs_report(dataset: str = "default"):
     except Exception as e:
         return {"success": False, "error": str(e)}
 
-# 导出 API
+# 导出API
 # 导出数据为指定格式
 @app.post("/api/export")
 async def api_export(req: ExportRequest):
@@ -1203,7 +1203,7 @@ async def api_export(req: ExportRequest):
             scores = manual_scoring.get_all_scores()
             if scores:
                 export_data[item_key] = scores
-        # 其他数据类型通过 session 无法持久化，这里只处理可持久化的
+        # 其他数据类型通过session无法持久化，这里只处理可持久化的
 
     if not export_data:
         return {"success": False, "error": "所选内容无可用数据"}
@@ -1234,7 +1234,7 @@ async def api_download(filename: str):
         return FileResponse(filepath, filename=filename)
     return JSONResponse({"error": "文件不存在"}, status_code=404)
 
-# 语料库查询 API
+# 语料库查询API
 # 获取语料库统计
 @app.get("/api/corpus/stats")
 async def api_corpus_stats():
@@ -1248,7 +1248,7 @@ async def api_corpus_stats():
 # 启动
 if __name__ == "__main__":
     print("=" * 60)
-    print("  多语言翻译与润色工具 — FastAPI 后端")
+    print("  多语言翻译与润色工具 — FastAPI后端")
     print("=" * 60)
     print(f"  前端: http://localhost:8501")
     print(f"  API 文档: http://localhost:8501/docs")

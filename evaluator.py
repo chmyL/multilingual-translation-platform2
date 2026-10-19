@@ -1,6 +1,6 @@
 # 翻译质量评估模块
-# 基于 BLEU 指标对翻译结果进行自动评估，支持人工打分。
-# (BLEU: sacrebleu 纯 Python 无额外依赖; METEOR: 用字符级近似代替 NLTK)
+# 基于BLEU指标对翻译结果进行自动评估，支持人工打分。
+# (BLEU:sacrebleu纯Python无额外依赖;METEOR:用字符级近似代替NLTK)
 import json
 import os
 import math
@@ -10,7 +10,7 @@ from sacrebleu.metrics import BLEU
 import re
 from config import EVALUATION_METRICS, MANUAL_SCORE_CRITERIA
 
-# BLEU 计算器
+# BLEU计算器
 bleu_calc = BLEU(effective_order=True)
 
 # 按语言分词。中文/日文用字符级，英文/韩文用空格（韩文也适用）。
@@ -21,16 +21,16 @@ def _tokenize(text: str, lang: str = "en") -> list:
         chars = re.findall(r"[\u4e00-\u9fff\u3040-\u30ff\uac00-\ud7af a-z0-9]", text)
         return [c for c in chars if c.strip()]
     else:
-        # 英文/韩文：空格分词 + 去标点
+        # 英文/韩文：空格分词+去标点
         text = re.sub(r"[^\w\s]", " ", text)
         return [w for w in text.split() if w]
 
-# 计算 BLEU 评分 (sacrebleu)
+# 计算BLEU评分 (sacrebleu)
 def compute_bleu(reference: str, candidate: str, lang: str = "en") -> Dict[str, float]:
     if not reference or not candidate:
         return {"bleu": 0.0}
 
-    # 如果是中文或日文，用字符级切分并加空格，骗过 sacrebleu 的按空格分词
+    # 如果是中文或日文，用字符级切分并加空格，骗过sacrebleu的按空格分词
     if lang in ("zh", "ja"):
         reference = " ".join(_tokenize(reference, lang))
         candidate = " ".join(_tokenize(candidate, lang))
@@ -45,8 +45,8 @@ def compute_bleu(reference: str, candidate: str, lang: str = "en") -> Dict[str, 
         except Exception:
             return {"bleu": 0.0}
 
-# 简化 METEOR 近似 (纯 Python，无需 NLTK)
-# 基于 unigram 匹配 + 罚分
+# 简化METEOR近似(纯Python，无需NLTK)
+# 基于unigram匹配+罚分
 def compute_meteor_simple(reference: str, candidate: str, lang: str = "en") -> Dict[str, float]:
     if not reference or not candidate:
         return {"meteor": 0.0}

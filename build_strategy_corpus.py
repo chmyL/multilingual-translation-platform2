@@ -1,4 +1,4 @@
-# 策略评估数据集构建脚本 (strategy_corpus.json) — 维基稳定版
+# 策略评估数据集构建脚本(strategy_corpus.json) — 维基稳定版
 import json, os, random
 from tqdm import tqdm
 
@@ -6,7 +6,7 @@ random.seed(42)
 OUT = "/mnt/f/PythonProject/data/corpus/backup"
 os.makedirs(OUT, exist_ok=True)
 
-# 1. 直译 — NewsCommentary v16
+# 1. 直译—NewsCommentary v16
 NC_PATH = "/mnt/d/news-commentary-v16.en-zh.tsv"
 print("[1/3] 加载 NewsCommentary v16（直译策略 / 商务领域）...")
 nc_data = []
@@ -22,7 +22,7 @@ with open(NC_PATH, "r", encoding="utf-8") as f:
 print(f"  有效句对: {len(nc_data)}")
 business = random.sample(nc_data, min(50, len(nc_data)))
 
-# 2. 意译 — FLORES-200
+# 2. 意译—FLORES-200
 FLORES_BASE = "/mnt/d/flores200_dataset/devtest"
 print(f"\n[2/3] 加载 FLORES-200（意译策略 / 日常领域）...")
 zh = open(f"{FLORES_BASE}/zho_Hans.devtest", "r", encoding="utf-8").read().strip().split("\n")
@@ -43,7 +43,7 @@ for i, text in enumerate(tqdm(zh, desc="筛选日常句")):
 daily = random.sample(daily_candidates, min(50, len(daily_candidates)))
 print(f"  日常候选: {len(daily_candidates)}, 选取 {len(daily)}")
 
-# 3. 学术润色 — FLORES-200 学术关键词筛选
+# 3. 学术润色 — FLORES-200学术关键词筛选
 print(f"\n[3/3] 从 FLORES-200 筛选学术句对（学术润色策略 / 学术领域）...")
 
 AC_KW = ["研究", "实验", "模型", "算法", "训练", "性能", "分析", "方法", "证明", "假设",

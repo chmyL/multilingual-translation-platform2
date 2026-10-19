@@ -6,7 +6,7 @@ from config import POLISH_LEVELS, DEEPSEEK_MAX_TOKENS
 from llm_adapter import chat, strip_deepseek_thinking
 from vllm_manager import get_actual_running_model
 
-# 根据润色级别和目标语言构建 system prompt
+# 根据润色级别和目标语言构建system prompt
 def _build_polish_prompt(text: str, level: str, target_lang: str) -> str:
     level_info = POLISH_LEVELS.get(level, POLISH_LEVELS["moderate"])
 

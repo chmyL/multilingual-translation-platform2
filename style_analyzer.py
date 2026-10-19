@@ -22,11 +22,11 @@ def _cn_style(text: str, word_count: int, sent_count: int) -> Dict:
     avg_word_len = sum(len(t) for t in all_tokens) / max(len(all_tokens), 1)
 
     passive_ratio = 0  # 中文无形态被动
-    # 连接词密度 = (正式词 + 学术词) / 句数 × 10
+    # 连接词密度=(正式词+学术词)/句数×10
     conn_density = (cn_formal + cn_academic) / max(sent_count, 1) * 10
-    # 第一人称占比 = 第一人称数 / 总词数 × 100
+    # 第一人称占比=第一人称数/总词数×100
     first_ratio = cn_first / max(word_count, 1) * 100
-    # 口语词占比 = 口语词数 / 总词数 × 100
+    # 口语词占比=口语词数/总词数×100
     collo_ratio = cn_colloq / max(word_count, 1) * 100
     raw = conn_density / 2 + avg_word_len / 2 - collo_ratio * 2 - first_ratio
     norm = max(0.0, min(1.0, (raw + 10) / 25))

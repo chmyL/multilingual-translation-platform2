@@ -6,21 +6,16 @@ import threading
 import glob
 from datetime import datetime
 from typing import Dict, Any, List, Optional, Callable
-
 import matplotlib.pyplot as plt
 import matplotlib
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-
-from config import (
-    MODELS,
-    TRANSLATION_STRATEGIES,
-    RESULTS_DIR,
-    CORPUS_DIR,
-    EXPERIMENT_SAMPLE_SIZE,
-)
+import matplotlib; matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import numpy as np
+from config import (MODELS, TRANSLATION_STRATEGIES, RESULTS_DIR, CORPUS_DIR, EXPERIMENT_SAMPLE_SIZE,)
 from evaluator import compute_bleu, compute_meteor_simple
 
 # 设置中文显示
@@ -45,11 +40,11 @@ def get_experiment_progress() -> dict:
     return dict(_experiment_progress)
 
 # 翻译调用，失败时返回错误记录不中断实验。
-# source_domain: 传入空字符串表示不指定领域（默认），传入真实领域名用于消融等场景。
+# source_domain:传入空字符串表示不指定领域（默认），传入真实领域名用于消融等场景。
 def _safe_translate(translate_fn, source_text, source_lang, target_lang, strategy, source_domain=""):
     try:
         t_start = time.time()
-        # 注意这里传入了 source_domain
+        # 注意这里传入了source_domain
         result = translate_fn(source_text, source_lang=source_lang,
                               target_lang=target_lang, strategy=strategy,
                               source_domain=source_domain, model="")
@@ -145,7 +140,7 @@ def _load_dataset_corpus(dataset_key: str = "default") -> list:
                 item["domain"] = item.get("source", "conversion")
                 items.append(item)
             return items
-        # 常规 dict_file：{domain: [items]}
+        # 常规dict_file：{domain: [items]}
         items = []
         for domain, domain_items in data.items():
             if domain == "meta" or domain == "pairs":
@@ -509,7 +504,7 @@ def run_strategy_comparison(translate_fn: Callable, model: str = "Hy-MT2-1.8B", 
         "summary": {},
     }
 
-    # 预创建 per_sample 骨架
+    # 预创建per_sample骨架
     for i, item in enumerate(test_data):
         source_text = item.get(source_lang, item.get("zh", ""))
         reference_text = item.get("en", "")
@@ -524,7 +519,7 @@ def run_strategy_comparison(translate_fn: Callable, model: str = "Hy-MT2-1.8B", 
     per_strategy_records = {s: [] for s in strategies}
 
     if strategy_domain_map:
-        # === 领域-策略配对模式（策略语料库专用）===
+        # 领域-策略配对模式（策略语料库专用）
         # 每个领域只测其对应的最优策略
         total_steps = total  # 每条只测1个策略
         _experiment_progress = {
@@ -577,7 +572,7 @@ def run_strategy_comparison(translate_fn: Callable, model: str = "Hy-MT2-1.8B", 
 
 
     else:
-        # === 原模式：所有策略跑所有条目 ===
+        # 原模式：所有策略跑所有条目
         total_steps = total * len(strategies)
         _experiment_progress = {
             "running": True, "current": 0, "total": total_steps,
@@ -814,8 +809,7 @@ def plot_radar_comparison(*args, **kwargs) -> str:
     return ""
 
 
-def generate_experiment_report(e1_data=None, e2_data=None,
-                               save_path: str = None) -> str:
+def generate_experiment_report(e1_data=None, e2_data=None, save_path: str = None) -> str:
     if save_path is None:
         save_path = os.path.join(RESULTS_DIR, "experiment_report.md")
     lines = [
@@ -903,13 +897,8 @@ def generate_experiment_report(e1_data=None, e2_data=None,
         f.write("\n".join(lines))
     return save_path
 
-# 绘制各领域 BLEU/BETEOR 分组柱状图
-def plot_domain_breakdown(data: Dict[str, Any], experiment_type: str = "model",
-                          save_path: Optional[str] = None) -> str:
-    import matplotlib; matplotlib.use('Agg')
-    import matplotlib.pyplot as plt
-    import numpy as np
-
+# 绘制各领域BLEU/BETEOR分组柱状图
+def plot_domain_breakdown(data: Dict[str, Any], experiment_type: str = "model", save_path: Optional[str] = None) -> str:
     key = "models" if experiment_type == "model" else "strategies"
     summary = data.get("summary", {}).get(key, {})
     if not summary:
@@ -971,7 +960,7 @@ def run_multi_lang_experiment(translate_fn: Callable, models: Optional[List[str]
     global _experiment_progress
     all_results = {}
     total_pairs = len(lang_pairs)
-    ds_info = DATASETS.get(dataset, {})   # ← 提到循环外，防止未定义
+    ds_info = DATASETS.get(dataset, {})
 
     for pi, (src, tgt) in enumerate(lang_pairs):
         # 检查停止信号
@@ -1009,7 +998,7 @@ def run_multi_lang_experiment(translate_fn: Callable, models: Optional[List[str]
         if pair_key not in existing_per_pair:
             existing_per_pair[pair_key] = pair_data
         else:
-            # 合并 per_sample：按 id 去重，追加新模型
+            # 合并per_sample：按id去重，追加新模型
             existing_samples = {s["id"]: s for s in existing_per_pair[pair_key].get("per_sample", [])}
             for s in pair_data.get("per_sample", []):
                 sid = s["id"]
@@ -1022,7 +1011,7 @@ def run_multi_lang_experiment(translate_fn: Callable, models: Optional[List[str]
             existing_per_pair[pair_key]["summary"]["models"].update(
                 pair_data.get("summary", {}).get("models", {})
             )
-    # 合并 config.models
+    # 合并config.models
     merged_models = list(set(
         (existing.get("config", {}).get("models", []) if existing else []) +
         models
@@ -1044,7 +1033,7 @@ def run_multi_lang_experiment(translate_fn: Callable, models: Optional[List[str]
     exp_results.save(save_name, save_data)
     return all_results
 
-# 绘制模型 × 语言对 BLEU/METEOR 分组柱状图。
+# 绘制模型×语言对BLEU/METEOR分组柱状图。
 def plot_lang_pair_comparison(data: Dict[str, Any], save_path: Optional[str] = None) -> str:
     import matplotlib; matplotlib.use('Agg')
     import matplotlib.pyplot as plt
@@ -1100,7 +1089,7 @@ def plot_lang_pair_comparison(data: Dict[str, Any], save_path: Optional[str] = N
     return save_path
 
 # 消融实验与多语言报告
-# 绘制消融实验 ON vs OFF 对比柱状图
+# 绘制消融实验ONvsOFF对比柱状图
 def plot_ablation_comparison(data: Dict[str, Any], save_path: Optional[str] = None) -> str:
     import matplotlib; matplotlib.use('Agg')
     import matplotlib.pyplot as plt
@@ -1147,7 +1136,7 @@ def plot_ablation_comparison(data: Dict[str, Any], save_path: Optional[str] = No
     plt.close(fig)
     return save_path
 
-# 生成消融实验 Markdown 报告
+# 生成消融实验Markdown报告
 def generate_ablation_report(data: Dict[str, Any], save_path: Optional[str] = None) -> str:
     if save_path is None:
         save_path = os.path.join(RESULTS_DIR, "experiment_ablation_report.md")
@@ -1201,7 +1190,7 @@ def generate_ablation_report(data: Dict[str, Any], save_path: Optional[str] = No
         f.write("\n".join(lines))
     return save_path
 
-# 生成多语言对对比实验 Markdown 报告
+# 生成多语言对对比实验Markdown报告
 def generate_multilang_report(data: Dict[str, Any], save_path: Optional[str] = None) -> str:
     if save_path is None:
         save_path = os.path.join(RESULTS_DIR, "experiment_multilang_report.md")

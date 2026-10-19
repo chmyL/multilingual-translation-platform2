@@ -1,4 +1,4 @@
-# 长文本分句翻译 + 特殊格式保护 + 上下文关联
+# 长文本分句翻译+特殊格式保护+上下文关联
 # 纯正则实现，无外部依赖。
 import re
 from typing import List, Tuple, Dict
@@ -6,7 +6,7 @@ from typing import List, Tuple, Dict
 
 # 反引号代码块
 _CODE_FENCE = re.compile(r'```[\s\S]*?```', re.MULTILINE)
-# 代码行（无 fence 的裸代码）
+# 代码行（无fence的裸代码）
 _CODE_LINE = re.compile(
     r'(?:^|\n)[ \t]*(?:'
     r'import\s+\w+|from\s+\w+\s+import|'
@@ -33,10 +33,10 @@ def extract_special_tokens(text: str) -> Tuple[str, Dict[str, str]]:
         placeholders[k] = match.group(0)
         return k
 
-    # 0. 预处理：把跨行 Markdown 链接压成单行
+    # 预处理：把跨行Markdown链接压成单行
     text = re.sub(r'\[([^\]]*)\]\s*\(([^)]*)\)', lambda m: f'[{m.group(1)}]({m.group(2)})', text, flags=re.DOTALL)
 
-    # 优先级：代码块 > 代码行 > Markdown链接 > URL > 邮箱
+    # 优先级：代码块>代码行>Markdown链接>URL>邮箱
     text = _CODE_FENCE.sub(_ph, text)
     text = _CODE_LINE.sub(_ph, text)
     text = _URL.sub(_ph, text)
@@ -115,10 +115,10 @@ def _clean_output(raw: str, original_len: int) -> str:
 def translate_long_text(translate_fn, text: str, source_lang: str = "zh",
                         target_lang: str = "en", strategy: str = "semantic", domain: str = "",
                         context_window: int = 2, **kw,) -> Tuple[str, List[Dict]]:
-    # 1. 提取特殊格式
+    # 1.提取特殊格式
     clean_text, placeholders = extract_special_tokens(text)
 
-    # 2. 分句
+    # 2.分句
     raw_sentences = _split_sentences(clean_text)
     sentences = []
     for s in raw_sentences:
@@ -139,7 +139,7 @@ def translate_long_text(translate_fn, text: str, source_lang: str = "zh",
     ctx_buf = []
 
     for i, s in enumerate(sentences):
-        # 含占位符的行：用 PH 标记替换后翻译
+        # 含占位符的行：用PH标记替换后翻译
         if "▣" in s:
             local_ph = {k: placeholders[k] for k in placeholders if k in s}
             simple_map = {}
@@ -209,7 +209,7 @@ def translate_long_text(translate_fn, text: str, source_lang: str = "zh",
         if t and t != s:
             ctx_buf.append(t)
 
-    # 4. 合并 + 恢复特殊格式
+    # 4.合并+恢复特殊格式
     merged = " ".join(t for t in translated if t)
     merged = restore_special_tokens(merged, placeholders)
     return merged, details

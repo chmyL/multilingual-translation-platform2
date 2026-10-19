@@ -1,6 +1,6 @@
 # 领域感知模块（实训）
 # 提供：场景自动识别、领域提示词注入、消融实验开关。
-# 独立于 translator.py，方便做启用/关闭对比实验。
+# 独立于translator.py，方便做启用/关闭对比实验。
 from typing import Dict, Optional
 
 
@@ -76,7 +76,6 @@ def detect_domain(text: str) -> str:
     best = max(scores, key=scores.get)
     return best if scores[best] > 0 else ""
 
-
 # 领域专属提示词注入
 DOMAIN_INSTRUCTIONS = {
     "academic": "【学术论文】使用正式学术英语（formal academic English），被动语态优先，避免第一人称。术语如'实验结果表明'→'experimental results demonstrate'、'本文提出'→'this paper proposes'。",
@@ -92,10 +91,7 @@ DOMAIN_INSTRUCTIONS = {
 def get_domain_instruction(domain: str) -> str:
     return DOMAIN_INSTRUCTIONS.get(domain, "")
 
-
-# ============================================================
 # 消融实验控制
-# ============================================================
 # domain_detection / domain_instruction: 由实验 wrapper (server.py) 控制
 # glossary_injection: 由 translator._build_prompt 检查
 _ABLATION_FLAGS: Dict[str, bool] = {

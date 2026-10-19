@@ -5,7 +5,7 @@ random.seed(42)
 OUT = "/mnt/f/PythonProject/data/corpus/backup"
 os.makedirs(OUT, exist_ok=True)
 
-# 1. 加载 FLORES-200 (学术 + 技术)
+# 1. 加载FLORES-200(学术+技术)
 FLORES_BASE = "/mnt/d/flores200_dataset/devtest"
 flores_zh = open(f"{FLORES_BASE}/zho_Hans.devtest","r",encoding="utf-8").read().strip().split("\n")
 flores_en = open(f"{FLORES_BASE}/eng_Latn.devtest","r",encoding="utf-8").read().strip().split("\n")
@@ -21,7 +21,7 @@ TECH_KW = ["服务器","代码","程序","网络","数据","接口","配置","�
            "硬件","协议","内存","线程","进程","缓存","端口","版本","更新",
            "错误","日志","安全","加密","API","URL","HTTP","TCP","IP"]
 
-# 从 FLORES 中按关键词选 N 条
+# 从FLORES中按关键词选N条
 def pick_flores(keywords, n):
     candidates = []
     for i in range(len(flores_zh)):
@@ -34,7 +34,7 @@ def pick_flores(keywords, n):
             })
     return random.sample(candidates, min(n, len(candidates)))
 
-# 2. 加载 NewsCommentary v16 (商务 + 直译)
+# 2. 加载NewsCommentary v16(商务+直译)
 NC_PATH = "/mnt/d/news-commentary-v16.en-zh.tsv"
 print(f"[2/4] 加载 NewsCommentary v16 ...")
 nc_data = []
@@ -56,10 +56,10 @@ def pick_nc(keywords, n):
     candidates = [d for d in nc_data if any(kw in d["zh"] for kw in keywords)]
     return random.sample(candidates, min(n, len(candidates))) if candidates else []
 
-# 3. 加载 Tatoeba (日常口语 + 意译)
+# 3. 加载Tatoeba(日常口语+意译)
 TAT_PATH = "/mnt/d/有中文普通话-英语对应句 - 2026-06-24.tsv"
 print(f"[3/4] 加载 Tatoeba ...")
-tat_data = {}  # zh_text -> en_text (取第一条)
+tat_data = {}  # zh_text->en_text(取第一条)
 with open(TAT_PATH, "r", encoding="utf-8") as f:
     for line in f:
         line = line.strip().replace("﻿","")
@@ -77,7 +77,7 @@ def pick_tatoeba(n):
     random.shuffle(items)
     return [{"zh": z, "en": e, "source": "Tatoeba"} for z, e in items[:n]]
 
-# 4. 加载 OpenSubtitles (补充口语)
+# 4. 加载OpenSubtitles(补充口语)
 print(f"[4/4] 加载 OpenSubtitles ...")
 opensub_data = []
 try:
@@ -93,25 +93,25 @@ try:
 except Exception as e:
     print(f"  OpenSubtitles 在线加载失败: {e}，跳过。不影响主要数据集。")
 
-# 5. 构建策略评估数据集 (200 条)
+# 5. 构建策略评估数据集(200条)
 print("\n=== 构建 strategy_corpus.json ===")
 
 strategy_corpus = {
-    "academic": [],    # FLORES → 50
-    "business": [],    # NewsCommentary → 50
-    "daily": [],       # Tatoeba → 50
-    "technical": [],   # FLORES → 50
+    "academic": [],    # FLORES→50
+    "business": [],    # NewsCommentary→50
+    "daily": [],       # Tatoeba→50
+    "technical": [],   # FLORES→50
 }
 
-# 学术 (FLORES)
+# 学术(FLORES)
 strategy_corpus["academic"] = pick_flores(AC_KW, 50)
-# 技术 (FLORES)
+# 技术(FLORES)
 strategy_corpus["technical"] = pick_flores(TECH_KW, 50)
-# 商务 (NewsCommentary)
+# 商务(NewsCommentary)
 biz_entries = pick_nc(BIZ_KW, 50)
 for d in biz_entries: d["domain"] = "business"
 strategy_corpus["business"] = biz_entries
-# 日常 (Tatoeba)
+# 日常(Tatoeba)
 daily_entries = pick_tatoeba(50)
 for d in daily_entries: d["domain"] = "daily"
 strategy_corpus["daily"] = daily_entries
@@ -140,10 +140,10 @@ with open(f"{OUT}/strategy_corpus.json", "w", encoding="utf-8") as f:
     json.dump(strategy_corpus, f, ensure_ascii=False, indent=2)
 print(f"  策略数据集: {total} 条 ({', '.join(f'{k}={len(v)}' for k,v in strategy_corpus.items() if k!='meta')})")
 
-# 6. 构建口语↔书面语转换数据集 (50 对)
+# 6. 构建口语↔书面语转换数据集 (50对)
 print("\n=== 构建 conversion_corpus.json ===")
 
-# 从 Tatoeba 取口语短句，写书面语版本
+# 从 Tatoeba取口语短句，写书面语版本
 spoken_data = random.sample(list(tat_data.items()), min(100, len(tat_data)))
 conversion_pairs = []
 for zh_spoken, en_spoken in spoken_data[:50]:

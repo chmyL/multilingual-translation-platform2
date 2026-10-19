@@ -9,18 +9,18 @@ from openai import OpenAI
 
 from config import VLLM_BASE_URL, MODELS
 
-# vLLM OpenAI 兼容客户端（timeout=60s，超时快触发自恢复）
+# vLLM OpenAI兼容客户端（timeout=60s，超时快触发自恢复）
 _vllm_client = OpenAI(base_url=f"{VLLM_BASE_URL}/v1", api_key="not-needed", timeout=60.0, max_retries=0)
 
-# transformers 本地模型缓存
+# transformers本地模型缓存
 _tf_model = None
 _tf_tokenizer = None
 _tf_loaded_model_path: Optional[str] = None
 
-# 需要走 transformers 后端的模型列表
+# 需要走transformers后端的模型列表
 _TRANSFORMERS_MODELS = {"Hy-MT2-1.8B"}
 
-# 查询 vLLM 服务当前运行的模型路径
+# 查询vLLM服务当前运行的模型路径
 def _get_running_vllm_model() -> Optional[str]:
     try:
         resp = requests.get(f"{VLLM_BASE_URL}/v1/models", timeout=3)
@@ -32,7 +32,7 @@ def _get_running_vllm_model() -> Optional[str]:
         pass
     return None
 
-# 卸载 transformers 模型，释放显存
+# 卸载transformers模型，释放显存
 def _unload_transformers():
     global _tf_model, _tf_tokenizer, _tf_loaded_model_path
     if _tf_model is not None:
@@ -48,7 +48,7 @@ def _unload_transformers():
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
 
-# 按需加载 transformers 模型到显存
+# 按需加载transformers模型到显存
 def _load_transformers(model_path: str):
     global _tf_model, _tf_tokenizer, _tf_loaded_model_path
 
@@ -73,7 +73,7 @@ def _load_transformers(model_path: str):
         trust_remote_code=True,
     )
 
-    # 移到 GPU（单卡直接 .to 即可，避开 device_map 对 accelerate 的依赖）
+    # 移到GPU（单卡直接.to 即可，避开device_map对accelerate的依赖）
     if torch.cuda.is_available():
         _tf_model = _tf_model.to("cuda")
     _tf_model.eval()
@@ -83,7 +83,7 @@ def _load_transformers(model_path: str):
           f"显存: {torch.cuda.memory_allocated() / 1e9:.2f} GB" if torch.cuda.is_available() else
           f"耗时 {time.time() - t0:.1f}s (CPU)")
 
-# 通过 vLLM OpenAI API 推理
+# 通过vLLM OpenAI API推理
 def _chat_vllm(messages: List[Dict[str, str]], model_name: str,
                temperature: float, max_tokens: int) -> str:
     response = _vllm_client.chat.completions.create(
@@ -94,17 +94,17 @@ def _chat_vllm(messages: List[Dict[str, str]], model_name: str,
     )
     return response.choices[0].message.content.strip()
 
-# 通过 transformers 本地推理
+# 通过transformers本地推理
 def _chat_transformers(messages: List[Dict[str, str]], model_path: str,
                        temperature: float, max_tokens: int) -> str:
     import torch
 
     _load_transformers(model_path)
 
-    # 使用 tokenizer 的 chat_template (Jinja2)
+    # 使用tokenizer的chat_template (Jinja2)
     if hasattr(_tf_tokenizer, 'apply_chat_template') and _tf_tokenizer.chat_template:
         try:
-            # tokenize=False → 返回字符串，再手动 encode
+            # tokenize=False→返回字符串，再手动encode
             prompt_text = _tf_tokenizer.apply_chat_template(
                 messages,
                 tokenize=False,
@@ -117,7 +117,7 @@ def _chat_transformers(messages: List[Dict[str, str]], model_path: str,
         input_ids = None
 
     if input_ids is None:
-        # 兜底：用 tokenizer 的特殊 token 手动构建
+        # 兜底：用tokenizer的特殊token手动构建
         # 模型文本起始标记
         bos = _tf_tokenizer.bos_token or ""
         # 模型终止输出标记
@@ -143,15 +143,15 @@ def _chat_transformers(messages: List[Dict[str, str]], model_path: str,
         # 调用模型自回归生成文本
         output_ids = _tf_model.generate(input_ids, **generation_config)
 
-    # 只取生成的新 token
+    # 只取生成的新token
     new_tokens = output_ids[0][input_ids.shape[1]:]
     result = _tf_tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
 
     return result
 
-# 统一推理接口 — 自动路由到 vLLM 或 transformers
+# 统一推理接口 — 自动路由到vLLM或transformers
 def chat(messages: List[Dict[str, str]], temperature: float = 0.3, max_tokens: int = 512) -> str:
-    # 1. 优先检查当前选中模型是否应该走 transformers
+    # 1.优先检查当前选中模型是否应该走transformers
     from vllm_manager import get_current_model, get_actual_running_model
     current = get_current_model()
 
@@ -160,10 +160,10 @@ def chat(messages: List[Dict[str, str]], temperature: float = 0.3, max_tokens: i
         print(f"[llm_adapter] 使用 transformers: {current}")
         return _chat_transformers(messages, model_path, temperature, max_tokens)
 
-    # 2. 查询 vLLM 实际运行的服务（不信任 _current_model，直接查 /v1/models）
+    # 2.查询vLLM实际运行的服务（不信任 _current_model，直接查/v1/models）
     vllm_model = _get_running_vllm_model()
     if vllm_model:
-        # 检测模型不一致：警告但不阻止（converter/translator 已用实际运行模型适配了 prompt）
+        # 检测模型不一致：警告但不阻止（converter/translator已用实际运行模型适配了prompt）
         actual_key = get_actual_running_model()
         if actual_key and actual_key != current:
             selected_name = MODELS.get(current, {}).get("name", current or "无")
@@ -172,7 +172,7 @@ def chat(messages: List[Dict[str, str]], temperature: float = 0.3, max_tokens: i
         print(f"[llm_adapter] 使用 vLLM: {vllm_model}")
         return _chat_vllm(messages, vllm_model, temperature, max_tokens)
 
-    # 3. vLLM 没运行 — 报错。给出明确的诊断信息
+    # 3.vLLM没运行 — 报错。给出明确的诊断信息
     msg = "vLLM 服务未启动，请在侧边栏选择模型后点击「启动/切换」。"
     if current and current not in _TRANSFORMERS_MODELS:
         msg += (
@@ -183,7 +183,7 @@ def chat(messages: List[Dict[str, str]], temperature: float = 0.3, max_tokens: i
         msg += f"\n当前选中模型: {current or '无'}。"
     raise RuntimeError(msg)
 
-# 返回当前推理后端名称。给前端 /api/status 提供后端类型字符串
+# 返回当前推理后端名称。给前端/api/status提供后端类型字符串
 def get_backend() -> str:
     if _get_running_vllm_model():
         return "vLLM"
@@ -193,7 +193,7 @@ def get_backend() -> str:
         return "transformers"
     return "unknown"
 
-# 去除 DeepSeek R1 的思考链，只保留最终输出
+# 去除DeepSeek R1的思考链，只保留最终输出
 def strip_deepseek_thinking(text: str) -> str:
     if not text:
         return text
@@ -201,15 +201,15 @@ def strip_deepseek_thinking(text: str) -> str:
     tag_start = "<think>"
     tag_end = "</think>"
 
-    # 1. 如果有闭合标签，取最后闭合标签之后的内容
+    # 1.如果有闭合标签，取最后闭合标签之后的内容
     if tag_end in text:
         text = text.rsplit(tag_end, 1)[-1].strip()
     else:
-        # 2. 如果只有开标签没有闭合，简单清理开标签
+        # 2.如果只有开标签没有闭合，简单清理开标签
         if tag_start in text:
             text = text.replace(tag_start, "").strip()
 
-    # 3. 去掉所有残留标签
+    # 3.去掉所有残留标签
     text = text.replace(tag_start, "").replace(tag_end, "").strip()
 
     return text

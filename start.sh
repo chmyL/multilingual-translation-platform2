@@ -1,6 +1,6 @@
 #!/bin/bash
-# 一键启动脚本 — 清进程 + 启 vLLM + 启 FastAPI
-# vLLM 参数从 config.py 读取，无需手动同步
+# 一键启动脚本—清进程+启vLLM+启FastAPI
+# vLLM参数从config.py读取，无需手动同步
 
 echo "=== 清理旧进程 ==="
 pkill -9 python 2>/dev/null
@@ -22,7 +22,7 @@ nvidia-smi | grep -E "MiB|Processes" -A3
 source /home/dell/miniconda3/etc/profile.d/conda.sh
 conda activate vllm-env
 
-# 从 config.py 读取参数
+# 从config.py读取参数
 eval $(python3 -c "
 import sys; sys.path.insert(0, '/mnt/f/PythonProject3')
 from config import MODELS, VLLM_DEFAULT_GPU_MEMORY, VLLM_DEFAULT_MAX_MODEL_LEN, VLLM_PORT

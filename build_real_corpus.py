@@ -54,7 +54,7 @@ for i in range(len(zh)):
 total = sum(len(v) for v in corpus.values())
 print(f"关键词分类: {total} (学术{len(corpus['academic'])} 商务{len(corpus['business'])} 日常{len(corpus['daily'])} 技术{len(corpus['technical'])})")
 
-# 3. 技术领域补足 32 条
+# 3. 技术领域补足32条
 print("补足技术语料 32 条...")
 TECH32 = [
     ["该系统通过消息队列实现异步任务处理。","The system processes asynchronous tasks through message queues.","このシステムはメッセージキューを通じて非同期タスクを処理する。","이 시스템은 메시지 큐를 통해 비동기 작업을 처리한다."],

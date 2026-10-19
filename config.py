@@ -22,28 +22,28 @@ MODELS = {
         "description": "DeepSeek推理蒸馏模型，用于质量分析与翻译对比",
         "type": "reasoning",
         "architecture": "qwen2",
-        "max_model_len": 1024,  # 推理链需要额外 token，给长上下文
+        "max_model_len": 1024,  # 推理链需要额外token，给长上下文
     },
 }
 
 # 推理参数配置
 DEFAULT_TEMPERATURE = 0.3
-DEFAULT_MAX_TOKENS = 128  # 翻译默认最大生成 token 数
-DEEPSEEK_MAX_TOKENS = 512  # DeepSeek-R1 推理链需更多 token
+DEFAULT_MAX_TOKENS = 128  # 翻译默认最大生成token数
+DEEPSEEK_MAX_TOKENS = 512  # DeepSeek-R1推理链需更多token
 
 # 默认模型（程序启动时使用）
 DEFAULT_MODEL = "Hy-MT2-1.8B"
 
-# vLLM 服务配置
+# vLLM服务配置
 VLLM_PORT = 8000
 VLLM_HOST = "localhost"
 VLLM_BASE_URL = f"http://{VLLM_HOST}:{VLLM_PORT}"
 
-# vLLM 安装路径（vllm-env conda 环境中）
+# vLLM安装路径（vllm-env conda环境中）
 _VLLM_BIN = "/home/dell/miniconda3/envs/vllm-env/bin/vllm"
 _VLLM_ENV_BIN = "/home/dell/miniconda3/envs/vllm-env/bin"
 
-# vLLM 启动参数（必须把 conda env bin 加到 PATH，否则 flashinfer 找不到 ninja）
+# vLLM启动参数（必须把conda env bin加到PATH，否则flashinfer找不到ninja）
 VLLM_START_CMD_TEMPLATE = (
     "PATH={env_bin}:$PATH "
     "CC=/usr/bin/gcc-12 CXX=/usr/bin/g++-12 "
@@ -59,7 +59,7 @@ VLLM_DEFAULT_GPU_MEMORY = 0.78  # RTX 4050 6GB
 VLLM_DEFAULT_MAX_MODEL_LEN = 512
 
 # vLLM 启动超时（秒）
-VLLM_STARTUP_TIMEOUT = 600  # WSL 共享目录 IO 慢，首次加载可能需要 5-10 分钟
+VLLM_STARTUP_TIMEOUT = 600  # WSL共享目录IO慢，首次加载可能需要5-10分钟
 # 健康检查间隔（秒）
 VLLM_HEALTH_CHECK_INTERVAL = 2
 

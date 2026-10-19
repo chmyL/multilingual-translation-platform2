@@ -1,6 +1,6 @@
 # 领域术语词典
 # 为法律、医学、计算机科学三个领域提供中英文术语对照表，
-# 在翻译 prompt 中注入相关术语以提升领域翻译专业性。
+# 在翻译prompt中注入相关术语以提升领域翻译专业性。
 
 # 法律领域术语（35条）
 LAW_GLOSSARY = {
@@ -129,7 +129,7 @@ CS_GLOSSARY = {
     "服务网格": "service mesh",
 }
 
-# 领域 → 术语词典映射
+# 领域→术语词典映射
 DOMAIN_GLOSSARIES = {
     "law": LAW_GLOSSARY,
     "medicine": MEDICINE_GLOSSARY,

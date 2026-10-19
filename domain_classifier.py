@@ -1,5 +1,5 @@
 # domain_classifier.py
-# 基于多语言 sentence embedding + 原型句相似度，替代纯关键词匹配。
+# 基于多语言sentence embedding+原型句相似度，替代纯关键词匹配。
 import os
 import threading
 from typing import Dict, Tuple, Optional, List

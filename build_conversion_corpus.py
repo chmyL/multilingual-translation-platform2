@@ -7,7 +7,7 @@ os.makedirs(OUT, exist_ok=True)
 
 TAT_PATH = "/mnt/d/有中文普通话-英语对应句 - 2026-06-24.tsv"
 
-# 1. 加载 Tatoeba 口语句对
+# 1. 加载Tatoeba口语句对
 print("[1/2] 加载 Tatoeba 中英口语句对...")
 tat_zh = {}
 with open(TAT_PATH, "r", encoding="utf-8") as f:
@@ -36,7 +36,7 @@ print(f"  口语句子候选: {len(spoken_candidates)}")
 # 2. 构建口语↔书面语对
 print("\n[2/2] 构建转换对...")
 
-# 手写口语→书面语 30 对（高质量人工参考）
+# 手写口语→书面语30对（高质量人工参考）
 HAND_S2W = [
     ("我觉得吧，这个结果还行。", "初步分析表明，该实验结果符合预期。", "I think the results are okay."),
     ("就是说，数据好像有点问题。", "数据可能存在统计偏差。", "The data seems to have some issues."),
@@ -77,7 +77,7 @@ for sp, wr, en in HAND_S2W:
         "direction": "spoken_to_written", "source": "hand-written",
     })
 
-# 书面语→口语 20 对：从 Tatoeba 取正式句，添语气词生成伪口语
+# 书面语→口语20对：从Tatoeba取正式句，添语气词生成伪口语
 FORMAL_KW = ["根据", "分析", "表明", "研究", "建议", "采取", "实施", "评估", "当前",
              "进行", "提供", "予以", "探讨", "讨论", "结论", "结果", "实验", "机制",
              "具有", "相关", "显著", "方案", "措施", "项目", "系统", "规定", "申请",

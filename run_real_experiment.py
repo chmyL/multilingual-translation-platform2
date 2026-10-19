@@ -1,16 +1,10 @@
-#!/usr/bin/env python3
-"""
-真实数据集实验脚本（已重构，使用 experiment.py 公共模块）
-
-实验一：模型对比 — real_corpus.json（FLORES-200 + Tatoeba 真实数据）
-实验二：策略对比 — strategy_corpus.json（NewsCommentary + FLORES-200 + Tatoeba）
-
-支持：
-- 均匀分层抽样（各领域等比例抽取）
-- 各场景独立评估
-- 结果统一存储，前端可直接查看
-"""
-
+# 真实数据集实验脚本（已重构，使用experiment.py公共模块）
+# 实验一：模型对比 — real_corpus.json（FLORES-200+Tatoeba真实数据）
+# 实验二：策略对比 — strategy_corpus.json（NewsCommentary+FLORES-200+Tatoeba）
+# 支持：
+# 均匀分层抽样（各领域等比例抽取）
+# 各场景独立评估
+# 结果统一存储，前端可直接查看
 import sys
 sys.path.insert(0, "/mnt/f/PythonProject3")
 
@@ -26,11 +20,8 @@ from experiment import (
 )
 from translator import translate
 
-
+# 实验一：三模型在真实语料上对比（依次切换模型，每个模型独立翻译所有样本）
 def run_real_exp1(sample_size=50, source_lang="zh", target_lang="en"):
-    """
-    实验一：三模型在真实语料上对比（依次切换模型，每个模型独立翻译所有样本）
-    """
     dataset_key = "real"
     ds_name = DATASETS[dataset_key]["name"]
     print("=" * 60)
@@ -44,7 +35,7 @@ def run_real_exp1(sample_size=50, source_lang="zh", target_lang="en"):
     stop_vllm()
     time.sleep(2)
 
-    # 使用 ExperimentResults 统一存储
+    # 使用ExperimentResults统一存储
     exp_store = ExperimentResults()
     save_name = _results_name("experiment1", dataset_key)
 
@@ -87,7 +78,7 @@ def run_real_exp1(sample_size=50, source_lang="zh", target_lang="en"):
         time.sleep(3)
 
     if all_results:
-        # 使用所有模型的列表更新 config
+        # 使用所有模型的列表更新config
         all_results["config"]["models"] = models
         exp_store.save(save_name, all_results)
         print(f"\n{'=' * 60}")
@@ -105,10 +96,8 @@ def run_real_exp1(sample_size=50, source_lang="zh", target_lang="en"):
     return all_results
 
 
+# 实验二：三策略在策略语料上对比
 def run_real_exp2(sample_size=50, source_lang="zh", target_lang="en", model=None):
-    """
-    实验二：三策略在策略语料上对比
-    """
     dataset_key = "strategy"
     ds_name = DATASETS[dataset_key]["name"]
     print("=" * 60)
